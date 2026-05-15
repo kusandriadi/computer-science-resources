@@ -51,6 +51,29 @@ Loss is usually masked to only the assistant turns — you don't want the model 
 - **Catastrophic forgetting** — losing capabilities present in the base model. Mitigated by mixing in pre-training data.
 - **Hallucination** — SFT teaches the model that the right move is to confidently produce an answer in the SFT format, even when it doesn't know. This is partly why RLHF/DPO are needed.
 
+### Try it: Fine-tune with SFT in 20 lines
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments
+from trl import SFTTrainer
+from datasets import load_dataset
+
+model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-0.5B")
+tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-0.5B")
+dataset = load_dataset("tatsu-lab/alpaca", split="train[:1000]")
+
+def format_prompt(example):
+    return {"text": f"### Instruction:\n{example['instruction']}\n\n### Response:\n{example['output']}"}
+
+dataset = dataset.map(format_prompt)
+trainer = SFTTrainer(
+    model=model, train_dataset=dataset, tokenizer=tokenizer,
+    args=TrainingArguments(output_dir="./sft-output", num_train_epochs=1, per_device_train_batch_size=4),
+    dataset_text_field="text", max_seq_length=512,
+)
+trainer.train()
+```
+
 ## 3.3 Reinforcement learning from human feedback (RLHF)
 
 SFT teaches the model what a good response *looks like*, but it does not teach the model to *choose* a good response over a mediocre one. That is what RLHF does: it gives the model a sense of "better" and "worse" by learning from human preferences.
@@ -103,6 +126,22 @@ That is a supervised loss directly on the policy. No reward model, no RL loop, n
 - You can afford the compute.
 
 **DPO variants** -- the field has not stopped at vanilla DPO. Each variant below addresses a specific limitation: IPO (fixes a length-bias issue), KTO (works with single ratings instead of pairwise comparisons -- useful when you only have thumbs-up/thumbs-down data), ORPO (combines SFT and preferences in one step), SimPO (length-normalized, reference-free). These trade off simplicity and quality differently; pick by empirical results on your task, not by which paper is newest.
+
+### Try it: DPO loss function
+
+```python
+import torch
+import torch.nn.functional as F
+
+def dpo_loss(policy_chosen_logps, policy_rejected_logps,
+             ref_chosen_logps, ref_rejected_logps, beta=0.1):
+    chosen_rewards = beta * (policy_chosen_logps - ref_chosen_logps)
+    rejected_rewards = beta * (policy_rejected_logps - ref_rejected_logps)
+    loss = -F.logsigmoid(chosen_rewards - rejected_rewards).mean()
+    return loss
+
+# The elegance: no reward model needed, just log-probabilities
+```
 
 ## 3.5 RLAIF and Constitutional AI
 

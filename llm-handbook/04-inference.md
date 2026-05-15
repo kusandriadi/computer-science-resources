@@ -40,6 +40,31 @@ Mitigations:
 - **Prefix caching**: reuse KV across requests that share a prefix (e.g. system prompt). Big win for chat applications.
 - **Eviction**: for very long contexts, drop or compress old tokens (sliding window, H2O, SnapKV).
 
+### Try it: See KV cache in action
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import time
+
+model = AutoModelForCausalLM.from_pretrained("gpt2")
+tokenizer = AutoTokenizer.from_pretrained("gpt2")
+input_ids = tokenizer.encode("The quick brown fox", return_tensors="pt")
+
+# Without KV cache
+start = time.time()
+output = model.generate(input_ids, max_new_tokens=50, use_cache=False)
+no_cache_time = time.time() - start
+
+# With KV cache
+start = time.time()
+output = model.generate(input_ids, max_new_tokens=50, use_cache=True)
+cache_time = time.time() - start
+
+print(f"Without cache: {no_cache_time:.2f}s")
+print(f"With cache: {cache_time:.2f}s")
+print(f"Speedup: {no_cache_time/cache_time:.1f}x")
+```
+
 ## 4.3 Sampling strategies
 
 Given the next-token distribution $p(t)$, how do we pick?
@@ -80,6 +105,24 @@ The trade-off is precision. With fewer bits you lose some information, and the q
 Practical rule: INT8 weights are usually free in quality. INT4 weights with GPTQ/AWQ lose ~1–2% on most evals, sometimes more on math/coding. KV cache INT8 is usually safe; INT4 KV is more aggressive.
 
 **Activation quantization** matters too. Weight-only quantization saves memory bandwidth but not compute; weight+activation quantization (W8A8) uses INT8 matmul kernels on Hopper for real speedup.
+
+### Try it: Quantize and compare
+
+```python
+from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+import torch
+
+# Full precision
+model_fp = AutoModelForCausalLM.from_pretrained("gpt2")
+fp_size = sum(p.numel() * p.element_size() for p in model_fp.parameters())
+
+# 4-bit quantized
+bnb_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.float16)
+model_4bit = AutoModelForCausalLM.from_pretrained("gpt2", quantization_config=bnb_config)
+
+print(f"FP32 size: {fp_size / 1e6:.1f} MB")
+print(f"4-bit: ~{fp_size / 1e6 / 8:.1f} MB (estimated)")
+```
 
 ## 4.5 Speculative decoding
 

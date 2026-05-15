@@ -25,6 +25,31 @@ The simplest form is zero-shot: append "Let's think step by step." (Kojima et al
 
 Modern models behave as if they were partially CoT-trained — they sometimes produce reasoning even when not asked. Some products separate the visible response from a hidden "thinking" block.
 
+### Try it: Compare direct vs CoT
+
+```python
+import anthropic
+
+client = anthropic.Anthropic()
+
+question = "Roger has 5 tennis balls. He buys 2 cans of 3 balls each. How many does he have now?"
+
+# Direct
+direct = client.messages.create(
+    model="claude-sonnet-4-20250514", max_tokens=100,
+    messages=[{"role": "user", "content": f"Answer with just the number: {question}"}]
+)
+
+# Chain of thought
+cot = client.messages.create(
+    model="claude-sonnet-4-20250514", max_tokens=300,
+    messages=[{"role": "user", "content": f"Think step by step: {question}"}]
+)
+
+print(f"Direct: {direct.content[0].text}")
+print(f"CoT: {cot.content[0].text}")
+```
+
 ## 6.2 Self-consistency, best-of-N, and majority voting
 
 If you sample $N$ CoT responses and take the majority answer (Wang et al. 2022, "self-consistency"), accuracy goes up sharply on tasks with checkable structure. This was the first widely-used demonstration that test-time compute scales capability.
@@ -73,6 +98,43 @@ A tool-using LLM emits a structured call (function name, arguments) when it deci
 
 **MCP (Model Context Protocol)** (Anthropic 2024): an open standard for tool servers. Servers expose tools, resources, and prompts; any compatible client can connect. Reduces N-to-M integration work.
 
+### Try it: Minimal tool-using agent
+
+```python
+import anthropic
+
+client = anthropic.Anthropic()
+
+tools = [
+    {
+        "name": "calculate",
+        "description": "Evaluate a math expression",
+        "input_schema": {
+            "type": "object",
+            "properties": {"expression": {"type": "string"}},
+            "required": ["expression"]
+        }
+    }
+]
+
+def run_tool(name, input):
+    if name == "calculate":
+        return str(eval(input["expression"]))  # simplified
+
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=1024,
+    tools=tools,
+    messages=[{"role": "user", "content": "What is 1847 * 293 + 17?"}]
+)
+
+# Handle tool calls
+for block in response.content:
+    if block.type == "tool_use":
+        result = run_tool(block.name, block.input)
+        print(f"Tool: {block.name}({block.input}) = {result}")
+```
+
 ## 6.5 Agents
 
 An "agent" is just a system where an LLM sits in a loop: it looks at the current situation, decides what to do next (call a tool, ask a question, write some code), observes what happened, and repeats. If you have used Claude Code, Cursor, or any coding assistant that edits files and runs tests on its own -- that is an agent. Other examples: browsing agents that navigate websites, research agents that search and synthesize information, customer service bots that look up accounts and take actions.
@@ -118,6 +180,32 @@ Many systems also include **lexical (BM25)** search and fuse with vector results
 **Long-context vs. RAG**: as context windows hit 1M+ tokens, "just put everything in context" becomes possible. But it's expensive and effective-context-length is shorter than nominal. The 2026 consensus: RAG is still the right primary architecture for large corpora; long context is complementary for synthesizing across retrieved chunks.
 
 **Agentic RAG**: the LLM decides what to search for, refines queries, and iterates. Substantially better than single-shot retrieval on hard questions.
+
+### Try it: Build a RAG system in 20 lines
+
+```python
+from langchain_community.document_loaders import TextLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores import Chroma
+from langchain_community.embeddings import HuggingFaceEmbeddings
+
+# 1. Load and chunk
+loader = TextLoader("your_document.txt")
+docs = loader.load()
+splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+chunks = splitter.split_documents(docs)
+
+# 2. Embed and store
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+vectorstore = Chroma.from_documents(chunks, embeddings)
+
+# 3. Query
+query = "What is the main topic?"
+results = vectorstore.similarity_search(query, k=3)
+context = "\n".join([r.page_content for r in results])
+print(f"Retrieved {len(results)} chunks for: '{query}'")
+print(f"Context:\n{context[:300]}...")
+```
 
 ## 6.7 Evaluating reasoning and agent systems
 

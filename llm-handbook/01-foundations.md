@@ -36,6 +36,21 @@ enc.encode("hello world")          # [15339, 1917]
 enc.encode(" hello world")         # different — leading space changes the first token
 ```
 
+### Try it: Tokenization in practice
+
+```python
+from transformers import AutoTokenizer
+
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3-8B")
+text = "Hello, how are you doing today?"
+tokens = tokenizer.encode(text)
+decoded = [tokenizer.decode([t]) for t in tokens]
+print(f"Text: {text}")
+print(f"Tokens: {tokens}")
+print(f"Decoded: {decoded}")
+print(f"Token count: {len(tokens)}")
+```
+
 ## 1.2 Embeddings and positional information
 
 Now that we have token IDs, the model needs to turn them into something it can do math on. Each token ID gets mapped to a vector -- a list of numbers that represents the token's "meaning" in a high-dimensional space. Concretely, this is a lookup in an embedding matrix $E \in \mathbb{R}^{V \times d}$, where $V$ is vocab size and $d$ is the model dimension. The output projection (logits) is often **tied** to $E^\top$ to save parameters.
@@ -77,6 +92,24 @@ Modern attention variants reduce memory and compute, especially the cost of the 
 - **GQA** (Ainslie et al. 2023) — group K/V heads. LLaMA-2 70B uses 8 KV heads for 64 Q heads. Best practical tradeoff for dense models.
 - **MLA** (Multi-head Latent Attention, DeepSeek-V2) — compress K/V to a low-rank latent, decompress when needed. Aggressive KV savings.
 
+### Try it: Attention in 10 lines
+
+```python
+import torch
+import torch.nn.functional as F
+
+def attention(Q, K, V):
+    d_k = Q.size(-1)
+    scores = torch.matmul(Q, K.transpose(-2, -1)) / d_k**0.5
+    weights = F.softmax(scores, dim=-1)
+    return torch.matmul(weights, V), weights
+
+# Try it
+Q = K = V = torch.randn(1, 4, 8)  # batch=1, seq=4, dim=8
+output, weights = attention(Q, K, V)
+print(f"Attention weights:\n{weights[0]}")  # Each row sums to 1
+```
+
 ## 1.4 The transformer block
 
 Now we can zoom out and see how attention fits into the bigger picture. A transformer is just a stack of identical blocks, and each block is surprisingly simple. Here is a modern decoder block (pre-norm, the dominant style):
@@ -99,6 +132,18 @@ $$\text{FFN}(x) = W_3 \big(\text{SiLU}(W_1 x) \odot (W_2 x)\big)$$
 where $\text{SiLU}(x) = x \cdot \sigma(x)$. The gated version (Shazeer 2020) consistently outperforms plain ReLU/GELU MLPs. Hidden dim is often $\approx \tfrac{8}{3} d$ when using SwiGLU to keep total params comparable to a $4d$ vanilla MLP.
 
 **Residual stream**. The Anthropic "transformer circuits" framing is useful: each block reads from and writes to a shared residual stream. The stream is the dominant flow of information; attention and FFN are corrections applied to it. This perspective is essential later for interpretability.
+
+### Try it: Load and inspect a real model
+
+```python
+from transformers import AutoModel
+
+model = AutoModel.from_pretrained("gpt2")
+print(f"Parameters: {sum(p.numel() for p in model.parameters()):,}")
+print(f"Layers: {model.config.n_layer}")
+print(f"Heads: {model.config.n_head}")
+print(f"Hidden dim: {model.config.n_embd}")
+```
 
 ## 1.5 Decoder-only vs. encoder-decoder
 

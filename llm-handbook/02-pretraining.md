@@ -54,6 +54,17 @@ Frontier pre-training corpora are tens of trillions of tokens. Composition matte
 
 **Tokenization considerations** (revisit Module 1): the tokenizer is part of pre-training. Changing it later requires retraining the embedding layer or worse.
 
+### Try it: Inspect training data quality
+
+```python
+from datasets import load_dataset
+
+ds = load_dataset("allenai/c4", "en", split="train", streaming=True)
+sample = next(iter(ds))
+print(f"Text length: {len(sample['text'])} chars")
+print(f"First 200 chars:\n{sample['text'][:200]}")
+```
+
 ## 2.3 Scaling laws
 
 Why do bigger models work better? And how much bigger do they need to be to get a specific improvement? Scaling laws answer these questions, and they are arguably the single most important empirical result in modern LLMs: loss as a function of compute, data, and parameters follows a power law. This means performance is predictable -- you can forecast how good a model will be before you spend the money to train it.
@@ -73,6 +84,22 @@ i.e. ~20 tokens per parameter. A 70B model should train on ~1.4T tokens. GPT-3 (
 2. Fit a power law to validation loss vs compute.
 3. Extrapolate to predict the loss of your target run before launching it.
 4. Use the extrapolation to set the data mix (different mixes have different scaling exponents — pick the one with best slope).
+
+### Try it: Estimate model size
+
+```python
+def estimate_params(vocab_size, d_model, n_layers, n_heads):
+    """Rough parameter count for a transformer."""
+    embedding = vocab_size * d_model
+    per_layer = 4 * d_model**2 + 4 * d_model**2  # attention + FFN (approx)
+    total = embedding + n_layers * per_layer + embedding  # + output head
+    return total
+
+# GPT-2 Small
+print(f"GPT-2: {estimate_params(50257, 768, 12, 12):,} params")
+# Llama-3 8B (approx)
+print(f"Llama-3 8B: {estimate_params(128256, 4096, 32, 32):,} params")
+```
 
 ## 2.4 Optimizer and hyperparameters
 

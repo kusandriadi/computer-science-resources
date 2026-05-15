@@ -43,6 +43,31 @@ A few principles that survive contact with reality:
 
 **Iterate on real examples.** Keep a notebook of representative inputs (the same ~50–200 from your eval set). Every prompt change is tested against them.
 
+### Try it: Structured output with Anthropic
+
+```python
+import anthropic
+import json
+
+client = anthropic.Anthropic()
+
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=500,
+    system="You are a data extraction assistant. Always respond with valid JSON.",
+    messages=[{
+        "role": "user",
+        "content": """Extract structured data from this text:
+        "John Smith, aged 34, works at Google as a senior engineer since 2019."
+
+        Return JSON with: name, age, company, title, start_year"""
+    }]
+)
+
+data = json.loads(response.content[0].text)
+print(json.dumps(data, indent=2))
+```
+
 ## 8.3 When and how to fine-tune
 
 Fine-tuning makes sense when:
@@ -74,6 +99,27 @@ Modern fine-tuning toolkit:
 - target modules: at least Q, K, V, O; often all linear layers
 
 **Evaluation discipline**: never trust a fine-tuned model until you've evaluated it on both task data and general capability. SFT silently breaks unrelated abilities.
+
+### Try it: LoRA fine-tuning setup
+
+```python
+from peft import LoraConfig, get_peft_model
+from transformers import AutoModelForCausalLM
+
+model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-0.5B")
+
+lora_config = LoraConfig(
+    r=16,                    # rank — higher = more capacity, more memory
+    lora_alpha=32,           # scaling factor
+    target_modules=["q_proj", "v_proj"],  # which layers to adapt
+    lora_dropout=0.05,
+    task_type="CAUSAL_LM",
+)
+
+model = get_peft_model(model, lora_config)
+model.print_trainable_parameters()
+# Output: trainable params: ~0.5% of total — that's the magic of LoRA
+```
 
 ## 8.4 RAG in production
 
@@ -144,6 +190,42 @@ This is the single biggest difference between teams that ship reliable LLM produ
 **Regressions**: when you change a prompt, model, or scaffolding component, run the change against your eval set first. Production canaries with quick rollback are essential.
 
 **Incident postmortems**: include trace IDs. The trace will usually tell you exactly which step failed.
+
+### Try it: Simple LLM observability
+
+```python
+import time
+import json
+
+class LLMLogger:
+    """Minimal observability wrapper."""
+    def __init__(self):
+        self.logs = []
+
+    def call(self, client, **kwargs):
+        start = time.time()
+        response = client.messages.create(**kwargs)
+        latency = time.time() - start
+
+        log = {
+            "model": kwargs.get("model"),
+            "input_tokens": response.usage.input_tokens,
+            "output_tokens": response.usage.output_tokens,
+            "latency_ms": round(latency * 1000),
+            "cost_usd": self._estimate_cost(response),
+        }
+        self.logs.append(log)
+        print(f"[LLM] {log['model']} | {log['input_tokens']}→{log['output_tokens']} tokens | {log['latency_ms']}ms")
+        return response
+
+    def _estimate_cost(self, response):
+        # Simplified cost estimation
+        return round((response.usage.input_tokens * 3 + response.usage.output_tokens * 15) / 1_000_000, 4)
+
+# Usage
+logger = LLMLogger()
+# response = logger.call(client, model="claude-sonnet-4-20250514", max_tokens=100, messages=[...])
+```
 
 ## 8.8 A reasonable starting stack (2026)
 
