@@ -116,6 +116,17 @@ Substitute into the Bradley-Terry RM loss. The $\log Z(x)$ cancels in the pairwi
 
 $$\mathcal{L}_{DPO} = -\mathbb{E}_{(x, y_w, y_l)}\!\left[\log \sigma\!\left(\beta \log \frac{\pi_\theta(y_w|x)}{\pi_{\text{ref}}(y_w|x)} - \beta \log \frac{\pi_\theta(y_l|x)}{\pi_{\text{ref}}(y_l|x)}\right)\right]$$
 
+**How to read this formula:**
+- $\pi_\theta$ — the model we're training (policy)
+- $\pi_{ref}$ — the reference model (frozen copy of the starting model)
+- $y_w$ — the "winning" (preferred) response
+- $y_l$ — the "losing" (rejected) response
+- $\beta$ — temperature parameter (higher = more conservative updates)
+- $\log \frac{\pi_\theta(y|x)}{\pi_{ref}(y|x)}$ — how much more/less likely our model makes response $y$ compared to the reference
+- $\sigma(...)$ — sigmoid function (squishes to 0-1)
+
+**In one sentence:** "Make the winning response more likely (relative to reference) and the losing response less likely, with sigmoid to keep things stable."
+
 That is a supervised loss directly on the policy. No reward model, no RL loop, no value function. You train it the same way you would train SFT -- just with a different loss function. The elegance here is real: all the complexity of RLHF collapses into a single, stable training objective.
 
 **When DPO wins**: simpler infra, more stable, almost no hyperparameter tuning beyond $\beta$. Strong default for small-scale post-training.

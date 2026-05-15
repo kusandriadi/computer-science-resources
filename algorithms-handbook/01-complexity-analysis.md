@@ -32,6 +32,16 @@ $f(n) = O(g(n))$ means there exist positive constants $c$ and $n_0$ such that:
 
 $$0 \leq f(n) \leq c \cdot g(n) \quad \text{for all } n \geq n_0$$
 
+**How to read this:** "f(n) is Big-O of g(n)" means: once n gets big enough (past some point $n_0$), f(n) will NEVER grow faster than some constant multiple of g(n). In plain English: "f grows at most as fast as g."
+
+**Symbol guide:**
+- $f(n)$ — the function we're analyzing (e.g., our algorithm's runtime)
+- $g(n)$ — the comparison function (e.g., $n^2$)
+- $c$ — some constant multiplier (we don't care about the exact value)
+- $n_0$ — the point after which the bound holds (we don't care about small inputs)
+- $\leq$ — "is less than or equal to"
+- $\geq$ — "is greater than or equal to"
+
 **Intuition:** $f$ grows *no faster than* $g$. Big-O gives an **upper bound** on growth.
 
 **Example:** $3n^2 + 5n + 7 = O(n^2)$. Choose $c = 15$ and $n_0 = 1$: for all $n \geq 1$, $3n^2 + 5n + 7 \leq 15n^2$.
@@ -51,6 +61,8 @@ For $n \geq 1$:
 Therefore: $n^2 + 2n + 1 \leq n^2 + 2n^2 + n^2 = 4n^2$.
 
 Choose $c = 4$ and $n_0 = 1$. For all $n \geq 1$: $n^2 + 2n + 1 \leq 4n^2$. $\blacksquare$
+
+**Notation note:** The $\blacksquare$ symbol means "end of proof" — it's the mathematician's way of saying "done, I've shown what I needed to show." You'll also see "QED" (Latin: "which was to be demonstrated") used the same way.
 
 **Proof 2: Show that $5n^3 + 20n^2 + 10 = O(n^3)$.**
 
@@ -74,6 +86,8 @@ $f(n) = \Omega(g(n))$ means there exist positive constants $c$ and $n_0$ such th
 
 $$0 \leq c \cdot g(n) \leq f(n) \quad \text{for all } n \geq n_0$$
 
+**How to read this:** "f(n) is Omega of g(n)" means: f grows AT LEAST as fast as g. It's a lower bound — "f will never be faster than this."
+
 **Intuition:** $f$ grows *at least as fast as* $g$. Big-$\Omega$ gives a **lower bound** on growth.
 
 **Example:** $3n^2 + 5n + 7 = \Omega(n^2)$. Choose $c = 3$ and $n_0 = 1$.
@@ -81,6 +95,8 @@ $$0 \leq c \cdot g(n) \leq f(n) \quad \text{for all } n \geq n_0$$
 ### Big-Theta ($\Theta$): Tight Bound
 
 $f(n) = \Theta(g(n))$ if and only if $f(n) = O(g(n))$ **and** $f(n) = \Omega(g(n))$.
+
+**How to read this:** "f(n) is Theta of g(n)" means: f grows at EXACTLY the same rate as g (up to constant factors). It's a tight bound — both upper AND lower. When we say an algorithm is $\Theta(n \log n)$, we mean it's always roughly $n \log n$, no better and no worse.
 
 **Intuition:** $f$ grows *at the same rate as* $g$. Big-$\Theta$ is a **tight bound**.
 
@@ -231,6 +247,22 @@ These analogies help build intuition for how each complexity class "feels" in pr
 | $O(n^2)$ | Comparing every person in a room with every other person | With 10 people that's 45 handshakes. With 100 people it's 4,950. Growth is quadratic. |
 | $O(2^n)$ | Trying every combination of $n$ on/off switches | Each switch doubles the possibilities. 10 switches = 1,024 combinations. 30 switches = over 1 billion. |
 | $O(n!)$ | Trying every arrangement of $n$ books on a shelf | 10 books = 3,628,800 arrangements. 20 books = more arrangements than atoms in the human body. |
+
+### Reading Complexity Notation
+
+Here's how to pronounce and understand each:
+
+| Notation | How to say it | What it means | Real-world analogy |
+|----------|---------------|---------------|-------------------|
+| $O(1)$ | "Oh of one" or "constant time" | Same speed regardless of input size | Looking up a word by page number |
+| $O(\log n)$ | "Oh of log n" or "logarithmic" | Halving the problem each step | Binary search in a sorted phone book |
+| $O(n)$ | "Oh of n" or "linear" | Touch each item once | Reading every page of a book |
+| $O(n \log n)$ | "Oh of n log n" or "linearithmic" | Slightly worse than linear | Efficient sorting (merge sort) |
+| $O(n^2)$ | "Oh of n squared" or "quadratic" | Every pair of items | Comparing everyone in a room to everyone else |
+| $O(2^n)$ | "Oh of two to the n" or "exponential" | Doubles with each new item | Trying every combination of on/off switches |
+| $O(n!)$ | "Oh of n factorial" or "factorial" | Every possible arrangement | Trying every order of books on a shelf |
+
+**The key insight:** When someone says "this algorithm is $O(n^2)$", they mean: if you double the input size, the runtime roughly quadruples. If they say $O(n)$, doubling input means doubling runtime. That's all Big-O really tells you.
 
 ### Important Algorithm Complexities
 

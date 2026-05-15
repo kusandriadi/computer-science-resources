@@ -31,6 +31,8 @@ The KV cache is one of those ideas that sounds simple but has enormous practical
 
 $$\text{KV bytes} = 2 \cdot L \cdot n \cdot h_{kv} \cdot d_{head} \cdot \text{bytes per element}$$
 
+**How to read this:** Each layer stores Key and Value tensors for every token generated so far. "×2" because we store both K and V. As sequence length grows, KV cache grows linearly — that's why long contexts are expensive.
+
 For LLaMA-3 70B with bf16, ~1.3 MB per token, ~10 GB at 8k context. Per request. This is often the bottleneck for batch size.
 
 Mitigations:

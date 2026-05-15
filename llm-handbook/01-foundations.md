@@ -79,6 +79,17 @@ Now the math. Scaled dot-product attention:
 
 $$\text{Attn}(Q, K, V) = \text{softmax}\!\left(\frac{Q K^\top}{\sqrt{d_k}}\right) V$$
 
+**How to read this formula:**
+- $Q$ (Query) — "what am I looking for?" — the current token's question
+- $K$ (Key) — "what do I contain?" — each other token's label
+- $V$ (Value) — "what information do I provide?" — the actual content to retrieve
+- $QK^T$ — multiply queries by keys (transposed) to get similarity scores
+- $\sqrt{d_k}$ — divide by square root of key dimension to prevent scores from getting too large
+- $\text{softmax}(...)$ — turn scores into probabilities (0 to 1, summing to 1)
+- $...V$ — multiply probabilities by values to get the weighted combination
+
+**In one sentence:** "For each token, compute how much attention to pay to every other token, then take a weighted average of their values."
+
 The $\sqrt{d_k}$ scaling prevents softmax saturation as $d_k$ grows. Without it, large dot products would push softmax into a regime where gradients nearly vanish.
 
 **Multi-head**: project $Q, K, V$ into $h$ different subspaces in parallel, apply attention, concat, project out. Each head can specialize (some attend locally, some track syntax, some copy-and-paste, etc.).

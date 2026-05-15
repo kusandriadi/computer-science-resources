@@ -430,6 +430,11 @@ $$T(n) = O(n^d)$$
   - $a/b^d = 1$ (Case 2): all levels contribute equally $\Rightarrow$ multiply by $\log n$.
   - $a/b^d < 1$ (Case 3): top level dominates $\Rightarrow$ driven by root work.
 
+**How to read this:** The Master Theorem looks scary but it's just asking one question: "At each level of recursion, is more work happening at the TOP (splitting/combining), or at the BOTTOM (base cases)?"
+- Case 1: Bottom-heavy — leaf work dominates
+- Case 2: Balanced — same work at every level
+- Case 3: Top-heavy — root work dominates
+
 ### Worked Examples
 
 **Example 1: Merge Sort** -- $T(n) = 2T(n/2) + O(n)$
