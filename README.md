@@ -1,6 +1,6 @@
 # Computer Science Resources
 
-A curated collection of computer science learning materials — from fundamentals to frontier topics.
+A curated collection of computer science learning materials — from fundamentals to frontier topics. Every handbook is written in clear, humanized English and designed to be accessible to its target audience.
 
 **Website:** [cs.kusandriadi.com](https://cs.kusandriadi.com)
 
@@ -8,12 +8,12 @@ A curated collection of computer science learning materials — from fundamental
 
 ## Topics
 
-| # | Topic | Description |
-|---|-------|-------------|
-| 1 | [AI Engineering Syllabus](ai-engineering-syllabus/) | Comprehensive AI/ML education program — 7 courses across 4 semesters, from data science to cloud AI infrastructure |
-| 2 | [LLM Handbook](llm-handbook/) | Large Language Models — foundations, architectures, pre/post-training, inference, reasoning, agents, production |
-| 3 | [Algorithms Handbook](algorithms-handbook/) | Algorithms & data structures — complexity analysis, sorting, graphs, dynamic programming, and more. Code in Java |
-| 4 | [Computational Thinking Handbook](computational-thinking-handbook/) | Think like a problem solver — designed for elementary school students with fun analogies and unplugged activities |
+| # | Topic | Audience | Description |
+|---|-------|----------|-------------|
+| 1 | [AI Engineering Syllabus](ai-engineering-syllabus/) | University students (semester 1–4), IT and non-IT backgrounds | A complete AI/ML education program — 7 courses across 4 semesters covering data science, machine learning, generative AI, deep learning, computer vision, AI ethics, and cloud infrastructure. Written in a friendly, encouraging tone with Week 0 crash courses and self-check checklists so students from any background can follow along. |
+| 2 | [LLM Handbook](llm-handbook/) | ML engineers, researchers, and practitioners | A deep-dive reference on Large Language Models — from transformer foundations and pre-training to inference optimization, reasoning, agents, and production systems. Technically precise but written like a knowledgeable colleague explaining over coffee, not a dry textbook. |
+| 3 | [Algorithms Handbook](algorithms-handbook/) | CS students and engineers | Algorithms and data structures — complexity analysis, sorting, graphs, dynamic programming, network flows, and more. All code examples in Java. Every module starts with real-world intuition before formal definitions, and ends with a quiz. |
+| 4 | [Computational Thinking Handbook](computational-thinking-handbook/) | Elementary school students (grades 1–6, ages 6–12) | Learn to think like a problem solver — no computer needed! Covers decomposition, pattern recognition, abstraction, algorithm design, logical thinking, and debugging through fun analogies (cooking, LEGO, games) and unplugged activities. Written in simple, energetic English that kids can understand. |
 
 ---
 
@@ -21,21 +21,59 @@ A curated collection of computer science learning materials — from fundamental
 
 ```
 computer-science-resources/
-├── ai-engineering-syllabus/           # 7 course syllabi (16 weeks each)
-├── llm-handbook/                      # 17 chapters + appendices
-├── algorithms-handbook/               # 14 modules with Java examples
-├── computational-thinking-handbook/   # 10 modules for young learners
+├── ai-engineering-syllabus/           # 7 courses (16 weeks each), Week 0 included
+├── llm-handbook/                      # 17 chapters + 7 appendices
+├── algorithms-handbook/               # 15 modules with Java examples and quizzes
+├── computational-thinking-handbook/   # 10 modules + activities for young learners
+├── AGENTS.md
 ├── LICENSE
 └── README.md
 ```
 
 ---
 
+## Design Principles
+
+- **Humanized language** — Every handbook is written to feel like a real person teaching, not an AI or textbook. Jargon is always explained before it is used.
+- **Audience-appropriate** — The AI syllabus speaks to university freshmen; the CT handbook speaks to 8-year-olds; the LLM handbook speaks to working engineers. Each one respects its reader.
+- **Practical first** — Real-world examples and "why this matters" context before theory and formulas.
+- **Self-contained** — Each topic can be read independently. No external accounts or paid tools required to learn.
+
+---
+
 ## How to Use
 
-- **Students & self-learners** — pick a topic, follow the modules in order
-- **Educators** — adapt the materials for your classes
-- **Engineers** — use as reference, jump to any module directly
+- **University students** — Start with the AI Engineering Syllabus. Follow semester 1 through 4. Each course has a Week 0 crash course if you need to catch up.
+- **Elementary school students & teachers** — Start with the Computational Thinking Handbook. No computer needed. Follow modules 01 through 07, then try the fun activities in module 08.
+- **ML engineers & researchers** — Jump into the LLM Handbook or Algorithms Handbook. Read linearly for a structured path, or use any module as a standalone reference.
+- **Educators** — Adapt any material for your classes. The AI syllabus includes weekly breakdowns, projects, and recommended textbooks. The CT handbook includes a full teacher guide (module 09).
+
+---
+
+## Recommended Textbooks
+
+Each handbook references authoritative books. Highlights:
+
+| Topic | Key Books |
+|-------|-----------|
+| Algorithms | CLRS (4th Ed), Sedgewick & Wayne (Java), Skiena, Jeff Erickson (free) |
+| Machine Learning | Hands-On ML (Géron), ISLR (free), d2l.ai (free) |
+| LLMs | Build a Large Language Model from Scratch (Raschka), Deep Learning (Goodfellow), Jurafsky & Martin (free) |
+| Generative AI | AI Engineering (Chip Huyen), NLP with Transformers (Tunstall) |
+| Computer Vision | Szeliski (free), Deep Learning for Vision Systems |
+| AI Ethics | Weapons of Math Destruction (O'Neil), Interpretable ML (Molnar, free) |
+| Computational Thinking | CS Unplugged (free), Hello Ruby (Liukas), Mindstorms (Papert) |
+
+Full reading lists are inside each handbook.
+
+---
+
+## Contributing
+
+Contributions are welcome. Please open an issue or submit a pull request if you want to:
+- Fix errors or improve explanations
+- Add new topics or modules
+- Translate materials to other languages
 
 ---
 
