@@ -82,8 +82,8 @@ const handbooks = {
 // State
 // ========================================
 let currentHandbook = null;
-const GITHUB_BASE = 'https://raw.githubusercontent.com/kusandriadi/computer-science-resources/main';
-const GITHUB_REPO = 'https://github.com/kusandriadi/computer-science-resources/blob/main';
+const GITHUB_BASE = 'https://raw.githubusercontent.com/kusandriadi/cs/main';
+const GITHUB_REPO = 'https://github.com/kusandriadi/cs/blob/main';
 
 // ========================================
 // Theme Management
