@@ -252,11 +252,9 @@ Each course has recommended textbooks and resources to complement the syllabus.
 - **"Natural Language Processing with Transformers"** by Tunstall, von Werra, Wolf (2022) — Practical Hugging Face guide
 - **"Hands-On Large Language Models"** by Jay Alammar & Maarten Grootendorst (2024) — Visual, practical LLM guide
 - **"Prompt Engineering for Generative AI"** by James Phoenix & Mike Taylor (2024) — Systematic prompt engineering
-- **"The Little Book of Deep Learning"** by François Fleuret (2023, free PDF) — Concise 160-page deep learning overview, useful as a quick reference
 
 ### Course 04: Deep Learning & NLP
 - **"Deep Learning"** by Goodfellow, Bengio, Courville (free online: deeplearningbook.org) — The deep learning textbook
-- **"Understanding Deep Learning"** by Simon Prince (2023, free online) — Modern, covers transformers and diffusion
 - **"Speech and Language Processing"** by Jurafsky & Martin (3rd Ed draft, free online: web.stanford.edu/~jurafsky/slp3/) — Definitive NLP textbook, free online draft
 - **"Dive into Deep Learning"** by Zhang, Lipton, Li, Smola (free online: d2l.ai) — Interactive, code-first approach; primary free resource for this course
 

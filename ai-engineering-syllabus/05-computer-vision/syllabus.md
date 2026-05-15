@@ -17,6 +17,17 @@ In 2026, computer vision is experiencing a major shift toward foundation models 
 - Machine Learning (Semester 2) — neural networks, PyTorch
 - Deep Learning & NLP recommended (CNNs, Transformers) but can be taken concurrently
 
+### Self-Check: Am I Ready?
+
+Before starting this course, make sure you can:
+- [ ] Load and display an image using Python (any library)
+- [ ] Train a simple neural network in PyTorch on a dataset like MNIST
+- [ ] Explain what a CNN (Convolutional Neural Network) does at a high level (it detects visual patterns)
+- [ ] Navigate a Jupyter Notebook or Google Colab environment comfortably
+- [ ] Understand what "pixels" are and that images are made of numbers
+
+If you can't check all boxes, don't worry! Week 0 covers these foundations.
+
 ## Tools & Technologies
 
 PyTorch, torchvision, OpenCV, Ultralytics (YOLO), Hugging Face, Roboflow, Albumentations, ONNX Runtime, Detectron2, Segment Anything (SAM)
@@ -24,6 +35,23 @@ PyTorch, torchvision, OpenCV, Ultralytics (YOLO), Hugging Face, Roboflow, Albume
 ---
 
 ## Weekly Schedule
+
+---
+
+### Week 0: Seeing Like a Computer
+
+*Welcome! This week introduces how computers "see" images — it's surprisingly different from how we do. No prior image processing experience needed.*
+
+**Topics:**
+- What is an image to a computer? (pixels, channels, RGB — images are just grids of numbers)
+- Image basics with Python: loading, displaying, and resizing images with OpenCV and PIL
+- Quick PyTorch refresher for vision tasks: tensors shaped like images, basic transforms
+- Dataset basics: how to organize image data (folders, labels, train/test splits)
+
+**What You'll Build:**
+- Load your first image in Python and explore its pixel values
+- Resize, crop, and change the colors of an image using code
+- Create a small organized image dataset ready for training
 
 ---
 
@@ -49,11 +77,11 @@ PyTorch, torchvision, OpenCV, Ultralytics (YOLO), Hugging Face, Roboflow, Albume
 ### Week 2: Feature Engineering & Classical Methods
 
 **Topics:**
-- Feature descriptors: HOG (Histogram of Oriented Gradients), SIFT, SURF, ORB
+- Feature descriptors (mathematical descriptions of interesting patterns in an image): HOG (Histogram of Oriented Gradients), SIFT, SURF, ORB
 - Feature matching: brute force, FLANN, RANSAC for outlier rejection
 - Template matching: finding known patterns in images
 - Classical classification: SVM + HOG, Bag of Visual Words
-- Optical flow: tracking motion between frames (Lucas-Kanade, Farneback)
+- Optical flow (tracking how things move between video frames): Lucas-Kanade, Farneback
 - Camera geometry basics: pinhole model, intrinsics, extrinsics, distortion
 - When classical methods still win: low-compute environments, well-defined problems, interpretability
 
@@ -70,7 +98,7 @@ PyTorch, torchvision, OpenCV, Ultralytics (YOLO), Hugging Face, Roboflow, Albume
   - ResNet, EfficientNet, ConvNeXt
   - Vision Transformers (ViT): patches as tokens
   - Swin Transformer: hierarchical shifted windows
-- Transfer learning: using pre-trained ImageNet models for custom tasks
+- Transfer learning (reusing a model already trained on millions of images for your own task): using pre-trained ImageNet models for custom tasks
 - Fine-tuning strategies: when to freeze layers, gradual unfreezing, learning rate differential
 - Data augmentation deep dive:
   - Traditional: flip, rotate, crop, color jitter
@@ -89,7 +117,7 @@ PyTorch, torchvision, OpenCV, Ultralytics (YOLO), Hugging Face, Roboflow, Albume
 
 **Topics:**
 - The object detection task: classify + localize simultaneously
-- Evaluation metrics: IoU, mAP (mean Average Precision), precision-recall curves
+- Evaluation metrics: IoU (Intersection over Union — how much the predicted box overlaps with the real box), mAP (mean Average Precision), precision-recall curves
 - Anchor-based detectors:
   - Two-stage: Faster R-CNN — region proposals + classification
   - One-stage: SSD, RetinaNet (focal loss for class imbalance)
@@ -113,9 +141,9 @@ PyTorch, torchvision, OpenCV, Ultralytics (YOLO), Hugging Face, Roboflow, Albume
 
 **Topics:**
 - Segmentation types:
-  - Semantic segmentation: classify every pixel (road, building, sky)
-  - Instance segmentation: separate individual objects (car 1, car 2, car 3)
-  - Panoptic segmentation: combining semantic + instance
+  - Semantic segmentation (coloring every pixel with a label): classify every pixel (road, building, sky)
+  - Instance segmentation (telling apart individual objects of the same type): separate individual objects (car 1, car 2, car 3)
+  - Panoptic segmentation (the complete picture): combining semantic + instance
 - Architecture evolution:
   - FCN (Fully Convolutional Network): the foundation
   - U-Net: encoder-decoder with skip connections (dominant in medical imaging)
@@ -140,7 +168,7 @@ PyTorch, torchvision, OpenCV, Ultralytics (YOLO), Hugging Face, Roboflow, Albume
 
 **Topics:**
 - Face detection: MTCNN, RetinaFace, BlazeFace
-- Face recognition: ArcFace, FaceNet — embedding-based approaches
+- Face recognition: ArcFace, FaceNet — embedding-based approaches (turning faces into numbers for comparison)
 - Facial landmark detection: 68-point, 3D face mesh
 - Face verification vs identification: one-to-one vs one-to-many
 - Human pose estimation: OpenPose, MediaPipe, HRNet
@@ -190,7 +218,7 @@ Covers Weeks 1-6: classical CV, classification, detection, segmentation, SAM, fa
 ### Week 9: 3D Vision & Depth
 
 **Topics:**
-- Depth estimation:
+- Depth estimation (figuring out how far away things are in an image):
   - Monocular depth estimation: MiDaS, DPT — depth from a single image
   - Stereo vision: disparity maps, depth from two cameras
   - Structured light and LiDAR: active depth sensing
@@ -199,8 +227,8 @@ Covers Weeks 1-6: classical CV, classification, detection, segmentation, SAM, fa
   - 3D object detection: VoxelNet, PointPillars
 - 3D reconstruction:
   - Structure from Motion (SfM): 3D from multiple 2D images
-  - Neural Radiance Fields (NeRF): novel view synthesis
-  - 3D Gaussian Splatting: faster alternative to NeRF (2024+)
+  - Neural Radiance Fields (NeRF — creating 3D scenes from a set of 2D photos): novel view synthesis
+  - 3D Gaussian Splatting (a faster way to recreate 3D scenes): faster alternative to NeRF (2024+)
 - Applications: autonomous driving, robotics, AR/VR, digital twins
 
 **What You'll Build:**
@@ -262,9 +290,9 @@ Covers Weeks 1-6: classical CV, classification, detection, segmentation, SAM, fa
   - DALL-E 3: creative image generation
   - Flux: next-generation architecture
 - Image editing with AI:
-  - Inpainting: filling in removed regions
-  - Outpainting: extending beyond image boundaries
-  - Style transfer: applying artistic styles
+  - Inpainting (filling in removed or missing parts of an image)
+  - Outpainting (extending an image beyond its original borders)
+  - Style transfer (making a photo look like a painting by a famous artist)
   - Image-to-image translation: ControlNet, IP-Adapter
 - Video generation: Sora, Runway, Kling — generating video from text
 - Practical applications: content creation, design prototyping, data augmentation
@@ -283,10 +311,10 @@ Covers Weeks 1-6: classical CV, classification, detection, segmentation, SAM, fa
 **Topics:**
 - Why edge matters: latency, privacy, cost, offline capability
 - Model optimization for edge:
-  - Quantization: post-training quantization (PTQ), quantization-aware training (QAT)
-  - Pruning: structured vs unstructured
-  - Knowledge distillation: teacher → student for compact models
-  - Neural Architecture Search (NAS): finding optimal edge architectures
+  - Quantization (shrinking model size by using less precise numbers): post-training quantization (PTQ), quantization-aware training (QAT)
+  - Pruning (removing unnecessary connections to make models smaller)
+  - Knowledge distillation (training a small "student" model to mimic a large "teacher" model)
+  - Neural Architecture Search (NAS — letting the computer design the best model structure automatically)
 - Edge deployment platforms:
   - NVIDIA Jetson: GPU-powered edge AI
   - Intel OpenVINO: optimized inference for Intel hardware

@@ -17,6 +17,17 @@ This is not a theoretical "ethics in a vacuum" course. Every topic is grounded i
 - Machine Learning (Semester 2) — understanding of model training and evaluation
 - Generative AI Engineering (Semester 3) recommended
 
+### Self-Check: Am I Ready?
+
+Before starting this course, make sure you can:
+- [ ] Explain what an AI/ML model does (it learns patterns from data to make decisions or predictions)
+- [ ] Give one example of AI being used in everyday life (e.g., recommendation systems, voice assistants)
+- [ ] Understand what "training data" is and why it matters
+- [ ] Describe what "bias" means in everyday language (unfair preference for or against something)
+- [ ] Read a news article about technology and summarize the key points
+
+If you can't check all boxes, don't worry! Week 0 covers these foundations.
+
 ## Tools & Technologies
 
 SHAP, LIME, AIF360 (IBM Fairness Toolkit), Fairlearn (Microsoft), What-If Tool (Google), NeMo Guardrails, Guardrails AI, LangSmith/Langfuse, Model Cards Toolkit
@@ -27,16 +38,32 @@ SHAP, LIME, AIF360 (IBM Fairness Toolkit), Fairlearn (Microsoft), What-If Tool (
 
 ---
 
+### Week 0: Why Ethics in AI Matters
+
+*Welcome! This week sets the stage with real stories about AI going wrong — and why you, as a future AI practitioner, should care.*
+
+**Topics:**
+- Real-world AI failures that made headlines (brief case studies: biased hiring tools, wrongful arrests from face recognition, chatbots gone rogue)
+- What is bias? Simple everyday examples (e.g., a search engine showing different results for different groups)
+- Quick overview: what AI can and cannot do (setting realistic expectations)
+- No coding needed for this course's first few weeks — we start with ideas, not code
+
+**What You'll Build:**
+- Find and discuss one recent news article about an AI failure or controversy
+- Write a short reflection: "What could go wrong if AI is used for [topic you care about]?"
+
+---
+
 ### Week 1: Why AI Ethics Matters — Now More Than Ever
 
 **Topics:**
 - The urgency: AI is making decisions about hiring, lending, healthcare, criminal justice, and education
 - Historical failures: Amazon's biased hiring AI, COMPAS recidivism prediction, Google Photos image labeling
 - The trust problem: 95% of AI investments show zero return (MIT 2026) — ethics failures are business failures
-- Key ethical principles: beneficence, non-maleficence, autonomy, justice, explicability
+- Key ethical principles: beneficence (do good), non-maleficence (do no harm), autonomy (respect human choice), justice (be fair), explicability (be transparent and explainable)
 - Stakeholder analysis: who is affected by an AI system? (users, subjects, society, environment)
 - The ethical AI engineer: responsibility doesn't end at model accuracy
-- Philosophy crash course: utilitarianism, deontology, virtue ethics — frameworks for moral reasoning about AI
+- Philosophy crash course: utilitarianism (greatest good for the greatest number), deontology (follow the rules regardless of outcome), virtue ethics (what would a good person do?) — frameworks for moral reasoning about AI
 
 **What You'll Build:**
 - Analyze 3 real-world AI failure case studies and identify ethical violations
@@ -52,12 +79,12 @@ SHAP, LIME, AIF360 (IBM Fairness Toolkit), Fairlearn (Microsoft), What-If Tool (
   - Algorithmic bias: amplification of data bias, proxy discrimination, feedback loops
   - Deployment bias: how context changes fairness properties
 - Fairness definitions (and why they can conflict):
-  - Demographic parity: equal positive prediction rates across groups
-  - Equalized odds: equal true positive and false positive rates
+  - Demographic parity (equal approval rates across groups): equal positive prediction rates across groups
+  - Equalized odds (equal accuracy across groups): equal true positive and false positive rates
   - Individual fairness: similar individuals should receive similar outcomes
-  - Counterfactual fairness: would the decision change if the sensitive attribute changed?
-  - The impossibility theorem: you can't satisfy all fairness metrics simultaneously
-- Intersectionality: bias across combined attributes (race × gender × age)
+  - Counterfactual fairness: would the decision change if the sensitive attribute (e.g., gender, race) changed?
+  - The impossibility theorem: you can't satisfy all fairness metrics simultaneously (a key insight!)
+- Intersectionality (how biases combine): bias across combined attributes (race × gender × age)
 - Measuring bias: disparate impact ratio, statistical parity difference, equalized odds difference
 
 **What You'll Build:**
@@ -93,12 +120,12 @@ SHAP, LIME, AIF360 (IBM Fairness Toolkit), Fairlearn (Microsoft), What-If Tool (
 - Interpretable models vs post-hoc explanations:
   - Interpretable by design: linear regression, decision trees, rule-based systems, GAMs
   - Post-hoc explanation methods: applied to any model after training
-- SHAP (SHapley Additive exPlanations):
-  - Game theory foundation: Shapley values — fair contribution attribution
+- SHAP (SHapley Additive exPlanations — a way to see which features most influenced a prediction):
+  - Game theory foundation: Shapley values — fairly measuring each feature's contribution
   - TreeSHAP, KernelSHAP, DeepSHAP — variants for different model types
   - SHAP visualizations: summary plots, dependence plots, force plots, waterfall plots
-- LIME (Local Interpretable Model-agnostic Explanations):
-  - Perturbing inputs and fitting local linear models
+- LIME (Local Interpretable Model-agnostic Explanations — explaining individual predictions by testing small changes):
+  - Perturbing inputs (slightly changing the input to see what happens) and fitting local linear models
   - Explaining individual predictions
   - LIME for text, images, and tabular data
 - Other XAI methods:
@@ -120,7 +147,7 @@ SHAP, LIME, AIF360 (IBM Fairness Toolkit), Fairlearn (Microsoft), What-If Tool (
 - The unique challenge: LLMs are the largest "black boxes" ever built
 - Prompt-based explanations: asking the model to explain its reasoning (chain-of-thought)
 - Attention analysis: which tokens influence which outputs?
-- Mechanistic interpretability: understanding internal representations (probing, circuit analysis)
+- Mechanistic interpretability (looking inside the model to understand how it "thinks"): understanding internal representations (probing, circuit analysis)
 - Hallucination as an explainability problem: why does the model confidently state falsehoods?
 - Explainability in RAG systems: citation, source attribution, confidence scores
 - LLM Observability as explainability:
@@ -238,9 +265,9 @@ Covers Weeks 1-6: bias, fairness, XAI (SHAP, LIME), LLM explainability, adversar
   - Purpose limitation: don't reuse data for undisclosed purposes
   - Data Protection Impact Assessments (DPIAs) for AI
 - Privacy-preserving AI techniques:
-  - Differential privacy: adding noise to protect individual data points
-  - Federated learning: training models without centralizing data
-  - Homomorphic encryption: computing on encrypted data
+  - Differential privacy (adding carefully calibrated noise so no individual's data can be identified)
+  - Federated learning (training AI on data spread across many devices, without collecting it in one place)
+  - Homomorphic encryption (running calculations on encrypted data without ever decrypting it)
   - Synthetic data generation: creating privacy-safe training data
 - Data rights for AI training: the EU AI Act's training data transparency requirements
 - Copyright and AI: the evolving legal landscape for AI-generated content
@@ -260,7 +287,7 @@ Covers Weeks 1-6: bias, fairness, XAI (SHAP, LIME), LLM explainability, adversar
 - Unique challenges of generative AI: hallucination, deepfakes, misinformation, copyright infringement
 - Content authenticity:
   - AI-generated content labeling (EU AI Act requirement)
-  - C2PA (Coalition for Content Provenance and Authenticity): digital watermarking
+  - C2PA (Coalition for Content Provenance and Authenticity): digital watermarking (invisible marks proving where content came from)
   - Deepfake detection: technical approaches and limitations
 - Misinformation and manipulation:
   - AI-generated text detection: current methods and their limitations

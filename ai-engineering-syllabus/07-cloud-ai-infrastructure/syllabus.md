@@ -18,6 +18,17 @@ Global IT spending is projected to reach $6.08 trillion in 2026, with MLOps and 
 - Generative AI Engineering (Semester 3) recommended
 - Basic command line / terminal familiarity
 
+### Self-Check: Am I Ready?
+
+Before starting this course, make sure you can:
+- [ ] Open a terminal/command line and navigate to a folder
+- [ ] Run a Python script from the command line (`python my_script.py`)
+- [ ] Explain what a "server" is in simple terms (a computer that provides services to other computers)
+- [ ] Understand what "deploying a model" means (making it available for others to use)
+- [ ] Create and activate a Python virtual environment
+
+If you can't check all boxes, don't worry! Week 0 covers these foundations.
+
 ## Tools & Technologies
 
 Docker, Kubernetes, Helm, AWS (SageMaker, Bedrock, Lambda), GCP (Vertex AI, Cloud Run, GKE), Azure (ML Studio, OpenAI Service), Terraform, GitHub Actions, MLflow, FastAPI, NVIDIA Triton, vLLM, Kubeflow, Ray, Prometheus, Grafana
@@ -28,15 +39,32 @@ Docker, Kubernetes, Helm, AWS (SageMaker, Bedrock, Lambda), GCP (Vertex AI, Clou
 
 ---
 
+### Week 0: Computer Basics for Cloud
+
+*Welcome! This week covers the fundamentals you'll need before diving into cloud infrastructure. Think of it as learning to drive before building a car.*
+
+**Topics:**
+- What is a server? Cloud vs local computing (simple analogy: renting a powerful computer over the internet instead of buying one)
+- Terminal/command line basics: navigating folders, creating files, running scripts
+- What is Linux? Basic commands: `ls` (list files), `cd` (change directory), `mkdir` (make folder), `cat` (show file contents)
+- What is a container? (analogy: a shipping container — same box runs the same way everywhere, no matter the ship)
+
+**What You'll Build:**
+- Practice essential terminal commands in a guided exercise
+- Connect to a remote server (or cloud instance) for the first time via SSH
+- Run a simple Python script on a remote machine
+
+---
+
 ### Week 1: AI Infrastructure Fundamentals
 
 **Topics:**
 - What is AI infrastructure and why it matters
-- The AI compute stack: CPU vs GPU vs TPU vs custom accelerators (Apple Neural Engine, AWS Inferentia)
+- The AI compute stack: CPU (general processor) vs GPU (graphics processor, great for parallel AI tasks) vs TPU (Google's custom AI chip) vs custom accelerators (Apple Neural Engine, AWS Inferentia)
 - GPU deep dive: CUDA cores, tensor cores, GPU memory (VRAM), NVIDIA GPU generations (A100, H100, H200, B200)
 - Linux essentials for AI engineers: shell commands, file system, processes, permissions, environment variables
 - Development environment setup: SSH, tmux, conda/venv, Jupyter on remote machines
-- The cloud computing paradigm: IaaS, PaaS, SaaS — what AI engineers need
+- The cloud computing paradigm: IaaS (rent raw servers), PaaS (rent a platform to build on), SaaS (use ready-made software) — what AI engineers need
 - Introduction to the three major clouds: AWS, GCP, Azure — their AI/ML service landscape
 
 **What You'll Build:**
@@ -49,8 +77,8 @@ Docker, Kubernetes, Helm, AWS (SageMaker, Bedrock, Lambda), GCP (Vertex AI, Clou
 ### Week 2: Containerization with Docker
 
 **Topics:**
-- Why containers matter for AI: reproducibility, portability, isolation, dependency management
-- Docker fundamentals: images, containers, Dockerfile, docker-compose
+- Why containers matter for AI: reproducibility (works the same everywhere), portability, isolation, dependency management
+- Docker fundamentals: images (blueprints), containers (running instances), Dockerfile (recipe to build an image), docker-compose (running multiple containers together)
 - Building AI containers:
   - Python ML containers with GPU support
   - Multi-stage builds: reducing image size
@@ -72,8 +100,8 @@ Docker, Kubernetes, Helm, AWS (SageMaker, Bedrock, Lambda), GCP (Vertex AI, Clou
 ### Week 3: Kubernetes for AI Workloads
 
 **Topics:**
-- Why Kubernetes: orchestrating containers at scale
-- Kubernetes architecture: control plane, nodes, pods, services, deployments
+- Why Kubernetes (an open-source system for managing containers at scale — think of it as a container traffic controller): orchestrating containers at scale
+- Kubernetes architecture: control plane (the brain), nodes (worker machines), pods (smallest unit, usually one container), services, deployments
 - Core concepts for AI:
   - Pods: the smallest deployable unit
   - Deployments: managing replicas and rolling updates
@@ -124,11 +152,11 @@ Docker, Kubernetes, Helm, AWS (SageMaker, Bedrock, Lambda), GCP (Vertex AI, Clou
 ### Week 5: Infrastructure as Code & CI/CD for ML
 
 **Topics:**
-- Infrastructure as Code (IaC):
-  - Terraform: declarative infrastructure provisioning across clouds
+- Infrastructure as Code (IaC — defining your servers and services in code files instead of clicking through web consoles):
+  - Terraform: declarative infrastructure provisioning across clouds (describe what you want, and it builds it)
   - Writing Terraform modules for AI infrastructure: GPU instances, networking, storage
   - State management: remote state, locking, workspaces
-- CI/CD for machine learning:
+- CI/CD for machine learning (Continuous Integration/Continuous Deployment — automatically testing and deploying your code):
   - Why ML needs different CI/CD: data dependencies, model versioning, training pipelines
   - GitHub Actions: automating model training, testing, and deployment
   - GitOps with ArgoCD: declarative deployments to Kubernetes
@@ -165,7 +193,7 @@ Docker, Kubernetes, Helm, AWS (SageMaker, Bedrock, Lambda), GCP (Vertex AI, Clou
   - Quantization: FP16, INT8, INT4 — serving smaller, faster models
   - Batching: dynamic batching, continuous batching for LLMs
   - Caching: semantic caching, KV-cache optimization
-  - Speculative decoding: faster LLM inference
+  - Speculative decoding (using a small fast model to draft, then a big model to verify — speeds up generation)
 - Model routing: sending requests to the right model based on complexity, cost, or latency
 - A/B testing and canary deployments for models
 
@@ -186,10 +214,10 @@ Covers Weeks 1-6: cloud fundamentals, Docker, Kubernetes, cloud AI services, IaC
 
 **Topics:**
 - Why distributed training: models and datasets are too large for a single GPU
-- Data parallelism:
+- Data parallelism (each GPU trains on different data, then they share what they learned):
   - DistributedDataParallel (DDP): same model, different data shards on each GPU
-  - Gradient synchronization: AllReduce, Ring-AllReduce
-- Model parallelism:
+  - Gradient synchronization: AllReduce, Ring-AllReduce (ways GPUs share their learning)
+- Model parallelism (splitting a model that's too big for one GPU across multiple GPUs):
   - Tensor parallelism: splitting layers across GPUs
   - Pipeline parallelism: splitting model stages across GPUs
   - Sequence parallelism: distributing along the sequence dimension
@@ -242,8 +270,8 @@ Covers Weeks 1-6: cloud fundamentals, Docker, Kubernetes, cloud AI services, IaC
   - Grafana: dashboarding and visualization
   - GPU monitoring: nvidia-smi, DCGM (Data Center GPU Manager)
 - Model monitoring:
-  - Data drift: detecting changes in input distribution (Evidently, NannyML)
-  - Concept drift: detecting changes in the relationship between inputs and outputs
+  - Data drift (when real-world data starts looking different from what the model was trained on): detecting changes in input distribution (Evidently, NannyML)
+  - Concept drift (when the relationship between inputs and correct answers changes over time)
   - Performance monitoring: accuracy degradation, latency changes, error rate spikes
 - LLM-specific observability:
   - Token usage and cost tracking
@@ -295,7 +323,7 @@ Covers Weeks 1-6: cloud fundamentals, Docker, Kubernetes, cloud AI services, IaC
 
 **Topics:**
 - The cost problem: AI infrastructure is expensive — GPU compute, storage, API calls, data transfer
-- FinOps for AI: Financial Operations applied to AI workloads
+- FinOps for AI (Financial Operations — managing and optimizing cloud spending): applied to AI workloads
   - Cost visibility: tagging, allocation, chargeback
   - Cost optimization: right-sizing, spot instances, reserved capacity
   - Cost governance: budgets, alerts, approval workflows
@@ -346,7 +374,7 @@ Covers Weeks 1-6: cloud fundamentals, Docker, Kubernetes, cloud AI services, IaC
 - Edge-cloud hybrid architecture:
   - Split inference: lightweight model on edge, full model in cloud
   - Edge preprocessing + cloud analysis
-  - Federated learning: training across distributed edge devices
+  - Federated learning (training AI across many devices without collecting data in one place)
 - IoT + AI: smart sensors, predictive maintenance, industrial applications
 - 5G + Edge AI: low-latency distributed AI applications
 

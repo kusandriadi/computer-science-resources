@@ -15,6 +15,17 @@ This course provides a deep dive into neural network architectures beyond the in
 - Machine Learning (Semester 2) — neural networks, backpropagation, PyTorch basics
 - Generative AI Engineering (Semester 3) recommended but not required
 
+### Self-Check: Am I Ready?
+
+Before starting this course, make sure you can:
+- [ ] Explain what a neural network does in one sentence (e.g., "it learns patterns from data to make predictions")
+- [ ] Write a simple PyTorch model with at least one layer and train it on sample data
+- [ ] Understand what "training loss going down" means (the model is getting better)
+- [ ] Use Google Colab or a local setup with GPU access
+- [ ] Describe the difference between classification (categories) and regression (numbers)
+
+If you can't check all boxes, don't worry! Week 0 covers these foundations.
+
 ## Tools & Technologies
 
 PyTorch, Hugging Face Transformers, torchvision, torchaudio, TensorBoard, Weights & Biases, ONNX, CUDA basics
@@ -25,15 +36,32 @@ PyTorch, Hugging Face Transformers, torchvision, torchaudio, TensorBoard, Weight
 
 ---
 
+### Week 0: Neural Network Prerequisites
+
+*Welcome! This week bridges the gap from the ML course and makes sure you're comfortable with the tools we'll use all semester.*
+
+**Topics:**
+- Quick review: what is ML? (recap from Course 02 — how machines learn from data)
+- PyTorch refresher: tensors (multi-dimensional arrays), autograd (automatic calculation of gradients), simple training loop
+- GPU basics: why GPUs matter for deep learning, Google Colab setup for free GPU access
+- Linear algebra refresher: matrix multiplication, dot product — with visual intuition, not just formulas
+
+**What You'll Build:**
+- Set up Google Colab with GPU and verify it works
+- Build and train a tiny neural network in PyTorch (step by step, with comments explaining each line)
+- Visualize matrix multiplication: see how numbers flow through a neural network layer
+
+---
+
 ### Week 1: Deep Learning Foundations Review
 
 **Topics:**
 - Quick review: neural networks, backpropagation, activation functions, optimizers
-- Computational graphs and automatic differentiation (autograd) in depth
-- Advanced optimization: AdamW, LAMB, learning rate schedulers (cosine annealing, warmup)
-- Normalization techniques: Batch Norm, Layer Norm, Group Norm, RMSNorm — when to use which
-- Modern regularization: dropout, DropPath, stochastic depth, weight decay
-- Mixed precision training: FP16/BF16 — training faster with less memory
+- Computational graphs and automatic differentiation (autograd — letting PyTorch compute gradients for you) in depth
+- Advanced optimization: AdamW, LAMB, learning rate schedulers (cosine annealing, warmup — ways to control how fast the model learns over time)
+- Normalization techniques (keeping numbers in a stable range during training): Batch Norm, Layer Norm, Group Norm, RMSNorm — when to use which
+- Modern regularization (techniques to prevent the model from memorizing instead of learning): dropout, DropPath, stochastic depth, weight decay
+- Mixed precision training: FP16/BF16 (using lower-precision numbers) — training faster with less memory
 - GPU programming basics: why GPUs matter, CUDA concepts, memory management
 
 **What You'll Build:**
@@ -45,14 +73,14 @@ PyTorch, Hugging Face Transformers, torchvision, torchaudio, TensorBoard, Weight
 ### Week 2: Convolutional Neural Networks (CNN) — Architecture Deep Dive
 
 **Topics:**
-- Convolution operation: filters, stride, padding, receptive field
+- Convolution operation (sliding a small filter across an image to detect features like edges or textures): filters, stride, padding, receptive field
 - Classic architectures and their innovations:
   - LeNet → AlexNet → VGGNet: the early evolution
-  - ResNet: skip connections that solved the vanishing gradient problem
+  - ResNet: skip connections (shortcuts that let information bypass layers) that solved the vanishing gradient problem
   - Inception: multi-scale feature extraction
   - EfficientNet: compound scaling (depth × width × resolution)
 - Modern CNNs: ConvNeXt — CNNs that compete with Transformers (2022+)
-- Depthwise separable convolutions: MobileNet for efficient inference
+- Depthwise separable convolutions (a lighter, faster version of regular convolutions): MobileNet for efficient inference
 - Feature visualization: what do CNNs actually "see"?
 
 **What You'll Build:**
@@ -84,9 +112,9 @@ PyTorch, Hugging Face Transformers, torchvision, torchaudio, TensorBoard, Weight
 
 **Topics:**
 - Why sequences matter: text, audio, time series, video are all sequential
-- RNN deep dive: hidden states, BPTT (Backpropagation Through Time)
-- LSTM: forget gate, input gate, output gate — controlling information flow
-- GRU: simplified gating mechanism
+- RNN deep dive: hidden states (the network's "memory"), BPTT (Backpropagation Through Time — learning from sequences by going backwards through each step)
+- LSTM (Long Short-Term Memory): forget gate, input gate, output gate — controlling what information to keep and what to discard
+- GRU (Gated Recurrent Unit — a simpler version of LSTM): simplified gating mechanism
 - Bidirectional models: looking at past and future context
 - Sequence-to-sequence: encoder-decoder architecture for translation, summarization
 - The attention mechanism: Bahdanau attention, Luong attention
@@ -104,11 +132,11 @@ PyTorch, Hugging Face Transformers, torchvision, torchaudio, TensorBoard, Weight
 - The "Attention Is All You Need" paper (2017): a deep reading
 - Self-attention mechanics: Query, Key, Value in mathematical detail
 - Multi-head attention: why multiple attention heads capture different relationships
-- Positional encoding: sinusoidal, learned, RoPE (Rotary Position Embedding), ALiBi
+- Positional encoding (telling the model the order of words, since Transformers don't naturally know position): sinusoidal, learned, RoPE (Rotary Position Embedding), ALiBi
 - The full Transformer block: attention → Add & Norm → FFN → Add & Norm
 - Encoder-only vs Decoder-only vs Encoder-Decoder architectures
 - Computational complexity: O(n²) attention and efforts to reduce it
-- Efficient attention variants: Flash Attention, multi-query attention, grouped-query attention
+- Efficient attention variants (ways to make attention faster and use less memory): Flash Attention, multi-query attention, grouped-query attention
 - Implementation details that matter: pre-norm vs post-norm, initialization
 
 **What You'll Build:**
@@ -121,14 +149,14 @@ PyTorch, Hugging Face Transformers, torchvision, torchaudio, TensorBoard, Weight
 
 **Topics:**
 - Encoder models (BERT family):
-  - BERT: Masked Language Modeling + Next Sentence Prediction
+  - BERT: Masked Language Modeling (predicting hidden words in a sentence) + Next Sentence Prediction
   - RoBERTa: training BERT better
   - DeBERTa: disentangled attention
   - Use cases: classification, NER, question answering, semantic similarity
 - Decoder models (GPT family):
   - GPT, GPT-2, GPT-3 → GPT-4: the scaling journey
-  - Causal language modeling: predicting the next token
-  - Emergent abilities with scale: in-context learning, chain-of-thought
+  - Causal language modeling: predicting the next token (word piece)
+  - Emergent abilities with scale: in-context learning (learning from examples in the prompt), chain-of-thought (reasoning step by step)
 - Encoder-Decoder models:
   - T5: "Text-to-Text Transfer Transformer" — everything is a text generation problem
   - BART: denoising autoencoder for generation
@@ -150,7 +178,7 @@ Covers Weeks 1-6: deep learning foundations, CNNs, sequence models, Transformers
 ### Week 8: Transfer Learning & the Hugging Face Ecosystem
 
 **Topics:**
-- Transfer learning: why pre-training + fine-tuning works so well
+- Transfer learning (reusing a model trained on a large dataset for your specific task): why pre-training + fine-tuning works so well
 - The Hugging Face ecosystem:
   - Model Hub: thousands of pre-trained models
   - Datasets library: standardized dataset loading
@@ -158,7 +186,7 @@ Covers Weeks 1-6: deep learning foundations, CNNs, sequence models, Transformers
   - Trainer API: simplified fine-tuning
   - Pipeline API: zero-code inference
 - Fine-tuning strategies: full fine-tuning, feature extraction, gradual unfreezing
-- Parameter-efficient fine-tuning: LoRA, QLoRA, adapters, prefix tuning (practical deep dive)
+- Parameter-efficient fine-tuning (adapting a model without retraining all its billions of parameters): LoRA, QLoRA, adapters, prefix tuning (practical deep dive)
 - Evaluation: benchmarks (GLUE, SuperGLUE, MMLU), human evaluation, domain-specific metrics
 - Self-supervised learning: how models learn from unlabeled data (contrastive learning, masked modeling)
 
@@ -172,11 +200,11 @@ Covers Weeks 1-6: deep learning foundations, CNNs, sequence models, Transformers
 
 **Topics:**
 - Text classification: sentiment analysis, topic classification, intent detection
-- Named Entity Recognition (NER): extracting structured information from text
+- Named Entity Recognition (NER — finding names, places, dates, and other key items in text): extracting structured information from text
 - Question Answering: extractive (find the answer in the text) vs abstractive (generate the answer)
 - Text summarization: extractive vs abstractive approaches
 - Machine translation: modern approaches with Transformers
-- Semantic similarity: sentence embeddings, contrastive learning, bi-encoders vs cross-encoders
+- Semantic similarity (measuring how close two texts are in meaning): sentence embeddings, contrastive learning, bi-encoders vs cross-encoders
 - Information extraction: relation extraction, event extraction
 - Multilingual NLP: cross-lingual transfer, multilingual models (mBERT, XLM-R)
 
@@ -189,7 +217,7 @@ Covers Weeks 1-6: deep learning foundations, CNNs, sequence models, Transformers
 ### Week 10: Speech & Audio Deep Learning
 
 **Topics:**
-- Audio fundamentals: waveforms, spectrograms, mel-spectrograms, MFCCs
+- Audio fundamentals: waveforms (the raw sound signal), spectrograms (visual pictures of sound showing frequency over time), mel-spectrograms, MFCCs
 - Speech recognition (ASR): from CTC to attention-based models
   - Whisper (OpenAI): universal speech recognition
   - Wav2Vec 2.0: self-supervised speech representations
@@ -215,7 +243,7 @@ Covers Weeks 1-6: deep learning foundations, CNNs, sequence models, Transformers
   - The reparameterization trick
   - KL divergence and the ELBO objective
   - Applications: image generation, anomaly detection, data augmentation
-- Generative Adversarial Networks (GANs):
+- Generative Adversarial Networks (GANs — two networks competing: one creates fakes, one tries to catch them):
   - Generator vs discriminator: the adversarial game
   - Training challenges: mode collapse, training instability
   - Key architectures: DCGAN, StyleGAN, CycleGAN, Pix2Pix
@@ -279,9 +307,9 @@ Covers Weeks 1-6: deep learning foundations, CNNs, sequence models, Transformers
 
 **Topics:**
 - Model compression:
-  - Quantization: FP32 → FP16 → INT8 → INT4 — tradeoffs between size, speed, and accuracy
-  - Pruning: removing unnecessary weights and connections
-  - Knowledge distillation: training a smaller model to mimic a larger one
+  - Quantization (using less-precise numbers to make models smaller and faster): FP32 → FP16 → INT8 → INT4 — tradeoffs between size, speed, and accuracy
+  - Pruning (removing unnecessary connections to make models leaner): removing unnecessary weights and connections
+  - Knowledge distillation (training a smaller "student" model to mimic a larger "teacher" model): making compact models that still perform well
 - Model export: ONNX format for cross-platform deployment
 - Serving frameworks: TorchServe, NVIDIA Triton Inference Server, vLLM
 - Edge deployment: running models on mobile and embedded devices

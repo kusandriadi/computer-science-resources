@@ -17,6 +17,17 @@ This course serves as the prerequisite for **Generative AI Engineering** (Semest
 - Programming fundamentals (Python preferred)
 - Basic mathematics (algebra, introductory statistics)
 
+### Self-Check: Am I Ready?
+
+Before starting this course, make sure you can:
+- [ ] Write a Python function that takes inputs and returns a result
+- [ ] Use a `for` loop to go through a list of items
+- [ ] Create and use a Python dictionary (key-value pairs)
+- [ ] Read a simple graph (x-axis, y-axis) and understand what it shows
+- [ ] Solve basic algebra: if y = 2x + 3, what is y when x = 5?
+
+If you can't check all boxes, don't worry! Week 0 covers these foundations.
+
 ## Tools & Technologies
 
 Python, NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, FastAPI, Git, MLflow, OpenAI Gymnasium
@@ -24,6 +35,24 @@ Python, NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, FastAPI, Git, MLflow, 
 ---
 
 ## Weekly Schedule
+
+---
+
+### Week 0: Python & Math Refresher
+
+*Welcome! This week is designed to make sure everyone starts on the same page — no matter your background.*
+
+**Topics:**
+- Python basics recap: variables, data types, loops, functions, lists, dictionaries
+- Jupyter Notebook setup and workflow
+- Math refresher: basic algebra, reading graphs, what is a function f(x)
+- NumPy basics: arrays, operations, indexing
+- "Don't worry about math" — we'll teach it when you need it (just-in-time learning throughout the course)
+
+**What You'll Build:**
+- Set up your Python environment and run your first Jupyter Notebook
+- Complete a guided Python exercise: work with lists, dictionaries, and simple functions
+- Play with NumPy: create arrays, do basic math on them, and see how they differ from regular Python lists
 
 ---
 
@@ -59,7 +88,7 @@ Python, NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, FastAPI, Git, MLflow, 
 
 **Mathematics:**
 - Calculus: slope, derivatives, partial derivatives — what they mean intuitively
-- Optimization: cost function (Mean Squared Error), gradient descent algorithm
+- Optimization: cost function (Mean Squared Error — how far off our predictions are), gradient descent algorithm (finding the best answer step by step)
 - Learning rate: too high vs too low, convergence
 - Closed-form solution (Normal Equation) vs iterative optimization
 
@@ -81,9 +110,9 @@ Python, NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, FastAPI, Git, MLflow, 
 
 **Mathematics:**
 - Probability: conditional probability, Bayes' theorem — how prior knowledge affects predictions
-- The sigmoid (logistic) function: squashing outputs into probabilities
-- Log-loss / cross-entropy: why we use this instead of MSE for classification
-- Maximum likelihood estimation (intuitive)
+- The sigmoid (logistic) function: squashing outputs into probabilities (turning any number into a value between 0 and 1)
+- Log-loss / cross-entropy (a way to measure how wrong our classification predictions are): why we use this instead of MSE for classification
+- Maximum likelihood estimation (picking the model that makes our data most probable) — intuitive explanation
 
 **What You'll Build:**
 - Build a spam classifier from scratch
@@ -97,10 +126,10 @@ Python, NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, FastAPI, Git, MLflow, 
 **Topics:**
 - The fundamental challenge: overfitting vs underfitting
 - Training set, validation set, test set — why we split data
-- Cross-validation: k-fold, stratified k-fold
-- Evaluation metrics: accuracy, precision, recall, F1-score, AUC-ROC
+- Cross-validation (testing your model multiple times on different slices of data): k-fold, stratified k-fold
+- Evaluation metrics: accuracy, precision (of all positive predictions, how many were correct), recall (of all actual positives, how many did we find), F1-score, AUC-ROC
 - When accuracy is misleading: imbalanced datasets
-- Hyperparameter tuning: grid search, random search
+- Hyperparameter tuning (adjusting the "settings" of your model to get better results): grid search, random search
 
 **Mathematics:**
 - Statistics: mean, variance, standard deviation — measuring spread and central tendency
@@ -126,10 +155,10 @@ Python, NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, FastAPI, Git, MLflow, 
 - Feature importance: which features matter most
 
 **Mathematics:**
-- Information theory: entropy — measuring uncertainty/disorder in data
+- Information theory: entropy (measuring how "mixed up" or uncertain your data is)
 - Information gain: how much a split reduces uncertainty
-- Gini impurity: an alternative measure for split quality
-- Bootstrapping: sampling with replacement (the foundation of Random Forest)
+- Gini impurity (another way to measure how mixed a group is): an alternative measure for split quality
+- Bootstrapping (randomly picking data points, allowing repeats): the foundation of Random Forest
 
 **What You'll Build:**
 - Build a Decision Tree and visualize the splits
@@ -145,8 +174,8 @@ Python, NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, FastAPI, Git, MLflow, 
 - What is unsupervised learning? Finding patterns without labels
 - K-Means clustering: grouping similar data points
 - Hierarchical clustering and DBSCAN (overview)
-- Dimensionality reduction: why and when to reduce features
-- PCA (Principal Component Analysis): projecting data to lower dimensions
+- Dimensionality reduction (simplifying data by keeping only the most important features): why and when to reduce features
+- PCA (Principal Component Analysis — finding the most important patterns in your data): projecting data to lower dimensions
 - Practical applications: customer segmentation, anomaly detection
 
 **Mathematics:**
@@ -173,8 +202,8 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 **Topics:**
 - The reality of data: real-world data is messy, incomplete, and inconsistent
 - Handling missing data: imputation strategies (mean, median, KNN, iterative)
-- Categorical encoding: one-hot, label, ordinal, target encoding
-- Feature scaling: normalization (min-max) vs standardization (z-score) — when to use which
+- Categorical encoding (turning categories like "red/blue/green" into numbers the model can use): one-hot, label, ordinal, target encoding
+- Feature scaling (making sure all numbers are on a similar range so no feature dominates): normalization (min-max) vs standardization (z-score) — when to use which
 - Feature selection: filter methods, wrapper methods, embedded methods
 - Dealing with imbalanced data: oversampling (SMOTE), undersampling
 - Data privacy awareness: GDPR basics, PII handling, anonymization
@@ -241,8 +270,8 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 ### Week 11: Training Neural Networks
 
 **Topics:**
-- Backpropagation: how neural networks learn from mistakes
-- Optimizers: SGD, momentum, Adam — different strategies for finding the minimum
+- Backpropagation (how neural networks learn from mistakes — sending error signals backwards through the network)
+- Optimizers: SGD, momentum, Adam — different strategies for finding the best answer
 - Learning rate scheduling: starting fast, then slowing down
 - Regularization: preventing overfitting in neural networks
   - L1/L2 regularization (weight decay)
@@ -268,11 +297,11 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 
 **Topics:**
 - Why sequence matters: text, time series, audio are sequential data
-- Recurrent Neural Networks (RNN): processing one token at a time
-- The vanishing gradient problem: why basic RNNs struggle with long sequences
-- LSTM (Long Short-Term Memory): gates that control information flow (overview)
-- The attention mechanism: the breakthrough that changed everything
-- Self-attention: how Transformers process all tokens simultaneously
+- Recurrent Neural Networks (RNN — networks with "memory" that process sequences one step at a time)
+- The vanishing gradient problem (signals getting weaker as they travel through many layers): why basic RNNs struggle with long sequences
+- LSTM (Long Short-Term Memory — an improved RNN with gates that decide what to remember and forget): overview
+- The attention mechanism (letting the model focus on the most relevant parts of the input): the breakthrough that changed everything
+- Self-attention: how Transformers process all tokens (small pieces of text) simultaneously
 - The Transformer architecture: encoder-decoder, multi-head attention
 - How this leads to modern LLMs: GPT, BERT, and beyond
 - This is the bridge to Generative AI Engineering (Semester 2)
@@ -293,8 +322,8 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 ### Week 13: ML in Production, Responsible AI & Explainability
 
 **Topics:**
-- Model serving: packaging a model as a REST API with FastAPI
-- Model serialization: saving and loading models (pickle, ONNX, TorchScript)
+- Model serving: packaging a model as a REST API (a web service other programs can call) with FastAPI
+- Model serialization (saving your trained model to a file so you can use it later): pickle, ONNX, TorchScript
 - Monitoring in production: model drift detection, performance degradation
 - A/B testing models: comparing old vs new model in production
 - Responsible AI:
@@ -336,7 +365,7 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 **Topics:**
 - A different paradigm: supervised learning learns from examples, RL learns from experience
 - The RL framework: agent, environment, state, action, reward
-  - Markov Decision Process (MDP): the mathematical formulation of RL
+  - Markov Decision Process (MDP — a formal way to describe decision-making problems): the mathematical formulation of RL
   - Episodes, trajectories, and the goal of maximizing cumulative reward
 - Exploration vs exploitation: try something new or stick with what works?
   - Multi-Armed Bandit (MAB) — the simplest RL problem
@@ -403,8 +432,8 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 - Course recap and capstone project presentations
 
 **Mathematics:**
-- KL divergence: measuring how much the updated policy deviates from the original (used in PPO and RLHF)
-- Bradley-Terry model: converting human preference rankings into a reward signal
+- KL divergence (measuring how different two probability distributions are): how much the updated policy deviates from the original (used in PPO and RLHF)
+- Bradley-Terry model (a math formula that turns "I prefer A over B" into scores): converting human preference rankings into a reward signal
 - Statistics: comprehensive review of all mathematical concepts across the course
 
 **What You'll Build:**

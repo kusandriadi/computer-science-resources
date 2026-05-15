@@ -18,6 +18,17 @@ This course is the second semester of a two-part program. **Machine Learning** (
 - Python proficiency
 - Basic understanding of APIs and web development
 
+### Self-Check: Am I Ready?
+
+Before starting this course, make sure you can:
+- [ ] Write a Python script that reads a file and processes its contents
+- [ ] Install a Python package using `pip install`
+- [ ] Explain what a trained ML model does (takes input, makes a prediction)
+- [ ] Use a terminal/command line to navigate folders and run scripts
+- [ ] Understand what JSON looks like (key-value pairs like `{"name": "Alice", "age": 25}`)
+
+If you can't check all boxes, don't worry! Week 0 covers these foundations.
+
 ## Tools & Technologies
 
 Anthropic SDK, OpenAI SDK, Ollama, LangChain, LangGraph, CrewAI, ChromaDB, Hugging Face (Transformers, TRL, PEFT), Docker, GitHub Copilot, Claude Code, LangSmith/Langfuse, NeMo Guardrails
@@ -25,6 +36,24 @@ Anthropic SDK, OpenAI SDK, Ollama, LangChain, LangGraph, CrewAI, ChromaDB, Huggi
 ---
 
 ## Weekly Schedule
+
+---
+
+### Week 0: Getting Ready for GenAI
+
+*Welcome! This week gets you comfortable with the tools you'll use every day in this course — no prior experience needed.*
+
+**Topics:**
+- API basics: what is an API (a way for programs to talk to each other), how to call one, JSON format
+- Terminal/command line basics: navigating folders, running Python scripts
+- Environment setup: Python virtual environments, pip install
+- Your first API call: calling the Claude/GPT API with a simple prompt
+- What is a "model"? A simple mental model before diving deep
+
+**What You'll Build:**
+- Set up your development environment from scratch (Python, virtual environment, API keys)
+- Make your first API call to an AI model and get a response
+- Build a tiny script that sends a question to an AI and prints the answer
 
 ---
 
@@ -49,11 +78,11 @@ Anthropic SDK, OpenAI SDK, Ollama, LangChain, LangGraph, CrewAI, ChromaDB, Huggi
 ### Week 2: How LLMs Work
 
 **Topics:**
-- Tokenization: how text becomes numbers (BPE, SentencePiece, tiktoken)
+- Tokenization (breaking text into small pieces the AI can read): how text becomes numbers (BPE, SentencePiece, tiktoken)
 - The attention mechanism in depth: self-attention, multi-head attention, positional encoding
 - The generation pipeline: how an LLM produces text token by token
-- Decoding strategies: greedy, beam search, top-k, top-p (nucleus sampling), temperature
-- Context windows: what they are, why they matter, current limits
+- Decoding strategies (how the AI picks the next word): greedy, beam search, top-k, top-p (nucleus sampling), temperature
+- Context windows (the maximum amount of text the AI can "see" at once): what they are, why they matter, current limits
 - Standard LLMs vs Reasoning Models:
   - Reasoning models: OpenAI o1/o3/o4-mini, DeepSeek R1, Claude thinking mode
   - How reasoning models work: chain-of-thought at inference time, "thinking tokens"
@@ -166,14 +195,14 @@ Anthropic SDK, OpenAI SDK, Ollama, LangChain, LangGraph, CrewAI, ChromaDB, Huggi
 ### Week 6: Embeddings & Vector Databases
 
 **Topics:**
-- What are embeddings: representing text (and images, audio) as dense vectors
+- What are embeddings (turning words, sentences, or images into lists of numbers the AI understands): representing text (and images, audio) as dense vectors
 - How embedding models work: sentence-transformers, OpenAI embeddings, Cohere embeddings
-- Similarity metrics: cosine similarity, dot product, Euclidean distance
+- Similarity metrics (ways to measure how "close" two pieces of text are in meaning): cosine similarity, dot product, Euclidean distance
 - Vector databases:
   - Why traditional databases can't do similarity search efficiently
   - ChromaDB: lightweight, easy to start
   - Pinecone, Weaviate, Qdrant, Milvus: production-grade options
-  - Indexing strategies: HNSW, IVF, PQ — tradeoffs between speed and accuracy
+  - Indexing strategies (ways to organize data so searches are fast): HNSW, IVF, PQ — tradeoffs between speed and accuracy
 - Chunking strategies: how to split documents for optimal retrieval
   - Fixed-size chunks, sentence-based, semantic chunking, recursive splitting
   - Chunk size vs retrieval quality tradeoffs
@@ -195,8 +224,8 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
 ### Week 8: RAG Fundamentals
 
 **Topics:**
-- What is RAG (Retrieval-Augmented Generation): giving LLMs access to external knowledge
-- Why RAG matters: reducing hallucination, keeping information current, domain-specific answers
+- What is RAG (Retrieval-Augmented Generation — letting the AI look up information before answering): giving LLMs access to external knowledge
+- Why RAG matters: reducing hallucination (when AI confidently makes things up), keeping information current, domain-specific answers
 - The RAG pipeline:
   1. Document ingestion: loading PDFs, web pages, databases
   2. Chunking and embedding: preparing documents for retrieval
@@ -256,9 +285,9 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
 **Topics:**
 - What are AI agents: LLMs that can take actions in the real world
 - From chatbots to agents: the paradigm shift
-- Function calling / tool use:
+- Function calling / tool use (letting the AI use external tools like calculators, web search, or databases):
   - How LLMs call external functions: the API contract
-  - Defining tools with JSON schemas
+  - Defining tools with JSON schemas (describing what each tool does in a structured format)
   - Tool execution and response handling
   - Error handling and retry strategies
 - Agent architectures:
@@ -338,8 +367,8 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
   - Prompt engineering: for guiding existing capabilities
 - Parameter-Efficient Fine-Tuning (PEFT):
   - Full fine-tuning: expensive, requires all parameters
-  - LoRA (Low-Rank Adaptation): training small adapter matrices instead of full weights
-  - QLoRA: LoRA with quantization — fine-tune large models on consumer hardware
+  - LoRA (Low-Rank Adaptation — training a small "patch" instead of the whole model): training small adapter matrices instead of full weights
+  - QLoRA: LoRA with quantization (shrinking the model's memory footprint) — fine-tune large models on consumer hardware
   - Adapter layers, prefix tuning, prompt tuning
 - Knowledge distillation (teacher → student):
   - What it is: training a smaller model to mimic a larger model's behavior
@@ -389,9 +418,9 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
 ### Week 13: Evaluation, Testing & Safety
 
 **Topics:**
-- Red teaming:
+- Red teaming (intentionally trying to break your AI to find weaknesses):
   - What it is: adversarial testing to find vulnerabilities
-  - Common attack vectors: prompt injection, jailbreaking, data extraction
+  - Common attack vectors: prompt injection (tricking the AI with hidden instructions), jailbreaking (bypassing safety filters), data extraction
   - How to run a red teaming exercise systematically
   - Automated red teaming tools
 - Prompt injection defense:
@@ -444,7 +473,7 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
 **Topics:**
 - Production deployment:
   - API design for AI applications: streaming, async, batch
-  - Containerization with Docker: packaging AI applications
+  - Containerization with Docker (packaging your app so it runs the same way everywhere): packaging AI applications
   - Scaling strategies: horizontal scaling, load balancing, queue-based processing
   - Caching: semantic caching, exact match caching, cache invalidation
 - Monitoring and maintenance:

@@ -179,11 +179,9 @@ A consolidated, curated reading list. The "Tier 1" papers in each section are no
 - Jurafsky & Martin — *Speech and Language Processing* (3rd ed. draft, free online; the definitive NLP textbook covering everything from n-grams to transformers — essential foundation for anyone working with language models)
 - Tunstall, von Werra, Wolf 2022 — *Natural Language Processing with Transformers* (O'Reilly; practical Hugging Face guide covering text classification, NER, QA, summarization, generation, and model deployment)
 - Huyen 2022 — *Designing Machine Learning Systems* (O'Reilly; production ML systems design: data engineering, feature engineering, model deployment, monitoring, and iteration — essential for Module 8)
-- Prince 2023 — *Understanding Deep Learning* (free online: udlbook.github.io; modern, mathematically rigorous yet accessible — excellent coverage of transformers, diffusion models, and GANs)
 - Alammar & Grootendorst 2024 — *Hands-On Large Language Models* (O'Reilly; practical guide with visual explanations covering text embeddings, semantic search, text generation, and multimodal models)
 - Huyen 2025 — *AI Engineering* (O'Reilly; building AI applications with foundation models — covers prompt engineering, RAG, agents, fine-tuning, and evaluation in production settings)
 - Zhang, Lipton, Li, Smola — *Dive into Deep Learning* (free, interactive: d2l.ai; Chapter 11 covers Attention and Transformers in detail with runnable code — excellent hands-on complement to the architecture papers)
-- Fleuret 2023 — *The Little Book of Deep Learning* (free PDF; concise 160-page overview of deep learning — excellent quick reference for core concepts)
 - Stanford CS224N lecture notes (free; covers NLP foundations — word vectors, sequence models, attention, pretraining — relevant background for LLM internals)
 
 ## Where to follow ongoing work
