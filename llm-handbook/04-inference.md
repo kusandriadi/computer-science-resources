@@ -103,7 +103,15 @@ Inference servers (vLLM, TensorRT-LLM, SGLang) optimize for throughput across ma
 
 **Prefix caching**: many requests share a prefix (system prompt). Cache and share the KV.
 
-**Disaggregated serving**: separate prefill and decode onto different machines, since they have different optimal hardware (prefill = compute-bound, decode = memory-bound). DistServe, Mooncake. Increasingly common at scale.
+### Disaggregated (prefill-decode) inference
+
+As noted above, prefill is compute-bound while decode is memory-bandwidth-bound. They want fundamentally different hardware profiles — prefill benefits from raw FLOPS and high batch sizes, decode benefits from high memory bandwidth and large KV-cache capacity. **Disaggregated inference** separates the two phases onto different machine pools so each can be provisioned and optimized independently.
+
+The flow: a prefill cluster processes incoming prompts, materializes the KV cache, then transfers it to a decode cluster that generates tokens autoregressively. Key systems include **DistServe** (Zhong et al. 2024) and **Splitwise** (Patel et al. 2024), both of which demonstrate significant throughput and latency improvements over monolithic serving under production-like workloads.
+
+Benefits: the prefill pool can run at very high utilization without slowing decode latency, and the decode pool can be sized for its memory-bandwidth needs rather than over-provisioned for prefill compute. This improves overall GPU utilization and lowers per-token cost at scale.
+
+Trade-offs: the architecture adds orchestration complexity and requires fast inter-node KV-cache transfer (the cache can be gigabytes per request for long contexts). Network bandwidth between the two pools becomes a new bottleneck. Disaggregation pays off most in **high-throughput production settings** with mixed workloads (varying prompt lengths, bursty traffic) — at small scale, monolithic serving with continuous batching is simpler and sufficient.
 
 ## 4.7 Cost and latency reasoning
 

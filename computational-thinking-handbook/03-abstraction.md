@@ -18,6 +18,8 @@ See what you did? You kept the **important** stuff (directions, landmarks) and i
 
 It's like having a superpower that helps you see through all the confusing details and find what REALLY matters.
 
+> **Hey younger readers (ages 6-8)!** This is one of the trickier ideas in Computational Thinking. Don't worry if it feels hard at first! The simple version is: **abstraction means keeping the important stuff and leaving out the rest.** Like when you draw a stick figure — you keep the head, body, arms, and legs, but you leave out the fingernails, eyelashes, and belly button. That's abstraction! Read on, and the examples will help it make sense.
+
 ---
 
 ## Why Abstraction Matters

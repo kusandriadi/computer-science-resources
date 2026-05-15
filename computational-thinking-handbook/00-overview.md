@@ -168,4 +168,73 @@ Let's go, problem-solver!
 
 ---
 
+## Quiz Time!
+
+Test what you've learned! Write your answers on paper.
+
+**Question 1:** What is Computational Thinking?
+- A) A way to program computers
+- B) A set of smart problem-solving skills
+- C) A type of math test
+- D) Something only adults can do
+
+**Question 2:** What are the four main Computational Thinking skills?
+- A) Reading, Writing, Drawing, Singing
+- B) Decomposition, Pattern Recognition, Abstraction, Algorithm Design
+- C) Adding, Subtracting, Multiplying, Dividing
+- D) Running, Jumping, Climbing, Swimming
+
+**Question 3:** Which skill means "ignoring the stuff that doesn't matter and focusing on what's important"?
+- A) Decomposition
+- B) Pattern Recognition
+- C) Abstraction
+- D) Algorithm Design
+
+**Question 4:** Which two bonus skills did you learn about in this module?
+- A) Typing and Clicking
+- B) Logical Thinking and Debugging
+- C) Spelling and Grammar
+- D) Drawing and Painting
+
+**Question 5:** Rani's room was messy. She broke the big job of cleaning into smaller jobs (toys, books, clothes). Which Computational Thinking skill did she use first?
+- A) Abstraction
+- B) Pattern Recognition
+- C) Decomposition
+- D) Debugging
+
+---
+
+## Challenge: Spot All Six Skills!
+
+Here's a fun challenge for you:
+
+**Task:** Think about planning a birthday party for a friend.
+
+See if you can find all **six** Computational Thinking skills hiding in this one activity! Copy the list below and write an example for each one:
+
+1. **Decomposition:** How would you break "plan a birthday party" into smaller tasks?
+2. **Pattern Recognition:** What patterns can you use from parties you've been to before?
+3. **Abstraction:** What details do you NOT need to worry about right now?
+4. **Algorithm Design:** What is your step-by-step plan for the party day?
+5. **Logical Thinking:** Can you write an IF-THEN rule for the party? (Example: IF it rains, THEN we move the games inside.)
+6. **Debugging:** Something went wrong — the cake fell on the floor! How would you fix it?
+
+Share your answers with a friend or family member and see if they come up with different ideas!
+
+---
+
+## Answers
+
+**Question 1:** B) A set of smart problem-solving skills.
+
+**Question 2:** B) Decomposition, Pattern Recognition, Abstraction, Algorithm Design.
+
+**Question 3:** C) Abstraction.
+
+**Question 4:** B) Logical Thinking and Debugging.
+
+**Question 5:** C) Decomposition — she broke the big job into smaller pieces.
+
+---
+
 [Next: Module 01 — Decomposition](01-decomposition.md)

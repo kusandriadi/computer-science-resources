@@ -18,6 +18,17 @@ That's it. The astonishing thing is that this single objective, at sufficient sc
 
 A related framing: **compression**. A perfect next-token predictor minimum-description-length-compresses the training data. Hutter and others have argued that compression and intelligence are deeply linked.
 
+### Multi-token prediction
+
+Standard next-token prediction trains the model to predict one token ahead. **Multi-token prediction** generalizes this: predict the next $k$ tokens simultaneously using $k$ independent output heads that share the same trunk (Gloeckle et al. 2024, Meta). Each head $i$ is trained to minimize $-\log p_\theta(t_{j+i} \mid t_{\leq j})$.
+
+Why bother? Three benefits compound:
+- **Better sample efficiency and representations.** Predicting further ahead forces internal representations to encode longer-range structure; the gradient signal from later tokens teaches the trunk things that one-step-ahead loss misses.
+- **Improved downstream quality.** Meta reports consistent gains on code and reasoning benchmarks, especially at smaller model sizes, without extra data or compute at inference.
+- **Faster inference.** The extra heads can propose multiple tokens in a single forward pass, functioning as a built-in draft mechanism for speculative decoding (see Module 4, §4.5). Qwen-3 and other 2024–2025 models adopt this for both quality and speed.
+
+The overhead during training is modest — the auxiliary heads add parameters and FLOPs but the shared trunk computation is unchanged. Multi-token prediction is becoming a standard ingredient in modern pre-training recipes.
+
 ## 2.2 Data
 
 Frontier pre-training corpora are tens of trillions of tokens. Composition matters more than raw volume past a point.

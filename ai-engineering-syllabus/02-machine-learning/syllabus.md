@@ -331,75 +331,32 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 
 ---
 
-### Week 15: Reinforcement Learning — Machines That Learn by Doing
+### Week 15: Reinforcement Learning Fundamentals
 
 **Topics:**
 - A different paradigm: supervised learning learns from examples, RL learns from experience
 - The RL framework: agent, environment, state, action, reward
   - Markov Decision Process (MDP): the mathematical formulation of RL
   - Episodes, trajectories, and the goal of maximizing cumulative reward
-- Key concepts:
-  - Exploration vs exploitation: try something new or stick with what works?
-  - Discount factor (γ): how much to value future rewards vs immediate ones
-  - Policy (π): the agent's strategy — mapping states to actions
-  - Value function V(s) and action-value function Q(s,a): how good is this state/action?
-  - On-policy vs off-policy learning: learning from your own experience vs learning from others
-- Multi-Armed Bandit (MAB) — the simplest RL problem:
-  - The problem: you have N slot machines, each with unknown payout — which do you pull?
+- Exploration vs exploitation: try something new or stick with what works?
+  - Multi-Armed Bandit (MAB) — the simplest RL problem
   - Epsilon-greedy strategy: explore randomly ε% of the time, exploit the best option otherwise
   - Upper Confidence Bound (UCB): balance exploration with confidence intervals
   - Thompson Sampling: Bayesian approach to exploration
-  - Real-world applications: A/B testing, ad placement, content recommendation, clinical trials
-  - Why start here: MAB builds intuition for exploration-exploitation before full MDP
+  - Real-world applications: A/B testing, ad placement, content recommendation
+- Key concepts:
+  - Discount factor (γ): how much to value future rewards vs immediate ones
+  - Policy (π): the agent's strategy — mapping states to actions
+  - Value function V(s) and action-value function Q(s,a): how good is this state/action?
 - Value-based methods:
-  - Q-Learning: learning the optimal action-value function through trial and error
+  - Q-Learning (tabular): learning the optimal action-value function through trial and error
   - SARSA: on-policy alternative to Q-Learning
-  - Deep Q-Network (DQN): using neural networks to approximate Q-values (Atari breakthrough, DeepMind 2015)
-  - Experience replay: why storing and replaying past experiences improves stability
-  - Target networks: preventing moving-target instability in DQN
-- Policy-based methods:
+  - From tabular to deep: overview of DQN (Atari breakthrough, DeepMind 2015)
+- Policy gradient methods:
   - Why value-based methods struggle with continuous action spaces
   - REINFORCE algorithm: Monte Carlo policy gradient
-  - The high variance problem: why vanilla policy gradient is unstable
   - Baseline subtraction: reducing variance while keeping the estimate unbiased
-- Actor-Critic methods — combining both worlds:
-  - Actor: the policy network that decides actions
-  - Critic: the value network that evaluates how good the actions are
-  - Advantage function A(s,a): how much better is this action than average?
-  - A2C (Advantage Actor-Critic): synchronous training
-  - PPO (Proximal Policy Optimization): the workhorse algorithm of modern RL
-    - The clipping mechanism: preventing too-large policy updates
-    - Why PPO became the default: stable, simple, effective
-    - PPO is used in RLHF for LLM alignment — understanding PPO here is essential for Semester 3
-- RL in the real world:
-  - Game playing: AlphaGo (Monte Carlo Tree Search + RL), Atari (DQN), Dota 2 (PPO), StarCraft II
-  - Robotics: learning to walk, grasp objects, sim-to-real transfer
-  - Recommendation systems: optimizing long-term user engagement, not just click-through rate
-  - Resource optimization: data center cooling (Google DeepMind saved 40% energy), traffic control
-  - Finance: portfolio optimization, order execution
-- RL for LLMs — the bridge to Generative AI:
-  - RLHF (Reinforcement Learning from Human Feedback): how ChatGPT was aligned
-    - Step 1: supervised fine-tuning (SFT) — teach the model to follow instructions
-    - Step 2: train a reward model from human preference rankings (Bradley-Terry model)
-    - Step 3: optimize the policy (LLM) using PPO against the reward model
-    - The KL penalty: preventing the model from drifting too far from the SFT baseline
-  - DPO (Direct Preference Optimization): simpler alternative to RLHF
-    - Key insight: you can implicitly optimize the reward without training a separate reward model
-    - The DPO loss function: directly training on preference pairs (chosen vs rejected)
-    - Trade-offs vs RLHF: simpler but potentially less flexible
-  - GRPO (Group Relative Policy Optimization): how DeepSeek R1 was trained
-    - The innovation: using group scores instead of a learned reward model
-    - Sample multiple outputs, rank them, use relative ranking as reward signal
-    - Why it matters: enables training reasoning capabilities without human-labeled preferences
-  - RLVR (Reinforcement Learning from Verifiable Rewards): training reasoning models
-    - How o1, o3, and DeepSeek R1 learn to "think"
-    - Verifiable rewards: math problems have correct answers, code has test cases
-    - The emergence of chain-of-thought through RL: the model learns to reason because reasoning gets rewarded
-  - Constitutional AI (CAI): Anthropic's approach
-    - Self-critique: the model evaluates its own outputs against principles
-    - RLAIF (RL from AI Feedback): using AI instead of humans to provide feedback
-  - Why this matters: RL is the key technique that turns a base LLM into a helpful, harmless, and honest assistant
-- Limitations of RL: sample inefficiency, reward hacking, sim-to-real gap, safety concerns, reward misspecification
+- OpenAI Gymnasium basics: environment setup, observation/action spaces, training loops
 
 **Mathematics:**
 - Probability: Markov property — the future depends only on the present, not the past
@@ -407,24 +364,53 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
   - V*(s) = max_a [R(s,a) + γ · Σ P(s'|s,a) · V*(s')]
   - Q*(s,a) = R(s,a) + γ · Σ P(s'|s,a) · max_a' Q*(s',a')
 - Optimization: policy gradient theorem — how to compute gradients for policy improvement
-  - ∇J(θ) = E[∇log π(a|s;θ) · A(s,a)] — the core equation behind REINFORCE, A2C, and PPO
+  - ∇J(θ) = E[∇log π(a|s;θ) · A(s,a)] — the core equation behind REINFORCE
 - Discount factor: geometric series for cumulative rewards
-- KL divergence: measuring how much the updated policy deviates from the original (used in PPO and RLHF)
-- Bradley-Terry model: converting human preference rankings into a reward signal
 
 **What You'll Build:**
+- Train an agent to play CartPole and FrozenLake with Q-learning
+- Implement REINFORCE on a simple environment
 - Implement a Multi-Armed Bandit with epsilon-greedy, UCB, and Thompson Sampling — visualize regret curves
-- Train a Q-Learning agent to solve a grid world (visualize Q-values evolving over episodes)
-- Implement DQN to play a simple Atari game using OpenAI Gymnasium
-- Experiment with reward shaping: see how different reward functions change agent behavior
-- Walk through a simplified RLHF pipeline: generate preference data → train reward model → optimize with PPO
-- Compare DPO vs RLHF on a small language model: see how both methods align model outputs
 
 ---
 
-### Week 16: Final Exam
+### Week 16: RL for AI Alignment & Course Capstone
 
-Comprehensive exam covering all course material: ML concepts, algorithms, mathematics, evaluation, neural networks, production deployment, responsible AI, and explainability.
+**Topics:**
+- From RL to LLM alignment: the connection
+  - Actor-Critic methods: actor (policy network) + critic (value network)
+  - PPO (Proximal Policy Optimization): the workhorse algorithm behind RLHF
+    - The clipping mechanism: preventing too-large policy updates
+    - Why PPO became the default: stable, simple, effective
+- RLHF (Reinforcement Learning from Human Feedback): how ChatGPT was aligned
+  - Step 1: supervised fine-tuning (SFT) — teach the model to follow instructions
+  - Step 2: train a reward model from human preference rankings (Bradley-Terry model)
+  - Step 3: optimize the policy (LLM) using PPO against the reward model
+  - The KL penalty: preventing the model from drifting too far from the SFT baseline
+- DPO (Direct Preference Optimization): no reward model needed
+  - Key insight: you can implicitly optimize the reward without training a separate reward model
+  - The DPO loss function: directly training on preference pairs (chosen vs rejected)
+  - Trade-offs vs RLHF: simpler but potentially less flexible
+- GRPO (Group Relative Policy Optimization): how DeepSeek R1 was trained
+  - The innovation: using group scores instead of a learned reward model
+  - Sample multiple outputs, rank them, use relative ranking as reward signal
+  - RLVR (Reinforcement Learning from Verifiable Rewards): math problems have correct answers, code has test cases
+  - Why it matters: enables training reasoning capabilities without human-labeled preferences
+- Constitutional AI (CAI): self-improvement through principles
+  - Self-critique: the model evaluates its own outputs against principles
+  - RLAIF (RL from AI Feedback): using AI instead of humans to provide feedback
+- Why this matters: RL is the key technique that turns a base LLM into a helpful, harmless, and honest assistant
+- Course recap and capstone project presentations
+
+**Mathematics:**
+- KL divergence: measuring how much the updated policy deviates from the original (used in PPO and RLHF)
+- Bradley-Terry model: converting human preference rankings into a reward signal
+- Statistics: comprehensive review of all mathematical concepts across the course
+
+**What You'll Build:**
+- Implement a simplified preference learning pipeline
+- Course capstone: end-to-end ML project presentation
+- Comprehensive assessment covering all course material: ML concepts, algorithms, mathematics, evaluation, neural networks, production deployment, responsible AI, explainability, and reinforcement learning
 
 ---
 
@@ -451,6 +437,6 @@ By the end of this course, students will be able to:
 |---|---|---|
 | Linear Algebra | Vectors, matrices, dot product → covariance, eigen → attention matrices | 1, 6, 10, 12 |
 | Calculus | Derivatives → partial derivatives → chain rule (backpropagation) | 2, 11 |
-| Probability & Statistics | Bayes' theorem → distributions → correlation → A/B testing → Markov, Bellman | 3, 4, 5, 8, 13, 15 |
+| Probability & Statistics | Bayes' theorem → distributions → correlation → A/B testing → Markov, Bellman → KL divergence, Bradley-Terry | 3, 4, 5, 8, 13, 15, 16 |
 | Optimization | Gradient descent → SGD, Adam → regularization → policy gradient | 2, 11, 15 |
 | Information Theory | Entropy, information gain, Gini impurity | 5 |

@@ -15,6 +15,8 @@ The coolest tools of logical thinking are:
 - **If/Then rules** — "IF it's raining, THEN bring an umbrella."
 - **AND, OR, NOT** — combining conditions to make smarter decisions.
 
+> **Hey younger readers (ages 6-8)!** Logical thinking can sound complicated, but you already do it every day! When you think "IF it's raining, THEN I need an umbrella" — that's logical thinking! Just take it one step at a time, and try the activities. They'll make everything click.
+
 Let's dive in!
 
 ---
@@ -121,6 +123,12 @@ Sometimes decisions depend on MORE than one thing. That's where AND, OR, and NOT
   (Not a school day = weekend or holiday.)
 
 Let's put them together:
+
+**Simple version first:**
+
+**IF** it's sunny **AND** I have free time, **THEN** I can play outside!
+
+(See? We just combined two conditions with AND. Now here's a bigger example that uses AND, OR, and NOT all at once:)
 
 **IF** it's my birthday **AND** it's **NOT** raining **AND** (my friends can come **OR** my cousins can come), **THEN** have a party outside!
 
