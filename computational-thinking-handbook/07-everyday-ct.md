@@ -2,7 +2,7 @@
 
 ## Putting It All Together
 
-You've learned SIX amazing skills:
+Wow, look how far you've come! You've learned SIX amazing skills:
 
 1. **Decomposition** — Break big problems into small pieces.
 2. **Pattern Recognition** — Find things that repeat or are similar.
@@ -11,7 +11,7 @@ You've learned SIX amazing skills:
 5. **Logical Thinking** — Make smart decisions with if/then.
 6. **Debugging** — Find and fix mistakes.
 
-Each skill is powerful on its own. But when you use them TOGETHER, they become a **super combo**! In this module, we'll see how all these skills work together in your everyday life.
+Each skill is powerful on its own. But when you use them TOGETHER, they become a **super combo**! Now here's where it gets cool — let's see how all these skills work together in your everyday life.
 
 ---
 
@@ -290,11 +290,11 @@ At the end of the day, check:
 
 ---
 
-## Activity: Plan a Birthday Party Using ALL 4 CT Skills
+## Activity: Plan a Birthday Party Using ALL 6 CT Skills
 
 **What you need:** Paper, pencil, colored pencils (optional).
 
-This is your big challenge! Plan a birthday party from start to finish using Computational Thinking.
+Ready for a challenge? This is a big one! Plan a birthday party from start to finish using Computational Thinking.
 
 **Instructions:**
 
@@ -382,7 +382,7 @@ This combo works for ANYTHING:
 
 ## Challenge: Solve a Real Problem!
 
-Pick ONE real problem from your life right now. It could be:
+You're doing great! Now here's the ultimate test. Pick ONE real problem from your life right now. It could be:
 - Organizing your desk
 - Preparing for a test
 - Learning a new skill (like juggling or cooking)
@@ -404,11 +404,13 @@ Write it all down. Then ACTUALLY DO IT and see how well your plan works!
 
 ## What You Learned
 
-In this module, you learned that:
+Awesome work! In this module, you learned that:
 - The six CT skills work BEST when used together.
 - You can apply CT to real-life situations like organizing, planning parties, playing games, sorting, and scheduling.
 - **Decomposition** chops the problem up. **Pattern Recognition** finds familiar ground. **Abstraction** filters out the noise. **Algorithm Design** creates the plan. **Logical Thinking** handles decisions. **Debugging** catches and fixes mistakes.
 - You already use these skills every day — now you can use them on purpose!
+
+You're becoming a real problem-solving pro!
 
 ---
 

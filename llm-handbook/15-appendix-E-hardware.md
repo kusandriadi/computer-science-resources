@@ -1,6 +1,6 @@
 # Appendix E — Hardware for Production LLM
 
-How to choose GPUs (and other accelerators) for serving LLMs in production. Covers the actual current options, cost economics, and the decision framework — not theoretical max FLOPS.
+Picking the right GPU is one of those decisions that seems like it should be straightforward but is actually full of traps. This appendix covers the actual options, real-world cost economics, and a decision framework based on what matters in practice -- not theoretical peak FLOPS from a spec sheet.
 
 ## E.1 The shortlist
 

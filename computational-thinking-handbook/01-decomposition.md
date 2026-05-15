@@ -296,7 +296,7 @@ Try to come up with at least 15 steps! Share your answer with a friend and compa
 
 ## What You Learned
 
-In this module, you learned that:
+You're doing great! In this module, you learned that:
 - **Decomposition** means breaking big problems into small, manageable pieces.
 - Every big task is really just a bunch of small tasks stuck together.
 - Breaking things down makes problems feel less scary, lets you share work, and helps you find mistakes.

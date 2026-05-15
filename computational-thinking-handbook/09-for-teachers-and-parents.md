@@ -2,9 +2,9 @@
 
 ## Welcome, Educators!
 
-Thank you for exploring Computational Thinking (CT) with the young people in your life. Whether you are a classroom teacher, a homeschool parent, a tutor, or a family member helping with learning, this guide will help you make the most of this handbook.
+Thank you for exploring Computational Thinking (CT) with the young people in your life! Whether you are a classroom teacher, a homeschool parent, a tutor, or a family member helping with learning, this guide will help you make the most of this handbook.
 
-You don't need to be a computer scientist to teach CT. The concepts are intuitive, and many of the activities in this handbook require zero technology. Your role is to **facilitate, ask good questions, and encourage exploration**.
+You don't need to be a tech expert to teach CT. Seriously — if you can follow a recipe or organize a closet, you already understand these concepts! The ideas are intuitive, and many of the activities in this handbook require zero technology. Your role is to **facilitate, ask good questions, and encourage exploration**.
 
 ---
 
@@ -336,7 +336,7 @@ Here's a simple template you can use for any CT lesson:
 
 ### "I'm not a technology person. Can I still teach this?"
 
-Absolutely! Computational Thinking is about THINKING, not technology. Most activities in this handbook are unplugged. If you can follow a recipe, organize a closet, or play a board game, you already understand CT.
+Absolutely — you've got this! Computational Thinking is about THINKING, not technology. Most activities in this handbook are unplugged. If you can follow a recipe, organize a closet, or play a board game, you already understand CT. You don't need to be a tech expert to help kids become amazing problem-solvers.
 
 ### "How much time should I spend on each module?"
 
@@ -344,11 +344,15 @@ Each module can be covered in 1-3 sessions of 30-45 minutes each, depending on t
 
 ### "What if a child struggles with a concept?"
 
+Don't worry — this is completely normal. Every child learns at a different pace. Here are some things that help:
+
 - Try a different analogy or example.
 - Use a more hands-on activity.
 - Pair them with a peer who understands the concept.
 - Break the concept down even further (use decomposition on decomposition!).
 - Come back to it later — sometimes concepts need time to sink in.
+
+The most important thing is that the child feels safe to struggle and try again. Your encouragement makes all the difference.
 
 ### "What if kids already know this stuff?"
 
@@ -381,9 +385,9 @@ Look for these signs:
 
 Teaching Computational Thinking is one of the most valuable things you can do for young learners. These skills will serve them in every subject, every career, and every area of life. They will become better problem-solvers, clearer communicators, and more resilient learners.
 
-And the best part? It's fun. For you and for them.
+And the best part? It's fun. For you and for them. You may even find yourself thinking in new ways along the journey!
 
-Thank you for being a guide on this journey. Happy teaching!
+You don't need to be perfect — just be curious and enthusiastic alongside the kids. That energy is contagious. Thank you for being a guide on this journey. Happy teaching!
 
 ---
 

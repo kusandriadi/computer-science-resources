@@ -422,7 +422,7 @@ Write your answer in your own words.
 
 ## Challenge: Build a Mystery Solver
 
-Create a decision tree that helps solve a "mystery." Here's the setup:
+Ready for a challenge? Let's play detective! Create a decision tree that helps solve a "mystery." Here's the setup:
 
 **Mystery:** Someone ate the last cookie. There are 4 suspects: Mom, Dad, Big Sister, and the Dog.
 
@@ -442,7 +442,7 @@ Follow the logic and see where it leads!
 
 ## What You Learned
 
-In this module, you learned that:
+Awesome job! In this module, you learned that:
 - **Logical Thinking** uses rules and reasoning to make smart decisions.
 - **If/Then** statements help you make decisions based on conditions.
 - **AND** means both conditions must be true. **OR** means at least one must be true. **NOT** means the opposite.

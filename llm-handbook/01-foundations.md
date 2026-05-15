@@ -1,5 +1,7 @@
 # Module 1 — Foundations
 
+Everything else in this curriculum sits on top of this module. If you only have time for one module, make it this one. The ideas here -- tokens, embeddings, attention, the transformer block -- are the vocabulary the entire field thinks in.
+
 ## Learning goals
 
 By the end of this module you can:
@@ -11,7 +13,9 @@ By the end of this module you can:
 
 ## 1.1 Tokenization
 
-Why not characters or whole words? Characters explode sequence length (transformers are $O(n^2)$ in attention). Words explode vocabulary and choke on OOV. **Subword tokenization** balances both.
+Before an LLM sees your text, it has to chop it into pieces. The question is: what kind of pieces? Individual characters? Whole words? The answer is neither, and the reason is practical.
+
+Characters explode sequence length (transformers are $O(n^2)$ in attention, so longer sequences get expensive fast). Whole words explode vocabulary and choke on out-of-vocabulary words. **Subword tokenization** balances both -- it splits text into chunks that are bigger than characters but smaller than words, adapting to what appears frequently in the training data.
 
 Three common algorithms:
 
@@ -34,9 +38,9 @@ enc.encode(" hello world")         # different — leading space changes the fir
 
 ## 1.2 Embeddings and positional information
 
-Each token id is mapped to a vector via an embedding matrix $E \in \mathbb{R}^{V \times d}$, where $V$ is vocab size and $d$ is the model dimension. The output projection (logits) is often **tied** to $E^\top$ to save parameters.
+Now that we have token IDs, the model needs to turn them into something it can do math on. Each token ID gets mapped to a vector -- a list of numbers that represents the token's "meaning" in a high-dimensional space. Concretely, this is a lookup in an embedding matrix $E \in \mathbb{R}^{V \times d}$, where $V$ is vocab size and $d$ is the model dimension. The output projection (logits) is often **tied** to $E^\top$ to save parameters.
 
-Pure self-attention is permutation-equivariant: shuffle the tokens and you get shuffled outputs. So we inject position. Options:
+Here is a subtle but important point: pure self-attention is permutation-equivariant. If you shuffle the tokens, you get shuffled outputs -- the model has no idea what order the words came in. Obviously, word order matters ("the dog bit the man" vs. "the man bit the dog"), so we need to inject positional information. Options:
 
 - **Sinusoidal absolute** (original 2017 paper) — fixed sin/cos at different frequencies.
 - **Learned absolute** — a position embedding matrix $P \in \mathbb{R}^{L \times d}$ added to token embeddings. Used by GPT-2. Doesn't extrapolate past $L$.
@@ -48,17 +52,23 @@ RoPE dominates today because of its clean mathematical form and decent length ex
 
 ## 1.3 Attention
 
-Scaled dot-product attention:
+Attention is the core mechanism that makes transformers work, and it is worth building intuition before looking at the math.
+
+Think of it this way: when you read a sentence like "The cat sat on the mat because **it** was tired," your brain instantly knows "it" refers to "the cat." You are selectively paying attention to the relevant earlier word. Attention in a transformer does the same thing -- each token gets to look at every other token and decide how much to "focus on" each one. High attention weight means "this other token is important for understanding me."
+
+Concretely, each token produces three vectors: a **Query** ("what am I looking for?"), a **Key** ("what do I contain?"), and a **Value** ("what information do I provide if selected?"). The model computes how well each Query matches each Key, and uses those scores to take a weighted combination of Values.
+
+Now the math. Scaled dot-product attention:
 
 $$\text{Attn}(Q, K, V) = \text{softmax}\!\left(\frac{Q K^\top}{\sqrt{d_k}}\right) V$$
 
-The $\sqrt{d_k}$ scaling prevents softmax saturation as $d_k$ grows.
+The $\sqrt{d_k}$ scaling prevents softmax saturation as $d_k$ grows. Without it, large dot products would push softmax into a regime where gradients nearly vanish.
 
 **Multi-head**: project $Q, K, V$ into $h$ different subspaces in parallel, apply attention, concat, project out. Each head can specialize (some attend locally, some track syntax, some copy-and-paste, etc.).
 
 For decoders, a **causal mask** sets logits at $(i, j)$ to $-\infty$ for $j > i$, so token $i$ only attends to tokens $\leq i$. This is what enables next-token prediction.
 
-Modern attention variants reduce memory/compute, especially of the KV cache at inference:
+Modern attention variants reduce memory and compute, especially the cost of the KV cache at inference. This matters a lot in practice -- the KV cache is often the bottleneck that limits how many users you can serve at once (Module 4 goes deep on this):
 
 - **MHA** — original multi-head. $h$ Q heads, $h$ K heads, $h$ V heads.
 - **MQA** (Shazeer 2019) — $h$ Q heads, 1 K head, 1 V head. ~10× smaller KV cache, modest quality loss.
@@ -67,7 +77,7 @@ Modern attention variants reduce memory/compute, especially of the KV cache at i
 
 ## 1.4 The transformer block
 
-A modern decoder block (pre-norm, the dominant style):
+Now we can zoom out and see how attention fits into the bigger picture. A transformer is just a stack of identical blocks, and each block is surprisingly simple. Here is a modern decoder block (pre-norm, the dominant style):
 
 ```
 h = x + Attn(RMSNorm(x))
@@ -98,7 +108,7 @@ Modern frontier LLMs are decoder-only. The simplicity (one stack, one objective)
 
 ## 1.6 Putting it together: a forward pass
 
-For a sequence of $n$ tokens $t_1, \ldots, t_n$:
+Let's trace what actually happens when you feed a sentence into the model, start to finish. For a sequence of $n$ tokens $t_1, \ldots, t_n$:
 
 1. **Embed**: $x_i = E[t_i] \in \mathbb{R}^d$ (and add position if not using RoPE).
 2. **Stack of $L$ blocks**, each doing pre-norm → attention → residual → pre-norm → FFN → residual.

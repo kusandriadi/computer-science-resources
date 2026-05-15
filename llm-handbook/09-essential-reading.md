@@ -1,6 +1,6 @@
 # Essential Reading and Resources
 
-A consolidated, curated reading list. The "Tier 1" papers in each section are non-negotiable; the rest are excellent further reading.
+There are thousands of papers in this field. You do not need to read thousands of papers. This is the curated short list: the "Tier 1" papers in each section are the ones that genuinely shaped how things work today, and reading them will give you real understanding (not just familiarity). The "Further" papers are excellent if you want to go deeper on a specific topic.
 
 ## Architecture and foundations
 

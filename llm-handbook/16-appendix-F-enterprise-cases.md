@@ -1,6 +1,6 @@
 # Appendix F — Enterprise LLM Use Cases
 
-Real corporate use cases — tax, HR, legal, finance, compliance, customer ops — with the architecture patterns that actually work. The goal is to skip the "AI can do anything!" mindset and get to "here's exactly what to build, in what order, with what mitigations".
+Every domain thinks its LLM needs are unique. They are not -- most enterprise deployments end up looking surprisingly similar at the architecture level. This appendix covers real corporate use cases (tax, HR, legal, finance, compliance, customer ops) with the patterns that actually work. The goal is to skip the "AI can do anything!" hype and get to "here is exactly what to build, in what order, with what mitigations."
 
 Every section follows the same structure: **what the use case is**, **what works**, **what fails**, **architecture**, **deployment notes**.
 

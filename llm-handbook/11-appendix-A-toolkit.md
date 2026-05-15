@@ -1,6 +1,6 @@
 # Appendix A — Practical Toolkit
 
-A consolidated map of the tooling you actually use to do LLM work. Organized by stage of the stack, with opinionated picks at each layer.
+The LLM ecosystem has more tools than anyone can track. This appendix cuts through the noise: here is what people actually use at each layer of the stack, with opinionated picks so you do not waste a week evaluating twelve vector databases when any of three will do.
 
 ## Programming languages
 

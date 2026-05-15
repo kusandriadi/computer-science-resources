@@ -322,7 +322,7 @@ Notice how each level adds more information? That's moving DOWN the abstraction 
 
 ## What You Learned
 
-In this module, you learned that:
+You're doing great! In this module, you learned that:
 - **Abstraction** means keeping what's important and removing what's not.
 - Maps, recipes, stick figures, and game instructions are all examples of abstraction.
 - Abstraction helps you **focus**, **simplify**, **solve problems faster**, and **communicate better**.

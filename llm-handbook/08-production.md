@@ -1,6 +1,6 @@
 # Module 8 — Production
 
-Most production LLM systems fail not because the underlying model can't do the task, but because of weaknesses around it: prompts, retrieval, evaluation, monitoring, cost discipline. This module is the engineering checklist.
+Here is what actually works, from teams that have shipped. Most production LLM systems fail not because the model is bad, but because everything *around* the model is weak: the prompts are vague, the retrieval is sloppy, there is no evaluation pipeline, nobody is watching the logs, and costs are out of control. This module is the engineering checklist for avoiding those failures.
 
 ## Learning goals
 
@@ -128,7 +128,7 @@ Three numbers to know about every model and route:
 
 ## 8.7 Observability and continuous evaluation
 
-The single biggest difference between teams that ship reliable LLM products and teams that don't.
+This is the single biggest difference between teams that ship reliable LLM products and teams that don't. If you take one thing from this module, let it be this: log everything and look at the logs.
 
 **Log everything**:
 - Every prompt, response, tool call, tool result, latency, cost, model version.

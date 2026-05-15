@@ -1,6 +1,6 @@
 # Learning Plan — Step by Step
 
-A concrete roadmap through the curriculum. Three tracks depending on how much time you have. Each phase has a fixed deliverable (so you know you're done) and a self-check (so you know you understood).
+Reading the modules is necessary but not sufficient. You need a plan with deliverables and checkpoints, or the material stays theoretical. This is that plan: three tracks depending on how much time you have, with a fixed deliverable for each phase (so you know you are done) and a self-check (so you know you actually understood it).
 
 ## Choose your track
 

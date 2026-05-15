@@ -1,6 +1,6 @@
 # Module 7 — Evaluation, Interpretability, and Safety
 
-What you can't measure, you can't improve. Most apparent progress in LLMs is mediated by benchmarks, and most reported numbers are systematically misleading. This module is about reading and producing trustworthy evals.
+Let's be blunt: most benchmark numbers you see on Twitter or in model announcements are misleading. Not necessarily wrong, but presented in ways that overstate real-world differences. What you can't measure, you can't improve -- but what you measure badly, you improve in the wrong direction. This module is about reading and producing trustworthy evals, which is one of the most underrated skills in ML engineering.
 
 ## Learning goals
 
@@ -21,7 +21,7 @@ Most public benchmarks are static, reference-based capability tests. Most produc
 
 ## 7.2 Canonical benchmarks (and what they actually measure)
 
-A non-exhaustive map of what shows up on model cards in 2026:
+Before diving into the list, a word of context: benchmarks exist because we need *some* way to compare models, but every benchmark is a simplification. The ones below are what you will see on model cards and leaderboards. For each, it helps to know not just what it tests but where it breaks down.
 
 **General knowledge / reasoning**
 - **MMLU / MMLU-Pro**: multiple-choice across 57 academic subjects. Saturated at the top; MMLU-Pro is a harder rebuild.
@@ -61,7 +61,7 @@ A non-exhaustive map of what shows up on model cards in 2026:
 
 ## 7.3 How benchmarks mislead
 
-Read every benchmark number assuming at least one of these is happening, until you can rule them out.
+This section is arguably the most important in the entire module. Read every benchmark number assuming at least one of the following is happening, until you can rule them out.
 
 **Contamination.** The eval is in the training data, directly or in close paraphrase. Modern web corpora include the answers to every popular benchmark. Mitigations: held-out splits, recently-created benchmarks (LiveCodeBench), formal contamination checks (n-gram overlap, perplexity-on-canary).
 

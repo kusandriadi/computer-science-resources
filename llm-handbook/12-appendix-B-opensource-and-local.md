@@ -1,11 +1,13 @@
 # Appendix B — Open Source LLMs and Local Setup
 
-This appendix has two purposes:
+You cannot truly understand LLMs by only calling APIs. You need to run models yourself, poke at them, break them, and fine-tune them. This appendix gets you there.
+
+It has two purposes:
 
 1. Give you a map of the **open-weights model ecosystem** as it stands in 2026.
 2. Get you actually **running models locally** today, with Ollama and friends.
 
-Working with open models is non-negotiable for serious LLM learning. APIs are convenient, but you can't inspect, fine-tune, or run experiments on a black box. Open weights are how you build intuition.
+APIs are convenient, but you cannot inspect weights, run ablations, or fine-tune a black box. Open weights are how you build real intuition.
 
 ## B.1 Why open source matters
 

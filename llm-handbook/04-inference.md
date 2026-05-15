@@ -1,6 +1,6 @@
 # Module 4 — Inference
 
-Pre-training is where the capital goes; inference is where the operating cost lives. A frontier model's lifetime inference compute exceeds its training compute by orders of magnitude. Understanding inference is essential for both research (test-time compute scales capability) and production (latency and cost determine viability).
+Here is why inference optimization matters: you train a model once, but you run inference on it millions of times. A frontier model's lifetime inference compute exceeds its training compute by orders of magnitude. Every millisecond you shave off per token, every byte of memory you save, compounds across every request from every user. Understanding inference is essential for both research (test-time compute scales capability) and production (latency and cost determine whether your system is viable at all).
 
 ## Learning goals
 
@@ -22,7 +22,7 @@ This split has huge implications. Prefill is easy to make fast (lots of arithmet
 
 ## 4.2 The KV cache
 
-To generate token $i+1$, attention needs keys and values for all positions $\leq i$. Recomputing these from scratch at each step would be $O(n^2)$ in tokens. Instead, we cache:
+The KV cache is one of those ideas that sounds simple but has enormous practical consequences. Here is the intuition: when generating token 100, the model needs to attend to all 99 previous tokens. That means it needs the Key and Value vectors for each of those tokens, at every layer. Recomputing these from scratch at each step would be $O(n^2)$ in tokens -- wasteful, since the K/V for earlier tokens do not change. Instead, we cache:
 
 - After each forward pass at position $i$, append the new $K_i$ and $V_i$ to a per-layer cache.
 - Subsequent decode steps only compute new K/V for the latest token and read cached K/V from previous tokens.
@@ -58,7 +58,9 @@ Modern defaults: temperature 0.7–1.0 with top-p 0.9 or min-p 0.05. For reasoni
 
 ## 4.4 Quantization
 
-Storing/computing weights in lower precision. Critical for fitting models on smaller hardware and for memory-bandwidth-bound decode.
+The idea behind quantization is straightforward: instead of storing every model weight as a 16-bit or 32-bit number, use fewer bits. An INT8 weight takes half the memory of bf16; INT4 takes a quarter. This matters because decode speed is almost entirely limited by how fast you can move weights from memory to the GPU cores. Fewer bits per weight means faster movement and, often, faster inference.
+
+The trade-off is precision. With fewer bits you lose some information, and the question is: how much quality do you lose in practice? The answer, for well-done quantization, is often "surprisingly little."
 
 **Weight precisions**:
 - **bf16** (16 bits): default training/inference precision. Same range as fp32, less mantissa.
@@ -81,9 +83,11 @@ Practical rule: INT8 weights are usually free in quality. INT4 weights with GPTQ
 
 ## 4.5 Speculative decoding
 
-Decode is bandwidth-bound: you spend most of your time reading weights, not computing. **Speculative decoding** (Leviathan et al., Chen et al. 2023) exploits this.
+Here is a clever insight: during decode, the GPU is mostly waiting for data to move from memory -- it has compute capacity to spare. What if we used that spare capacity to verify multiple tokens at once, instead of generating them one by one?
 
-Idea: use a small **draft model** to propose $k$ tokens cheaply. Verify all $k$ in parallel with one forward pass of the **target model** (large model verifies as easily as it generates one token). Keep all draft tokens that the target would have produced; the rest are rejected.
+That is exactly what **speculative decoding** (Leviathan et al., Chen et al. 2023) does.
+
+The idea: use a small **draft model** to propose $k$ tokens cheaply. Verify all $k$ in parallel with one forward pass of the **target model** (large model verifies as easily as it generates one token). Keep all draft tokens that the target would have produced; the rest are rejected.
 
 If the draft model agrees with the target $\alpha$ fraction of the time, you get roughly $1 + k\alpha$ target tokens per target forward pass instead of 1. For typical setups $\alpha \approx 0.7$, yielding ~2–3× speedup with no quality loss (it's mathematically equivalent to sampling from the target).
 
@@ -105,7 +109,7 @@ Inference servers (vLLM, TensorRT-LLM, SGLang) optimize for throughput across ma
 
 ### Disaggregated (prefill-decode) inference
 
-As noted above, prefill is compute-bound while decode is memory-bandwidth-bound. They want fundamentally different hardware profiles — prefill benefits from raw FLOPS and high batch sizes, decode benefits from high memory bandwidth and large KV-cache capacity. **Disaggregated inference** separates the two phases onto different machine pools so each can be provisioned and optimized independently.
+Since prefill and decode have such different resource profiles (one wants raw compute, the other wants memory bandwidth), a natural question arises: why run them on the same machine? They want fundamentally different hardware profiles — prefill benefits from raw FLOPS and high batch sizes, decode benefits from high memory bandwidth and large KV-cache capacity. **Disaggregated inference** separates the two phases onto different machine pools so each can be provisioned and optimized independently.
 
 The flow: a prefill cluster processes incoming prompts, materializes the KV cache, then transfers it to a decode cluster that generates tokens autoregressively. Key systems include **DistServe** (Zhong et al. 2024) and **Splitwise** (Patel et al. 2024), both of which demonstrate significant throughput and latency improvements over monolithic serving under production-like workloads.
 

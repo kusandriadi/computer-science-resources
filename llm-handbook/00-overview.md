@@ -1,10 +1,10 @@
 # LLM Learning Curriculum — Foundations to Frontier
 
-A structured path from "what is a transformer" to "I can read a frontier-model paper and reproduce the core ideas." Calibrated for both research depth and production work.
+You want to go from "what is a transformer?" to "I can read a frontier-model paper and reproduce the core ideas." This is your roadmap. It is built for both research depth and production work, and it assumes you are serious about doing both.
 
 ## Who this is for
 
-- ML engineers and researchers who want a coherent, modern reference
+- ML engineers and researchers who want a coherent, modern reference -- not a scattered collection of blog posts
 - Practitioners who already use LLMs but want to understand the internals
 - People moving from adjacent ML areas (vision, RL, classical NLP) into LLMs
 
@@ -38,7 +38,7 @@ If any of these are shaky: Goodfellow et al. *Deep Learning* (Ch. 2–6) covers 
 | 16 | Appendix F — Enterprise cases | Tax, HR, legal, finance, compliance — architectures and regulations |
 | 17 | Appendix G — Security | Prompt injection, data leakage, tool abuse, OWASP LLM Top 10 |
 
-Each module is roughly 30–90 minutes of reading plus the same again on exercises and papers. Linear order recommended for a first pass; the modules are also independently useful as references.
+Each module is roughly 30–90 minutes of reading plus the same again on exercises and papers. If this is your first pass, go in order -- each module builds on the last. But they also work as standalone references if you need to jump straight to, say, inference optimization.
 
 **A practical tip**: do Appendix B (local setup) in parallel with Module 1. Having models actually running on your machine while learning the theory is a huge accelerator.
 
@@ -63,7 +63,7 @@ Suggested companion projects:
 
 ## Reading discipline
 
-Don't just read. For each paper:
+This is the most important section on this page. Don't just read. For each paper:
 1. Read the abstract and conclusion. Predict the method.
 2. Read the method. Sketch the algorithm on paper.
 3. Read the results. Note what you'd want to ablate.

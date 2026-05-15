@@ -12,9 +12,11 @@ The biggest capability shift of 2024–2025 was the maturation of "test-time com
 
 ## 6.1 Chain of thought
 
-**Chain-of-thought** (CoT, Wei et al. 2022): prompt the model to produce intermediate reasoning steps before the final answer. On many tasks (math, multi-step reasoning, code) this dramatically improves accuracy.
+Here is a concrete example of why chain-of-thought matters. Ask a model: "Roger has 5 tennis balls. He buys 2 cans of 3 tennis balls each. How many does he have now?" Without CoT, the model might just blurt out a number (sometimes wrong). With CoT, the model writes: "Roger starts with 5. He buys 2 cans x 3 = 6 balls. Total = 5 + 6 = 11." That step-by-step process dramatically reduces errors.
 
-The simplest form is zero-shot: append "Let's think step by step." (Kojima et al. 2022). Few-shot CoT shows worked examples. Both improve over direct answering on hard tasks for sufficiently large models.
+**Chain-of-thought** (CoT, Wei et al. 2022) is the general technique: prompt the model to produce intermediate reasoning steps before the final answer. On many tasks (math, multi-step reasoning, code) this dramatically improves accuracy.
+
+The simplest form is zero-shot: append "Let's think step by step." (Kojima et al. 2022). Few-shot CoT shows worked examples in the prompt. Both improve over direct answering on hard tasks for sufficiently large models.
 
 **Why does CoT help?** Two complementary explanations:
 
@@ -73,7 +75,7 @@ A tool-using LLM emits a structured call (function name, arguments) when it deci
 
 ## 6.5 Agents
 
-An "agent" is a system where an LLM iteratively chooses actions (tool calls, sub-tasks) toward a goal, observing results between steps. Examples: code-writing agents (Devin-style, Aider, Claude Code), browsing agents, research agents.
+An "agent" is just a system where an LLM sits in a loop: it looks at the current situation, decides what to do next (call a tool, ask a question, write some code), observes what happened, and repeats. If you have used Claude Code, Cursor, or any coding assistant that edits files and runs tests on its own -- that is an agent. Other examples: browsing agents that navigate websites, research agents that search and synthesize information, customer service bots that look up accounts and take actions.
 
 **Design patterns** (Anthropic's *Building Effective Agents* is a good reference):
 
@@ -93,7 +95,7 @@ Practical principles:
 
 ## 6.6 Retrieval-augmented generation (RAG)
 
-RAG: augment the LLM with retrieval over an external corpus. Used when you need to ground in knowledge the model doesn't have (private docs, fresh data, citations).
+LLMs know what was in their training data, but they do not know your company's internal docs, yesterday's news, or the paper you published last week. RAG solves this by giving the model a search engine: before generating an answer, it retrieves relevant documents and includes them in the prompt. This is the single most common architecture for production LLM applications.
 
 **Standard pipeline**:
 

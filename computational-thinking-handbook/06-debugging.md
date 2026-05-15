@@ -384,7 +384,7 @@ Write your answer in your own words.
 
 ## Challenge: The Ultimate Bug Hunt
 
-Here's a story FULL of bugs. How many can you find?
+Ready for a challenge? Here's a story FULL of bugs. How many can you find?
 
 **Ravi's Morning (Full of Bugs):**
 
@@ -398,7 +398,7 @@ Write down each bug and explain what should have been different.
 
 ## What You Learned
 
-In this module, you learned that:
+You're becoming a debugging pro! In this module, you learned that:
 - **Debugging** means finding and fixing mistakes.
 - The word "bug" comes from a real moth found in a computer in 1947!
 - The debugging process is: Notice the problem, Check each step, Find the bug, Fix it, Test again.

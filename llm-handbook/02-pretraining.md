@@ -1,5 +1,7 @@
 # Module 2 — Pre-training
 
+Pre-training is where a model acquires almost everything it knows. You take a randomly initialized neural network, show it trillions of tokens, and what comes out the other end can translate, code, reason, and follow instructions -- all from a single objective: predict the next token. This module covers how that works and how to make it work at scale.
+
 ## Learning goals
 
 - Understand the next-token-prediction objective and why it works
@@ -54,7 +56,7 @@ Frontier pre-training corpora are tens of trillions of tokens. Composition matte
 
 ## 2.3 Scaling laws
 
-The single most important empirical result in modern LLMs: loss as a function of compute, data, and parameters follows a power law.
+Why do bigger models work better? And how much bigger do they need to be to get a specific improvement? Scaling laws answer these questions, and they are arguably the single most important empirical result in modern LLMs: loss as a function of compute, data, and parameters follows a power law. This means performance is predictable -- you can forecast how good a model will be before you spend the money to train it.
 
 **Kaplan et al. 2020** (OpenAI): for fixed compute, optimal allocation favors more parameters than data. Implied: keep growing models.
 
@@ -95,7 +97,9 @@ i.e. ~20 tokens per parameter. A 70B model should train on ~1.4T tokens. GPT-3 (
 
 ## 2.5 Distributed training
 
-Single GPU pre-training stops working past ~7B params (model + optimizer + activations exceed 80GB). Modern pre-training spans hundreds to tens of thousands of GPUs. Four orthogonal parallelism dimensions:
+Here is the practical problem: a single GPU cannot train a large model. Even an 80 GB H100 runs out of memory once you add up the model parameters, optimizer states, and activations for a 7B+ model. And even if it fit, training would take years. So modern pre-training spreads the work across hundreds to tens of thousands of GPUs. The challenge is doing this efficiently -- GPUs are fast at computation but communication between them is relatively slow.
+
+There are four orthogonal parallelism dimensions, and understanding when to use each is one of the most practical skills in large-scale ML:
 
 **Data parallelism (DP)**: each rank has a full model copy; different ranks see different micro-batches; gradients are all-reduced. Simple. Scales until model doesn't fit.
 

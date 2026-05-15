@@ -1,8 +1,8 @@
 # Appendix C — Agent Engineering
 
-Module 6 covers agents conceptually. This appendix is the engineering deep-dive: how to actually design tools, write skills, build MCP servers, structure plans, and run an agent loop that doesn't fall apart on real work.
+If Module 6 is the "what" and "why" of agents, this appendix is the "how" -- the nuts and bolts of making an agent that actually works. Tool design, state management, error recovery, MCP, skills: this is the stuff that separates a demo from a product.
 
-The audience is someone building agents (not just calling them). If you're going through the learning plan, this maps onto Phase 6B.
+The audience is someone building agents (not just calling them). If you are going through the learning plan, this maps onto Phase 6B.
 
 ## C.1 The agent loop, properly
 

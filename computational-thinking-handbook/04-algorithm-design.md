@@ -110,7 +110,7 @@ Every algorithm should have a starting point and an ending point. You should kno
 
 ## Algorithms with Decisions
 
-Some algorithms have decision points — places where you have to make a choice. We use **IF-THEN** for these.
+Now here's where it gets cool. Some algorithms have decision points — places where you have to make a choice. We use **IF-THEN** for these.
 
 **Example: Getting dressed in the morning**
 
@@ -399,7 +399,7 @@ Set B: "Turn left out of the classroom. Walk to the end of the hallway. Turn rig
 
 ## Challenge: Design Your Own Game
 
-Here's a big challenge: **design a simple game and write the algorithm for playing it!**
+Ready for a BIG challenge? **Design a simple game and write the algorithm for playing it!**
 
 Your game algorithm should include:
 1. **Setup:** What do you need? How many players?
@@ -415,7 +415,7 @@ The game can be anything — a card game, a board game, a running game, a guessi
 
 ## What You Learned
 
-In this module, you learned that:
+Amazing work! In this module, you learned that:
 - An **algorithm** is a set of step-by-step instructions to solve a problem or complete a task.
 - Good algorithms have clear steps, correct order, nothing missing, and a clear start and end.
 - Algorithms can include **decisions** (IF-THEN) and **loops** (REPEAT UNTIL).

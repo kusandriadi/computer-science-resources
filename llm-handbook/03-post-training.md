@@ -1,6 +1,8 @@
 # Module 3 — Post-training
 
-The transformation from "next-token predictor on the internet" to "useful assistant" happens in post-training. This is where most of the visible character of a model is forged.
+Here is the thing about a freshly pre-trained model: it is like a brilliant but unfiltered intern. It has absorbed an enormous amount of knowledge, but it has no idea how to be helpful. Ask it a question and it might continue with another question, paste HTML, or write something offensive -- because that is what "the internet" looks like, and predicting the internet is all it was trained to do.
+
+Post-training is where you teach it manners. This is the transformation from "next-token predictor on the internet" to "useful assistant," and it is where most of the visible character of a model is forged.
 
 ## Learning goals
 
@@ -51,6 +53,10 @@ Loss is usually masked to only the assistant turns — you don't want the model 
 
 ## 3.3 Reinforcement learning from human feedback (RLHF)
 
+SFT teaches the model what a good response *looks like*, but it does not teach the model to *choose* a good response over a mediocre one. That is what RLHF does: it gives the model a sense of "better" and "worse" by learning from human preferences.
+
+A concrete example: ask the model "Explain quantum entanglement." SFT might produce a correct but jargon-heavy answer. RLHF, trained on human preferences, learns that the same model should produce a clear, well-structured answer -- because that is what humans consistently preferred during training.
+
 The standard RLHF recipe (Ouyang et al. 2022, InstructGPT):
 
 **Step 1 — collect preferences**. For each prompt $x$, sample multiple responses from an SFT model. A human ranks them. Pairs become $(x, y_w, y_l)$ — preferred and dispreferred.
@@ -77,7 +83,7 @@ The KL penalty prevents the policy from drifting too far from the SFT model — 
 
 ## 3.4 Direct Preference Optimization (DPO)
 
-DPO (Rafailov et al. 2023) is a remarkable result. It shows that the RLHF objective has a *closed-form optimal policy* in terms of the reward and reference policy:
+RLHF works, but it is complex -- four models in memory, sensitive hyperparameters, reward hacking. DPO (Rafailov et al. 2023) is a remarkable shortcut. It shows that the RLHF objective has a *closed-form optimal policy* in terms of the reward and reference policy:
 
 $$\pi^*(y|x) = \frac{1}{Z(x)}\, \pi_{\text{ref}}(y|x)\, \exp\!\left(\frac{1}{\beta} r(x, y)\right)$$
 
@@ -87,7 +93,7 @@ Substitute into the Bradley-Terry RM loss. The $\log Z(x)$ cancels in the pairwi
 
 $$\mathcal{L}_{DPO} = -\mathbb{E}_{(x, y_w, y_l)}\!\left[\log \sigma\!\left(\beta \log \frac{\pi_\theta(y_w|x)}{\pi_{\text{ref}}(y_w|x)} - \beta \log \frac{\pi_\theta(y_l|x)}{\pi_{\text{ref}}(y_l|x)}\right)\right]$$
 
-That's a supervised loss directly on the policy. No reward model, no RL loop, no value function. Train it like you'd train SFT.
+That is a supervised loss directly on the policy. No reward model, no RL loop, no value function. You train it the same way you would train SFT -- just with a different loss function. The elegance here is real: all the complexity of RLHF collapses into a single, stable training objective.
 
 **When DPO wins**: simpler infra, more stable, almost no hyperparameter tuning beyond $\beta$. Strong default for small-scale post-training.
 
@@ -96,7 +102,7 @@ That's a supervised loss directly on the policy. No reward model, no RL loop, no
 - You have a high-quality reward signal (verifier, code execution, math grader) — this is the regime where modern reasoning models live.
 - You can afford the compute.
 
-**DPO variants**: IPO (fixes a length-bias issue), KTO (single-rating instead of pairwise), ORPO (combines SFT and preferences in one step), SimPO (length-normalized, reference-free). These trade off simplicity and quality differently; pick by empirical results on your task.
+**DPO variants** -- the field has not stopped at vanilla DPO. Each variant below addresses a specific limitation: IPO (fixes a length-bias issue), KTO (works with single ratings instead of pairwise comparisons -- useful when you only have thumbs-up/thumbs-down data), ORPO (combines SFT and preferences in one step), SimPO (length-normalized, reference-free). These trade off simplicity and quality differently; pick by empirical results on your task, not by which paper is newest.
 
 ## 3.5 RLAIF and Constitutional AI
 
@@ -111,7 +117,7 @@ The constitution makes values explicit and auditable. Modern alignment work incr
 
 ## 3.6 RL with verifiable rewards: the reasoning regime
 
-For tasks where correctness is checkable — math problems with known answers, code with unit tests, formal proofs — you don't need a learned reward model. The verifier is the reward.
+This section describes arguably the most exciting result in post-training from the last two years. The key insight: for tasks where correctness is checkable -- math problems with known answers, code with unit tests, formal proofs -- you do not need a learned reward model at all. The verifier *is* the reward. Did the code pass the test? Did the math answer match? That binary signal turns out to be enough to teach a model to reason.
 
 **GRPO** (Group Relative Policy Optimization, DeepSeek-Math/R1 2024–2025): sample $G$ responses per prompt, compute the reward for each, use the group mean as a baseline. Drops the value function entirely. Simpler than PPO and works well when rewards are dense enough.
 

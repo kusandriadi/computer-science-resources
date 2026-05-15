@@ -1,6 +1,6 @@
 # Module 5 — Architectures
 
-The vanilla decoder transformer described in Module 1 is the foundation; modern frontier models extend it along three axes: sparsity (MoE), context length, and modality. This module covers each.
+The basic transformer from Module 1 is powerful, but it is not the final word. Real frontier models push beyond it in three directions: making models bigger without proportionally increasing compute (MoE), handling much longer inputs (long context), and processing images, audio, and video alongside text (multimodal). This module covers each of those extensions and what is changing at the architectural level.
 
 ## Learning goals
 
@@ -11,7 +11,9 @@ The vanilla decoder transformer described in Module 1 is the foundation; modern 
 
 ## 5.1 Mixture of Experts
 
-A dense transformer activates all parameters for every token. MoE makes the FFN sparse: each token is routed to a small subset of $E$ expert FFNs.
+Think of it like a hospital. A dense transformer is a single general practitioner who handles every patient, no matter the condition. A Mixture of Experts (MoE) model is a hospital with many specialists -- each patient (token) gets routed to the relevant specialist, and only that specialist does the work. The hospital has far more total medical knowledge than a single GP, but any given patient only uses a fraction of it.
+
+Concretely: a dense transformer activates all parameters for every token. MoE makes the FFN sparse -- each token is routed to a small subset of $E$ expert FFNs.
 
 **Mechanics**:
 - A gating network produces a score $g(x) \in \mathbb{R}^E$ per token.
@@ -33,7 +35,9 @@ Modern MoE designs (Mixtral, DeepSeek-V3, Qwen-MoE) have 30B–700B total parame
 
 ## 5.2 Long context
 
-The vanilla transformer attention is $O(n^2)$ in both compute and memory. Pre-trained models also typically can't extrapolate past the training context length. Two problems, sometimes addressed together.
+Why does long context matter practically? Consider the difference between a model that can see 4,000 tokens (about 3 pages of text) and one that can see 1 million tokens (an entire codebase, or a shelf of books). Long context turns LLMs from tools that answer questions about a paragraph into tools that reason over entire documents, repositories, and databases.
+
+But it is not free. The vanilla transformer attention is $O(n^2)$ in both compute and memory. Pre-trained models also typically cannot extrapolate past the training context length. Two problems, sometimes addressed together.
 
 ### Length extrapolation with RoPE
 
@@ -95,7 +99,7 @@ Modern vision-language models (LLaVA, GPT-4V, Claude, Gemini, Qwen-VL):
 
 ## 5.4 State-space models (SSMs) and hybrids
 
-The transformer's $O(n^2)$ scaling and KV-cache memory inspired a re-examination of recurrent architectures with modern tricks.
+The key question here is: can we get something close to the transformer's quality without paying its $O(n^2)$ cost? The transformer's quadratic scaling and ever-growing KV cache are real problems at long context lengths, which inspired a re-examination of recurrent architectures with modern tricks.
 
 **S4 / S5 / Mamba** (Gu, Dao et al. 2021–2023). A linear time-invariant state-space model:
 

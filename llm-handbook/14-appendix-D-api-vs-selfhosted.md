@@ -1,6 +1,6 @@
 # Appendix D — API vs Self-Hosted Open-Source: Tradeoffs
 
-When you have a real workload, the first architectural decision is: hit a frontier API (Claude, GPT, Gemini), or run an open-weights model on your own infrastructure (possibly customized to your data)? This appendix is a structured way to think about it, plus the vocabulary you need to talk about customization without confusing yourself.
+This is one of the first decisions every team gets wrong at least once. Do you call a frontier API, or do you run your own model? The answer depends on your volume, your privacy requirements, your team, and your budget -- and most people jump to "let's self-host" or "let's just use the API" without thinking through the tradeoffs. This appendix gives you a structured way to make that call, plus the vocabulary you need to talk about customization without confusing yourself.
 
 ## D.1 The terminology you actually need
 

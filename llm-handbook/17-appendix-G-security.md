@@ -1,8 +1,8 @@
 # Appendix G — LLM Security
 
-LLM applications introduce attack surfaces that classical web security doesn't cover. This appendix is a structured map of what to defend against, with mitigations that actually work.
+If you are building anything that lets an LLM interact with the real world -- read files, send emails, query databases, browse the web -- you need to read this appendix. LLM applications introduce attack surfaces that classical web security does not cover, and the most important one (prompt injection) has no complete solution yet.
 
-The standard reference is the **OWASP Top 10 for LLM Applications** (updated annually). What follows is organized around the same threat categories with practical depth, plus a few that OWASP doesn't fully capture.
+The standard reference is the **OWASP Top 10 for LLM Applications** (updated annually). What follows is organized around the same threat categories with practical depth, plus a few that OWASP does not fully capture.
 
 ## G.1 Threat model first
 

@@ -2,15 +2,15 @@
 
 ## No Computer Needed!
 
-This module is packed with fun activities, games, and puzzles that teach Computational Thinking — all WITHOUT a computer! These activities work great in classrooms, at home, or with friends.
+Get ready — this is the FUN part! This module is packed with awesome games, cool puzzles, and hands-on activities that teach Computational Thinking — all WITHOUT a computer! You can play these in your classroom, at home, or with friends.
 
-Each activity lists:
+Here's what you'll see for each activity:
 - **What you need** (materials)
 - **How many players**
 - **CT skills practiced**
 - **Step-by-step instructions**
 
-Let's play!
+Ready? Let's play!
 
 ---
 
@@ -24,7 +24,7 @@ Let's play!
 
 ### What Is a Sorting Network?
 
-A sorting network is a set of paths on the ground with "compare" stations. Two people walk along paths, and when they meet at a station, they compare their numbers. The person with the SMALLER number always goes left, and the person with the BIGGER number always goes right.
+This one is really cool! A sorting network is a set of paths on the ground with "compare" stations. Two people walk along paths, and when they meet at a station, they compare their numbers. The person with the SMALLER number always goes left, and the person with the BIGGER number always goes right.
 
 By the end, everyone is sorted in order — without anyone needing to see the big picture!
 
@@ -83,7 +83,7 @@ Nobody decided the final order. Nobody could see everyone's numbers. The simple 
 
 ### What Are Binary Numbers?
 
-Computers use only two digits: **0** and **1**. This is called **binary**. Every number, letter, picture, and video on a computer is stored using just 0s and 1s!
+This is one of the coolest things about computers! They use only two digits: **0** and **1**. This is called **binary**. Every number, letter, picture, and video on a computer is stored using just 0s and 1s!
 
 Let's turn your age (or any number) into binary and make a bracelet out of it.
 
@@ -196,6 +196,8 @@ What shape does this make? (Hint: it's a diamond!)
 
 ## Activity 4: Treasure Hunt with Algorithms
 
+This one is really fun!
+
 **What you need:** Small "treasure" (a toy, candy, sticker), paper, pencil, an area to hide the treasure
 
 **CT Skills:** Algorithm Design, Logical Thinking, Debugging
@@ -243,6 +245,8 @@ If the Seeker can't find the treasure, debug together:
 
 ## Activity 5: Error Detection Magic Trick (Parity)
 
+Get ready — this is tricky but SO cool!
+
 **What you need:** 36 cards or pieces of paper (two colors — like blue and yellow), a flat surface
 
 **CT Skills:** Pattern Recognition, Logical Thinking, Debugging
@@ -251,7 +255,7 @@ If the Seeker can't find the treasure, debug together:
 
 ### The Magic Trick
 
-This trick amazes people because you can tell which card someone flipped — without looking!
+This trick will amaze your friends because you can tell which card someone flipped — without even looking!
 
 ### Setup
 
@@ -488,6 +492,8 @@ If you don't want to use real food, cut paper into "bread slices" and use colore
 
 ## Activity 12: The Debugging Relay Race
 
+This is a great one for teams!
+
 **What you need:** 2 teams of 3-4 players, paper, pencils, a list of "buggy" instructions
 
 **CT Skills:** Debugging, Algorithm Design
@@ -534,6 +540,8 @@ Prepare 5 sets of "buggy instructions" (instructions with mistakes). Write each 
 ---
 
 ## Activity 13: Secret Code Messages
+
+Ready for a challenge? Let's send secret messages like a spy!
 
 **What you need:** Paper, pencils, the code key below
 
@@ -655,7 +663,7 @@ If the drawings don't match:
 
 ## Bonus Activity: Create Your Own CT Game!
 
-Now it's YOUR turn. Use what you've learned to create your own game that teaches one or more CT skills.
+Now it's YOUR turn — and this is going to be awesome! Use what you've learned to create your own game that teaches one or more CT skills.
 
 **Your game should have:**
 1. A clear name
@@ -697,7 +705,7 @@ Write up your game, test it with friends, and debug it until it works perfectly!
 
 ---
 
-Have fun with these activities! The more you play, the stronger your Computational Thinking skills become. And remember — the best part about these games is that you're learning to think like a problem-solver while having a great time!
+You did it — you made it through ALL the activities! You're doing amazing! The more you play these games, the stronger your Computational Thinking skills become. And remember — the best part is that you're learning to think like a problem-solver while having a great time! Now go try your favorites with your friends!
 
 ---
 
