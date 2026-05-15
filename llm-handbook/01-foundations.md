@@ -1,0 +1,132 @@
+# Module 1 — Foundations
+
+## Learning goals
+
+By the end of this module you can:
+
+- Explain why we use subword tokenization and tokenize text with `tiktoken`
+- Compute attention by hand on a 3-token example
+- Trace a full forward pass through a decoder block
+- Implement a minimal GPT (≤300 lines) that trains on character-level data
+
+## 1.1 Tokenization
+
+Why not characters or whole words? Characters explode sequence length (transformers are $O(n^2)$ in attention). Words explode vocabulary and choke on OOV. **Subword tokenization** balances both.
+
+Three common algorithms:
+
+- **BPE** (Byte-Pair Encoding, Sennrich et al. 2016). Start with characters; iteratively merge the most frequent adjacent pair into a new token. GPT, LLaMA, and most modern decoders use *byte-level* BPE on UTF-8 bytes, so any string is representable (no `<UNK>`).
+- **WordPiece** (used by BERT). Similar to BPE but merges based on likelihood gain rather than raw frequency.
+- **Unigram / SentencePiece** (Kudo 2018). Starts with a large vocab and prunes; works on raw bytes, no pre-tokenization needed.
+
+Practical notes:
+
+- **Token economy matters**. English prose is ~0.75 words/token. Code, math, and non-Latin scripts are denser (more tokens per byte). Tokenization choices materially affect compute cost and effective context length.
+- **Numbers** are a known pain point. Older tokenizers split numbers inconsistently ("1234" might be `1234` or `1`, `234`); modern tokenizers (LLaMA-3, GPT-4o) often digit-by-digit or grouped consistently to help arithmetic.
+- **`tiktoken`** is the fast reference implementation. `cl100k_base` is GPT-3.5/4; `o200k_base` is GPT-4o-era.
+
+```python
+import tiktoken
+enc = tiktoken.get_encoding("cl100k_base")
+enc.encode("hello world")          # [15339, 1917]
+enc.encode(" hello world")         # different — leading space changes the first token
+```
+
+## 1.2 Embeddings and positional information
+
+Each token id is mapped to a vector via an embedding matrix $E \in \mathbb{R}^{V \times d}$, where $V$ is vocab size and $d$ is the model dimension. The output projection (logits) is often **tied** to $E^\top$ to save parameters.
+
+Pure self-attention is permutation-equivariant: shuffle the tokens and you get shuffled outputs. So we inject position. Options:
+
+- **Sinusoidal absolute** (original 2017 paper) — fixed sin/cos at different frequencies.
+- **Learned absolute** — a position embedding matrix $P \in \mathbb{R}^{L \times d}$ added to token embeddings. Used by GPT-2. Doesn't extrapolate past $L$.
+- **Relative** (Shaw, T5) — biases attention scores by token distance.
+- **RoPE** (Rotary Position Embedding, Su et al. 2021) — rotates Q/K vectors in 2D subspaces by an angle proportional to position. The dot product $\langle Q_i, K_j \rangle$ then depends on $i - j$ naturally. Used by LLaMA, Mistral, Qwen, DeepSeek, and most modern decoders.
+- **ALiBi** (Press et al. 2022) — adds a linear penalty $-m \cdot (i - j)$ to attention logits. No learned positional params; extrapolates well.
+
+RoPE dominates today because of its clean mathematical form and decent length extrapolation when combined with scaling tricks (Module 5).
+
+## 1.3 Attention
+
+Scaled dot-product attention:
+
+$$\text{Attn}(Q, K, V) = \text{softmax}\!\left(\frac{Q K^\top}{\sqrt{d_k}}\right) V$$
+
+The $\sqrt{d_k}$ scaling prevents softmax saturation as $d_k$ grows.
+
+**Multi-head**: project $Q, K, V$ into $h$ different subspaces in parallel, apply attention, concat, project out. Each head can specialize (some attend locally, some track syntax, some copy-and-paste, etc.).
+
+For decoders, a **causal mask** sets logits at $(i, j)$ to $-\infty$ for $j > i$, so token $i$ only attends to tokens $\leq i$. This is what enables next-token prediction.
+
+Modern attention variants reduce memory/compute, especially of the KV cache at inference:
+
+- **MHA** — original multi-head. $h$ Q heads, $h$ K heads, $h$ V heads.
+- **MQA** (Shazeer 2019) — $h$ Q heads, 1 K head, 1 V head. ~10× smaller KV cache, modest quality loss.
+- **GQA** (Ainslie et al. 2023) — group K/V heads. LLaMA-2 70B uses 8 KV heads for 64 Q heads. Best practical tradeoff for dense models.
+- **MLA** (Multi-head Latent Attention, DeepSeek-V2) — compress K/V to a low-rank latent, decompress when needed. Aggressive KV savings.
+
+## 1.4 The transformer block
+
+A modern decoder block (pre-norm, the dominant style):
+
+```
+h = x + Attn(RMSNorm(x))
+y = h + FFN(RMSNorm(h))
+```
+
+Three things to know:
+
+**RMSNorm** has largely replaced LayerNorm (Zhang & Sennrich 2019). Just divides by the RMS of the activation; no mean-centering. Cheaper and works as well.
+
+$$\text{RMSNorm}(x) = \frac{x}{\sqrt{\frac{1}{d}\sum_i x_i^2 + \epsilon}} \odot \gamma$$
+
+**FFN** is typically a **SwiGLU**:
+
+$$\text{FFN}(x) = W_3 \big(\text{SiLU}(W_1 x) \odot (W_2 x)\big)$$
+
+where $\text{SiLU}(x) = x \cdot \sigma(x)$. The gated version (Shazeer 2020) consistently outperforms plain ReLU/GELU MLPs. Hidden dim is often $\approx \tfrac{8}{3} d$ when using SwiGLU to keep total params comparable to a $4d$ vanilla MLP.
+
+**Residual stream**. The Anthropic "transformer circuits" framing is useful: each block reads from and writes to a shared residual stream. The stream is the dominant flow of information; attention and FFN are corrections applied to it. This perspective is essential later for interpretability.
+
+## 1.5 Decoder-only vs. encoder-decoder
+
+- **Decoder-only** (GPT, LLaMA, Mistral, Qwen, Claude). Causal mask, autoregressive. Predicts the next token given all previous tokens. Dominant paradigm for generation.
+- **Encoder-only** (BERT, RoBERTa). Bidirectional attention, masked LM objective. Great for representations and classification; can't generate.
+- **Encoder-decoder** (T5, BART, original Transformer). Encoder reads input; decoder generates output cross-attending to encoder. Still used in translation and some seq2seq tasks.
+
+Modern frontier LLMs are decoder-only. The simplicity (one stack, one objective) and the empirical scaling have won.
+
+## 1.6 Putting it together: a forward pass
+
+For a sequence of $n$ tokens $t_1, \ldots, t_n$:
+
+1. **Embed**: $x_i = E[t_i] \in \mathbb{R}^d$ (and add position if not using RoPE).
+2. **Stack of $L$ blocks**, each doing pre-norm → attention → residual → pre-norm → FFN → residual.
+3. **Final RMSNorm** on the residual stream.
+4. **Project to vocab**: $\text{logits}_i = x_i^{(L)} E^\top \in \mathbb{R}^V$ (weight-tied).
+5. **Loss**: cross-entropy against $t_{i+1}$ at each position $i$.
+
+The whole model is one differentiable function. You train by gradient descent on the cross-entropy loss.
+
+## Key papers
+
+- Vaswani et al. 2017 — *Attention is All You Need*. The foundational paper.
+- Radford et al. 2018, 2019 — *GPT-1 / GPT-2*. Decoder-only LM at scale.
+- Devlin et al. 2018 — *BERT*. For the encoder side.
+- Su et al. 2021 — *RoFormer (RoPE)*.
+- Shazeer 2020 — *GLU Variants*. Why SwiGLU.
+- Ainslie et al. 2023 — *GQA*.
+
+## Exercises
+
+1. Implement scaled dot-product attention in PyTorch in under 10 lines. Verify gradient flow on a tiny example.
+2. Build a single-block transformer with $d = 64$, train it to copy a 10-token sequence. Watch the attention map develop a diagonal.
+3. Compare BPE tokenization of an English paragraph, a Python function, and a paragraph of Mandarin. Plot tokens-per-byte for each.
+4. Implement RoPE. Verify that rotating both $Q$ and $K$ by the same position gives the same attention score (relative-only property).
+
+## Further reading
+
+- Karpathy's *Let's build GPT from scratch* (YouTube + nanoGPT repo).
+- Phuong & Hutter 2022 — *Formal Algorithms for Transformers*. Precise pseudocode.
+- Anthropic's *A Mathematical Framework for Transformer Circuits* (transformer-circuits.pub). Essential perspective.
+- Lilian Weng's blog post *The Transformer Family v2* — comprehensive variant survey.
