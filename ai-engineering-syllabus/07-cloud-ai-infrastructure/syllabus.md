@@ -6,9 +6,9 @@
 
 ## Course Overview
 
-This course transforms AI practitioners into infrastructure-capable engineers who can take models from notebooks to production at scale. In 2026, cloud-native AI is the default — organizations are rapidly moving all AI workloads to the cloud, and the demand for professionals who can bridge the gap between model development and production operations is surging. Students will master containerization, orchestration, CI/CD for ML, cloud AI services, GPU management, distributed training, serverless inference, cost optimization, and the emerging practice of FinOps for AI.
+You've trained a machine learning model. It works great on your laptop. Now what? How do you make it available to thousands of users? How do you keep it running reliably? How do you stop the cloud bill from exploding?
 
-Global IT spending is projected to reach $6.08 trillion in 2026, with MLOps and AI infrastructure skills among the most valued in the industry.
+That's what this course is about. You'll learn to take AI models out of Jupyter notebooks and into the real world. We'll cover containers, cloud platforms, deployment, monitoring, security, and cost optimization. These are the skills that turn a data scientist into someone who can actually ship AI products.
 
 ---
 
@@ -99,9 +99,15 @@ Docker, Kubernetes, Helm, AWS (SageMaker, Bedrock, Lambda), GCP (Vertex AI, Clou
 
 ### Week 3: Kubernetes for AI Workloads
 
+*Why this matters: Docker runs one container. Kubernetes runs thousands of containers and keeps them healthy automatically. If you're deploying AI at any real scale, you'll need Kubernetes.*
+
 **Topics:**
 - Why Kubernetes (an open-source system for managing containers at scale — think of it as a container traffic controller): orchestrating containers at scale
-- Kubernetes architecture: control plane (the brain), nodes (worker machines), pods (smallest unit, usually one container), services, deployments
+- Kubernetes architecture — the key pieces:
+  - Control plane (the brain)
+  - Nodes (worker machines)
+  - Pods (smallest unit, usually one container)
+  - Services and deployments
 - Core concepts for AI:
   - Pods: the smallest deployable unit
   - Deployments: managing replicas and rolling updates
@@ -109,7 +115,7 @@ Docker, Kubernetes, Helm, AWS (SageMaker, Bedrock, Lambda), GCP (Vertex AI, Clou
   - ConfigMaps and Secrets: managing configuration
   - Persistent Volumes: storing model artifacts and data
 - GPU scheduling in Kubernetes: NVIDIA device plugin, resource requests/limits
-- Autoscaling AI workloads:
+- Autoscaling AI workloads — making your system grow and shrink automatically:
   - Horizontal Pod Autoscaler (HPA): scaling based on CPU/memory/custom metrics
   - Vertical Pod Autoscaler (VPA): right-sizing pod resources
   - KEDA: event-driven autoscaling for AI inference
@@ -150,6 +156,8 @@ Docker, Kubernetes, Helm, AWS (SageMaker, Bedrock, Lambda), GCP (Vertex AI, Clou
 ---
 
 ### Week 5: Infrastructure as Code & CI/CD for ML
+
+*Why this matters: Clicking through cloud consoles to set up servers is slow and error-prone. This week teaches you how to define your entire infrastructure in code — so it's repeatable, reviewable, and automated.*
 
 **Topics:**
 - Infrastructure as Code (IaC — defining your servers and services in code files instead of clicking through web consoles):
@@ -212,6 +220,8 @@ Covers Weeks 1-6: cloud fundamentals, Docker, Kubernetes, cloud AI services, IaC
 
 ### Week 8: Distributed Training
 
+*Why this matters: Modern AI models are too large to train on a single GPU. This week teaches you how to spread training across multiple GPUs and even multiple machines.*
+
 **Topics:**
 - Why distributed training: models and datasets are too large for a single GPU
 - Data parallelism (each GPU trains on different data, then they share what they learned):
@@ -236,6 +246,8 @@ Covers Weeks 1-6: cloud fundamentals, Docker, Kubernetes, cloud AI services, IaC
 ---
 
 ### Week 9: ML Pipelines & Workflow Orchestration
+
+*Why this matters: Running a model once in a notebook is easy. Running it automatically, reliably, every day, with fresh data? That requires a pipeline. This is what separates experiments from real products.*
 
 **Topics:**
 - ML pipeline architecture: modular, reproducible, automated workflows
@@ -262,6 +274,8 @@ Covers Weeks 1-6: cloud fundamentals, Docker, Kubernetes, cloud AI services, IaC
 ---
 
 ### Week 10: Monitoring, Observability & Alerting
+
+*Why this matters: AI models don't just "break" like normal software. They silently get worse over time as the world changes around them. This week teaches you how to catch problems before your users do.*
 
 **Topics:**
 - Why monitoring AI is different from monitoring software: drift, degradation, fairness shifts
@@ -290,6 +304,8 @@ Covers Weeks 1-6: cloud fundamentals, Docker, Kubernetes, cloud AI services, IaC
 ---
 
 ### Week 11: Security for AI Systems
+
+*Why this matters: AI systems face unique security threats. Someone could steal your model, poison your training data, or trick your system with crafted inputs. This week covers how to defend against all of these.*
 
 **Topics:**
 - AI-specific security threats:
@@ -321,6 +337,8 @@ Covers Weeks 1-6: cloud fundamentals, Docker, Kubernetes, cloud AI services, IaC
 
 ### Week 12: Cost Optimization & FinOps for AI
 
+*Why this matters: A single GPU can cost $3+/hour. A training run can cost thousands of dollars. If you don't learn to optimize costs, your AI project might succeed technically but fail financially.*
+
 **Topics:**
 - The cost problem: AI infrastructure is expensive — GPU compute, storage, API calls, data transfer
 - FinOps for AI (Financial Operations — managing and optimizing cloud spending): applied to AI workloads
@@ -332,13 +350,13 @@ Covers Weeks 1-6: cloud fundamentals, Docker, Kubernetes, cloud AI services, IaC
   - Mixed precision training: faster training = less cost
   - Efficient architectures: smaller models, distillation
   - Hyperparameter optimization: smart search instead of brute force
-- Inference cost optimization:
-  - Model routing: expensive models for hard queries, cheap models for easy ones
-  - Caching: semantic caching, exact match caching
-  - Batching: processing multiple requests together
+- Inference cost optimization — where most production costs go:
+  - Model routing: use expensive models for hard queries, cheap models for easy ones
+  - Caching: avoid re-computing answers you've already given
+  - Batching: process multiple requests together
   - Scale-to-zero: serverless inference when traffic is low
-  - Quantization: serving smaller models at lower cost
-- LLM cost optimization:
+  - Quantization: serve smaller models at lower cost
+- LLM cost optimization — this adds up fast:
   - Token optimization: shorter prompts, structured outputs
   - Model selection: SLM vs LLM based on task complexity
   - Caching LLM responses: semantic similarity matching

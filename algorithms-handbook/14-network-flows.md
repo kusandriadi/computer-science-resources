@@ -2,11 +2,15 @@
 
 ## Introduction
 
-Network flow is one of the most powerful and elegant frameworks in combinatorial optimization. The core question is deceptively simple: given a directed graph where each edge has a capacity, how much "flow" can be pushed from a source vertex to a sink vertex without exceeding any edge's capacity?
+Picture a network of water pipes connecting a reservoir to a city. Each pipe has a maximum throughput -- it can only carry so much water per second. Some pipes are wide, some are narrow, and they connect through a web of junctions. The question is: **what is the maximum amount of water you can deliver to the city?**
 
-This simple abstraction models an extraordinary range of real-world problems: transportation logistics, communication bandwidth, bipartite matching, project scheduling, image segmentation, baseball elimination, and many more. The deep connection between maximum flows and minimum cuts (the Max-Flow Min-Cut Theorem) is one of the most important results in theoretical computer science and operations research.
+That is the network flow problem. Replace "water" with internet traffic, and you are optimizing bandwidth. Replace it with cars, and you are analyzing highway congestion. Replace it with goods, and you are planning shipping logistics. The same mathematical framework solves all of these.
 
-This module covers the theoretical foundations of network flow, the classical Ford-Fulkerson method and its Edmonds-Karp variant, the Max-Flow Min-Cut Theorem with proof, Dinic's algorithm for improved performance, and a survey of applications that demonstrate why network flow is an indispensable tool for any serious algorithm designer.
+More precisely, the core question is: given a directed graph where each edge has a capacity, how much "flow" can be pushed from a source vertex to a sink vertex without exceeding any edge's capacity? This simple abstraction models a remarkable range of real-world problems -- from transportation and communication to bipartite matching, project scheduling, image segmentation, and even baseball elimination.
+
+The deep connection between maximum flows and minimum cuts (the Max-Flow Min-Cut Theorem) is one of the most important results in theoretical computer science and operations research.
+
+This module covers the theoretical foundations of network flow, the classical Ford-Fulkerson method and its Edmonds-Karp variant, the Max-Flow Min-Cut Theorem with proof, Dinic's algorithm for improved performance, and a survey of applications that show why network flow is an essential tool in any algorithm designer's toolkit.
 
 **References:** CLRS Chapter 26, Jeff Erickson Chapters 10--11, Sedgewick *Algorithms* (4th edition, Chapter 6).
 
@@ -14,7 +18,7 @@ This module covers the theoretical foundations of network flow, the classical Fo
 
 ## Flow Networks
 
-A **flow network** is a directed graph $G = (V, E)$ with the following properties:
+Now let's define things precisely. A **flow network** is a directed graph $G = (V, E)$ with the following properties:
 
 1. **Capacity function:** Each edge $(u, v) \in E$ has a non-negative capacity $c(u, v) \geq 0$. If $(u, v) \notin E$, then $c(u, v) = 0$.
 2. **Source:** A distinguished vertex $s \in V$ with no incoming edges (or at least, net flow leaves $s$).
@@ -64,7 +68,7 @@ The **maximum flow problem** asks: what is the largest possible value $|f|$ over
 
 ## Residual Graphs and Augmenting Paths
 
-The key insight behind all max-flow algorithms is the concept of the **residual graph**.
+Here is the key idea that makes max-flow algorithms work -- and it is genuinely clever. The concept is the **residual graph**.
 
 ### Residual Graph
 
@@ -87,7 +91,7 @@ We can increase the flow value by the bottleneck amount by sending flow along th
 
 ## Ford-Fulkerson Method
 
-The Ford-Fulkerson method is a general algorithmic framework for computing maximum flow. It is a "method" rather than an "algorithm" because it does not specify how to find augmenting paths.
+With the residual graph in hand, we can now describe the classic approach for finding maximum flow. The Ford-Fulkerson method is a general algorithmic framework -- it is called a "method" rather than an "algorithm" because it does not specify *how* to find augmenting paths (that choice matters a lot, as we will see).
 
 ### Algorithm
 

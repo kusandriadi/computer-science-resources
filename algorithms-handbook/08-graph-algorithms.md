@@ -2,15 +2,23 @@
 
 ## Introduction
 
-Graphs model relationships: social networks, road maps, dependency chains, web links, molecular structures, and countless other domains. A graph $G = (V, E)$ consists of vertices $V$ and edges $E$. Graph algorithms are among the most versatile tools in computer science.
+Think about your social network -- you have friends, and your friends have friends. If you wanted to find the shortest chain of connections between you and a stranger, how would you do it? Or think about Google Maps: when you ask for directions, it needs to find the best route through millions of intersections and roads. What about your university's course catalog, where some courses require you to complete others first -- how does the system figure out a valid order to take them in?
 
-This module covers the essential graph algorithms that every engineer should know, from basic traversals to shortest paths, minimum spanning trees, topological sorting, and strongly connected components.
+All of these are **graph problems**. Graphs are one of the most versatile structures in computer science because they show up everywhere: road maps, social networks, airline routes, web links, course prerequisites, molecular structures, even the internet itself.
+
+So what exactly is a graph? At its core, a graph is simply a collection of things (we call them **vertices** or **nodes**) connected by relationships (we call them **edges**). Formally, we write this as $G = (V, E)$, where $V$ is the set of vertices and $E$ is the set of edges. That's it -- vertices and edges. Everything else builds on this simple idea.
+
+This module covers the essential graph algorithms that every engineer should know: basic traversals (how to systematically visit every vertex), shortest paths (how to find the best route), minimum spanning trees (how to connect everything at minimum cost), topological sorting (how to find a valid ordering), and strongly connected components (how to find tightly connected groups).
 
 ---
 
 ## Graph Representations
 
+Before we can run algorithms on a graph, we need a way to store it in memory. There are three common approaches, each with different tradeoffs. Let's look at each one.
+
 ### Adjacency List
+
+The most common representation. For each vertex, we keep a list of its neighbors. Here is what this looks like in Java:
 
 ```java
 public class Graph {
@@ -41,13 +49,17 @@ public class Graph {
 
 ### Adjacency Matrix
 
+A 2D array where `matrix[u][v]` tells you the weight of the edge from `u` to `v` (or 0 / `false` if there is no edge).
+
 ```java
 int[][] matrix = new int[V][V]; // 0 or weight
 ```
 
-**Space:** $O(V^2)$. Best for dense graphs or when $O(1)$ edge lookups are needed.
+**Space:** $O(V^2)$. Best for dense graphs or when you need $O(1)$ edge lookups.
 
 ### Edge List
+
+Sometimes you just need a flat list of all edges -- no per-vertex structure at all.
 
 ```java
 List<int[]> edges = new ArrayList<>(); // int[]{u, v, weight}
@@ -59,7 +71,9 @@ List<int[]> edges = new ArrayList<>(); // int[]{u, v, weight}
 
 ## Breadth-First Search (BFS)
 
-BFS explores vertices layer by layer, visiting all vertices at distance $k$ before any at distance $k+1$.
+BFS explores vertices layer by layer, visiting all vertices at distance $k$ before any at distance $k+1$. Think of it like dropping a stone into a pond -- the ripples spread outward, reaching closer points before farther ones.
+
+Here is the basic implementation in Java:
 
 ```java
 public static int[] bfs(List<List<Integer>> adj, int source) {
@@ -127,9 +141,11 @@ public static List<Integer> bfsPath(List<List<Integer>> adj, int source, int tar
 
 ## Depth-First Search (DFS)
 
-DFS explores as deep as possible along each branch before backtracking.
+DFS takes the opposite approach from BFS: instead of exploring layer by layer, it goes as deep as possible along one path before backtracking and trying another. Think of it like exploring a maze -- you follow one corridor all the way to the end, then backtrack to the last fork and try a different direction.
 
 ### Recursive DFS
+
+The recursive version is the most natural way to write DFS:
 
 ```java
 public static void dfs(List<List<Integer>> adj, int u, boolean[] visited) {
@@ -236,9 +252,11 @@ private static boolean dfsCycleDirected(List<List<Integer>> adj,
 
 ## Shortest Path Algorithms
 
+One of the most common graph questions is: "What is the shortest path from A to B?" This is what GPS navigation does every time you ask for directions. There are several algorithms for this, each suited to different situations.
+
 ### Dijkstra's Algorithm
 
-Finds shortest paths from a source to all vertices in a graph with **non-negative** edge weights.
+Finds shortest paths from a source to all vertices in a graph with **non-negative** edge weights. This is the workhorse algorithm for shortest paths -- it powers most real-world routing systems.
 
 **Strategy:** Greedily process the unvisited vertex with the smallest known distance.
 
@@ -360,9 +378,13 @@ public static int[][] floydWarshall(int[][] graph) {
 
 ## Minimum Spanning Tree (MST)
 
+Imagine you are designing a network of roads to connect several cities. You want every city to be reachable from every other city, but you want to minimize the total length of road you build. That is the minimum spanning tree problem: find the cheapest set of edges that keeps the entire graph connected.
+
 ### Kruskal's Algorithm
 
-Sort edges by weight. Greedily add the cheapest edge that doesn't create a cycle (using Union-Find).
+Kruskal's approach is straightforward: sort all edges by weight, then greedily add the cheapest edge that does not create a cycle (using Union-Find to check efficiently).
+
+Here is the implementation:
 
 ```java
 public static List<int[]> kruskal(int V, int[][] edges) {
@@ -449,6 +471,8 @@ public static int prim(List<List<int[]>> adj) {
 
 ## Topological Sort
 
+Here is a problem you have probably dealt with yourself: you have a list of courses to take, and some courses have prerequisites. In what order should you take them so that you always complete the prerequisites first? That is exactly what topological sort does.
+
 A **topological ordering** of a directed acyclic graph (DAG) is a linear ordering of vertices such that for every directed edge $(u, v)$, vertex $u$ comes before $v$.
 
 ### Kahn's Algorithm (BFS-based)
@@ -524,7 +548,7 @@ private static void dfsTopoSort(List<List<Integer>> adj, int u,
 
 ## Strongly Connected Components (SCC)
 
-A **strongly connected component** is a maximal set of vertices such that every vertex is reachable from every other vertex in the set (in a directed graph).
+In a directed graph, you can often reach vertex B from vertex A but not the other way around. A **strongly connected component** is a group of vertices where you *can* reach every vertex from every other vertex in the group. Think of it as a cluster of web pages where you can navigate from any page to any other page within the cluster by following links.
 
 ### Kosaraju's Algorithm
 

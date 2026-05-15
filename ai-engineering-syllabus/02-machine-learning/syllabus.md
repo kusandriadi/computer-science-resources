@@ -6,7 +6,9 @@
 
 ## Course Overview
 
-This course provides a comprehensive foundation in machine learning, combining mathematical theory with hands-on practice. Students will learn how ML algorithms work under the hood, implement them using industry-standard tools, and deploy models into production. The course emphasizes contextual mathematics — every mathematical concept is introduced at the exact moment it becomes relevant, so students immediately see why it matters.
+Ever wondered how Netflix knows what you want to watch, or how your phone unlocks with your face? That's machine learning. In this course, you'll learn how these systems actually work — and build your own.
+
+We'll cover the math you need along the way, exactly when you need it. No prior math wizardry required. Every formula is introduced at the moment it becomes useful, so you'll always understand *why* it matters, not just *what* it is.
 
 This course serves as the prerequisite for **Generative AI Engineering** (Semester 2).
 
@@ -199,6 +201,8 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 
 ### Week 8: Data Preprocessing & Feature Engineering
 
+*Why this matters: If your model works great in testing but fails in the real world, you probably have a data quality problem. This week teaches you how to prevent that.*
+
 **Topics:**
 - The reality of data: real-world data is messy, incomplete, and inconsistent
 - Handling missing data: imputation strategies (mean, median, KNN, iterative)
@@ -245,6 +249,8 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 ---
 
 ### Week 10: Introduction to Neural Networks
+
+*Why this matters: Neural networks are the technology behind image recognition, language translation, and AI assistants. This is where machine learning gets really powerful — and really interesting.*
 
 **Topics:**
 - From linear models to neural networks: why we need non-linearity
@@ -321,16 +327,18 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 
 ### Week 13: ML in Production, Responsible AI & Explainability
 
+*Why this matters: Building a great model is only half the job. This week is about putting it into the real world, making sure it's fair, and being able to explain its decisions.*
+
 **Topics:**
 - Model serving: packaging a model as a REST API (a web service other programs can call) with FastAPI
 - Model serialization (saving your trained model to a file so you can use it later): pickle, ONNX, TorchScript
 - Monitoring in production: model drift detection, performance degradation
 - A/B testing models: comparing old vs new model in production
-- Responsible AI:
+- Responsible AI — making sure your model is fair and trustworthy:
   - Bias in data and models: how it happens, how to detect it
   - Fairness metrics: demographic parity, equalized odds
   - AI regulation overview: EU AI Act, emerging global standards
-- Explainable AI (XAI):
+- Explainable AI (XAI) — helping people understand *why* the model made a decision:
   - Why explainability matters: trust, regulation, debugging
   - SHAP (SHapley Additive exPlanations): game theory-based feature attribution
   - LIME (Local Interpretable Model-agnostic Explanations): local approximations
@@ -362,23 +370,25 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 
 ### Week 15: Reinforcement Learning Fundamentals
 
+*Why this matters: Reinforcement learning is how AI learns to make decisions by trial and error. It's the same idea behind how ChatGPT was trained to be helpful. This week, you'll build an AI agent that learns to play a game.*
+
 **Topics:**
 - A different paradigm: supervised learning learns from examples, RL learns from experience
 - The RL framework: agent, environment, state, action, reward
   - Markov Decision Process (MDP — a formal way to describe decision-making problems): the mathematical formulation of RL
   - Episodes, trajectories, and the goal of maximizing cumulative reward
-- Exploration vs exploitation: try something new or stick with what works?
+- Exploration vs exploitation — try something new or stick with what works?
   - Multi-Armed Bandit (MAB) — the simplest RL problem
-  - Epsilon-greedy strategy: explore randomly ε% of the time, exploit the best option otherwise
+  - Epsilon-greedy strategy: explore randomly some % of the time, exploit the best option otherwise
   - Upper Confidence Bound (UCB): balance exploration with confidence intervals
   - Thompson Sampling: Bayesian approach to exploration
   - Real-world applications: A/B testing, ad placement, content recommendation
 - Key concepts:
-  - Discount factor (γ): how much to value future rewards vs immediate ones
-  - Policy (π): the agent's strategy — mapping states to actions
+  - Discount factor: how much to value future rewards vs immediate ones
+  - Policy: the agent's strategy — mapping states to actions
   - Value function V(s) and action-value function Q(s,a): how good is this state/action?
 - Value-based methods:
-  - Q-Learning (tabular): learning the optimal action-value function through trial and error
+  - Q-Learning (tabular): learning the best action through trial and error
   - SARSA: on-policy alternative to Q-Learning
   - From tabular to deep: overview of DQN (Atari breakthrough, DeepMind 2015)
 - Policy gradient methods:
@@ -405,30 +415,32 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 
 ### Week 16: RL for AI Alignment & Course Capstone
 
+*Why this matters: This is how ChatGPT went from "predicts the next word" to "actually helpful assistant." RL is the secret sauce behind modern AI alignment.*
+
 **Topics:**
 - From RL to LLM alignment: the connection
   - Actor-Critic methods: actor (policy network) + critic (value network)
-  - PPO (Proximal Policy Optimization): the workhorse algorithm behind RLHF
+  - PPO (Proximal Policy Optimization): the main algorithm behind RLHF
     - The clipping mechanism: preventing too-large policy updates
     - Why PPO became the default: stable, simple, effective
-- RLHF (Reinforcement Learning from Human Feedback): how ChatGPT was aligned
+- RLHF (Reinforcement Learning from Human Feedback) — how ChatGPT was aligned:
   - Step 1: supervised fine-tuning (SFT) — teach the model to follow instructions
   - Step 2: train a reward model from human preference rankings (Bradley-Terry model)
   - Step 3: optimize the policy (LLM) using PPO against the reward model
   - The KL penalty: preventing the model from drifting too far from the SFT baseline
-- DPO (Direct Preference Optimization): no reward model needed
-  - Key insight: you can implicitly optimize the reward without training a separate reward model
+- DPO (Direct Preference Optimization) — a simpler alternative, no reward model needed:
+  - Key insight: you can optimize the reward without training a separate reward model
   - The DPO loss function: directly training on preference pairs (chosen vs rejected)
   - Trade-offs vs RLHF: simpler but potentially less flexible
-- GRPO (Group Relative Policy Optimization): how DeepSeek R1 was trained
+- GRPO (Group Relative Policy Optimization) — how DeepSeek R1 was trained:
   - The innovation: using group scores instead of a learned reward model
   - Sample multiple outputs, rank them, use relative ranking as reward signal
   - RLVR (Reinforcement Learning from Verifiable Rewards): math problems have correct answers, code has test cases
-  - Why it matters: enables training reasoning capabilities without human-labeled preferences
+  - Why it matters: enables training reasoning without human-labeled preferences
 - Constitutional AI (CAI): self-improvement through principles
   - Self-critique: the model evaluates its own outputs against principles
   - RLAIF (RL from AI Feedback): using AI instead of humans to provide feedback
-- Why this matters: RL is the key technique that turns a base LLM into a helpful, harmless, and honest assistant
+- The big picture: RL is the key technique that turns a base LLM into a helpful, harmless, and honest assistant
 - Course recap and capstone project presentations
 
 **Mathematics:**
@@ -439,7 +451,7 @@ Covers Weeks 1-6: ML fundamentals, supervised learning (regression & classificat
 **What You'll Build:**
 - Implement a simplified preference learning pipeline
 - Course capstone: end-to-end ML project presentation
-- Comprehensive assessment covering all course material: ML concepts, algorithms, mathematics, evaluation, neural networks, production deployment, responsible AI, explainability, and reinforcement learning
+- Comprehensive assessment covering all course material
 
 ---
 
@@ -454,7 +466,7 @@ By the end of this course, students will be able to:
 5. Work with both classical ML and neural networks using industry-standard tools
 6. Deploy models into a production-ready API with monitoring
 7. Apply responsible AI principles including bias detection, fairness, and explainability (SHAP, LIME)
-8. Understand reinforcement learning from fundamentals to LLM alignment: Multi-Armed Bandits, Q-Learning, DQN, PPO, and how RL powers modern AI alignment (RLHF, DPO, GRPO, Constitutional AI)
+8. Understand reinforcement learning from fundamentals to LLM alignment. This includes Multi-Armed Bandits, Q-Learning, DQN, PPO, and how RL powers modern AI alignment (RLHF, DPO, GRPO, Constitutional AI)
 9. Use professional workflows: Git, experiment tracking, and collaborative development
 10. Frame business problems as ML tasks and measure real-world impact
 

@@ -6,9 +6,9 @@
 
 ## Course Overview
 
-This course provides specialized, in-depth training in computer vision, going far beyond what's covered in Deep Learning & NLP. Students will master the complete spectrum of visual understanding: from classical image processing to cutting-edge foundation models like SAM 3, CLIP, and Vision-Language Models. The course emphasizes both traditional techniques (which remain essential for many industrial applications) and modern deep learning approaches, with a strong focus on practical deployment including edge AI and real-time processing.
+How does a self-driving car know what's on the road? How does your phone sort photos by the people in them? How does a factory robot spot a defective product on an assembly line? All of these are computer vision.
 
-In 2026, computer vision is experiencing a major shift toward foundation models and multimodal AI, making systems smarter, more flexible, and accessible even without large training datasets.
+In this course, you'll teach machines to see and understand the visual world. You'll work with both classic techniques (still important for many real jobs) and the latest AI approaches. By the end, you'll be able to build systems that detect objects, recognize faces, read documents, generate images, and run in real-time on edge devices.
 
 ---
 
@@ -75,6 +75,8 @@ PyTorch, torchvision, OpenCV, Ultralytics (YOLO), Hugging Face, Roboflow, Albume
 ---
 
 ### Week 2: Feature Engineering & Classical Methods
+
+*Why this matters: Deep learning isn't always the answer. Classical methods are faster, more interpretable, and sometimes just work better. Many real-world CV systems still rely on these techniques.*
 
 **Topics:**
 - Feature descriptors (mathematical descriptions of interesting patterns in an image): HOG (Histogram of Oriented Gradients), SIFT, SURF, ORB
@@ -166,6 +168,8 @@ PyTorch, torchvision, OpenCV, Ultralytics (YOLO), Hugging Face, Roboflow, Albume
 
 ### Week 6: Face & Human Analysis
 
+*Why this matters: Face recognition and pose estimation are some of the most powerful — and most controversial — applications of computer vision. This week, you'll build these systems and also learn when they should NOT be used.*
+
 **Topics:**
 - Face detection: MTCNN, RetinaFace, BlazeFace
 - Face recognition: ArcFace, FaceNet — embedding-based approaches (turning faces into numbers for comparison)
@@ -174,7 +178,7 @@ PyTorch, torchvision, OpenCV, Ultralytics (YOLO), Hugging Face, Roboflow, Albume
 - Human pose estimation: OpenPose, MediaPipe, HRNet
 - Human action recognition: video-based activity understanding
 - Liveness detection: preventing face spoofing attacks
-- Privacy and ethical considerations:
+- Privacy and ethical considerations — this is a big deal:
   - Bias in face recognition: racial, gender, age disparities
   - Deepfake detection: identifying AI-generated faces
   - Regulatory landscape: GDPR facial data, EU AI Act prohibitions on mass surveillance
@@ -194,6 +198,8 @@ Covers Weeks 1-6: classical CV, classification, detection, segmentation, SAM, fa
 ---
 
 ### Week 8: Video Understanding
+
+*Why this matters: The world doesn't stand still, and neither should your vision system. Video understanding powers surveillance, sports analytics, autonomous driving, and content moderation.*
 
 **Topics:**
 - Video as a data structure: frames, temporal dimension, optical flow
@@ -217,6 +223,8 @@ Covers Weeks 1-6: classical CV, classification, detection, segmentation, SAM, fa
 
 ### Week 9: 3D Vision & Depth
 
+*Why this matters: The real world is 3D, but cameras only capture 2D images. This week teaches you how to bridge that gap — essential for AR/VR, robotics, and autonomous vehicles.*
+
 **Topics:**
 - Depth estimation (figuring out how far away things are in an image):
   - Monocular depth estimation: MiDaS, DPT — depth from a single image
@@ -239,6 +247,8 @@ Covers Weeks 1-6: classical CV, classification, detection, segmentation, SAM, fa
 
 ### Week 10: OCR & Document Understanding
 
+*Why this matters: Billions of documents exist as images or scanned PDFs. Teaching machines to read them automatically saves enormous amounts of human time.*
+
 **Topics:**
 - Text detection: EAST, DBNet — finding text in images
 - Text recognition: CRNN, TrOCR — reading detected text
@@ -260,6 +270,8 @@ Covers Weeks 1-6: classical CV, classification, detection, segmentation, SAM, fa
 ---
 
 ### Week 11: Foundation Models for Vision
+
+*Why this matters: Foundation models are changing the game. Instead of training a new model for every task, you can use one powerful model that adapts to many tasks with little or no extra training.*
 
 **Topics:**
 - The foundation model paradigm: pre-train once, adapt everywhere
@@ -307,6 +319,8 @@ Covers Weeks 1-6: classical CV, classification, detection, segmentation, SAM, fa
 ---
 
 ### Week 13: Edge Deployment & Real-Time Vision
+
+*Why this matters: In the real world, your model might need to run on a security camera, a phone, or a factory robot — not a powerful cloud server. This week teaches you how to make that happen.*
 
 **Topics:**
 - Why edge matters: latency, privacy, cost, offline capability

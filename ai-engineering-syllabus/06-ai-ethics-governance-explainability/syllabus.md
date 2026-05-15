@@ -6,9 +6,9 @@
 
 ## Course Overview
 
-This course addresses the most critical non-technical challenges in AI: ensuring that AI systems are fair, transparent, explainable, and aligned with human values. As the EU AI Act becomes fully applicable on August 2, 2026, and AI regulation expands globally, every AI practitioner needs to understand the ethical, legal, and governance frameworks that govern AI deployment. This course combines philosophical foundations with practical tools — students will learn to audit models for bias, implement explainability techniques, conduct red-team exercises, build governance frameworks, and navigate the global regulatory landscape.
+What happens when an AI denies someone a loan — and nobody can explain why? What happens when a hiring algorithm quietly discriminates against certain groups? These aren't hypothetical questions. They're happening right now.
 
-This is not a theoretical "ethics in a vacuum" course. Every topic is grounded in real case studies, real tools, and real regulatory requirements.
+This course is about making sure AI systems are fair, transparent, and accountable. You'll learn to audit models for bias, explain AI decisions to non-technical people, and navigate the new laws that govern AI (like the EU AI Act, which fully applies in August 2026). This is not a "theory only" course. Every topic is grounded in real case studies, real tools, and real regulatory requirements.
 
 ---
 
@@ -60,10 +60,18 @@ SHAP, LIME, AIF360 (IBM Fairness Toolkit), Fairlearn (Microsoft), What-If Tool (
 - The urgency: AI is making decisions about hiring, lending, healthcare, criminal justice, and education
 - Historical failures: Amazon's biased hiring AI, COMPAS recidivism prediction, Google Photos image labeling
 - The trust problem: 95% of AI investments show zero return (MIT 2026) — ethics failures are business failures
-- Key ethical principles: beneficence (do good), non-maleficence (do no harm), autonomy (respect human choice), justice (be fair), explicability (be transparent and explainable)
+- Key ethical principles:
+  - Beneficence (do good)
+  - Non-maleficence (do no harm)
+  - Autonomy (respect human choice)
+  - Justice (be fair)
+  - Explicability (be transparent and explainable)
 - Stakeholder analysis: who is affected by an AI system? (users, subjects, society, environment)
 - The ethical AI engineer: responsibility doesn't end at model accuracy
-- Philosophy crash course: utilitarianism (greatest good for the greatest number), deontology (follow the rules regardless of outcome), virtue ethics (what would a good person do?) — frameworks for moral reasoning about AI
+- Philosophy crash course — frameworks for thinking about right and wrong:
+  - Utilitarianism: greatest good for the greatest number
+  - Deontology: follow the rules regardless of outcome
+  - Virtue ethics: what would a good person do?
 
 **What You'll Build:**
 - Analyze 3 real-world AI failure case studies and identify ethical violations
@@ -74,9 +82,14 @@ SHAP, LIME, AIF360 (IBM Fairness Toolkit), Fairlearn (Microsoft), What-If Tool (
 ### Week 2: Bias in AI — Where It Comes From and How to Find It
 
 **Topics:**
-- Types of bias in AI systems:
-  - Data bias: sampling bias, historical bias, representation bias, measurement bias, label bias
-  - Algorithmic bias: amplification of data bias, proxy discrimination, feedback loops
+- Types of bias in AI systems — and there are more than you'd expect:
+  - Data bias (problems in the data itself):
+    - Sampling bias (your data doesn't represent everyone)
+    - Historical bias (past unfairness baked into data)
+    - Representation bias (some groups are missing or underrepresented)
+    - Measurement bias (the way you collect data introduces errors)
+    - Label bias (the labels themselves reflect human prejudice)
+  - Algorithmic bias: the model amplifies data bias, uses proxy variables, or creates feedback loops
   - Deployment bias: how context changes fairness properties
 - Fairness definitions (and why they can conflict):
   - Demographic parity (equal approval rates across groups): equal positive prediction rates across groups
@@ -96,10 +109,12 @@ SHAP, LIME, AIF360 (IBM Fairness Toolkit), Fairlearn (Microsoft), What-If Tool (
 
 ### Week 3: Bias Mitigation — Making AI More Fair
 
+*Why this matters: Finding bias is important, but fixing it is what actually helps people. This week gives you practical techniques to make AI systems fairer.*
+
 **Topics:**
-- Pre-processing techniques: reweighting, resampling, disparate impact remover, data augmentation
-- In-processing techniques: adversarial debiasing, prejudice remover, fairness constraints during training
-- Post-processing techniques: calibrated equalized odds, reject option classification, threshold adjustment
+- Pre-processing techniques (fix the data before training): reweighting, resampling, disparate impact remover, data augmentation
+- In-processing techniques (fix during training): adversarial debiasing, prejudice remover, fairness constraints
+- Post-processing techniques (fix after training): calibrated equalized odds, reject option classification, threshold adjustment
 - The tradeoff: accuracy vs fairness — is some accuracy loss acceptable for fairness?
 - Fairness in generative AI: bias in LLMs, image generation stereotypes, representation in training data
 - Bias in embeddings: word2vec gender bias, visual stereotype amplification
@@ -165,6 +180,8 @@ SHAP, LIME, AIF360 (IBM Fairness Toolkit), Fairlearn (Microsoft), What-If Tool (
 
 ### Week 6: AI Safety — Attacks, Defenses & Guardrails
 
+*Why this matters: People will try to break your AI. They'll trick it, manipulate it, and use it in ways you never intended. This week teaches you how to defend against these attacks.*
+
 **Topics:**
 - Adversarial attacks on ML models:
   - Evasion attacks: fooling classifiers with imperceptible perturbations (FGSM, PGD)
@@ -202,6 +219,8 @@ Covers Weeks 1-6: bias, fairness, XAI (SHAP, LIME), LLM explainability, adversar
 
 ### Week 8: The Global AI Regulatory Landscape
 
+*Why this matters: AI regulation is no longer "coming someday." The EU AI Act applies in 2026, with real penalties for non-compliance. As an AI engineer, you need to know the rules.*
+
 **Topics:**
 - EU AI Act — the world's first comprehensive AI regulation:
   - Risk classification: unacceptable, high-risk, limited risk, minimal risk
@@ -229,15 +248,15 @@ Covers Weeks 1-6: bias, fairness, XAI (SHAP, LIME), LLM explainability, adversar
 ### Week 9: AI Governance in Practice
 
 **Topics:**
-- What is AI governance: the organizational framework for responsible AI development and deployment
+- What is AI governance: the organizational framework for responsible AI development and deployment. Think of it as the rules and processes an organization follows to use AI responsibly
 - AI governance frameworks:
   - NIST AI Risk Management Framework (RMF): Map, Measure, Manage, Govern
   - ISO/IEC 42001: AI Management System standard
   - Gartner AI TRiSM: AI Trust, Risk, and Security Management
   - OECD AI Principles
-- Building an AI governance program:
-  - AI inventory: cataloging all AI systems in your organization
-  - Risk assessment: evaluating each system's risk level
+- Building an AI governance program — the practical steps:
+  - AI inventory: catalog all AI systems in your organization
+  - Risk assessment: evaluate each system's risk level
   - Roles and responsibilities: AI ethics board, AI officer, model owners
   - Policies and procedures: development guidelines, approval processes, incident response
 - Documentation requirements:
@@ -255,6 +274,8 @@ Covers Weeks 1-6: bias, fairness, XAI (SHAP, LIME), LLM explainability, adversar
 ---
 
 ### Week 10: Privacy, Data Rights & Consent
+
+*Why this matters: AI models are trained on data, and that data often comes from real people. This week covers how to protect privacy while still building useful AI systems.*
 
 **Topics:**
 - Privacy in the age of AI: how AI amplifies privacy risks
@@ -282,6 +303,8 @@ Covers Weeks 1-6: bias, fairness, XAI (SHAP, LIME), LLM explainability, adversar
 ---
 
 ### Week 11: Responsible Generative AI
+
+*Why this matters: Generative AI can create text, images, and video that look completely real. This power comes with serious risks — from misinformation to copyright violations. This week teaches you how to handle them.*
 
 **Topics:**
 - Unique challenges of generative AI: hallucination, deepfakes, misinformation, copyright infringement
@@ -356,7 +379,7 @@ Covers Weeks 1-6: bias, fairness, XAI (SHAP, LIME), LLM explainability, adversar
 - The AI governance gap: technology moves faster than regulation
 - Open source vs closed source: implications for safety and access
 - Global AI cooperation: is international coordination possible?
-- The role of AI engineers in shaping the future: you are not just building tools, you are building the future
+- The role of AI engineers in shaping the future: you are not just building tools. You are building the future
 
 **What You'll Build:**
 - Write a position paper on an open question in AI ethics (e.g., "Should AI have rights?", "Is open-source AI safer?", "Can we align AGI?")
@@ -389,7 +412,7 @@ Students present their ethical AI system. Peer review, instructor feedback, and 
 
 ### Week 16: Final Exam
 
-Comprehensive exam covering all course material: bias, fairness, XAI, safety, regulation, governance, privacy, responsible AI, and societal impact.
+Comprehensive exam covering all course material. Topics include bias, fairness, XAI, safety, regulation, governance, privacy, responsible AI, and societal impact.
 
 ---
 

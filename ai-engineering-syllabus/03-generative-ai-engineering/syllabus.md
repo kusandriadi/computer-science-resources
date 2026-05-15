@@ -6,7 +6,9 @@
 
 ## Course Overview
 
-This course transforms students from AI users into AI engineers. Starting from how Large Language Models actually work under the hood, students progressively build increasingly sophisticated AI applications — from simple chatbots to multi-agent systems with persistent memory, retrieval-augmented generation, and production-grade safety guardrails. The curriculum is designed around what the industry actually needs in 2026: not just prompt engineering, but full-stack AI engineering including reasoning models, agentic systems, edge deployment, and LLM observability.
+You've probably used ChatGPT or Claude to ask a question or generate some text. But have you ever wondered how to *build* something like that yourself? How do you go from "cool chatbot" to a real application that people can rely on?
+
+That's what this course is about. You'll start by understanding how large language models actually work. Then you'll build your way up — from simple chatbots to AI agents that can use tools, look up information, and work together. By the end, you'll be able to build, test, and deploy AI-powered applications that are ready for the real world.
 
 This course is the second semester of a two-part program. **Machine Learning** (Semester 1) is the prerequisite.
 
@@ -77,23 +79,25 @@ Anthropic SDK, OpenAI SDK, Ollama, LangChain, LangGraph, CrewAI, ChromaDB, Huggi
 
 ### Week 2: How LLMs Work
 
+*Why this matters: If you want to build with AI, you need to understand what's happening inside. This week pulls back the curtain so you can make smarter decisions as an engineer.*
+
 **Topics:**
 - Tokenization (breaking text into small pieces the AI can read): how text becomes numbers (BPE, SentencePiece, tiktoken)
 - The attention mechanism in depth: self-attention, multi-head attention, positional encoding
 - The generation pipeline: how an LLM produces text token by token
 - Decoding strategies (how the AI picks the next word): greedy, beam search, top-k, top-p (nucleus sampling), temperature
 - Context windows (the maximum amount of text the AI can "see" at once): what they are, why they matter, current limits
-- Standard LLMs vs Reasoning Models:
+- Standard LLMs vs Reasoning Models — two different approaches:
   - Reasoning models: OpenAI o1/o3/o4-mini, DeepSeek R1, Claude thinking mode
   - How reasoning models work: chain-of-thought at inference time, "thinking tokens"
   - Test-time compute scaling: spending more compute at inference instead of training
-  - Reinforcement Learning from Verifiable Rewards (RLVR): how reasoning is trained
+  - Reinforcement Learning from Verifiable Rewards (RLVR) — how reasoning is trained:
     - Building on RL foundations from ML course (Week 15): PPO, reward models, policy optimization
-    - Verifiable rewards: math has correct answers, code has test cases — no human labeling needed
+    - Verifiable rewards: math has correct answers, code has test cases. No human labeling needed
     - How chain-of-thought emerges: the model discovers that "thinking step by step" gets higher rewards
-    - GRPO (Group Relative Policy Optimization): DeepSeek R1's approach — sample multiple outputs, rank them, use relative ranking as reward
+    - GRPO (Group Relative Policy Optimization): DeepSeek R1's approach. Sample multiple outputs, rank them, use relative ranking as reward
   - When to use standard LLMs vs reasoning models: cost, latency, accuracy tradeoffs
-- How LLMs are aligned — the RL connection (prerequisite: ML Week 15):
+- How LLMs are aligned — the RL connection (builds on ML Week 15):
   - RLHF pipeline recap: SFT → reward model → PPO optimization
   - DPO (Direct Preference Optimization): skipping the reward model
   - Constitutional AI (Anthropic): self-supervised alignment
@@ -162,6 +166,8 @@ Anthropic SDK, OpenAI SDK, Ollama, LangChain, LangGraph, CrewAI, ChromaDB, Huggi
 ---
 
 ### Week 5: Memory & Session Management
+
+*Why this matters: By default, LLMs have no memory. Every conversation starts from scratch. If you want to build a useful assistant that remembers your users, you need to solve this problem yourself.*
 
 **Topics:**
 - The context window problem: LLMs are stateless — they forget everything between calls
@@ -247,6 +253,8 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
 
 ### Week 9: Advanced RAG
 
+*Why this matters: Basic RAG gets you 70% of the way there. This week covers the techniques that get you to 90%+ — because in production, that gap is the difference between useful and frustrating.*
+
 **Topics:**
 - Limitations of basic RAG: the "naive retrieval" problem
 - Agentic RAG — RAG with decision-making:
@@ -256,7 +264,7 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
   - Self-reflection: the agent evaluates whether retrieved information is sufficient
   - Multi-source routing: choosing between different knowledge bases
 - Knowledge Graphs for structured retrieval:
-  - What knowledge graphs add that vector search alone can't: relationships, hierarchy, context
+  - What knowledge graphs add that vector search alone can't: relationships, hierarchy, and context
   - LightRAG: lightweight knowledge graph integration with RAG
   - GraphRAG (Microsoft): building knowledge graphs from documents automatically
   - Hybrid approach: combining vector search + knowledge graph traversal
@@ -320,6 +328,8 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
 
 ### Week 11: Plugins, Skills, MCP & A2A
 
+*Why this matters: AI models are powerful, but they can't do everything alone. This week is about giving AI the ability to connect with the outside world — and with other AI agents.*
+
 **Topics:**
 - The AI plugin ecosystem:
   - What plugins are: extending LLM capabilities with external services
@@ -358,6 +368,8 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
 ---
 
 ### Week 12: Fine-Tuning & Model Customization
+
+*Why this matters: Sometimes prompts and RAG aren't enough. You need the model to behave differently at a fundamental level. This week teaches you how to customize a model to speak your domain's language.*
 
 **Topics:**
 - Why fine-tune: when prompting and RAG aren't enough
@@ -416,6 +428,8 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
 ---
 
 ### Week 13: Evaluation, Testing & Safety
+
+*Why this matters: Before you ship an AI product, you need to know how it fails. This week teaches you how to test, monitor, and protect your AI application so it doesn't embarrass you (or harm anyone) in production.*
 
 **Topics:**
 - Red teaming (intentionally trying to break your AI to find weaknesses):
@@ -530,7 +544,7 @@ Covers Weeks 1-6: AI landscape, LLM internals, reasoning models, ecosystem setup
 
 ### Week 16: Final Exam
 
-Comprehensive exam covering all course material: LLM internals, reasoning models, prompt engineering, memory management, RAG, agents, MCP/A2A, fine-tuning, safety, observability, deployment, and the broader AI landscape.
+Comprehensive exam covering all course material. Topics include LLM internals, reasoning models, prompt engineering, memory management, RAG, agents, MCP/A2A, fine-tuning, safety, observability, and deployment.
 
 ---
 
@@ -549,23 +563,23 @@ By the end of this course, students will be able to:
 9. Deploy and maintain AI applications in production and on edge devices with cost optimization
 10. Work with multimodal AI including vision-language models and audio processing
 11. Apply responsible AI principles, understand AI governance, and navigate the regulatory landscape
-12. Articulate the current state of AI, the trajectory toward AGI/ASI, and the implications for engineers and society
+12. Articulate the current state of AI and the trajectory toward AGI/ASI. Understand the implications for engineers and society
 
 ---
 
 ## Program Outcomes (Combined with Machine Learning)
 
-Students completing both semesters will graduate with a comprehensive skill set that is competitive in the global AI job market:
+Students completing both semesters will have a skill set that is competitive in the global AI job market:
 
 | Competency | Coverage |
 |---|---|
 | ML Fundamentals | Supervised & unsupervised learning, neural networks, model evaluation |
 | Mathematics for AI | Linear algebra, calculus, probability, statistics, optimization — taught contextually |
-| LLM & Generative AI | Transformer architecture, reasoning models (o1/o3, DeepSeek R1), tokenization, prompt engineering, fine-tuning, knowledge distillation, SLMs |
-| RAG & Knowledge Systems | Embeddings, vector databases, Agentic RAG, Knowledge Graphs (LightRAG, GraphRAG), evaluation |
+| LLM & Generative AI | Transformer architecture, reasoning models, tokenization, prompt engineering, fine-tuning, knowledge distillation, SLMs |
+| RAG & Knowledge Systems | Embeddings, vector databases, Agentic RAG, Knowledge Graphs, evaluation |
 | AI Agents & Orchestration | Tool use, function calling, Swarm pattern, MCP, A2A protocol, multi-agent systems, plugins, skills |
-| Production Engineering | API deployment, LLM observability (LangSmith, Langfuse), cost optimization, cloud basics, Edge AI, on-device deployment, MLOps, AI coding assistants |
-| Safety & Responsibility | Bias detection, prompt injection defense, guardrails frameworks (NeMo Guardrails), AI regulation, Explainable AI (XAI), AI governance |
+| Production Engineering | API deployment, LLM observability, cost optimization, cloud basics, Edge AI, on-device deployment, MLOps |
+| Safety & Responsibility | Bias detection, prompt injection defense, guardrails frameworks, AI regulation, Explainable AI (XAI), AI governance |
 | Multimodal AI | Vision-language models, image generation, audio/speech processing, multimodal pipelines |
 | AI Landscape & Future | ANI/AGI/ASI understanding, AI alignment, trajectory awareness, career positioning |
 | Professional Workflow | Git, experiment tracking, collaborative development, business impact measurement |

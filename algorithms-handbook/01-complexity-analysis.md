@@ -22,6 +22,10 @@ Constant factors matter, but **growth rate dominates** at scale. Complexity anal
 
 ## Asymptotic Notation
 
+Now that you have seen *why* growth rate matters, let's learn the language computer scientists use to talk about it. The notation below might look intimidating at first glance, but the core ideas are simpler than they appear. Each symbol is just a precise way of saying something you already understand intuitively -- "this function grows no faster than that one," or "these two functions grow at roughly the same rate."
+
+Let's walk through each one.
+
 ### Big-O: Upper Bound
 
 $f(n) = O(g(n))$ means there exist positive constants $c$ and $n_0$ such that:
@@ -249,6 +253,8 @@ Beyond the common complexity classes above, it is useful to know the complexitie
 Time complexity counts the number of **fundamental operations** (comparisons, assignments, arithmetic) as a function of input size $n$.
 
 ### How to Analyze Code
+
+The good news: analyzing code follows a small set of simple rules. Once you know them, you can determine the complexity of most code just by reading it. Let's walk through each rule with examples.
 
 #### Rule 1: Sequential Statements Add
 
@@ -487,9 +493,9 @@ Inner loop runs $\lfloor n/i \rfloor$ times. Total: $\sum_{i=1}^{n} \lfloor n/i 
 
 ## Space Complexity
 
-Space complexity measures the **additional memory** an algorithm uses as a function of input size, excluding the input itself (unless stated otherwise).
+Time is not the only resource we care about -- memory matters too. Space complexity measures the **additional memory** an algorithm uses as a function of input size, excluding the input itself (unless stated otherwise).
 
-### Examples
+Let's see a few examples to get a feel for how space usage varies:
 
 ```java
 // O(1) space -- constant extra memory
@@ -905,6 +911,8 @@ There are $2^n$ subsets, each of average size $n/2$. Total output size: $O(n \cd
 ---
 
 ## Common Pitfalls
+
+These are mistakes that trip up students (and professional engineers) all the time. Being aware of them will save you a lot of debugging headaches.
 
 ### Pitfall 1: Ignoring Hidden Costs
 

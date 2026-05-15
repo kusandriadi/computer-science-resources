@@ -2,7 +2,11 @@
 
 ## Introduction
 
-Recursion is one of the most powerful ideas in computer science. It allows us to express complex problems as simpler versions of themselves, mirroring the mathematical technique of induction. Backtracking extends recursion into a systematic search strategy: explore possibilities, and if a path leads to a dead end, undo the last choice and try the next option.
+Recursion is one of the most powerful ideas in computer science -- and also one of the most confusing when you first encounter it. So before we get into the formal details, let's build some intuition.
+
+Have you ever stood between two mirrors and seen your reflection repeat into infinity? Or opened a set of Russian nesting dolls, where each doll contains a smaller version of itself? That's the essence of recursion: **a problem that contains a smaller copy of itself**. To solve the big problem, you solve the smaller version first. To solve that one, you solve an even smaller version. And so on, until you reach a version so tiny that the answer is obvious.
+
+Recursion allows us to express complex problems as simpler versions of themselves, mirroring the mathematical technique of induction. Backtracking extends recursion into a systematic search strategy: explore possibilities, and if a path leads to a dead end, undo the last choice and try the next option.
 
 This module covers recursive thinking from the ground up, visualizes the call stack, introduces memoization as a bridge to dynamic programming, and presents the backtracking paradigm with classic problems.
 
@@ -221,9 +225,13 @@ public static int solve(int a, int b) {
 
 ### The Paradigm
 
-Backtracking is a systematic way to explore all potential solutions by building them incrementally and abandoning ("backtracking from") partial solutions that cannot lead to a valid complete solution.
+Imagine you are solving a maze. You walk forward until you hit a dead end. Then you go back to the last fork, choose a different path, and try again. You keep doing this until you find the exit (or exhaust all options).
+
+That is backtracking: a systematic way to explore all potential solutions by building them incrementally and abandoning ("backtracking from") partial solutions that cannot lead to a valid complete solution.
 
 ### General Template
+
+Almost every backtracking problem follows the same pattern. Here is the general template:
 
 ```java
 public static void backtrack(State state, List<Solution> results) {

@@ -2,9 +2,11 @@
 
 ## Introduction
 
-An algorithm without data structures is like an engine without a chassis. Data structures determine how information is organized, accessed, and modified. The choice of data structure often determines the complexity class of your algorithm. A problem that is $O(n^2)$ with an array might become $O(n \log n)$ with a balanced BST or $O(n)$ with a hash table.
+Imagine trying to find a specific book in a library that has no organization system -- no shelves, no categories, no catalog. You would have to check every single book, one by one. Now imagine the same library with books sorted by subject, then by author, with an index card catalog for quick lookup. The books are the same, but the *organization* makes all the difference.
 
-This module covers the foundational data structures that every engineer must know: arrays, linked lists, stacks, queues, hash tables, heaps, trees, tries, and graphs. For each, we discuss the operations it supports, their complexities, Java implementations, and when to reach for it.
+That is exactly what data structures do for your data. A data structure is a way of organizing information so that you can access and modify it efficiently. The choice of data structure often determines how fast your algorithm runs. A problem that takes $O(n^2)$ with a plain array might drop to $O(n \log n)$ with a balanced BST, or even $O(n)$ with a hash table. Picking the right data structure is one of the most impactful decisions you will make as a programmer.
+
+This module covers the foundational data structures that every engineer should know: arrays, linked lists, stacks, queues, hash tables, heaps, trees, tries, and graphs. For each one, we will look at the operations it supports, their time complexities, Java implementations, and -- most importantly -- when to reach for it.
 
 ---
 
