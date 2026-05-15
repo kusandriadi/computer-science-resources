@@ -228,6 +228,58 @@ Graduates completing the full program will be able to:
 
 ---
 
+## Recommended Textbooks
+
+Each course has recommended textbooks and resources to complement the syllabus.
+
+### Course 01: Data Science & AI for Business
+- **"Python for Data Analysis"** by Wes McKinney (3rd Ed, 2022) — Pandas creator's guide to data manipulation
+- **"Storytelling with Data"** by Cole Nussbaumer Knaflic — Data visualization best practices
+- **"Naked Statistics"** by Charles Wheelan — Accessible introduction to statistics
+- **"Data Science for Business"** by Foster Provost & Tom Fawcett — Connecting data science to business decisions
+
+### Course 02: Machine Learning
+- **"Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"** by Aurélien Géron (3rd Ed, 2022) — The practical ML bible
+- **"An Introduction to Statistical Learning (ISLR)"** by James, Witten, Hastie, Tibshirani (2nd Ed, 2021, free online) — Accessible statistical learning
+- **"The Hundred-Page Machine Learning Book"** by Andriy Burkov — Concise ML overview
+- **"Pattern Recognition and Machine Learning"** by Christopher Bishop — Deeper mathematical foundations
+- **"Mathematics for Machine Learning"** by Deisenroth, Faisal, Ong (free online: mml-book.github.io) — Essential math foundations
+
+### Course 03: Generative AI Engineering
+- **"Build a Large Language Model (From Scratch)"** by Sebastian Raschka (2024) — Build GPT from scratch in PyTorch
+- **"AI Engineering"** by Chip Huyen (2025) — Building applications with foundation models
+- **"Natural Language Processing with Transformers"** by Tunstall, von Werra, Wolf (2022) — Practical Hugging Face guide
+- **"Hands-On Large Language Models"** by Jay Alammar & Maarten Grootendorst (2024) — Visual, practical LLM guide
+- **"Prompt Engineering for Generative AI"** by James Phoenix & Mike Taylor (2024) — Systematic prompt engineering
+
+### Course 04: Deep Learning & NLP
+- **"Deep Learning"** by Goodfellow, Bengio, Courville (free online: deeplearningbook.org) — The deep learning textbook
+- **"Understanding Deep Learning"** by Simon Prince (2023, free online) — Modern, covers transformers and diffusion
+- **"Speech and Language Processing"** by Jurafsky & Martin (3rd Ed draft, free online) — Definitive NLP textbook
+- **"Dive into Deep Learning"** by Zhang, Lipton, Li, Smola (free online: d2l.ai) — Interactive, code-first approach
+
+### Course 05: Computer Vision
+- **"Computer Vision: Algorithms and Applications"** by Richard Szeliski (2nd Ed, 2022, free online) — Comprehensive CV textbook
+- **"Deep Learning for Vision Systems"** by Mohamed Elgendy (2020) — Practical CV with deep learning
+- **"Programming Computer Vision with Python"** by Jan Erik Solem — Hands-on CV with Python and OpenCV
+- **"Multiple View Geometry in Computer Vision"** by Hartley & Zisserman — For 3D vision (advanced)
+
+### Course 06: AI Ethics, Governance & Explainability
+- **"Weapons of Math Destruction"** by Cathy O'Neil — How algorithms can reinforce inequality
+- **"Atlas of AI"** by Kate Crawford — Political and social implications of AI
+- **"Interpretable Machine Learning"** by Christoph Molnar (free online) — Practical XAI techniques
+- **"The Alignment Problem"** by Brian Christian — AI alignment challenges
+- **"Artificial Intelligence: A Guide for Thinking Humans"** by Melanie Mitchell — Balanced perspective on AI capabilities
+
+### Course 07: Cloud & AI Infrastructure
+- **"Designing Machine Learning Systems"** by Chip Huyen (2022) — Production ML systems design
+- **"Kubernetes in Action"** by Marko Lukša (2nd Ed, 2024) — Comprehensive Kubernetes guide
+- **"Designing Data-Intensive Applications"** by Martin Kleppmann — Distributed systems fundamentals
+- **"Machine Learning Engineering"** by Andriy Burkov (free online) — ML engineering practices
+- **"Infrastructure as Code"** by Kief Morris (2nd Ed, 2020) — Terraform and cloud infrastructure
+
+---
+
 ## How to Use This Repository
 
 ### For Educators

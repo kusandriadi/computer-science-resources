@@ -175,6 +175,13 @@ A consolidated, curated reading list. The "Tier 1" papers in each section are no
 - Murphy — *Probabilistic Machine Learning* (broad and current)
 - Bishop & Bishop 2024 — *Deep Learning: Foundations and Concepts*
 - Lambert — *RLHF Book* (online, free, actively updated)
+- Raschka 2024 — *Build a Large Language Model (From Scratch)* (hands-on guide to building a GPT-like model from scratch in PyTorch; covers tokenization, attention, training, fine-tuning — best practical companion to the theoretical modules)
+- Jurafsky & Martin — *Speech and Language Processing* (3rd ed. draft, free online; the definitive NLP textbook covering everything from n-grams to transformers — essential foundation for anyone working with language models)
+- Tunstall, von Werra, Wolf 2022 — *Natural Language Processing with Transformers* (O'Reilly; practical Hugging Face guide covering text classification, NER, QA, summarization, generation, and model deployment)
+- Huyen 2022 — *Designing Machine Learning Systems* (O'Reilly; production ML systems design: data engineering, feature engineering, model deployment, monitoring, and iteration — essential for Module 8)
+- Prince 2023 — *Understanding Deep Learning* (free online: udlbook.github.io; modern, mathematically rigorous yet accessible — excellent coverage of transformers, diffusion models, and GANs)
+- Alammar & Grootendorst 2024 — *Hands-On Large Language Models* (O'Reilly; practical guide with visual explanations covering text embeddings, semantic search, text generation, and multimodal models)
+- Huyen 2025 — *AI Engineering* (O'Reilly; building AI applications with foundation models — covers prompt engineering, RAG, agents, fine-tuning, and evaluation in production settings)
 
 ## Where to follow ongoing work
 

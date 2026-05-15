@@ -40,6 +40,8 @@ A more practical and readable alternative to CLRS. The first half teaches algori
 #### "Algorithms" by Robert Sedgewick and Kevin Wayne
 **Edition:** 4th Edition (2011)
 
+> **This is the most important textbook for this handbook.** Since we use Java throughout, Sedgewick and Wayne's Java-based approach aligns directly with our implementations and coding style.
+
 The most Java-friendly algorithms textbook. All code is in Java, with beautiful visualizations and a companion website (algs4.cs.princeton.edu) containing data structures, algorithms, and test data. Based on the Princeton algorithms course (available free on Coursera).
 
 **Best for:** Java programmers, visual learners, those who prefer learning by implementation.
@@ -50,7 +52,52 @@ The most Java-friendly algorithms textbook. All code is in Java, with beautiful 
 
 ---
 
-### Tier 2: Competitive Programming
+#### "Algorithms" by Jeff Erickson
+**Available:** Free online at [jeffe.cs.illinois.edu/teaching/algorithms/](http://jeffe.cs.illinois.edu/teaching/algorithms/)
+
+An excellent open textbook based on UIUC undergraduate and graduate courses. Strong on dynamic programming, graph algorithms, and NP-hardness proofs. Modern writing style that is very clear and engaging, with a focus on building intuition alongside rigor.
+
+**Best for:** Self-learners who want a free, high-quality alternative to CLRS.
+
+**How to use:** Works well as a standalone textbook or as a supplement to CLRS. The dynamic programming and graph chapters are especially well-written. All content is freely available as a PDF.
+
+---
+
+#### "Data Structures and Algorithm Analysis in Java" by Mark Allen Weiss
+**Edition:** 3rd Edition (2012)
+
+The best Java-specific data structures textbook. All implementations are in Java, with thorough analysis of every data structure and algorithm. Covers everything from lists and stacks to graph algorithms with clean, production-quality Java code.
+
+**Best for:** Java programmers, university DS&A courses using Java.
+
+**How to use:** An excellent companion to this handbook. Read alongside the corresponding modules -- Weiss's Java implementations are clear and practical. Particularly strong on trees, priority queues, and hashing.
+
+---
+
+### Tier 2: Interview & Problem Solving
+
+#### "Cracking the Coding Interview" by Gayle Laakmann McDowell
+**Edition:** 6th Edition (2015)
+
+The standard interview preparation book. 189 programming questions with solutions, plus advice on the interview process. Not deep on theory but comprehensive for interview-specific preparation.
+
+**Best for:** Interview preparation, especially for FAANG-style companies.
+
+**How to use:** Work through problems by topic, starting with areas you're weakest in. The behavioral interview chapters are useful too. Pair with LeetCode practice for additional problems in each category.
+
+---
+
+#### "Elements of Programming Interviews in Java" by Adnan Aziz, Tsung-Hsien Lee, Amit Prakash
+
+300+ problems with detailed Java solutions. Harder and more comprehensive than CTCI, with problems organized by topic (arrays, strings, linked lists, trees, graphs, DP, etc.). Includes a study guide with recommended problem subsets for different time horizons.
+
+**Best for:** Advanced interview preparation, especially for FAANG. Those who have outgrown CTCI and want more challenging problems.
+
+**How to use:** Follow one of the included study plans (4-week, 8-week, or 16-week). The problems are harder than typical CTCI problems, so tackle this after building a foundation. The Java implementations are clean and idiomatic.
+
+---
+
+### Tier 2 (cont.): Competitive Programming
 
 #### "Competitive Programming" by Steven Halim and Felix Halim
 **Edition:** 4th Edition (2020, two volumes)
@@ -102,12 +149,36 @@ Not a traditional algorithms textbook but a collection of essays on programming 
 
 ---
 
-#### "Cracking the Coding Interview" by Gayle Laakmann McDowell
-**Edition:** 6th Edition (2015)
+#### "Algorithms Illuminated" by Tim Roughgarden
+**Volumes:** 4 volumes (2017--2020)
 
-The standard interview preparation book. 189 programming questions with solutions, plus advice on the interview process. Not deep on theory but comprehensive for interview-specific preparation.
+Based on Stanford's famous CS161 course (Design and Analysis of Algorithms). Extremely accessible writing that makes complex topics feel approachable. Available as a companion to Roughgarden's free Coursera and YouTube lectures. The four volumes cover: (1) The Basics, (2) Graph Algorithms and Data Structures, (3) Greedy Algorithms and Dynamic Programming, (4) Algorithms for NP-Hard Problems.
 
-**Best for:** Interview preparation, especially for FAANG-style companies.
+**Best for:** Those who prefer Roughgarden's Stanford lectures, self-learners who want a gentler path through algorithm design.
+
+**How to use:** Watch the corresponding Stanford lectures on YouTube, then read the matching chapters. Each volume is short and focused -- much less intimidating than CLRS.
+
+---
+
+#### "The Art of Computer Programming" by Donald Knuth
+**Volumes:** Volumes 1--4A
+
+The magnum opus of computer science. Encyclopedic, mathematically rigorous, and written using MIX/MMIX assembly language. Not practical for day-to-day implementation, but unmatched for theoretical depth, historical perspective, and mathematical precision. Knuth's analysis of fundamental algorithms remains the gold standard.
+
+**Best for:** Reference, mathematical proofs, historical perspective. Researchers and those who want the deepest possible understanding of algorithmic foundations.
+
+**How to use:** Do not attempt to read cover to cover. Use as a reference when you need the definitive treatment of a specific topic (e.g., sorting, searching, combinatorial algorithms). The exercises are legendary in difficulty and depth.
+
+---
+
+#### "Discrete Mathematics and Its Applications" by Kenneth Rosen
+**Edition:** 8th Edition (2019)
+
+Essential for the mathematical foundations that underpin algorithm analysis: logic, sets, relations, counting, graphs, trees, and number theory. If you find yourself struggling with the mathematical proofs in CLRS or Kleinberg/Tardos, this book fills those gaps.
+
+**Best for:** Filling math gaps before diving into CLRS-level analysis. Students who need to strengthen their discrete math foundations.
+
+**How to use:** Focus on the chapters most relevant to algorithms: logic and proofs (Ch. 1), sets and functions (Ch. 2), counting and combinatorics (Ch. 6), relations (Ch. 9), graphs (Ch. 10--11), and trees (Ch. 11). Work through the exercises -- discrete math is learned by doing.
 
 ---
 

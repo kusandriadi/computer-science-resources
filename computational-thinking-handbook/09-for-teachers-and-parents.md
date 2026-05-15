@@ -209,12 +209,21 @@ Have students work in pairs and give each other feedback:
 - *How to Be Good at Science, Technology, and Engineering* (DK) — Visual encyclopedia covering CS concepts.
 - *Lift-the-Flap Computers and Coding* (Usborne) — Interactive book for younger readers.
 - *Girls Who Code: Learn to Code and Change the World* by Reshma Saujani — Inspiring introduction to coding.
+- *Computational Fairy Tales* by Jeremy Kubica — CS concepts taught through fairy tale stories. Covers algorithms, data structures, search, and sorting in an engaging narrative.
+- *Lauren Ipsum: A Story About Computer Science and Other Impossible Things* by Carlos Bueno — A girl named Lauren falls into a strange world and solves problems using CS concepts. Great for ages 8-12.
+- *Secret Coders* by Gene Luen Yang (graphic novel series, 6 books) — Kids learn coding and logic through an engaging graphic novel mystery. Visual and fun. Ages 8-12.
+- *How to Code a Sandcastle* by Josh Funk — Picture book about a girl who uses coding concepts to build a sandcastle. Perfect for ages 5-8.
+- *Ada Lovelace, Poet of Science* by Diane Stanley — Picture book biography of the first computer programmer. Inspires interest in computing. Ages 6-10.
 
 ### Books for Educators
 
 - *Computational Thinking and Coding for Every Student* by Jane Krauss and Kiki Prottsman
 - *Computer Science Unplugged* by Tim Bell, Ian H. Witten, and Mike Fellows (free online)
 - *Teaching Computational Thinking* by Maureen D. Neumann
+- *Mindstorms: Children, Computers, and Powerful Ideas* by Seymour Papert (1980, reissued) — The classic that started it all. Papert's vision of children as builders, not just consumers. Essential reading for understanding why CT matters.
+- *Computational Thinking: A Beginner's Guide to Problem-Solving and Programming* by Karl Beecher — Practical guide bridging CT concepts to programming. Good for educators planning to extend into coding.
+- *Learner-Centered Design of Computing Education* by Mark Guzdial — Research-backed approaches to teaching computing. Covers how people actually learn CS concepts.
+- *Computer Science K-12: Imagining the Possibilities!* edited by Shuchi Grover — Collection of essays and ideas for teaching CS in K-12. Practical classroom strategies.
 
 ---
 
