@@ -40,7 +40,9 @@ enc.encode(" hello world")         # different — leading space changes the fir
 
 Now that we have token IDs, the model needs to turn them into something it can do math on. Each token ID gets mapped to a vector -- a list of numbers that represents the token's "meaning" in a high-dimensional space. Concretely, this is a lookup in an embedding matrix $E \in \mathbb{R}^{V \times d}$, where $V$ is vocab size and $d$ is the model dimension. The output projection (logits) is often **tied** to $E^\top$ to save parameters.
 
-Here is a subtle but important point: pure self-attention is permutation-equivariant. If you shuffle the tokens, you get shuffled outputs -- the model has no idea what order the words came in. Obviously, word order matters ("the dog bit the man" vs. "the man bit the dog"), so we need to inject positional information. Options:
+Here's a puzzle: without position information, the model sees "the dog bit the man" and "the man bit the dog" as the same thing -- just a bag of words. Obviously that's wrong. We need to tell the model which word comes first, second, third. That's what positional encoding does.
+
+More precisely, pure self-attention is permutation-equivariant. If you shuffle the tokens, you get shuffled outputs -- the model has no idea what order the words came in. So we need to inject positional information. Options:
 
 - **Sinusoidal absolute** (original 2017 paper) — fixed sin/cos at different frequencies.
 - **Learned absolute** — a position embedding matrix $P \in \mathbb{R}^{L \times d}$ added to token embeddings. Used by GPT-2. Doesn't extrapolate past $L$.

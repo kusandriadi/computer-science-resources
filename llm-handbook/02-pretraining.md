@@ -36,9 +36,9 @@ The overhead during training is modest — the auxiliary heads add parameters an
 Frontier pre-training corpora are tens of trillions of tokens. Composition matters more than raw volume past a point.
 
 **Sources**:
-- Web crawl (Common Crawl, FineWeb, RefinedWeb, DCLM). The bulk.
-- Books and academic papers.
-- Code (GitHub, The Stack v2). Improves reasoning even on non-code tasks.
+- Web crawl (Common Crawl, FineWeb, RefinedWeb, DCLM). The bulk — huge scale but noisy, with lots of spam and duplicates to filter out.
+- Books and academic papers. Higher quality but limited in scale.
+- Code (GitHub, The Stack v2). Surprisingly, training on code improves reasoning even on non-code tasks.
 - Math (proof corpora, math web pages).
 - Curated multilingual data.
 - Synthetic data — increasingly large fraction in 2024–2026 models (e.g. Phi family, post-LLaMA-3 work).

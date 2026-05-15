@@ -6,7 +6,7 @@ Coba lihat sekelilingmu sekarang. Bisakah kamu menemukan sesuatu yang berulang? 
 
 Dunia ini PENUH dengan pola, dan otakmu hebat banget dalam menemukannya!
 
-> **Pattern Recognition (pengenalan pola) = memperhatikan hal-hal yang berulang, terlihat mirip, atau mengikuti suatu aturan.**
+> **Pengenalan Pola** atau **Pattern Recognition** = memperhatikan hal-hal yang berulang, terlihat mirip, atau mengikuti suatu aturan.
 
 Kalau kamu menemukan pola, sesuatu yang ajaib terjadi: **kamu bisa memprediksi apa yang datang selanjutnya.** Kalau kamu melihat Senin, Selasa, Rabu — kamu TAHU Kamis yang berikutnya. Itulah pattern recognition!
 
@@ -385,4 +385,4 @@ Kerja bagus, detektif pola! Di modul ini, kamu belajar bahwa:
 
 ---
 
-[Sebelumnya: Modul 01 — Decomposition](01-decomposition.md) | [Selanjutnya: Modul 03 — Abstraction](03-abstraction.md)
+[Sebelumnya: Modul 01 — Dekomposisi](01-decomposition.md) | [Selanjutnya: Modul 03 — Abstraksi](03-abstraction.md)

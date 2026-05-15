@@ -4,7 +4,7 @@
 
 Bayangkan kamu punya kekuatan super yang bisa membantu memecahkan masalah APA PUN — dari yang paling gampang sampai yang paling susah. Kekuatan super yang membantu kamu merencanakan pesta ulang tahun terkeren, membangun benteng bantal paling kece, atau menemukan cara mengalahkan level tersulit di video game.
 
-Kabar baik: **kekuatan super itu nyata**, dan namanya **Computational Thinking** (berpikir komputasional).
+Kabar baik: **kekuatan super itu nyata**, dan namanya **Berpikir Komputasional** atau **Computational Thinking** adalah cara keren untuk memecahkan masalah apa pun.
 
 Jangan takut sama nama besarnya! Computational Thinking cuma cara keren untuk bilang **"pemecahan masalah yang cerdas."** Ini adalah kumpulan trik yang bisa dipelajari otakmu untuk memecah hal-hal susah jadi hal-hal gampang.
 
@@ -237,4 +237,4 @@ Bagikan jawabanmu dengan teman atau anggota keluarga dan lihat apakah mereka pun
 
 ---
 
-[Selanjutnya: Modul 01 — Decomposition](01-decomposition.md)
+[Selanjutnya: Modul 01 — Dekomposisi](01-decomposition.md)

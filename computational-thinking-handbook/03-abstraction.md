@@ -14,11 +14,11 @@ Sebaliknya, kamu mungkin akan bilang:
 
 Lihat yang kamu lakukan? Kamu menyimpan hal-hal yang **penting** (arah, tempat yang mudah dikenali) dan mengabaikan hal-hal yang **nggak penting** (retakan, daun, penyok). Itulah abstraction!
 
-> **Abstraction (abstraksi) = fokus pada yang penting dan mengabaikan yang tidak.**
+> **Abstraksi** atau **Abstraction** = fokus pada yang penting dan mengabaikan yang tidak.
 
 Ini seperti punya kekuatan super yang membantu kamu melihat menembus semua detail yang membingungkan dan menemukan apa yang BENAR-BENAR penting.
 
-> **Hai pembaca yang lebih muda (usia 6-8 tahun)!** Ini salah satu ide yang agak tricky di Computational Thinking. Nggak apa-apa kalau rasanya susah di awal! Versi sederhananya: **abstraction artinya menyimpan hal-hal penting dan membuang sisanya.** Seperti saat kamu menggambar orang stik — kamu menggambar kepala, badan, tangan, dan kaki, tapi kamu nggak menggambar kuku, bulu mata, dan pusar. Itulah abstraction! Baca terus, dan contoh-contohnya akan membantu kamu lebih paham.
+> **Hai pembaca yang lebih muda (usia 6-8 tahun)!** Ini salah satu ide yang agak tricky di Computational Thinking. Nggak apa-apa kalau rasanya susah di awal! Gampangnya: **fokus pada yang penting aja, yang nggak penting dibuang!** Kayak gambar orang stik — kamu cuma gambar kepala, badan, tangan, kaki. Nggak perlu gambar bulu mata atau kuku kaki! Baca terus, dan contoh-contohnya akan membantu kamu lebih paham.
 
 ---
 
@@ -345,4 +345,4 @@ Kamu hebat! Di modul ini, kamu belajar bahwa:
 
 ---
 
-[Sebelumnya: Modul 02 — Pattern Recognition](02-pattern-recognition.md) | [Selanjutnya: Modul 04 — Algorithm Design](04-algorithm-design.md)
+[Sebelumnya: Modul 02 — Pengenalan Pola](02-pattern-recognition.md) | [Selanjutnya: Modul 04 — Desain Algoritma](04-algorithm-design.md)

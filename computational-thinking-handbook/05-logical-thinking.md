@@ -4,7 +4,7 @@
 
 Setiap hari, kamu membuat ratusan keputusan. Ada yang kecil — "Pakai baju merah atau baju biru ya?" Ada yang lebih besar — "Belajar dulu untuk ulangan atau main dulu ya?"
 
-**Berpikir Logis** (Logical Thinking) adalah cara membuat keputusan dengan cerdas dan teratur. Caranya pakai aturan-aturan sederhana untuk membantu kamu mencari jawaban.
+**Berpikir Logis** atau **Logical Thinking** adalah cara membuat keputusan dengan cerdas dan teratur. Caranya pakai aturan-aturan sederhana untuk membantu kamu mencari jawaban.
 
 > **Berpikir Logis = menggunakan aturan, fakta, dan penalaran untuk membuat keputusan dan menyelesaikan masalah.**
 
@@ -229,6 +229,8 @@ Itu berpikir logis — menggunakan pertanyaan ya/tidak untuk mempersempit kemung
 
 ## Aktivitas 2: Tabel Kebenaran yang Seru
 
+*Aktivitas ini agak menantang! Cocok untuk kelas 4-6. Untuk kelas 1-3, coba Aktivitas 1 atau 3 dulu ya.*
+
 **Yang kamu butuhkan:** Kertas dan pensil.
 
 Tabel kebenaran menunjukkan semua kombinasi yang mungkin dari benar dan salah. Yuk kita bikin yang seru!
@@ -354,7 +356,7 @@ Hanya SATU dari pernyataan ini yang benar. Yang mana?
 
 **Cara bermain:**
 
-Ini terinspirasi dari topi penyortir ajaib! Orang "topi penyortir" bertanya pertanyaan ya/tidak untuk menyortir setiap pemain ke dalam kelompok.
+Ini permainan tentang topi ajaib yang bisa menentukan tempat untuk setiap orang berdasarkan jawaban mereka! Orang "topi penyortir" bertanya pertanyaan ya/tidak untuk menyortir setiap pemain ke dalam kelompok.
 
 1. Buat 4 kelompok (seperti asrama, tim, atau kelompok hewan).
 2. Topi penyortir membuat pohon keputusan:

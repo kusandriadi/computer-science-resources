@@ -6,7 +6,7 @@ Ini kata yang seru: **algorithm** (baca: AL-go-rit-ma).
 
 Kedengarannya canggih, tapi sebenarnya sangat sederhana:
 
-> **Algorithm (algoritma) = kumpulan instruksi langkah demi langkah untuk menyelesaikan masalah atau menyelesaikan tugas.**
+> **Algoritma** atau **Algorithm** = kumpulan instruksi langkah demi langkah untuk menyelesaikan masalah atau menyelesaikan tugas.
 
 Kamu mengikuti algorithm setiap hari! Resep masakan adalah algorithm untuk memasak. Petunjuk arah ke rumah teman adalah algorithm untuk sampai ke sana. Aturan permainan adalah algorithm untuk memainkannya.
 
@@ -36,26 +36,26 @@ Algorithm itu penting karena:
 
 ## Contoh di Kehidupan Nyata
 
-### Contoh 1: Resep Membuat Roti Isi
+### Contoh 1: Resep Membuat Roti Isi Cokelat
 
-Ini algorithm untuk membuat roti isi selai kacang:
+Ini algorithm untuk membuat roti isi cokelat:
 
 ```
 Langkah 1: Ambil dua lembar roti.
-Langkah 2: Ambil toples selai kacang dan toples selai.
+Langkah 2: Ambil toples selai cokelat dan toples mentega.
 Langkah 3: Ambil pisau roti.
-Langkah 4: Buka toples selai kacang.
-Langkah 5: Gunakan pisau untuk mengambil selai kacang.
-Langkah 6: Oleskan selai kacang di satu lembar roti.
-Langkah 7: Buka toples selai.
-Langkah 8: Gunakan pisau untuk mengambil selai.
-Langkah 9: Oleskan selai di lembar roti yang lain.
-Langkah 10: Tempelkan kedua lembar roti (sisi selai kacang menghadap sisi selai).
+Langkah 4: Buka toples selai cokelat.
+Langkah 5: Gunakan pisau untuk mengambil selai cokelat.
+Langkah 6: Oleskan selai cokelat di satu lembar roti.
+Langkah 7: Buka toples mentega.
+Langkah 8: Gunakan pisau untuk mengambil mentega.
+Langkah 9: Oleskan mentega di lembar roti yang lain.
+Langkah 10: Tempelkan kedua lembar roti (sisi selai cokelat menghadap sisi mentega).
 Langkah 11: Potong roti jadi dua kalau kamu mau.
 Langkah 12: Makan dan nikmati!
 ```
 
-Kalau siapa pun mengikuti langkah-langkah ini, mereka akan mendapat roti isi selai. Itulah algorithm!
+Kalau siapa pun mengikuti langkah-langkah ini, mereka akan mendapat roti isi cokelat yang enak. Itulah algorithm!
 
 ### Contoh 2: Pergi dari Rumah ke Sekolah
 
@@ -448,4 +448,4 @@ Kerja yang luar biasa! Di modul ini, kamu belajar bahwa:
 
 ---
 
-[Sebelumnya: Modul 03 — Abstraction](03-abstraction.md) | [Selanjutnya: Modul 05 — Logical Thinking](05-logical-thinking.md)
+[Sebelumnya: Modul 03 — Abstraksi](03-abstraction.md) | [Selanjutnya: Modul 05 — Berpikir Logis](05-logical-thinking.md)

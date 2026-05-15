@@ -8,9 +8,7 @@ Mungkin itu PR yang banyak banget. Atau membersihkan seluruh rumah. Atau belajar
 
 Ini rahasianya: **nggak ada yang terlalu besar kalau kamu memecahnya jadi bagian-bagian kecil.**
 
-Itulah yang dimaksud dengan **Decomposition** (dekomposisi). Kata yang panjang, tapi idenya sederhana:
-
-> **Decomposition = mengambil sesuatu yang BESAR dan memecahnya jadi bagian-bagian KECIL.**
+Itulah yang dimaksud dengan **Dekomposisi** atau dalam Bahasa Inggris **Decomposition** = mengambil sesuatu yang BESAR dan memecahnya jadi bagian-bagian KECIL. Kata yang panjang, tapi idenya sederhana!
 
 Bayangkan seperti makan pizza. Kamu nggak memasukkan seluruh pizza ke mulut sekaligus (yah, mungkin kamu mau, tapi nggak bisa kan!). Kamu memakannya satu potong demi satu potong. Setiap potong gampang dimakan. Dan tahu-tahu — seluruh pizza sudah habis!
 
@@ -318,4 +316,4 @@ Kamu hebat! Di modul ini, kamu belajar bahwa:
 
 ---
 
-[Sebelumnya: Modul 00 — Gambaran Umum](00-overview.md) | [Selanjutnya: Modul 02 — Pattern Recognition](02-pattern-recognition.md)
+[Sebelumnya: Modul 00 — Gambaran Umum](00-overview.md) | [Selanjutnya: Modul 02 — Pengenalan Pola](02-pattern-recognition.md)

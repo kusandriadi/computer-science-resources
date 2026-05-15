@@ -23,6 +23,9 @@ Concretely: a dense transformer activates all parameters for every token. MoE ma
 Modern MoE designs (Mixtral, DeepSeek-V3, Qwen-MoE) have 30B–700B total parameters with 4B–40B active. Roughly equivalent compute to a 4B–40B dense model, but with capability closer to the total size.
 
 **Routing matters and is hard**:
+
+Left to its own devices, the gating network has a frustrating failure mode: it discovers that one expert can handle most things, so it sends everything there. The other experts sit idle, wasting capacity. This is called router collapse, and preventing it is the central challenge of MoE training.
+
 - **Load balance**: without intervention, the router collapses to one expert. Auxiliary load-balancing losses (Switch Transformer) push uniform usage. DeepSeek-V3 introduced an *auxiliary-loss-free* approach via per-expert biases.
 - **Capacity**: each expert handles at most $C \cdot N/E$ tokens per batch ($C$ is the capacity factor, typically 1.25). Overflow tokens are dropped.
 - **Expert parallelism**: experts are sharded across devices. All-to-all communication every MoE layer dominates the cost at scale.
