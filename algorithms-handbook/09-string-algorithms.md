@@ -115,6 +115,86 @@ When a mismatch occurs at position $j$ in the pattern after matching $j$ charact
 
 ---
 
+### Boyer-Moore Algorithm
+
+Boyer-Moore is often the fastest string matching algorithm in practice, especially for large alphabets (e.g., ASCII text) and longer patterns. Unlike KMP, which scans left-to-right, Boyer-Moore compares the pattern **right-to-left** and uses two heuristics to skip large portions of the text.
+
+#### Bad Character Rule
+
+When a mismatch occurs at position $j$ in the pattern against text character $c$:
+- If $c$ does not appear in the pattern, shift the pattern past the mismatch entirely.
+- If $c$ appears in the pattern at position $k < j$, shift to align $c$ with its rightmost occurrence in the pattern.
+
+#### Good Suffix Rule (Brief)
+
+When a mismatch occurs after matching a suffix $s$ of the pattern:
+- If $s$ appears elsewhere in the pattern preceded by a different character, shift to align that occurrence.
+- Otherwise, shift to align the longest prefix of the pattern that matches a suffix of $s$.
+
+In practice, the bad character rule alone gives excellent performance on natural text. The good suffix rule provides the $O(n/m)$ best case guarantee.
+
+#### Implementation (Bad Character Rule)
+
+```java
+public static List<Integer> boyerMooreSearch(String text, String pattern) {
+    List<Integer> matches = new ArrayList<>();
+    int n = text.length(), m = pattern.length();
+    if (m == 0 || m > n) return matches;
+
+    // Preprocess: last occurrence of each character in pattern
+    int[] badChar = new int[256]; // ASCII alphabet
+    Arrays.fill(badChar, -1);
+    for (int i = 0; i < m; i++) {
+        badChar[pattern.charAt(i)] = i;
+    }
+
+    int shift = 0; // current alignment of pattern with text
+    while (shift <= n - m) {
+        int j = m - 1; // start comparing from the right
+
+        while (j >= 0 && pattern.charAt(j) == text.charAt(shift + j)) {
+            j--;
+        }
+
+        if (j < 0) {
+            // Full match found
+            matches.add(shift);
+            // Shift pattern so next character in text aligns
+            shift += (shift + m < n) ? m - badChar[text.charAt(shift + m)] : 1;
+        } else {
+            // Shift based on bad character rule
+            int bcShift = j - badChar[text.charAt(shift + j)];
+            shift += Math.max(1, bcShift);
+        }
+    }
+    return matches;
+}
+```
+
+#### Complexity Analysis
+
+- **Preprocessing:** $O(m + |\Sigma|)$ where $|\Sigma|$ is the alphabet size.
+- **Best case:** $O(n/m)$ -- when the bad character rule frequently skips $m$ positions (e.g., searching for a pattern with characters rare in the text).
+- **Worst case:** $O(nm)$ with only the bad character rule. Adding the good suffix rule improves worst case to $O(n)$.
+- **Space:** $O(|\Sigma|)$ for the bad character table ($O(|\Sigma| + m)$ if good suffix rule is included).
+
+#### When to Use Which Algorithm
+
+| Criterion | Boyer-Moore | KMP | Rabin-Karp |
+|-----------|-------------|-----|------------|
+| Best case | $O(n/m)$ | $O(n)$ | $O(n)$ |
+| Worst case | $O(nm)$* | $O(n)$ | $O(nm)$ |
+| Large alphabets | Excellent (frequent skips) | No benefit | No benefit |
+| Small alphabets (e.g., DNA) | Less effective | Strong choice | Good |
+| Multiple patterns | Not ideal | Not ideal | Natural fit |
+| Implementation complexity | Moderate | Moderate | Simple |
+
+*$O(n)$ worst case with full good suffix rule.
+
+**Rule of thumb:** Use Boyer-Moore for single-pattern search on English/ASCII text. Use KMP when worst-case guarantees matter or the alphabet is small. Use Rabin-Karp for multi-pattern matching or when simplicity is preferred.
+
+---
+
 ### Rabin-Karp Algorithm
 
 Rabin-Karp uses **hashing** to quickly filter candidate positions. Instead of comparing characters, it compares hash values. Only when hashes match does it verify character by character.
@@ -501,12 +581,13 @@ public class StringHasher {
 |-----------|--------------|--------|-------|-------------------|
 | Brute Force | None | $O(nm)$ | $O(1)$ | No |
 | KMP | $O(m)$ | $O(n)$ | $O(m)$ | No |
+| Boyer-Moore | $O(m + |\Sigma|)$ | $O(n/m)$ best, $O(n)$* | $O(|\Sigma|)$ | No |
 | Rabin-Karp | $O(m)$ | $O(n)$ avg | $O(1)$ | Yes |
 | Trie | $O(\text{total length})$ | $O(m)$ | $O(\text{total} \times |\Sigma|)$ | Yes |
 | Suffix Array | $O(n \log n)$ | $O(m \log n)$ | $O(n)$ | Yes |
 | Aho-Corasick* | $O(\text{total pattern length})$ | $O(n + \text{matches})$ | $O(\text{total} \times |\Sigma|)$ | Yes |
 
-*Aho-Corasick is not covered in this module but is the standard algorithm for multi-pattern matching.
+*With the full good suffix rule. Aho-Corasick is not covered in this module but is the standard algorithm for multi-pattern matching.
 
 ---
 

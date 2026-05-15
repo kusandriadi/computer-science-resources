@@ -642,6 +642,95 @@ Use Fenwick trees when you only need prefix sums and point updates. Use segment 
 
 ---
 
+## Fibonacci Heap
+
+A **Fibonacci heap** is a collection of heap-ordered trees with remarkably efficient amortized costs. It was designed specifically to speed up graph algorithms that perform many decrease-key operations.
+
+### Structure
+
+- A collection of min-heap-ordered trees (each node's key $\leq$ its children's keys).
+- A pointer to the minimum node.
+- Trees are not necessarily binomial -- their shapes are maintained lazily, which is the source of the amortized efficiency.
+
+### Amortized Complexities
+
+| Operation | Fibonacci Heap | Binary Heap |
+|-----------|---------------|-------------|
+| Insert | $O(1)$ | $O(\log n)$ |
+| Find-min | $O(1)$ | $O(1)$ |
+| Extract-min | $O(\log n)$ | $O(\log n)$ |
+| Decrease-key | $O(1)$ | $O(\log n)$ |
+| Merge | $O(1)$ | $O(n)$ |
+| Delete | $O(\log n)$ | $O(\log n)$ |
+
+The $O(1)$ amortized decrease-key is the critical advantage. Insert and merge are also $O(1)$ because they simply add trees to the collection without restructuring.
+
+### Why It Matters
+
+The $O(1)$ decrease-key directly improves two important graph algorithms:
+
+- **Dijkstra's algorithm:** From $O((V + E) \log V)$ with a binary heap to $O(V \log V + E)$ with a Fibonacci heap. For dense graphs ($E \approx V^2$), this is a significant improvement.
+- **Prim's MST algorithm:** Same improvement from $O((V + E) \log V)$ to $O(V \log V + E)$.
+
+### Java Interface (Key Idea)
+
+A full Fibonacci heap implementation is complex (~200 lines) due to cascading cuts and tree consolidation. The interface captures the essential operations:
+
+```java
+public class FibonacciHeap<K extends Comparable<K>> {
+
+    private static class Node<K> {
+        K key;
+        Node<K> parent, child, left, right;
+        int degree;
+        boolean marked; // has lost a child since becoming a child itself
+    }
+
+    private Node<K> min;
+    private int size;
+
+    // O(1): create a new single-node tree and add to root list
+    public Node<K> insert(K key) {
+        Node<K> node = new Node<>();
+        node.key = key;
+        node.left = node.right = node; // circular list
+        addToRootList(node);
+        if (min == null || key.compareTo(min.key) < 0) min = node;
+        size++;
+        return node; // caller keeps handle for decrease-key
+    }
+
+    // O(1): concatenate root lists, update min
+    public void merge(FibonacciHeap<K> other) {
+        if (other.min == null) return;
+        concatenateRootLists(this.min, other.min);
+        if (this.min == null || other.min.key.compareTo(this.min.key) < 0) {
+            this.min = other.min;
+        }
+        this.size += other.size;
+    }
+
+    // O(log n) amortized: remove min, consolidate trees by degree
+    public K extractMin() { /* ... consolidation logic ... */ return null; }
+
+    // O(1) amortized: cut node from parent, cascading cuts if needed
+    public void decreaseKey(Node<K> node, K newKey) { /* ... */ }
+
+    private void addToRootList(Node<K> node) { /* ... */ }
+    private void concatenateRootLists(Node<K> a, Node<K> b) { /* ... */ }
+}
+```
+
+The key implementation details omitted above are:
+- **Consolidation** (in `extractMin`): merge root-list trees until no two trees have the same degree, similar to binary addition.
+- **Cascading cuts** (in `decreaseKey`): if a non-root node loses a second child, cut it from its parent and move it to the root list. This maintains the logarithmic bound on tree sizes.
+
+### Practical Considerations
+
+Fibonacci heaps have large constant factors and complex code, so they rarely outperform binary heaps for small or moderate inputs. They are primarily of theoretical importance -- they prove that Dijkstra and Prim can achieve $O(V \log V + E)$. In practice, binary heaps or pairing heaps are often preferred.
+
+---
+
 ## Quiz
 
 **Q1.** What does `n & (n - 1)` compute, and why is it useful?

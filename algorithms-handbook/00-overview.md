@@ -70,6 +70,7 @@ For code examples, type them out rather than copy-pasting. Modify them. Break th
 | 11 | Complexity Theory | P, NP, NP-Complete, reductions, approximation |
 | 12 | Problem-Solving Patterns | Recognizing techniques, interview patterns, strategies |
 | 13 | Essential Reading | Books, online resources, practice platforms |
+| 14 | Network Flows | Flow networks, Ford-Fulkerson, Edmonds-Karp, max-flow min-cut, Dinic's, applications |
 
 ---
 

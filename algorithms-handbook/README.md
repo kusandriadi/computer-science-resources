@@ -22,6 +22,7 @@ A comprehensive, practical guide to algorithms and data structures for CS studen
 | 11 | [Complexity Theory](11-complexity-theory.md) | P, NP, NP-Complete, NP-Hard, reductions, approximation algorithms |
 | 12 | [Problem-Solving Patterns](12-problem-solving-patterns.md) | Technique recognition, interview patterns, competitive programming strategies |
 | 13 | [Essential Reading](13-essential-reading.md) | Books, online courses, practice platforms, curated problem lists |
+| 14 | [Network Flows](14-network-flows.md) | Flow networks, Ford-Fulkerson, Edmonds-Karp, max-flow min-cut, Dinic's, bipartite matching, applications |
 
 ---
 

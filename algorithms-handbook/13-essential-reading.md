@@ -193,6 +193,15 @@ Essential for the mathematical foundations that underpin algorithm analysis: log
 | Data Structures and Algorithms | Khan Academy | Various | Very beginner-friendly |
 | CS 161: Design and Analysis of Algorithms | Stanford (YouTube) | Tim Roughgarden | Excellent theoretical depth |
 
+### Free Online Textbooks
+
+| Resource | Notes |
+|----------|-------|
+| **Dive into Deep Learning** (d2l.ai) | Free, interactive; relevant for optimization algorithms (gradient descent, convergence analysis) |
+| **Open Data Structures** by Pat Morin (opendatastructures.org) | Free, Java edition available; covers all fundamental data structures with pseudocode and implementations |
+| **Algorithms** by Jeff Erickson (jeffe.cs.illinois.edu) | Already listed above — the best free alternative to CLRS |
+| Algorithm Design lecture notes from various universities | Many CS departments publish high-quality notes; search for "algorithm design lecture notes" from Stanford, MIT, or CMU |
+
 ### Paid Courses
 
 | Course | Platform | Notes |

@@ -190,7 +190,12 @@ Have students work in pairs and give each other feedback:
 
 ### Unplugged Resources (No Computer Needed)
 
-- **CS Unplugged (csunplugged.org)** — A collection of free activities that teach computer science concepts without computers. Many of the activities in Module 08 are inspired by this resource.
+- **CS Unplugged (csunplugged.org)** — A collection of free activities that teach computer science concepts without computers. Many of the activities in Module 08 are inspired by this resource. Specific CS Unplugged topics map directly to handbook modules:
+  - *Binary Numbers* — relates to Module 08 Activity 2 (Binary Bracelets)
+  - *Error Detection* — relates to Module 08 Activity 5 (Parity Magic)
+  - *Sorting Networks* — relates to Module 08 Activity 1 (Human Sorting)
+  - *Searching Algorithms* — relates to Module 04 (Algorithm Design)
+  - *Image Representation* — relates to Module 08 Activity 3 (Pixel Art)
 - **Bebras Challenge** — An international computational thinking challenge for students. Great practice problems available online.
 - **This Handbook** — Use it as-is or adapt the activities for your classroom.
 
