@@ -1,348 +1,348 @@
-# Module 03: Abstraction — Focusing on What Matters, Ignoring the Rest
+# Modul 03: Abstraction — Fokus pada yang Penting, Abaikan Sisanya
 
-## What is Abstraction?
+## Apa Itu Abstraction?
 
-Imagine you want to tell your friend how to get from school to your house. Would you say:
+Bayangkan kamu mau memberitahu temanmu cara jalan dari sekolah ke rumahmu. Apakah kamu akan bilang:
 
-*"Walk out the school gate, step over the crack in the sidewalk, pass the brown dog that sometimes sits near the tree (the tree has 347 leaves), walk past the red car (it has a dent on the bumper), then turn left at the big blue building..."*
+*"Jalan keluar gerbang sekolah, langkahi retakan di trotoar, lewati anjing cokelat yang kadang duduk dekat pohon (pohonnya punya 347 helai daun), jalan melewati mobil merah (ada penyok di bempernya), lalu belok kiri di gedung biru besar..."*
 
-NO! That's way too much information! Most of it doesn't matter.
+NGGAK! Itu kebanyakan informasi! Sebagian besar nggak penting.
 
-Instead, you'd probably say:
+Sebaliknya, kamu mungkin akan bilang:
 
-*"Go out the school gate. Walk straight for two blocks. Turn left at the big blue building. My house is the third one on the right."*
+*"Keluar gerbang sekolah. Jalan lurus dua blok. Belok kiri di gedung biru besar. Rumahku yang ketiga di sebelah kanan."*
 
-See what you did? You kept the **important** stuff (directions, landmarks) and ignored the **unimportant** stuff (cracks, leaves, dents). That's abstraction!
+Lihat yang kamu lakukan? Kamu menyimpan hal-hal yang **penting** (arah, tempat yang mudah dikenali) dan mengabaikan hal-hal yang **nggak penting** (retakan, daun, penyok). Itulah abstraction!
 
-> **Abstraction = focusing on what's important and ignoring what's not.**
+> **Abstraction (abstraksi) = fokus pada yang penting dan mengabaikan yang tidak.**
 
-It's like having a superpower that helps you see through all the confusing details and find what REALLY matters.
+Ini seperti punya kekuatan super yang membantu kamu melihat menembus semua detail yang membingungkan dan menemukan apa yang BENAR-BENAR penting.
 
-> **Hey younger readers (ages 6-8)!** This is one of the trickier ideas in Computational Thinking. Don't worry if it feels hard at first! The simple version is: **abstraction means keeping the important stuff and leaving out the rest.** Like when you draw a stick figure — you keep the head, body, arms, and legs, but you leave out the fingernails, eyelashes, and belly button. That's abstraction! Read on, and the examples will help it make sense.
-
----
-
-## Why Abstraction Matters
-
-The world is full of details. TONS of details. If you tried to pay attention to every single detail all the time, your brain would be overwhelmed! Abstraction helps you:
-
-1. **Focus on what's important.** You don't need to know everything — just the stuff that matters for your task.
-
-2. **Keep things simple.** Simple is easier to understand, easier to explain, and easier to work with.
-
-3. **Solve problems faster.** When you ignore the extra stuff, the problem becomes smaller and clearer.
-
-4. **Communicate better.** When you explain things simply, other people understand you more easily.
+> **Hai pembaca yang lebih muda (usia 6-8 tahun)!** Ini salah satu ide yang agak tricky di Computational Thinking. Nggak apa-apa kalau rasanya susah di awal! Versi sederhananya: **abstraction artinya menyimpan hal-hal penting dan membuang sisanya.** Seperti saat kamu menggambar orang stik — kamu menggambar kepala, badan, tangan, dan kaki, tapi kamu nggak menggambar kuku, bulu mata, dan pusar. Itulah abstraction! Baca terus, dan contoh-contohnya akan membantu kamu lebih paham.
 
 ---
 
-## Real-Life Examples
+## Kenapa Abstraction Itu Penting
 
-### Example 1: A Map vs. The Real World
+Dunia ini penuh detail. BANYAK BANGET detail. Kalau kamu coba memperhatikan setiap detail setiap saat, otakmu akan kewalahan! Abstraction membantu kamu:
 
-Think about a map of your city. Does the map show every tree? Every person? Every ant on the sidewalk? No way!
+1. **Fokus pada yang penting.** Kamu nggak perlu tahu segalanya — cukup hal-hal yang penting untuk tugasmu.
 
-A map only shows the **important things**: roads, buildings, rivers, parks. It leaves out everything else. That's what makes a map useful! If a map had EVERY detail of the real world, it would be as big as the real world and impossible to read.
+2. **Membuat segalanya sederhana.** Sederhana itu lebih mudah dipahami, lebih mudah dijelaskan, dan lebih mudah dikerjakan.
 
-Different maps leave out different things:
+3. **Menyelesaikan masalah lebih cepat.** Kalau kamu mengabaikan yang berlebihan, masalahnya jadi lebih kecil dan lebih jelas.
 
-- A **road map** shows roads and highways but not hiking trails.
-- A **weather map** shows temperature and rain but not roads.
-- A **subway map** shows train stations and lines but not the actual shape of the streets above.
-
-Each map uses abstraction to focus on what matters for its purpose.
-
-### Example 2: A Recipe
-
-A recipe for cookies might say:
-
-*"Mix flour, sugar, butter, and eggs. Roll into balls. Bake at 180 degrees for 12 minutes."*
-
-The recipe doesn't say:
-- What brand of flour to use
-- What color bowl to mix in
-- Which hand to hold the spoon with
-- What music to listen to while baking
-
-Those details don't matter for making cookies! The recipe uses abstraction — it only includes the steps that are important.
-
-### Example 3: A Stick Figure
-
-When you draw a stick figure, you're using abstraction! A real person has skin, hair, fingernails, eyelashes, freckles, and thousands of tiny details. But a stick figure shows just the basics:
-
-- A circle for the head
-- A line for the body
-- Lines for arms and legs
-
-Everyone can look at a stick figure and say, "That's a person!" You removed all the unimportant details but kept enough so people understand what it is.
-
-### Example 4: Game Instructions
-
-When someone teaches you a new card game, they don't explain every possible move you'll ever make. They give you the **basic rules**:
-
-- "Each player gets 7 cards."
-- "Take turns putting down a card that matches the color or number."
-- "If you can't play, pick up a card."
-- "First player with no cards wins!"
-
-That's enough to play. You don't need to know the history of card games, how the cards were made, or the probability of each card appearing. The instructions use abstraction to keep things simple.
+4. **Berkomunikasi lebih baik.** Kalau kamu menjelaskan sesuatu dengan sederhana, orang lain lebih mudah memahami kamu.
 
 ---
 
-## How Abstraction Works
+## Contoh di Kehidupan Nyata
 
-Think of abstraction as a **filter**. Imagine pouring water through a coffee filter — the filter catches the coffee grounds and lets the clean water through.
+### Contoh 1: Peta vs. Dunia Nyata
 
-Abstraction works the same way:
+Coba pikirkan peta kotamu. Apakah peta itu menunjukkan setiap pohon? Setiap orang? Setiap semut di trotoar? Nggak mungkin!
 
-- **Information goes in** (all the details about a problem).
-- **Your abstraction filter** keeps the important stuff.
-- **The unimportant stuff** gets filtered out.
-- **What's left** is clear, simple, and easy to work with.
+Peta hanya menunjukkan **hal-hal penting**: jalan, gedung, sungai, taman. Peta meninggalkan segala sesuatu yang lain. Itulah yang membuat peta berguna! Kalau peta punya SETIAP detail dari dunia nyata, peta itu akan sebesar dunia nyata dan mustahil dibaca.
 
-The tricky part? Deciding what's important and what's not! That depends on what you're trying to do.
+Peta yang berbeda meninggalkan hal yang berbeda:
 
-**Example:** If you're drawing a map to help someone find your house:
-- Important: street names, turns, your house location
-- Not important: types of trees, colors of other houses, fire hydrant locations
+- **Peta jalan** menunjukkan jalan raya tapi tidak jalur hiking.
+- **Peta cuaca** menunjukkan suhu dan hujan tapi tidak jalan.
+- **Peta kereta bawah tanah** menunjukkan stasiun dan jalur tapi tidak bentuk sebenarnya dari jalan-jalan di atas.
 
-But if you're drawing a map for a nature walk:
-- Important: trails, trees, lakes, animal habitats
-- Not important: street names, house numbers, traffic lights
+Setiap peta menggunakan abstraction untuk fokus pada apa yang penting untuk tujuannya.
 
-The same information can be important in one situation and unimportant in another!
+### Contoh 2: Resep Masakan
 
----
+Resep kue kering mungkin bilang:
 
-## Levels of Abstraction
+*"Campur tepung, gula, mentega, dan telur. Bulatkan adonan. Panggang di suhu 180 derajat selama 12 menit."*
 
-Here's something cool: you can have different LEVELS of abstraction — from very simple to very detailed.
+Resep itu nggak bilang:
+- Merk tepung apa yang harus dipakai
+- Mangkuk warna apa untuk mencampur
+- Tangan mana untuk memegang sendok
+- Musik apa yang didengarkan saat memanggang
 
-**Example: Describing your school**
+Detail-detail itu nggak penting untuk membuat kue! Resep menggunakan abstraction — hanya memasukkan langkah-langkah yang penting.
 
-**Very abstract (simple):** "It's a building where kids learn."
+### Contoh 3: Orang Stik
 
-**Medium abstract:** "It's a two-story building with classrooms, a library, a cafeteria, and a playground."
+Saat kamu menggambar orang stik, kamu sedang menggunakan abstraction! Orang sungguhan punya kulit, rambut, kuku, bulu mata, bintik-bintik, dan ribuan detail kecil. Tapi orang stik hanya menunjukkan yang dasar:
 
-**Less abstract (more detail):** "It's a two-story building on Jalan Merdeka. The first floor has 10 classrooms, a library with 5,000 books, and a cafeteria. The second floor has 8 classrooms, a science lab, and a computer room. Outside there's a playground with swings, slides, and a soccer field."
+- Lingkaran untuk kepala
+- Garis untuk badan
+- Garis untuk tangan dan kaki
 
-**No abstraction (all details):** This would be a description of every brick, every desk, every book, every pencil, every scratch on the wall... it would take forever!
+Semua orang bisa melihat orang stik dan bilang, "Itu orang!" Kamu menghilangkan semua detail yang nggak penting tapi tetap menyimpan cukup agar orang paham apa itu.
 
-Each level is useful for different purposes:
-- The very abstract version is good for a quick answer.
-- The medium version is good for a school brochure.
-- The detailed version is good for someone who needs to find a specific room.
+### Contoh 4: Aturan Permainan
 
----
+Saat seseorang mengajarimu permainan kartu baru, mereka nggak menjelaskan setiap kemungkinan gerakan yang akan kamu buat. Mereka memberikan **aturan dasarnya**:
 
-## Activity 1: Draw a Map of Your School
+- "Setiap pemain dapat 7 kartu."
+- "Gantian menaruh kartu yang warna atau angkanya cocok."
+- "Kalau nggak bisa main, ambil satu kartu."
+- "Pemain pertama yang kartunya habis menang!"
 
-**What you need:** Paper, pencil, colored pencils.
-
-**Instructions:**
-
-1. Think about your school. Imagine you're floating above it, looking down.
-2. Draw a simple map of your school that shows ONLY the important things.
-3. You get to decide what's important! But you can only include **10 things** on your map.
-
-**Think about:** What would a new student need to see? Probably:
-- Where the classrooms are
-- Where the entrance is
-- Where the bathroom is
-- Where the playground is
-- Where the cafeteria is
-
-**You probably DON'T need to include:**
-- Every desk in every room
-- Where the trash cans are
-- What color the doors are
-- Where each teacher sits
-
-4. When you're done, show your map to a friend. Can they understand it? Would they be able to find things at your school using your map?
-
-5. Compare your map with a friend's map. Did you include different things? Talk about WHY you made different choices.
+Itu cukup untuk bermain. Kamu nggak perlu tahu sejarah permainan kartu, bagaimana kartu itu dibuat, atau kemungkinan setiap kartu muncul. Aturannya menggunakan abstraction untuk menjaga hal-hal tetap sederhana.
 
 ---
 
-## Activity 2: Simplify a Story
+## Cara Kerja Abstraction
 
-**What you need:** Paper and pencil.
+Bayangkan abstraction sebagai **saringan**. Bayangkan menuang air melalui saringan kopi — saringan menangkap ampas kopi dan membiarkan air bersih melewatinya.
 
-**Instructions:**
+Abstraction bekerja dengan cara yang sama:
 
-1. Think of a story you know well — a fairy tale, a movie, or a book. (Examples: Cinderella, Finding Nemo, The Three Little Pigs)
+- **Informasi masuk** (semua detail tentang suatu masalah).
+- **Saringan abstraction-mu** menyimpan hal-hal penting.
+- **Hal-hal nggak penting** tersaring keluar.
+- **Yang tersisa** jelas, sederhana, dan mudah dikerjakan.
 
-2. Write the story in **exactly 3 sentences**. You have to capture the most important parts and leave out the rest.
+Bagian yang susah? Memutuskan mana yang penting dan mana yang tidak! Itu tergantung pada apa yang sedang kamu coba lakukan.
 
-**Example — The Three Little Pigs in 3 sentences:**
-"Three pigs each built a house — one of straw, one of sticks, and one of bricks. A big bad wolf blew down the straw house and the stick house. The pigs were safe in the brick house because the wolf couldn't blow it down."
+**Contoh:** Kalau kamu menggambar peta untuk membantu seseorang menemukan rumahmu:
+- Penting: nama jalan, belokan, lokasi rumahmu
+- Nggak penting: jenis pohon, warna rumah lain, lokasi hidran
 
-That's the whole story! We left out lots of details (what the pigs looked like, what they ate for breakfast, what the wolf said), but the MAIN IDEA is there.
+Tapi kalau kamu menggambar peta untuk jalan-jalan di alam:
+- Penting: jalur setapak, pohon, danau, habitat hewan
+- Nggak penting: nama jalan, nomor rumah, lampu lalu lintas
 
-3. Try to write 3 different stories in 3 sentences each.
-
-**Challenge:** Now try writing a story in just ONE sentence! That takes even MORE abstraction.
-
-**Example — The Three Little Pigs in 1 sentence:**
-"A wolf tries to destroy three pigs' houses, but only the brick house survives."
-
----
-
-## Activity 3: The Description Game
-
-**What you need:** Two or more players, paper, pencils.
-
-**How to play:**
-
-1. Player 1 thinks of an object (a bicycle, a phone, a tree, a pizza, a guitar).
-2. Player 1 describes the object using only **5 words or less**.
-3. Other players try to guess the object.
-
-**Examples:**
-- "Two wheels, pedals, handlebars" = Bicycle
-- "Hot, round, cheese, tomato" = Pizza
-- "Strings, music, wooden body" = Guitar
-
-This game forces you to think: "What are the MOST important features of this object?" That's abstraction!
-
-**Make it harder:** Describe the object using only **3 words**!
+Informasi yang sama bisa penting di satu situasi dan nggak penting di situasi lain!
 
 ---
 
-## Activity 4: What Can I Remove?
+## Tingkat-tingkat Abstraction
 
-**What you need:** Paper and pencil.
+Ini hal yang keren: kamu bisa punya TINGKATAN abstraction yang berbeda — dari yang sangat sederhana sampai yang sangat detail.
 
-**Instructions:**
+**Contoh: Mendeskripsikan sekolahmu**
 
-Read each description below. Cross out the parts that are NOT important for understanding the main idea.
+**Sangat abstrak (sederhana):** "Itu gedung tempat anak-anak belajar."
 
-**Description 1:**
-"My friend Sara, who has brown hair and is wearing a blue shirt today, told me that our math test, which we studied for last weekend at her house while eating popcorn, is moved to Friday."
+**Cukup abstrak:** "Itu gedung dua lantai dengan ruang kelas, perpustakaan, kantin, dan lapangan bermain."
 
-**Important version:** "Sara told me the math test is moved to Friday."
+**Kurang abstrak (lebih detail):** "Itu gedung dua lantai di Jalan Merdeka. Lantai pertama punya 10 ruang kelas, perpustakaan dengan 5.000 buku, dan kantin. Lantai kedua punya 8 ruang kelas, laboratorium IPA, dan ruang komputer. Di luar ada lapangan bermain dengan ayunan, perosotan, dan lapangan sepak bola."
 
-**Now try these yourself:**
+**Tanpa abstraction (semua detail):** Ini akan jadi deskripsi setiap batu bata, setiap meja, setiap buku, setiap pensil, setiap goresan di dinding... bakalan lama banget!
 
-**Description 2:**
-"The big yellow school bus, which was washed yesterday and had new tires put on last month, will pick us up at 7:30 in the morning from the corner near the old oak tree that has been there for fifty years."
-
-What's the important part? Write it in one short sentence.
-
-**Description 3:**
-"For dinner tonight, my mom, who is a really good cook and learned to cook from my grandmother when she was twelve years old, is making spaghetti with tomato sauce and meatballs."
-
-What's the important part? Write it in one short sentence.
-
-**Description 4:**
-"The new student, who just moved from another city where he went to a school that had a swimming pool, will be sitting next to you in class starting tomorrow."
-
-What's the important part? Write it in one short sentence.
+Setiap tingkat berguna untuk tujuan yang berbeda:
+- Versi yang sangat abstrak cocok untuk jawaban singkat.
+- Versi yang sedang cocok untuk brosur sekolah.
+- Versi yang detail cocok untuk seseorang yang perlu menemukan ruangan tertentu.
 
 ---
 
-## Activity 5: Abstract Art
+## Kegiatan 1: Gambar Peta Sekolahmu
 
-**What you need:** Paper, pencil, colored pencils or crayons.
+**Apa yang kamu butuhkan:** Kertas, pensil, pensil warna.
 
-**Instructions:**
+**Instruksi:**
 
-1. Look at an object near you — a chair, a water bottle, a shoe, a backpack.
-2. Draw it THREE times:
-   - **Drawing 1: Detailed** — Draw it with as many details as you can. Texture, shadows, labels, stitching, everything!
-   - **Drawing 2: Medium** — Draw it with basic shapes and main features only.
-   - **Drawing 3: Abstract** — Draw it using only 3-5 simple shapes or lines. Make it as simple as possible while still being recognizable.
+1. Pikirkan tentang sekolahmu. Bayangkan kamu melayang di atasnya, melihat ke bawah.
+2. Gambar peta sederhana sekolahmu yang menunjukkan HANYA hal-hal penting.
+3. Kamu yang menentukan apa yang penting! Tapi kamu hanya boleh memasukkan **10 hal** di petamu.
 
-3. Show your three drawings to someone. Can they tell what the object is from Drawing 3 (the most abstract one)?
+**Pikirkan:** Apa yang perlu dilihat murid baru? Mungkin:
+- Di mana ruang kelasnya
+- Di mana pintu masuknya
+- Di mana kamar mandinya
+- Di mana lapangan bermainnya
+- Di mana kantinnya
 
-This is exactly what abstraction looks like — starting with lots of detail and stripping away until only the essentials remain.
+**Kamu mungkin TIDAK perlu memasukkan:**
+- Setiap meja di setiap ruangan
+- Di mana tempat sampahnya
+- Warna pintunya apa
+- Di mana setiap guru duduk
 
----
+4. Kalau sudah selesai, tunjukkan petamu ke teman. Apakah mereka bisa memahaminya? Apakah mereka bisa menemukan tempat-tempat di sekolahmu menggunakan petamu?
 
-## Abstraction in Everyday Life
-
-You use abstraction all the time without knowing it:
-
-- **Emojis** are abstractions of emotions. A smiley face represents the feeling of happiness without showing a real human face.
-- **Traffic signs** are abstractions. A stick figure walking tells you "pedestrian crossing" without drawing a real person.
-- **Book covers** are abstractions of the whole story. They show one image that represents hundreds of pages.
-- **Nicknames** are abstractions of full names. "Tom" is easier to remember than "Thomas Alexander Bartholomew III."
-- **Summaries** are abstractions of longer texts. A movie trailer is an abstraction of a two-hour film.
-
----
-
-## Quiz Time!
-
-**Question 1:** What does abstraction mean?
-- A) Making things more complicated
-- B) Focusing on what's important and ignoring what's not
-- C) Drawing abstract art
-- D) Forgetting things
-
-**Question 2:** A map is a good example of abstraction because:
-- A) It shows every single detail of the real world
-- B) It only shows the information you need, like roads and buildings
-- C) It's always colorful
-- D) It's made of paper
-
-**Question 3:** Which of these is the MOST abstract description of a cat?
-- A) "A small furry animal with four legs"
-- B) "A white Persian cat named Snowball with blue eyes, weighing 4 kilograms, who likes to sleep on the couch"
-- C) "An animal"
-- D) "A cat with fur, whiskers, a tail, four paws, two ears, and two eyes that meows"
-
-**Question 4:** Why is abstraction useful?
-- A) It helps you focus on what matters
-- B) It makes problems simpler
-- C) It helps you communicate more clearly
-- D) All of the above
-
-**Question 5:** You're writing a text message to tell your mom what happened at school today. You had a math test, ate lunch, played soccer, learned about volcanoes, and your friend told a funny joke. Your mom asks, "How was school?" What's the BEST abstract answer?
-- A) Tell her every single detail about every minute of every class
-- B) "Good! We had a math test and learned about volcanoes."
-- C) "Fine."
-- D) Don't answer
+5. Bandingkan petamu dengan peta teman. Apakah kalian memasukkan hal yang berbeda? Diskusikan KENAPA kalian membuat pilihan yang berbeda.
 
 ---
 
-## Challenge: The Abstraction Ladder
+## Kegiatan 2: Sederhanakan Sebuah Cerita
 
-Pick one of these topics and write FOUR descriptions — from most abstract to most detailed:
+**Apa yang kamu butuhkan:** Kertas dan pensil.
 
-**Topics:** Your best friend, your favorite food, your bedroom, your pet (or dream pet)
+**Instruksi:**
 
-**Level 1 — Super abstract:** Describe it in 5 words or less.
-**Level 2 — A little detail:** Describe it in 1-2 sentences.
-**Level 3 — More detail:** Describe it in a full paragraph (4-5 sentences).
-**Level 4 — Full detail:** Describe it with as much detail as you can.
+1. Pikirkan cerita yang kamu kenal baik — dongeng, film, atau buku. (Contoh: Cinderella, Finding Nemo, Tiga Babi Kecil)
 
-Notice how each level adds more information? That's moving DOWN the abstraction ladder — from simple to detailed. In problem-solving, we often want to move UP the ladder — from detailed to simple.
+2. Tulis ceritanya dalam **tepat 3 kalimat**. Kamu harus menangkap bagian-bagian terpenting dan meninggalkan sisanya.
 
----
+**Contoh — Tiga Babi Kecil dalam 3 kalimat:**
+"Tiga ekor babi masing-masing membangun rumah — satu dari jerami, satu dari kayu, dan satu dari batu bata. Seekor serigala jahat meniup roboh rumah jerami dan rumah kayu. Babi-babi itu selamat di rumah batu bata karena serigala nggak bisa menghancurkannya."
 
-## What You Learned
+Itulah keseluruhan ceritanya! Kita meninggalkan banyak detail (seperti apa babi-babinya, apa sarapan mereka, apa kata serigala), tapi IDE UTAMA-nya ada.
 
-You're doing great! In this module, you learned that:
-- **Abstraction** means keeping what's important and removing what's not.
-- Maps, recipes, stick figures, and game instructions are all examples of abstraction.
-- Abstraction helps you **focus**, **simplify**, **solve problems faster**, and **communicate better**.
-- Different situations need different levels of detail.
-- You already use abstraction every day!
+3. Coba tulis 3 cerita berbeda dalam 3 kalimat masing-masing.
+
+**Tantangan:** Sekarang coba tulis cerita dalam hanya SATU kalimat! Itu butuh abstraction yang lebih banyak lagi.
+
+**Contoh — Tiga Babi Kecil dalam 1 kalimat:**
+"Seekor serigala mencoba menghancurkan tiga rumah babi, tapi hanya rumah batu bata yang selamat."
 
 ---
 
-## Answers
+## Kegiatan 3: Permainan Deskripsi
 
-**Question 1:** B) Focusing on what's important and ignoring what's not.
+**Apa yang kamu butuhkan:** Dua atau lebih pemain, kertas, pensil.
 
-**Question 2:** B) It only shows the information you need.
+**Cara bermain:**
 
-**Question 3:** C) "An animal" — this is the most abstract because it gives the least detail while still being true.
+1. Pemain 1 memikirkan suatu benda (sepeda, handphone, pohon, pizza, gitar).
+2. Pemain 1 mendeskripsikan benda itu menggunakan hanya **5 kata atau kurang**.
+3. Pemain lain mencoba menebak bendanya.
 
-**Question 4:** D) All of the above.
+**Contoh:**
+- "Dua roda, pedal, stang" = Sepeda
+- "Panas, bulat, keju, tomat" = Pizza
+- "Senar, musik, badan kayu" = Gitar
 
-**Question 5:** B) "Good! We had a math test and learned about volcanoes." — This gives the highlights without overwhelming detail, but more useful than just "Fine."
+Permainan ini memaksa kamu berpikir: "Apa ciri-ciri PALING penting dari benda ini?" Itulah abstraction!
+
+**Buat lebih susah:** Deskripsikan bendanya menggunakan hanya **3 kata**!
 
 ---
 
-[Previous: Module 02 — Pattern Recognition](02-pattern-recognition.md) | [Next: Module 04 — Algorithm Design](04-algorithm-design.md)
+## Kegiatan 4: Apa yang Bisa Dihilangkan?
+
+**Apa yang kamu butuhkan:** Kertas dan pensil.
+
+**Instruksi:**
+
+Baca setiap deskripsi di bawah. Coret bagian-bagian yang TIDAK penting untuk memahami ide utamanya.
+
+**Deskripsi 1:**
+"Temanku Sara, yang rambutnya cokelat dan hari ini pakai baju biru, memberitahuku bahwa ulangan matematika kita, yang kita pelajari akhir pekan lalu di rumahnya sambil makan popcorn, dipindah ke hari Jumat."
+
+**Versi penting:** "Sara memberitahuku ulangan matematika dipindah ke hari Jumat."
+
+**Sekarang coba sendiri:**
+
+**Deskripsi 2:**
+"Bus sekolah kuning besar, yang dicuci kemarin dan dipasang ban baru bulan lalu, akan menjemput kita jam 7:30 pagi di pojok dekat pohon beringin tua yang sudah ada selama lima puluh tahun."
+
+Apa bagian pentingnya? Tulis dalam satu kalimat pendek.
+
+**Deskripsi 3:**
+"Untuk makan malam nanti, mamaku, yang jago masak dan belajar masak dari nenek saat berumur dua belas tahun, akan membuat spaghetti dengan saus tomat dan bakso."
+
+Apa bagian pentingnya? Tulis dalam satu kalimat pendek.
+
+**Deskripsi 4:**
+"Murid baru, yang baru pindah dari kota lain di mana dia sekolah di tempat yang punya kolam renang, akan duduk di sebelahmu di kelas mulai besok."
+
+Apa bagian pentingnya? Tulis dalam satu kalimat pendek.
+
+---
+
+## Kegiatan 5: Seni Abstrak
+
+**Apa yang kamu butuhkan:** Kertas, pensil, pensil warna atau krayon.
+
+**Instruksi:**
+
+1. Lihat suatu benda di dekatmu — kursi, botol minum, sepatu, tas sekolah.
+2. Gambar benda itu TIGA kali:
+   - **Gambar 1: Detail** — Gambar dengan sebanyak mungkin detail. Tekstur, bayangan, label, jahitan, semuanya!
+   - **Gambar 2: Sedang** — Gambar dengan bentuk dasar dan fitur utama saja.
+   - **Gambar 3: Abstrak** — Gambar menggunakan hanya 3-5 bentuk atau garis sederhana. Buat sesederhana mungkin tapi masih bisa dikenali.
+
+3. Tunjukkan ketiga gambarmu ke seseorang. Bisakah mereka menebak benda apa dari Gambar 3 (yang paling abstrak)?
+
+Ini persis seperti abstraction — mulai dari banyak detail dan menghilangkan sampai hanya yang paling penting yang tersisa.
+
+---
+
+## Abstraction dalam Kehidupan Sehari-hari
+
+Kamu menggunakan abstraction sepanjang waktu tanpa sadar:
+
+- **Emoji** adalah abstraksi dari emosi. Wajah tersenyum mewakili perasaan senang tanpa menunjukkan wajah manusia sungguhan.
+- **Rambu lalu lintas** adalah abstraksi. Orang stik yang berjalan memberitahumu "penyeberangan pejalan kaki" tanpa menggambar orang sungguhan.
+- **Sampul buku** adalah abstraksi dari keseluruhan cerita. Mereka menunjukkan satu gambar yang mewakili ratusan halaman.
+- **Nama panggilan** adalah abstraksi dari nama lengkap. "Tom" lebih mudah diingat daripada "Thomas Alexander Bartholomew III."
+- **Ringkasan** adalah abstraksi dari teks yang lebih panjang. Trailer film adalah abstraksi dari film berdurasi dua jam.
+
+---
+
+## Waktunya Kuis!
+
+**Pertanyaan 1:** Apa artinya abstraction?
+- A) Membuat sesuatu jadi lebih rumit
+- B) Fokus pada yang penting dan mengabaikan yang tidak
+- C) Menggambar seni abstrak
+- D) Melupakan sesuatu
+
+**Pertanyaan 2:** Peta adalah contoh bagus dari abstraction karena:
+- A) Peta menunjukkan setiap detail dari dunia nyata
+- B) Peta hanya menunjukkan informasi yang kamu butuhkan, seperti jalan dan gedung
+- C) Peta selalu berwarna-warni
+- D) Peta terbuat dari kertas
+
+**Pertanyaan 3:** Mana yang merupakan deskripsi PALING abstrak tentang kucing?
+- A) "Hewan kecil berbulu dengan empat kaki"
+- B) "Kucing Persia putih bernama Salju bermata biru, beratnya 4 kilogram, suka tidur di sofa"
+- C) "Seekor hewan"
+- D) "Kucing dengan bulu, kumis, ekor, empat cakar, dua telinga, dan dua mata yang mengeong"
+
+**Pertanyaan 4:** Kenapa abstraction itu berguna?
+- A) Membantu kamu fokus pada yang penting
+- B) Membuat masalah jadi lebih sederhana
+- C) Membantu kamu berkomunikasi lebih jelas
+- D) Semua jawaban di atas
+
+**Pertanyaan 5:** Kamu menulis pesan ke mamamu untuk menceritakan apa yang terjadi di sekolah hari ini. Kamu ulangan matematika, makan siang, main sepak bola, belajar tentang gunung berapi, dan temanmu cerita lelucon lucu. Mamamu bertanya, "Gimana sekolahnya?" Apa jawaban abstrak TERBAIK?
+- A) Ceritakan setiap detail tentang setiap menit dari setiap pelajaran
+- B) "Seru! Kita ulangan matematika dan belajar tentang gunung berapi."
+- C) "Biasa aja."
+- D) Jangan dijawab
+
+---
+
+## Tantangan: Tangga Abstraction
+
+Pilih satu topik dan tulis EMPAT deskripsi — dari yang paling abstrak sampai yang paling detail:
+
+**Topik:** Sahabatmu, makanan favoritmu, kamar tidurmu, hewan peliharaanmu (atau hewan peliharaan impian)
+
+**Level 1 — Super abstrak:** Deskripsikan dalam 5 kata atau kurang.
+**Level 2 — Sedikit detail:** Deskripsikan dalam 1-2 kalimat.
+**Level 3 — Lebih detail:** Deskripsikan dalam satu paragraf penuh (4-5 kalimat).
+**Level 4 — Detail lengkap:** Deskripsikan dengan sebanyak mungkin detail.
+
+Perhatikan bagaimana setiap level menambahkan lebih banyak informasi? Itu artinya bergerak TURUN tangga abstraction — dari sederhana ke detail. Dalam pemecahan masalah, kita sering ingin bergerak NAIK tangga — dari detail ke sederhana.
+
+---
+
+## Apa yang Sudah Kamu Pelajari
+
+Kamu hebat! Di modul ini, kamu belajar bahwa:
+- **Abstraction** (abstraksi) artinya menyimpan yang penting dan menghilangkan yang tidak.
+- Peta, resep, orang stik, dan aturan permainan semuanya adalah contoh abstraction.
+- Abstraction membantu kamu **fokus**, **menyederhanakan**, **menyelesaikan masalah lebih cepat**, dan **berkomunikasi lebih baik**.
+- Situasi yang berbeda butuh tingkat detail yang berbeda.
+- Kamu sudah pakai abstraction setiap hari!
+
+---
+
+## Jawaban
+
+**Pertanyaan 1:** B) Fokus pada yang penting dan mengabaikan yang tidak.
+
+**Pertanyaan 2:** B) Peta hanya menunjukkan informasi yang kamu butuhkan.
+
+**Pertanyaan 3:** C) "Seekor hewan" — ini yang paling abstrak karena memberikan detail paling sedikit tapi masih benar.
+
+**Pertanyaan 4:** D) Semua jawaban di atas.
+
+**Pertanyaan 5:** B) "Seru! Kita ulangan matematika dan belajar tentang gunung berapi." — Ini memberikan hal-hal penting tanpa detail berlebihan, tapi lebih berguna daripada cuma "Biasa aja."
+
+---
+
+[Sebelumnya: Modul 02 — Pattern Recognition](02-pattern-recognition.md) | [Selanjutnya: Modul 04 — Algorithm Design](04-algorithm-design.md)

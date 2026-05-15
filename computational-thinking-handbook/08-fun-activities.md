@@ -1,712 +1,712 @@
-# Module 08: Fun Activities — Unplugged Games and Puzzles
+# Modul 08: Aktivitas Seru — Permainan dan Teka-Teki Tanpa Komputer
 
-## No Computer Needed!
+## Tidak Perlu Komputer!
 
-Get ready — this is the FUN part! This module is packed with awesome games, cool puzzles, and hands-on activities that teach Computational Thinking — all WITHOUT a computer! You can play these in your classroom, at home, or with friends.
+Siap-siap — ini bagian yang SERU banget! Modul ini penuh dengan permainan keren, teka-teki asyik, dan aktivitas langsung yang mengajarkan Computational Thinking — semuanya TANPA komputer! Kamu bisa mainkan ini di kelas, di rumah, atau bersama teman-teman.
 
-Here's what you'll see for each activity:
-- **What you need** (materials)
-- **How many players**
-- **CT skills practiced**
-- **Step-by-step instructions**
+Ini yang akan kamu lihat di setiap aktivitas:
+- **Yang kamu butuhkan** (bahan-bahan)
+- **Berapa pemain**
+- **Kemampuan CT yang dilatih**
+- **Instruksi langkah demi langkah**
 
-Ready? Let's play!
+Siap? Ayo main!
 
 ---
 
-## Activity 1: Human Sorting Network
+## Aktivitas 1: Jaringan Penyortiran Manusia
 
-**What you need:** 6 or more players, tape or chalk to mark the floor, numbered cards
+**Yang kamu butuhkan:** 6 pemain atau lebih, selotip atau kapur untuk menandai lantai, kartu bernomor
 
-**CT Skills:** Algorithm Design, Decomposition
+**Kemampuan CT:** Desain Algoritma, Dekomposisi
 
-**Time:** 15-20 minutes
+**Waktu:** 15-20 menit
 
-### What Is a Sorting Network?
+### Apa Itu Jaringan Penyortiran?
 
-This one is really cool! A sorting network is a set of paths on the ground with "compare" stations. Two people walk along paths, and when they meet at a station, they compare their numbers. The person with the SMALLER number always goes left, and the person with the BIGGER number always goes right.
+Yang satu ini keren banget! Jaringan penyortiran (Sorting Network) adalah sekumpulan jalur di tanah dengan stasiun "bandingkan." Dua orang berjalan di jalur, dan saat mereka bertemu di stasiun, mereka membandingkan angka mereka. Orang dengan angka LEBIH KECIL selalu ke kiri, dan orang dengan angka LEBIH BESAR selalu ke kanan.
 
-By the end, everyone is sorted in order — without anyone needing to see the big picture!
+Di akhir, semua orang tersusun urut — tanpa siapa pun perlu melihat gambaran besarnya!
 
-### Setup
+### Persiapan
 
-1. Mark a network on the floor using tape or chalk. Here's a simple one for 4 people:
+1. Tandai jaringan di lantai menggunakan selotip atau kapur. Ini contoh sederhana untuk 4 orang:
 
 ```
-Start:    A ----.    .---- B
+Mulai:    A ----.    .---- B
                |    |
-              [COMPARE]
+              [BANDINGKAN]
                |    |
           .----'    '----.
           |               |
      C ----.    .---- D   |
            |    |         |
-          [COMPARE]       |
+          [BANDINGKAN]    |
            |    |         |
       .----'    '----.    |
       |               |   |
       |          .-----.----.
       |          |         |
-     [COMPARE]  [COMPARE]
+     [BANDINGKAN]  [BANDINGKAN]
       |    |     |    |
       '----'     '----'
-End:   1    2    3    4
+Akhir: 1    2    3    4
 ```
 
-(For a simpler version, just have pairs of students compare and swap. Do this in rounds until everyone is sorted.)
+(Untuk versi yang lebih simpel, cukup suruh pasangan siswa membandingkan dan bertukar. Lakukan ini dalam beberapa ronde sampai semua urut.)
 
-2. Give each player a card with a random number.
+2. Beri setiap pemain kartu dengan angka acak.
 
-### How to Play
+### Cara Bermain
 
-1. Players stand at the start positions.
-2. They walk forward along the paths.
-3. When two players meet at a Compare station, they show each other their numbers.
-4. The player with the **smaller** number takes the **left** path.
-5. The player with the **bigger** number takes the **right** path.
-6. Players continue walking until they reach the end.
-7. Check: are the numbers in order from smallest to biggest? They should be!
+1. Pemain berdiri di posisi awal.
+2. Mereka berjalan maju sepanjang jalur.
+3. Saat dua pemain bertemu di stasiun Bandingkan, mereka menunjukkan angka mereka satu sama lain.
+4. Pemain dengan angka **lebih kecil** ambil jalur **kiri**.
+5. Pemain dengan angka **lebih besar** ambil jalur **kanan**.
+6. Pemain terus berjalan sampai mencapai akhir.
+7. Cek: apakah angkanya urut dari terkecil ke terbesar? Seharusnya iya!
 
-### Why This Is Cool
+### Kenapa Ini Keren
 
-Nobody decided the final order. Nobody could see everyone's numbers. The simple rule "smaller goes left, bigger goes right" at each station was enough to sort everyone. That's how computers sort things!
+Tidak ada yang menentukan urutan akhirnya. Tidak ada yang bisa melihat angka semua orang. Aturan sederhana "yang kecil ke kiri, yang besar ke kanan" di setiap stasiun sudah cukup untuk menyortir semua orang. Begitulah cara komputer menyortir!
 
 ---
 
-## Activity 2: Binary Number Bracelets
+## Aktivitas 2: Gelang Angka Biner
 
-**What you need:** Beads (2 colors, like black and white), string or yarn, scissors
+**Yang kamu butuhkan:** Manik-manik (2 warna, misalnya hitam dan putih), benang atau tali, gunting
 
-**CT Skills:** Pattern Recognition, Abstraction
+**Kemampuan CT:** Pengenalan Pola, Abstraksi
 
-**Time:** 20-30 minutes
+**Waktu:** 20-30 menit
 
-### What Are Binary Numbers?
+### Apa Itu Angka Biner?
 
-This is one of the coolest things about computers! They use only two digits: **0** and **1**. This is called **binary**. Every number, letter, picture, and video on a computer is stored using just 0s and 1s!
+Ini salah satu hal paling keren tentang komputer! Komputer hanya menggunakan dua digit: **0** dan **1**. Ini disebut **biner** (binary). Setiap angka, huruf, gambar, dan video di komputer disimpan hanya menggunakan 0 dan 1!
 
-Let's turn your age (or any number) into binary and make a bracelet out of it.
+Yuk ubah usiamu (atau angka apa saja) jadi biner dan buat gelang darinya.
 
-### How Binary Works
+### Cara Kerja Biner
 
-In binary, each position represents a power of 2:
+Dalam biner, setiap posisi mewakili pangkat 2:
 
-| Position | 5th | 4th | 3rd | 2nd | 1st |
+| Posisi | ke-5 | ke-4 | ke-3 | ke-2 | ke-1 |
 |----------|-----|-----|-----|-----|-----|
-| Value    | 16  | 8   | 4   | 2   | 1   |
+| Nilai    | 16  | 8   | 4   | 2   | 1   |
 
-To write a number in binary, figure out which values add up to your number.
+Untuk menulis angka dalam biner, cari tahu nilai mana yang kalau dijumlahkan hasilnya angkamu.
 
-**Example: The number 10**
-- 16? NO (too big). Write **0**.
-- 8? YES (10 - 8 = 2 left). Write **1**.
-- 4? NO (2 is less than 4). Write **0**.
-- 2? YES (2 - 2 = 0 left). Write **1**.
-- 1? NO (nothing left). Write **0**.
+**Contoh: Angka 10**
+- 16? TIDAK (terlalu besar). Tulis **0**.
+- 8? YA (10 - 8 = sisa 2). Tulis **1**.
+- 4? TIDAK (2 kurang dari 4). Tulis **0**.
+- 2? YA (2 - 2 = sisa 0). Tulis **1**.
+- 1? TIDAK (tidak ada sisa). Tulis **0**.
 
-So 10 in binary = **01010**
+Jadi 10 dalam biner = **01010**
 
-**Example: The number 7**
-- 16? NO. **0**
-- 8? NO. **0**
-- 4? YES (7 - 4 = 3). **1**
-- 2? YES (3 - 2 = 1). **1**
-- 1? YES (1 - 1 = 0). **1**
+**Contoh: Angka 7**
+- 16? TIDAK. **0**
+- 8? TIDAK. **0**
+- 4? YA (7 - 4 = 3). **1**
+- 2? YA (3 - 2 = 1). **1**
+- 1? YA (1 - 1 = 0). **1**
 
-So 7 in binary = **00111**
+Jadi 7 dalam biner = **00111**
 
-### Making the Bracelet
+### Membuat Gelang
 
-1. Pick your number (your age is a great choice!).
-2. Convert it to binary using the method above.
-3. Choose two bead colors:
-   - **White** = 0
-   - **Black** = 1
-4. Thread the beads onto string in the binary order.
-5. Tie the bracelet and wear it!
+1. Pilih angkamu (usiamu pilihan yang bagus!).
+2. Ubah ke biner menggunakan cara di atas.
+3. Pilih dua warna manik-manik:
+   - **Putih** = 0
+   - **Hitam** = 1
+4. Masukkan manik-manik ke benang sesuai urutan biner.
+5. Ikat gelangnya dan pakai!
 
-**Example: Age 9 = 01001**
-Beads: white, black, white, white, black
+**Contoh: Usia 9 = 01001**
+Manik-manik: putih, hitam, putih, putih, hitam
 
-### Challenge
+### Tantangan
 
-- Can you read your friend's binary bracelet and figure out their number?
-- Make bracelets for your whole family!
+- Bisakah kamu membaca gelang biner temanmu dan menebak angkanya?
+- Buat gelang untuk seluruh keluargamu!
 
 ---
 
-## Activity 3: Pixel Art (Grid Coloring)
+## Aktivitas 3: Pixel Art (Mewarnai Kotak-Kotak)
 
-**What you need:** Graph paper (or draw your own grid), colored pencils or markers
+**Yang kamu butuhkan:** Kertas kotak-kotak (atau gambar kotak-kotakmu sendiri), pensil warna atau spidol
 
-**CT Skills:** Abstraction, Pattern Recognition, Decomposition
+**Kemampuan CT:** Abstraksi, Pengenalan Pola, Dekomposisi
 
-**Time:** 15-25 minutes
+**Waktu:** 15-25 menit
 
-### What Are Pixels?
+### Apa Itu Pixel?
 
-Every picture on a screen is made of tiny squares called **pixels**. If you zoom in really close on any digital picture, you'll see them — little colored squares! Pixel art is like painting, but using a grid of squares instead of brushstrokes.
+Setiap gambar di layar terbuat dari kotak-kotak kecil yang disebut **pixel**. Kalau kamu zoom in sangat dekat ke gambar digital apa pun, kamu akan melihatnya — kotak-kotak kecil berwarna! Pixel art itu seperti melukis, tapi menggunakan kotak-kotak di grid, bukan sapuan kuas.
 
-### How to Create Pixel Art
+### Cara Membuat Pixel Art
 
-1. Draw a grid on your paper (10x10 squares is a good start, or use graph paper).
-2. Plan a simple picture: a heart, a star, a smiley face, a tree, a spaceship, an animal.
-3. Color in the squares to create your picture.
+1. Gambar grid di kertasmu (10x10 kotak adalah awal yang bagus, atau pakai kertas kotak-kotak).
+2. Rencanakan gambar sederhana: hati, bintang, wajah tersenyum, pohon, pesawat luar angkasa, hewan.
+3. Warnai kotak-kotak untuk membuat gambarmu.
 
-### Encoding Your Art
+### Meng-encode Gambarmu
 
-Here's the cool part: you can write your picture as **numbers** instead of colors!
+Ini bagian kerennya: kamu bisa menulis gambarmu sebagai **angka**, bukan warna!
 
-**How to encode:**
+**Cara meng-encode:**
 
-For each row, write down how many squares of each color there are, from left to right.
+Untuk setiap baris, tulis berapa banyak kotak dari setiap warna, dari kiri ke kanan.
 
-**Example: A row that looks like this:**
-White White White Black Black Black White White White White
+**Contoh: Sebuah baris yang terlihat seperti ini:**
+Putih Putih Putih Hitam Hitam Hitam Putih Putih Putih Putih
 
-You'd write: **3W, 3B, 4W** (3 white, 3 black, 4 white)
+Kamu tulis: **3P, 3H, 4P** (3 putih, 3 hitam, 4 putih)
 
-**Do this for every row, and you've turned a picture into data!**
+**Lakukan ini untuk setiap baris, dan kamu sudah mengubah gambar jadi data!**
 
-### The Decoding Challenge
+### Tantangan Decoding
 
-1. Player 1 creates a pixel art picture and encodes it as numbers.
-2. Player 1 gives ONLY the numbers to Player 2.
-3. Player 2 decodes the numbers back into a picture by coloring a grid.
-4. Compare the pictures — do they match?
+1. Pemain 1 membuat gambar pixel art dan meng-encode-nya sebagai angka.
+2. Pemain 1 memberikan HANYA angkanya ke Pemain 2.
+3. Pemain 2 men-decode angka kembali jadi gambar dengan mewarnai grid.
+4. Bandingkan gambarnya — apakah cocok?
 
-**Example to decode:**
+**Contoh untuk di-decode:**
 
-Grid: 8 columns wide
+Grid: 8 kolom lebar
 
 ```
-Row 1: 3W, 2B, 3W
-Row 2: 2W, 4B, 2W
-Row 3: 1W, 6B, 1W
-Row 4: 8B
-Row 5: 8B
-Row 6: 1W, 6B, 1W
-Row 7: 2W, 4B, 2W
-Row 8: 3W, 2B, 3W
+Baris 1: 3P, 2H, 3P
+Baris 2: 2P, 4H, 2P
+Baris 3: 1P, 6H, 1P
+Baris 4: 8H
+Baris 5: 8H
+Baris 6: 1P, 6H, 1P
+Baris 7: 2P, 4H, 2P
+Baris 8: 3P, 2H, 3P
 ```
 
-What shape does this make? (Hint: it's a diamond!)
+Bentuk apa yang dihasilkan? (Petunjuk: itu belah ketupat!)
 
 ---
 
-## Activity 4: Treasure Hunt with Algorithms
+## Aktivitas 4: Berburu Harta Karun dengan Algoritma
 
-This one is really fun!
+Yang satu ini seru banget!
 
-**What you need:** Small "treasure" (a toy, candy, sticker), paper, pencil, an area to hide the treasure
+**Yang kamu butuhkan:** "Harta karun" kecil (mainan, permen, stiker), kertas, pensil, area untuk menyembunyikan harta karun
 
-**CT Skills:** Algorithm Design, Logical Thinking, Debugging
+**Kemampuan CT:** Desain Algoritma, Berpikir Logis, Debugging
 
-**Time:** 20-30 minutes
+**Waktu:** 20-30 menit
 
-### Setup
+### Persiapan
 
-1. One player (the Hider) hides a treasure somewhere in the room, house, or yard.
-2. The Hider writes an **algorithm** (step-by-step directions) to find the treasure.
-3. Another player (the Seeker) follows the algorithm to find the treasure.
+1. Satu pemain (si Penyembunyi) menyembunyikan harta karun di suatu tempat di ruangan, rumah, atau halaman.
+2. Si Penyembunyi menulis sebuah **algoritma** (petunjuk langkah demi langkah) untuk menemukan harta karunnya.
+3. Pemain lain (si Pencari) mengikuti algoritma untuk menemukan harta karunnya.
 
-### Rules for Writing the Algorithm
+### Aturan Menulis Algoritma
 
-The directions must be very specific:
-- Use exact numbers: "Take 5 steps forward" (not "walk a bit").
-- Use clear directions: "Turn left" or "Turn right" (not "turn that way").
-- Include landmarks: "Walk to the big tree" or "Stop at the red chair."
+Petunjuknya harus sangat spesifik:
+- Gunakan angka yang tepat: "Jalan 5 langkah ke depan" (bukan "jalan sedikit").
+- Gunakan arah yang jelas: "Belok kiri" atau "Belok kanan" (bukan "belok sana").
+- Sertakan penanda: "Jalan ke pohon besar" atau "Berhenti di kursi merah."
 
-### Example Algorithm
+### Contoh Algoritma
 
 ```
-Step 1: Start at the front door.
-Step 2: Take 10 steps forward.
-Step 3: Turn right.
-Step 4: Walk until you reach the blue bookshelf.
-Step 5: Look on the third shelf from the bottom.
-Step 6: The treasure is behind the big red book!
+Langkah 1: Mulai di pintu depan.
+Langkah 2: Jalan 10 langkah ke depan.
+Langkah 3: Belok kanan.
+Langkah 4: Jalan sampai rak buku biru.
+Langkah 5: Lihat di rak ketiga dari bawah.
+Langkah 6: Harta karunnya ada di belakang buku merah besar!
 ```
 
-### Make It Harder
+### Bikin Lebih Sulit
 
-- Add **IF-THEN** branches: "IF you see a yellow sticky note, THEN turn left. ELSE turn right."
-- Add **puzzles** at each step: "Solve this math problem to find out how many steps to take next: 3 + 4 = ?"
-- Create a **multi-step** treasure hunt where each clue leads to the next clue.
+- Tambahkan cabang **JIKA-MAKA**: "JIKA kamu melihat sticky note kuning, MAKA belok kiri. SELAINNYA belok kanan."
+- Tambahkan **teka-teki** di setiap langkah: "Selesaikan soal matematika ini untuk tahu berapa langkah selanjutnya: 3 + 4 = ?"
+- Buat berburu harta karun **multi-langkah** di mana setiap petunjuk mengarah ke petunjuk berikutnya.
 
-### Debugging the Hunt
+### Debugging Perburuannya
 
-If the Seeker can't find the treasure, debug together:
-- Which step was confusing?
-- Did the Seeker miss a turn?
-- Was a direction wrong?
-
----
-
-## Activity 5: Error Detection Magic Trick (Parity)
-
-Get ready — this is tricky but SO cool!
-
-**What you need:** 36 cards or pieces of paper (two colors — like blue and yellow), a flat surface
-
-**CT Skills:** Pattern Recognition, Logical Thinking, Debugging
-
-**Time:** 15-20 minutes
-
-### The Magic Trick
-
-This trick will amaze your friends because you can tell which card someone flipped — without even looking!
-
-### Setup
-
-1. Lay out a 5x5 grid of cards, randomly showing blue or yellow faces.
-2. HERE'S THE SECRET: Add a 6th row and a 6th column. In each extra position, place a card so that EVERY row and EVERY column has an **even** number of one color (let's say yellow). This is called **parity**.
-
-### How to Perform the Trick
-
-1. Show your audience the 6x6 grid. (They think it's random, but you set it up carefully!)
-2. Ask someone to flip ONE card while you look away.
-3. Turn back and look at the grid.
-4. Check each row: count the yellow cards. If a row has an ODD number of yellow cards, that row has the flipped card.
-5. Check each column: count the yellow cards. If a column has an ODD number of yellow cards, that column has the flipped card.
-6. The flipped card is where the "odd" row meets the "odd" column!
-
-### Why This Works
-
-You set up the grid so every row and column has an even number of yellow cards. When someone flips a card, it changes one row from even to odd and one column from even to odd. Those two tell you EXACTLY which card was flipped!
-
-### The CT Connection
-
-This is how computers detect errors! When data is sent over the internet, extra "parity bits" (like your extra row and column) are added. If a bit gets flipped during transfer, the computer can detect it — just like your magic trick!
+Kalau si Pencari tidak bisa menemukan harta karunnya, debug bersama:
+- Langkah mana yang membingungkan?
+- Apakah si Pencari melewatkan belokan?
+- Apakah ada arah yang salah?
 
 ---
 
-## Activity 6: The Cup Stacking Algorithm Challenge
+## Aktivitas 5: Trik Sulap Deteksi Kesalahan (Paritas)
 
-**What you need:** 6-10 plastic cups (or paper cups), a table
+Siap-siap — yang ini menjebak tapi KEREN BANGET!
 
-**CT Skills:** Algorithm Design, Decomposition, Debugging
+**Yang kamu butuhkan:** 36 kartu atau potongan kertas (dua warna — misalnya biru dan kuning), permukaan datar
 
-**Time:** 10-15 minutes
+**Kemampuan CT:** Pengenalan Pola, Berpikir Logis, Debugging
 
-### How to Play
+**Waktu:** 15-20 menit
 
-1. Build a cup pyramid: 4 cups on the bottom, 3 on the next level, 2 on the next, and 1 on top.
-2. Now write an algorithm (step-by-step instructions) for someone else to build the same pyramid.
-3. Knock down the pyramid.
-4. Give your algorithm to a partner. Can they rebuild the pyramid using ONLY your instructions?
+### Trik Sulapnya
 
-### Rules
+Trik ini akan membuat teman-temanmu takjub karena kamu bisa tahu kartu mana yang dibalik — tanpa melihat!
 
-- Your partner can ONLY do what the instructions say.
-- You cannot talk, gesture, or help in any way.
-- If the instructions are unclear, the partner does their best guess (which might be wrong!).
+### Persiapan
 
-### What You'll Learn
+1. Tata grid 5x5 kartu, secara acak menunjukkan sisi biru atau kuning.
+2. INI RAHASIANYA: Tambahkan baris ke-6 dan kolom ke-6. Di setiap posisi tambahan, taruh kartu supaya SETIAP baris dan SETIAP kolom punya jumlah **genap** dari satu warna (misalnya kuning). Ini disebut **paritas** (parity).
 
-You'll discover how hard it is to write clear instructions! You might say "put a cup down" — but WHERE? Which direction? This teaches you to be very precise in your algorithms.
+### Cara Melakukan Trik
 
----
+1. Tunjukkan ke penonton grid 6x6-nya. (Mereka kira acak, tapi kamu sudah mengaturnya dengan cermat!)
+2. Minta seseorang membalik SATU kartu saat kamu tidak melihat.
+3. Berbalik dan lihat grid-nya.
+4. Periksa setiap baris: hitung kartu kuning. Kalau sebuah baris punya jumlah GANJIL kartu kuning, baris itu yang ada kartu yang dibalik.
+5. Periksa setiap kolom: hitung kartu kuning. Kalau sebuah kolom punya jumlah GANJIL kartu kuning, kolom itu yang ada kartu yang dibalik.
+6. Kartu yang dibalik ada di pertemuan baris "ganjil" dan kolom "ganjil"!
 
-## Activity 7: The Telephone Algorithm
+### Kenapa Ini Berhasil
 
-**What you need:** 5 or more players, paper, pencils
+Kamu mengatur grid-nya supaya setiap baris dan kolom punya jumlah genap kartu kuning. Saat seseorang membalik kartu, itu mengubah satu baris dari genap ke ganjil dan satu kolom dari genap ke ganjil. Keduanya memberitahumu PERSIS kartu mana yang dibalik!
 
-**CT Skills:** Algorithm Design, Debugging, Abstraction
+### Koneksi CT
 
-**Time:** 15-20 minutes
-
-### How to Play
-
-1. Player 1 writes an algorithm for a simple task (like drawing a smiley face, tying a shoe, or making a paper hat). The algorithm should have 6-8 steps.
-
-2. Player 1 whispers Step 1 to Player 2. Player 2 writes it down.
-   Player 1 whispers Step 2 to Player 2. Player 2 writes it down.
-   Continue until all steps are passed.
-
-3. Player 2 now reads their version to Player 3 (without showing it), and Player 3 writes it down.
-
-4. Continue until the algorithm reaches the last player.
-
-5. The last player tries to follow the algorithm.
-
-6. Compare the ORIGINAL algorithm with the FINAL version. How much changed?
-
-### Discussion
-
-- What "bugs" crept in?
-- Which steps changed the most?
-- How could you make the algorithm more resistant to errors?
-- This is like the children's game "Telephone" — but with instructions!
+Beginilah cara komputer mendeteksi kesalahan! Saat data dikirim lewat internet, "bit paritas" (parity bits) tambahan (seperti baris dan kolom tambahanmu) ditambahkan. Kalau sebuah bit tertukar saat transfer, komputer bisa mendeteksinya — persis seperti trik sulapmu!
 
 ---
 
-## Activity 8: Human Robot Maze
+## Aktivitas 6: Tantangan Algoritma Menyusun Gelas
 
-**What you need:** Chairs or boxes to create a maze, 2+ players, a blindfold (optional)
+**Yang kamu butuhkan:** 6-10 gelas plastik (atau gelas kertas), meja
 
-**CT Skills:** Algorithm Design, Logical Thinking, Debugging
+**Kemampuan CT:** Desain Algoritma, Dekomposisi, Debugging
 
-**Time:** 20-30 minutes
+**Waktu:** 10-15 menit
 
-### Setup
+### Cara Bermain
 
-1. Arrange chairs, boxes, or cushions to create a simple maze in a room or hallway.
-2. Place a "goal" (a stuffed animal, book, or ball) at the end of the maze.
+1. Bangun piramida gelas: 4 gelas di bawah, 3 di tingkat berikutnya, 2 di berikutnya, dan 1 di atas.
+2. Sekarang tulis algoritma (instruksi langkah demi langkah) untuk orang lain membangun piramida yang sama.
+3. Robohkan piramidanya.
+4. Berikan algoritmamu ke teman. Bisakah mereka membangun ulang piramida HANYA menggunakan instruksimu?
 
-### How to Play
+### Aturan
 
-1. One player is the **Robot**. The Robot stands at the start of the maze and closes their eyes (or wears a blindfold).
-2. Another player is the **Programmer**. The Programmer can see the maze and gives verbal commands.
-3. The Robot can only follow these commands:
-   - "Forward" (one step forward)
-   - "Left" (turn left 90 degrees)
-   - "Right" (turn right 90 degrees)
-   - "Stop" (stand still)
-   - "Grab" (pick up the goal object)
+- Temanmu HANYA boleh melakukan apa yang tertulis di instruksi.
+- Kamu tidak boleh bicara, memberi isyarat, atau membantu dengan cara apa pun.
+- Kalau instruksinya tidak jelas, temanmu menebak sebaik mungkin (yang mungkin salah!).
 
-4. The Programmer guides the Robot through the maze to the goal.
+### Apa yang Akan Kamu Pelajari
 
-### Advanced Version
+Kamu akan menemukan betapa sulitnya menulis instruksi yang jelas! Kamu mungkin bilang "taruh gelas" — tapi DI MANA? Arah mana? Ini mengajarkanmu untuk sangat tepat dalam algoritmamu.
 
-The Programmer must write ALL instructions on paper FIRST, then hand them to the Robot. No changes allowed! This forces the Programmer to plan the entire path in advance.
+---
+
+## Aktivitas 7: Algoritma Telepon
+
+**Yang kamu butuhkan:** 5 pemain atau lebih, kertas, pensil
+
+**Kemampuan CT:** Desain Algoritma, Debugging, Abstraksi
+
+**Waktu:** 15-20 menit
+
+### Cara Bermain
+
+1. Pemain 1 menulis algoritma untuk tugas sederhana (seperti menggambar wajah tersenyum, mengikat sepatu, atau membuat topi kertas). Algoritmanya harus punya 6-8 langkah.
+
+2. Pemain 1 membisikkan Langkah 1 ke Pemain 2. Pemain 2 menulisnya.
+   Pemain 1 membisikkan Langkah 2 ke Pemain 2. Pemain 2 menulisnya.
+   Lanjut sampai semua langkah diteruskan.
+
+3. Pemain 2 sekarang membacakan versinya ke Pemain 3 (tanpa menunjukkan), dan Pemain 3 menulisnya.
+
+4. Lanjut sampai algoritma mencapai pemain terakhir.
+
+5. Pemain terakhir mencoba mengikuti algoritmanya.
+
+6. Bandingkan algoritma ASLI dengan versi TERAKHIR. Berapa banyak yang berubah?
+
+### Diskusi
+
+- "Bug" apa yang muncul?
+- Langkah mana yang paling banyak berubah?
+- Bagaimana caranya membuat algoritma lebih tahan terhadap kesalahan?
+- Ini seperti permainan anak-anak "Telepon" — tapi dengan instruksi!
+
+---
+
+## Aktivitas 8: Labirin Robot Manusia
+
+**Yang kamu butuhkan:** Kursi atau kotak untuk membuat labirin, 2+ pemain, penutup mata (opsional)
+
+**Kemampuan CT:** Desain Algoritma, Berpikir Logis, Debugging
+
+**Waktu:** 20-30 menit
+
+### Persiapan
+
+1. Susun kursi, kotak, atau bantal untuk membuat labirin sederhana di ruangan atau lorong.
+2. Taruh "tujuan" (boneka, buku, atau bola) di ujung labirin.
+
+### Cara Bermain
+
+1. Satu pemain jadi **Robot**. Robot berdiri di awal labirin dan menutup mata (atau pakai penutup mata).
+2. Pemain lain jadi **Programmer**. Programmer bisa melihat labirin dan memberikan perintah verbal.
+3. Robot hanya bisa mengikuti perintah ini:
+   - "Maju" (satu langkah ke depan)
+   - "Kiri" (belok kiri 90 derajat)
+   - "Kanan" (belok kanan 90 derajat)
+   - "Berhenti" (diam di tempat)
+   - "Ambil" (ambil benda tujuannya)
+
+4. Programmer memandu Robot melewati labirin ke tujuan.
+
+### Versi Lanjutan
+
+Programmer harus menulis SEMUA instruksi di kertas DULU, lalu berikan ke Robot. Tidak boleh ada perubahan! Ini memaksa Programmer untuk merencanakan seluruh jalur terlebih dahulu.
 
 ### Debugging
 
-If the Robot bumps into something:
-- What instruction was wrong?
-- Was it a missing step, wrong direction, or wrong number of steps?
-- How would you fix the algorithm?
+Kalau Robot menabrak sesuatu:
+- Instruksi mana yang salah?
+- Apakah itu langkah yang hilang, arah yang salah, atau jumlah langkah yang salah?
+- Bagaimana cara memperbaiki algoritmanya?
 
 ---
 
-## Activity 9: Pattern Bead Strings
+## Aktivitas 9: Untaian Manik-Manik Pola
 
-**What you need:** Beads or colored pasta (3-4 colors), string
+**Yang kamu butuhkan:** Manik-manik atau pasta warna-warni (3-4 warna), benang
 
-**CT Skills:** Pattern Recognition, Algorithm Design
+**Kemampuan CT:** Pengenalan Pola, Desain Algoritma
 
-**Time:** 15-20 minutes
+**Waktu:** 15-20 menit
 
-### How to Play
+### Cara Bermain
 
-1. Create a pattern using beads on a string. Start simple and get harder:
-   - **Easy:** Red, Blue, Red, Blue, Red, Blue (AB pattern)
-   - **Medium:** Red, Red, Blue, Green, Red, Red, Blue, Green (AABC pattern)
-   - **Hard:** Red, Blue, Blue, Red, Blue, Blue, Blue, Red, Blue, Blue, Blue, Blue (the number of blues increases: 2, 3, 4!)
+1. Buat pola menggunakan manik-manik di benang. Mulai dari yang simpel dan makin sulit:
+   - **Mudah:** Merah, Biru, Merah, Biru, Merah, Biru (pola AB)
+   - **Sedang:** Merah, Merah, Biru, Hijau, Merah, Merah, Biru, Hijau (pola AABC)
+   - **Sulit:** Merah, Biru, Biru, Merah, Biru, Biru, Biru, Merah, Biru, Biru, Biru, Biru (jumlah biru bertambah: 2, 3, 4!)
 
-2. Show your string to a friend. Can they figure out the pattern?
+2. Tunjukkan untaianmu ke teman. Bisakah mereka menebak polanya?
 
-3. Your friend continues the string by adding the right beads.
+3. Temanmu melanjutkan untaian dengan menambahkan manik-manik yang benar.
 
-4. Now your friend creates a pattern for YOU to figure out!
+4. Sekarang temanmu membuat pola untuk KAMU tebak!
 
-### Write the Algorithm
+### Tulis Algoritmanya
 
-After you figure out the pattern, write it as an algorithm:
+Setelah kamu menebak polanya, tulis sebagai algoritma:
 
-**Example:**
+**Contoh:**
 ```
-REPEAT forever:
-  Add 1 red bead
-  Add 2 blue beads
-```
-
-This produces: R, B, B, R, B, B, R, B, B...
-
-Can you write algorithms for more complex patterns?
-
----
-
-## Activity 10: Sandwich Assembly Line
-
-**What you need:** Bread, spreads, fillings (or pretend ingredients using paper cutouts), 4+ players
-
-**CT Skills:** Decomposition, Algorithm Design, Pattern Recognition
-
-**Time:** 15-20 minutes
-
-### How to Play
-
-1. **Decompose** the sandwich-making process into separate steps:
-   - Station 1: Get bread
-   - Station 2: Spread peanut butter
-   - Station 3: Add jelly
-   - Station 4: Put slices together and cut
-
-2. Each player stands at ONE station and does ONLY their step.
-
-3. Pass the sandwich from station to station.
-
-4. See how many sandwiches your assembly line can make in 3 minutes!
-
-### Discussion
-
-- What patterns did you notice? (Each sandwich follows the same steps!)
-- What happens if one station is too slow? (A bottleneck!)
-- How could you make the assembly line faster? (Add a second person to the slow station!)
-- What if someone at a station makes a mistake? How do you debug?
-
-If you don't want to use real food, cut paper into "bread slices" and use colored paper for "ingredients."
-
----
-
-## Activity 11: Story Algorithm Cards
-
-**What you need:** Index cards or paper cut into cards, pencils, 2+ players
-
-**CT Skills:** Algorithm Design, Decomposition, Logical Thinking
-
-**Time:** 15-20 minutes
-
-### How to Play
-
-1. Think of a short story (a fairy tale works great, like Goldilocks or Little Red Riding Hood).
-
-2. Write each EVENT of the story on a separate card. One event per card. Write at least 8 cards.
-
-**Example for "Goldilocks and the Three Bears":**
-- The three bears go for a walk.
-- Goldilocks finds the bears' house.
-- Goldilocks tries three bowls of porridge.
-- Goldilocks tries three chairs.
-- The small chair breaks.
-- Goldilocks tries three beds.
-- Goldilocks falls asleep in the small bed.
-- The bears come home.
-- The bears find Goldilocks.
-- Goldilocks runs away.
-
-3. Shuffle the cards and give them to a friend.
-
-4. Your friend must put the cards in the CORRECT order to retell the story.
-
-5. Check: is the order right? If not, debug! Which cards are out of place?
-
-### Make It Harder
-
-- Add 2-3 FAKE events that don't belong in the story. Your friend must find and remove them!
-- Mix cards from TWO different stories. Your friend must separate them and order each one.
-
----
-
-## Activity 12: The Debugging Relay Race
-
-This is a great one for teams!
-
-**What you need:** 2 teams of 3-4 players, paper, pencils, a list of "buggy" instructions
-
-**CT Skills:** Debugging, Algorithm Design
-
-**Time:** 15-20 minutes
-
-### Setup
-
-Prepare 5 sets of "buggy instructions" (instructions with mistakes). Write each set on a separate piece of paper.
-
-**Example buggy instruction sets:**
-
-**Set 1: Making toast**
-1. Put butter on the bread. 2. Put bread in toaster. 3. Wait for toast. 4. Get bread.
-(Bug: wrong order)
-
-**Set 2: Washing hands**
-1. Turn on water. 2. Put soap on hands. 3. Dry hands. 4. Turn off water.
-(Bug: missing step — scrub hands!)
-
-**Set 3: Going to bed**
-1. Brush teeth. 2. Get in bed. 3. Turn off light. 4. Put on pajamas. 5. Fall asleep.
-(Bug: pajamas should come before getting in bed)
-
-**Set 4: Sending a letter**
-1. Write the letter. 2. Mail the letter. 3. Put letter in envelope. 4. Put stamp on envelope. 5. Write the address.
-(Bug: several steps are out of order)
-
-**Set 5: Making lemonade**
-1. Get a glass. 2. Add 10 cups of sugar. 3. Add water. 4. Add lemon juice. 5. Stir.
-(Bug: way too much sugar — should be 2 tablespoons)
-
-### How to Play
-
-1. Place each buggy instruction set at a different spot around the room (stations).
-2. Teams line up at the starting point.
-3. When you say "Go!", one player from each team runs to Station 1.
-4. They read the buggy instructions, find the bug, and write the fix.
-5. They run back and tag the next teammate.
-6. The next teammate runs to Station 2.
-7. Continue until all 5 stations are done.
-8. Check answers. The team with the most correct fixes AND fastest time wins!
-
----
-
-## Activity 13: Secret Code Messages
-
-Ready for a challenge? Let's send secret messages like a spy!
-
-**What you need:** Paper, pencils, the code key below
-
-**CT Skills:** Pattern Recognition, Abstraction, Algorithm Design
-
-**Time:** 15-20 minutes
-
-### The Caesar Cipher
-
-A cipher is a way to encode a secret message. The Caesar Cipher is one of the oldest and simplest. Here's how it works:
-
-Shift every letter forward by a set number. Let's use a shift of 3:
-
-```
-Plain:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-Cipher: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+ULANGI selamanya:
+  Tambah 1 manik merah
+  Tambah 2 manik biru
 ```
 
-So A becomes D, B becomes E, C becomes F, and so on. X wraps around to A, Y to B, Z to C.
+Ini menghasilkan: M, B, B, M, B, B, M, B, B...
 
-### Encoding a Message
-
-**Message:** HELLO
-- H becomes K
-- E becomes H
-- L becomes O
-- L becomes O
-- O becomes R
-
-**Encoded message:** KHOOR
-
-### Decoding a Message
-
-To decode, shift each letter BACK by 3.
-
-**Try decoding these messages (shift of 3):**
-1. FRPSXWHU (answer: COMPUTER)
-2. SDWWHUQ (answer: PATTERN)
-3. DOJRULWKP (answer: ALGORITHM)
-
-### Make Your Own
-
-1. Write a secret message.
-2. Encode it using the Caesar Cipher (pick your own shift number!).
-3. Give the encoded message AND the shift number to a friend.
-4. Can they decode it?
-
-### Challenge
-
-What if you get an encoded message but DON'T know the shift number? Try every possible shift (1 through 25) until one makes sense. That's called **brute force** — trying every possibility!
+Bisakah kamu menulis algoritma untuk pola yang lebih kompleks?
 
 ---
 
-## Activity 14: Sorting Without Seeing
+## Aktivitas 10: Lini Perakitan Sandwich
 
-**What you need:** 5-8 players, numbered cards (one per player, numbers hidden from others)
+**Yang kamu butuhkan:** Roti, olesan, isian (atau bahan-bahan pura-pura menggunakan potongan kertas), 4+ pemain
 
-**CT Skills:** Algorithm Design, Logical Thinking, Decomposition
+**Kemampuan CT:** Dekomposisi, Desain Algoritma, Pengenalan Pola
 
-**Time:** 10-15 minutes
+**Waktu:** 15-20 menit
 
-### How to Play
+### Cara Bermain
 
-1. Give each player a card with a number. Players can see ONLY their own number.
-2. The goal: line up in order from smallest to biggest.
-3. The rule: Players can only ask ONE question to another player: "Is your number bigger than mine?"
-4. The other player answers YES or NO.
-5. Based on the answer, players swap positions or stay put.
-6. Repeat until everyone is in order.
+1. **Dekomposisi** proses membuat sandwich jadi langkah-langkah terpisah:
+   - Stasiun 1: Ambil roti
+   - Stasiun 2: Oleskan selai kacang
+   - Stasiun 3: Tambahkan selai buah
+   - Stasiun 4: Satukan irisan roti dan potong
 
-### Discussion
+2. Setiap pemain berdiri di SATU stasiun dan melakukan HANYA langkah mereka.
 
-- How many questions did it take?
-- What strategy worked best?
-- Is there a pattern to the questions you should ask?
-- This is how computers sort data — by comparing two items at a time!
+3. Teruskan sandwich dari stasiun ke stasiun.
+
+4. Lihat berapa banyak sandwich yang bisa dibuat lini perakitanmu dalam 3 menit!
+
+### Diskusi
+
+- Pola apa yang kamu perhatikan? (Setiap sandwich mengikuti langkah yang sama!)
+- Apa yang terjadi kalau satu stasiun terlalu lambat? (Bottleneck — kemacetan!)
+- Bagaimana cara membuat lini perakitan lebih cepat? (Tambahkan orang kedua di stasiun yang lambat!)
+- Bagaimana kalau seseorang di stasiun membuat kesalahan? Bagaimana cara debug-nya?
+
+Kalau tidak mau pakai makanan sungguhan, potong kertas jadi "irisan roti" dan pakai kertas berwarna untuk "bahan-bahan."
 
 ---
 
-## Activity 15: Build-a-Bot Drawing Game
+## Aktivitas 11: Kartu Algoritma Cerita
 
-**What you need:** Paper, pencils, 2 players who cannot see each other's paper
+**Yang kamu butuhkan:** Kartu indeks atau kertas dipotong jadi kartu, pensil, 2+ pemain
 
-**CT Skills:** Algorithm Design, Abstraction, Debugging
+**Kemampuan CT:** Desain Algoritma, Dekomposisi, Berpikir Logis
 
-**Time:** 15-20 minutes
+**Waktu:** 15-20 menit
 
-### How to Play
+### Cara Bermain
 
-1. Player 1 draws a simple robot on their paper (using basic shapes — circles, squares, rectangles, triangles).
+1. Pikirkan cerita pendek (dongeng cocok banget, seperti Goldilocks atau Si Kancil dan Buaya).
 
-2. Player 1 then writes an algorithm describing how to draw the robot, step by step.
+2. Tulis setiap KEJADIAN dalam cerita di kartu terpisah. Satu kejadian per kartu. Tulis setidaknya 8 kartu.
 
-**Example:**
+**Contoh untuk "Goldilocks dan Tiga Beruang":**
+- Tiga beruang pergi jalan-jalan.
+- Goldilocks menemukan rumah beruang.
+- Goldilocks mencoba tiga mangkuk bubur.
+- Goldilocks mencoba tiga kursi.
+- Kursi kecil patah.
+- Goldilocks mencoba tiga tempat tidur.
+- Goldilocks tertidur di tempat tidur kecil.
+- Tiga beruang pulang.
+- Beruang-beruang menemukan Goldilocks.
+- Goldilocks lari.
+
+3. Kocok kartunya dan berikan ke teman.
+
+4. Temanmu harus menyusun kartu dalam URUTAN YANG BENAR untuk menceritakan ulang ceritanya.
+
+5. Cek: apakah urutannya benar? Kalau tidak, debug! Kartu mana yang salah tempat?
+
+### Bikin Lebih Sulit
+
+- Tambahkan 2-3 kejadian PALSU yang tidak ada dalam cerita. Temanmu harus menemukan dan menyingkirkannya!
+- Campur kartu dari DUA cerita berbeda. Temanmu harus memisahkan dan mengurutkan masing-masing.
+
+---
+
+## Aktivitas 12: Lomba Estafet Debugging
+
+Yang satu ini bagus banget untuk tim!
+
+**Yang kamu butuhkan:** 2 tim dengan 3-4 pemain, kertas, pensil, daftar instruksi "bermasalah"
+
+**Kemampuan CT:** Debugging, Desain Algoritma
+
+**Waktu:** 15-20 menit
+
+### Persiapan
+
+Siapkan 5 set "instruksi bermasalah" (instruksi dengan kesalahan). Tulis setiap set di kertas terpisah.
+
+**Contoh set instruksi bermasalah:**
+
+**Set 1: Membuat roti panggang**
+1. Oleskan mentega di roti. 2. Masukkan roti ke pemanggang. 3. Tunggu rotinya matang. 4. Ambil roti.
+(Bug: urutan salah)
+
+**Set 2: Mencuci tangan**
+1. Nyalakan air. 2. Taruh sabun di tangan. 3. Keringkan tangan. 4. Matikan air.
+(Bug: langkah hilang — gosok tangan!)
+
+**Set 3: Mau tidur**
+1. Sikat gigi. 2. Naik ke tempat tidur. 3. Matikan lampu. 4. Pakai piyama. 5. Tidur.
+(Bug: piyama seharusnya sebelum naik ke tempat tidur)
+
+**Set 4: Mengirim surat**
+1. Tulis suratnya. 2. Kirim suratnya. 3. Masukkan surat ke amplop. 4. Tempel perangko di amplop. 5. Tulis alamatnya.
+(Bug: beberapa langkah urutannya salah)
+
+**Set 5: Membuat limun**
+1. Ambil gelas. 2. Tambah 10 gelas gula. 3. Tambah air. 4. Tambah perasan lemon. 5. Aduk.
+(Bug: gulanya kebanyakan — seharusnya 2 sendok makan)
+
+### Cara Bermain
+
+1. Taruh setiap set instruksi bermasalah di tempat berbeda di ruangan (stasiun).
+2. Tim berbaris di titik mulai.
+3. Saat kamu bilang "Mulai!", satu pemain dari setiap tim berlari ke Stasiun 1.
+4. Mereka membaca instruksi bermasalah, menemukan bug-nya, dan menulis perbaikannya.
+5. Mereka berlari kembali dan tag teman tim berikutnya.
+6. Teman tim berikutnya berlari ke Stasiun 2.
+7. Lanjut sampai semua 5 stasiun selesai.
+8. Periksa jawaban. Tim dengan perbaikan paling benar DAN waktu tercepat menang!
+
+---
+
+## Aktivitas 13: Pesan Rahasia Berkode
+
+Siap untuk tantangan? Yuk kirim pesan rahasia seperti mata-mata!
+
+**Yang kamu butuhkan:** Kertas, pensil, kunci kode di bawah ini
+
+**Kemampuan CT:** Pengenalan Pola, Abstraksi, Desain Algoritma
+
+**Waktu:** 15-20 menit
+
+### Sandi Caesar (Caesar Cipher)
+
+Sandi (cipher) adalah cara untuk meng-encode pesan rahasia. Sandi Caesar adalah salah satu yang tertua dan paling sederhana. Begini caranya:
+
+Geser setiap huruf maju sejumlah tertentu. Kita pakai geser 3:
+
 ```
-Step 1: Draw a large square in the middle of the paper. This is the body.
-Step 2: Draw a smaller square on top of the body. This is the head.
-Step 3: Draw two small circles inside the head for eyes.
-Step 4: Draw a straight line across the head below the eyes for the mouth.
-Step 5: Draw two long rectangles coming down from the bottom of the body for legs.
-Step 6: Draw two thin rectangles coming out from the sides of the body for arms.
-Step 7: Draw a small triangle on top of the head for an antenna.
+Asli:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+Sandi: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 ```
 
-3. Player 1 gives ONLY the written algorithm to Player 2 (not the drawing!).
+Jadi A jadi D, B jadi E, C jadi F, dan seterusnya. X berputar jadi A, Y jadi B, Z jadi C.
 
-4. Player 2 follows the algorithm and draws the robot.
+### Meng-encode Pesan
 
-5. Compare the two drawings. Do they match?
+**Pesan:** HELLO
+- H jadi K
+- E jadi H
+- L jadi O
+- L jadi O
+- O jadi R
+
+**Pesan ter-encode:** KHOOR
+
+### Men-decode Pesan
+
+Untuk men-decode, geser setiap huruf MUNDUR 3.
+
+**Coba decode pesan-pesan ini (geser 3):**
+1. FRPSXWHU (jawaban: COMPUTER)
+2. SDWWHUQ (jawaban: PATTERN)
+3. DOJRULWKP (jawaban: ALGORITHM)
+
+### Buat Sendiri
+
+1. Tulis pesan rahasia.
+2. Encode menggunakan Sandi Caesar (pilih angka gesermu sendiri!).
+3. Berikan pesan ter-encode DAN angka gesernya ke teman.
+4. Bisakah mereka men-decode-nya?
+
+### Tantangan
+
+Bagaimana kalau kamu dapat pesan ter-encode tapi TIDAK tahu angka gesernya? Coba setiap kemungkinan geser (1 sampai 25) sampai ada yang masuk akal. Itu disebut **brute force** — mencoba setiap kemungkinan!
+
+---
+
+## Aktivitas 14: Menyortir Tanpa Melihat
+
+**Yang kamu butuhkan:** 5-8 pemain, kartu bernomor (satu per pemain, angka disembunyikan dari yang lain)
+
+**Kemampuan CT:** Desain Algoritma, Berpikir Logis, Dekomposisi
+
+**Waktu:** 10-15 menit
+
+### Cara Bermain
+
+1. Beri setiap pemain kartu dengan angka. Pemain hanya bisa melihat angka mereka SENDIRI.
+2. Tujuan: berbaris urut dari terkecil ke terbesar.
+3. Aturan: Pemain hanya boleh bertanya SATU pertanyaan ke pemain lain: "Apakah angkamu lebih besar dari punyaku?"
+4. Pemain lain menjawab YA atau TIDAK.
+5. Berdasarkan jawaban, pemain bertukar posisi atau tetap di tempat.
+6. Ulangi sampai semua urut.
+
+### Diskusi
+
+- Berapa pertanyaan yang dibutuhkan?
+- Strategi apa yang paling berhasil?
+- Apakah ada pola dalam pertanyaan yang harus kamu ajukan?
+- Beginilah cara komputer menyortir data — dengan membandingkan dua item sekaligus!
+
+---
+
+## Aktivitas 15: Permainan Menggambar Robot
+
+**Yang kamu butuhkan:** Kertas, pensil, 2 pemain yang tidak bisa melihat kertas satu sama lain
+
+**Kemampuan CT:** Desain Algoritma, Abstraksi, Debugging
+
+**Waktu:** 15-20 menit
+
+### Cara Bermain
+
+1. Pemain 1 menggambar robot sederhana di kertasnya (menggunakan bentuk dasar — lingkaran, persegi, persegi panjang, segitiga).
+
+2. Pemain 1 lalu menulis algoritma yang menjelaskan cara menggambar robot itu, langkah demi langkah.
+
+**Contoh:**
+```
+Langkah 1: Gambar persegi besar di tengah kertas. Ini badannya.
+Langkah 2: Gambar persegi lebih kecil di atas badan. Ini kepalanya.
+Langkah 3: Gambar dua lingkaran kecil di dalam kepala untuk mata.
+Langkah 4: Gambar garis lurus melintang di kepala di bawah mata untuk mulutnya.
+Langkah 5: Gambar dua persegi panjang panjang turun dari bawah badan untuk kaki.
+Langkah 6: Gambar dua persegi panjang tipis keluar dari sisi badan untuk lengan.
+Langkah 7: Gambar segitiga kecil di atas kepala untuk antena.
+```
+
+3. Pemain 1 memberikan HANYA algoritma tertulis ke Pemain 2 (bukan gambarnya!).
+
+4. Pemain 2 mengikuti algoritma dan menggambar robotnya.
+
+5. Bandingkan kedua gambar. Apakah cocok?
 
 ### Debugging
 
-If the drawings don't match:
-- Which steps were unclear?
-- What was missing?
-- How could the algorithm be improved?
+Kalau gambarnya tidak cocok:
+- Langkah mana yang tidak jelas?
+- Apa yang hilang?
+- Bagaimana algoritmanya bisa diperbaiki?
 
 ---
 
-## Bonus Activity: Create Your Own CT Game!
+## Aktivitas Bonus: Buat Game CT-mu Sendiri!
 
-Now it's YOUR turn — and this is going to be awesome! Use what you've learned to create your own game that teaches one or more CT skills.
+Sekarang giliran KAMU — dan ini bakal keren banget! Gunakan apa yang sudah kamu pelajari untuk membuat game sendiri yang mengajarkan satu atau lebih kemampuan CT.
 
-**Your game should have:**
-1. A clear name
-2. What you need to play
-3. How many players
-4. Clear rules (an algorithm for playing!)
-5. How to win
-6. Which CT skill(s) it teaches
+**Game-mu harus punya:**
+1. Nama yang jelas
+2. Apa yang dibutuhkan untuk bermain
+3. Berapa pemain
+4. Aturan yang jelas (algoritma untuk bermain!)
+5. Cara menang
+6. Kemampuan CT apa yang diajarkan
 
-**Ideas to get you started:**
-- A board game where you navigate a maze by writing algorithms
-- A card game where you find patterns to score points
-- A guessing game that uses logical thinking
-- A team game where you debug broken instructions
+**Ide untuk memulai:**
+- Board game di mana kamu menavigasi labirin dengan menulis algoritma
+- Card game di mana kamu mencari pola untuk mendapat poin
+- Permainan tebak-tebakan yang menggunakan berpikir logis
+- Permainan tim di mana kamu debug instruksi yang rusak
 
-Write up your game, test it with friends, and debug it until it works perfectly!
+Tulis game-mu, tes dengan teman-teman, dan debug sampai sempurna!
 
 ---
 
-## Activity Quick-Reference Table
+## Tabel Referensi Cepat Aktivitas
 
-| # | Activity | Players | Time | Main CT Skills |
+| # | Aktivitas | Pemain | Waktu | Kemampuan CT Utama |
 |---|----------|---------|------|---------------|
-| 1 | Human Sorting Network | 6+ | 15-20 min | Algorithm Design, Decomposition |
-| 2 | Binary Number Bracelets | 1+ | 20-30 min | Pattern Recognition, Abstraction |
-| 3 | Pixel Art | 1+ | 15-25 min | Abstraction, Pattern Recognition |
-| 4 | Treasure Hunt with Algorithms | 2+ | 20-30 min | Algorithm Design, Logical Thinking |
-| 5 | Error Detection Magic Trick | 2+ | 15-20 min | Pattern Recognition, Debugging |
-| 6 | Cup Stacking Algorithm | 2+ | 10-15 min | Algorithm Design, Debugging |
-| 7 | Telephone Algorithm | 5+ | 15-20 min | Algorithm Design, Debugging |
-| 8 | Human Robot Maze | 2+ | 20-30 min | Algorithm Design, Logical Thinking |
-| 9 | Pattern Bead Strings | 2+ | 15-20 min | Pattern Recognition, Algorithm Design |
-| 10 | Sandwich Assembly Line | 4+ | 15-20 min | Decomposition, Algorithm Design |
-| 11 | Story Algorithm Cards | 2+ | 15-20 min | Algorithm Design, Decomposition |
-| 12 | Debugging Relay Race | 6+ | 15-20 min | Debugging, Algorithm Design |
-| 13 | Secret Code Messages | 2+ | 15-20 min | Pattern Recognition, Algorithm Design |
-| 14 | Sorting Without Seeing | 5+ | 10-15 min | Algorithm Design, Logical Thinking |
-| 15 | Build-a-Bot Drawing | 2 | 15-20 min | Algorithm Design, Abstraction |
+| 1 | Jaringan Penyortiran Manusia | 6+ | 15-20 mnt | Desain Algoritma, Dekomposisi |
+| 2 | Gelang Angka Biner | 1+ | 20-30 mnt | Pengenalan Pola, Abstraksi |
+| 3 | Pixel Art | 1+ | 15-25 mnt | Abstraksi, Pengenalan Pola |
+| 4 | Berburu Harta Karun dengan Algoritma | 2+ | 20-30 mnt | Desain Algoritma, Berpikir Logis |
+| 5 | Trik Sulap Deteksi Kesalahan | 2+ | 15-20 mnt | Pengenalan Pola, Debugging |
+| 6 | Algoritma Menyusun Gelas | 2+ | 10-15 mnt | Desain Algoritma, Debugging |
+| 7 | Algoritma Telepon | 5+ | 15-20 mnt | Desain Algoritma, Debugging |
+| 8 | Labirin Robot Manusia | 2+ | 20-30 mnt | Desain Algoritma, Berpikir Logis |
+| 9 | Untaian Manik-Manik Pola | 2+ | 15-20 mnt | Pengenalan Pola, Desain Algoritma |
+| 10 | Lini Perakitan Sandwich | 4+ | 15-20 mnt | Dekomposisi, Desain Algoritma |
+| 11 | Kartu Algoritma Cerita | 2+ | 15-20 mnt | Desain Algoritma, Dekomposisi |
+| 12 | Lomba Estafet Debugging | 6+ | 15-20 mnt | Debugging, Desain Algoritma |
+| 13 | Pesan Rahasia Berkode | 2+ | 15-20 mnt | Pengenalan Pola, Desain Algoritma |
+| 14 | Menyortir Tanpa Melihat | 5+ | 10-15 mnt | Desain Algoritma, Berpikir Logis |
+| 15 | Menggambar Robot | 2 | 15-20 mnt | Desain Algoritma, Abstraksi |
 
 ---
 
-You did it — you made it through ALL the activities! You're doing amazing! The more you play these games, the stronger your Computational Thinking skills become. And remember — the best part is that you're learning to think like a problem-solver while having a great time! Now go try your favorites with your friends!
+Kamu berhasil — kamu sudah menyelesaikan SEMUA aktivitas! Kamu hebat banget! Semakin sering kamu memainkan permainan-permainan ini, semakin kuat kemampuan Computational Thinking-mu. Dan ingat — bagian terbaiknya adalah kamu belajar berpikir seperti pemecah masalah sambil bersenang-senang! Sekarang ayo coba yang paling kamu suka bersama teman-temanmu!
 
 ---
 
-[Previous: Module 07 — Everyday CT](07-everyday-ct.md) | [Next: Module 09 — For Teachers and Parents](09-for-teachers-and-parents.md)
+[Sebelumnya: Modul 07 — CT Sehari-hari](07-everyday-ct.md) | [Selanjutnya: Modul 09 — Untuk Guru dan Orang Tua](09-for-teachers-and-parents.md)

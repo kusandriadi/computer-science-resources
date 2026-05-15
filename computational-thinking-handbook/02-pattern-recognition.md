@@ -1,388 +1,388 @@
-# Module 02: Pattern Recognition — Finding Patterns and Things That Repeat
+# Modul 02: Pattern Recognition — Menemukan Pola dan Hal-hal yang Berulang
 
-## What is Pattern Recognition?
+## Apa Itu Pattern Recognition?
 
-Look around you right now. Can you see anything that repeats? Maybe the tiles on the floor are the same shape over and over. Maybe the stripes on your shirt go blue, white, blue, white. Maybe the birds outside sing the same song again and again.
+Coba lihat sekelilingmu sekarang. Bisakah kamu menemukan sesuatu yang berulang? Mungkin ubin di lantai punya bentuk yang sama terus-terusan. Mungkin garis-garis di bajumu bergantian biru, putih, biru, putih. Mungkin burung-burung di luar menyanyikan lagu yang sama berulang kali.
 
-The world is FULL of patterns, and your brain is amazing at finding them!
+Dunia ini PENUH dengan pola, dan otakmu hebat banget dalam menemukannya!
 
-> **Pattern Recognition = noticing things that repeat, look similar, or follow a rule.**
+> **Pattern Recognition (pengenalan pola) = memperhatikan hal-hal yang berulang, terlihat mirip, atau mengikuti suatu aturan.**
 
-When you find a pattern, something magical happens: **you can predict what comes next.** If you see Monday, Tuesday, Wednesday — you KNOW Thursday comes next. That's pattern recognition!
-
----
-
-## Why Are Patterns So Important?
-
-Patterns are everywhere, and they help us in big ways:
-
-1. **Patterns save time.** If you know a pattern, you don't have to figure out everything from scratch. You already know what to expect!
-
-2. **Patterns help you predict.** Knowing that winter comes after autumn helps you prepare warm clothes.
-
-3. **Patterns help you solve problems.** If you solved a math problem once, and the next problem looks similar, you can use the same method!
-
-4. **Patterns make learning easier.** Spelling rules, multiplication tables, and music notes all have patterns. Find the pattern, and you learn faster.
+Kalau kamu menemukan pola, sesuatu yang ajaib terjadi: **kamu bisa memprediksi apa yang datang selanjutnya.** Kalau kamu melihat Senin, Selasa, Rabu — kamu TAHU Kamis yang berikutnya. Itulah pattern recognition!
 
 ---
 
-## Real-Life Examples
+## Kenapa Pola Itu Sangat Penting?
 
-### Example 1: Batik Patterns
+Pola ada di mana-mana, dan pola membantu kita dengan cara yang besar:
 
-Have you ever seen batik fabric? The beautiful designs on batik are made of patterns that repeat over and over. A flower shape might repeat across the whole cloth. A swirl might appear again and again in different sizes.
+1. **Pola menghemat waktu.** Kalau kamu tahu polanya, kamu nggak perlu mencari tahu semuanya dari nol. Kamu sudah tahu apa yang diharapkan!
 
-Artists who make batik start with ONE design, and then repeat it in a pattern. That's how they fill an entire piece of cloth with beauty — by using the power of patterns!
+2. **Pola membantu kamu memprediksi.** Mengetahui bahwa musim hujan datang setelah musim kemarau membantu kamu menyiapkan payung.
 
-### Example 2: Song Choruses
+3. **Pola membantu kamu memecahkan masalah.** Kalau kamu pernah menyelesaikan satu soal matematika, dan soal berikutnya terlihat mirip, kamu bisa pakai cara yang sama!
 
-Think of your favorite song. Does it have a part that repeats? That's called the **chorus**, and it's a pattern!
+4. **Pola membuat belajar jadi lebih mudah.** Aturan ejaan, tabel perkalian, dan not musik semuanya punya pola. Temukan polanya, dan kamu belajar lebih cepat.
 
-A song might go:
-- Verse 1
-- **Chorus**
-- Verse 2
-- **Chorus**
-- Verse 3
-- **Chorus**
+---
 
-The chorus is the same every time. Once you learn it, you can sing along every time it comes back!
+## Contoh di Kehidupan Nyata
 
-### Example 3: Your Daily Schedule
+### Contoh 1: Pola Batik
 
-Your school days probably follow a pattern:
+Pernahkah kamu melihat kain batik? Desain indah pada batik terbuat dari pola yang berulang terus-menerus. Bentuk bunga mungkin berulang di seluruh kain. Pola melengkung mungkin muncul lagi dan lagi dalam ukuran yang berbeda.
 
-- Wake up at 6:30
-- School from 8:00 to 2:00
-- Homework at 4:00
-- Dinner at 6:30
-- Bedtime at 8:30
+Seniman yang membuat batik memulai dengan SATU desain, lalu mengulanginya dalam sebuah pola. Begitulah cara mereka mengisi seluruh kain dengan keindahan — dengan menggunakan kekuatan pola!
 
-This pattern repeats Monday through Friday. Because you know the pattern, you don't have to figure out what to do every single day. Your brain says, "Oh, I know — it's the same as yesterday!"
+### Contoh 2: Bagian Pengulangan di Lagu
 
-### Example 4: Number Sequences
+Coba pikirkan lagu favoritmu. Apakah ada bagian yang berulang? Itu namanya **reff** (chorus), dan itu adalah pola!
 
-Look at these numbers:
+Sebuah lagu bisa seperti ini:
+- Bait 1
+- **Reff**
+- Bait 2
+- **Reff**
+- Bait 3
+- **Reff**
+
+Reff-nya sama setiap kali. Begitu kamu hafalkan, kamu bisa ikut bernyanyi setiap kali reff-nya kembali!
+
+### Contoh 3: Jadwal Harianmu
+
+Hari-hari sekolahmu mungkin mengikuti pola:
+
+- Bangun jam 6:30
+- Sekolah dari jam 8:00 sampai 2:00
+- Mengerjakan PR jam 4:00
+- Makan malam jam 6:30
+- Tidur jam 8:30
+
+Pola ini berulang Senin sampai Jumat. Karena kamu tahu polanya, kamu nggak perlu mencari tahu apa yang harus dilakukan setiap hari. Otakmu bilang, "Oh, aku tahu — sama kayak kemarin!"
+
+### Contoh 4: Urutan Angka
+
+Lihat angka-angka ini:
 
 **2, 4, 6, 8, ?**
 
-What comes next? If you said **10**, you found the pattern! Each number goes up by 2.
+Apa yang datang selanjutnya? Kalau kamu jawab **10**, kamu menemukan polanya! Setiap angka naik 2.
 
-Try these:
-- 5, 10, 15, 20, ? (Answer: 25 — goes up by 5)
-- 1, 1, 2, 3, 5, 8, ? (Answer: 13 — add the last two numbers!)
-- 3, 6, 12, 24, ? (Answer: 48 — each number doubles!)
+Coba yang ini:
+- 5, 10, 15, 20, ? (Jawaban: 25 — naik 5)
+- 1, 1, 2, 3, 5, 8, ? (Jawaban: 13 — jumlahkan dua angka terakhir!)
+- 3, 6, 12, 24, ? (Jawaban: 48 — setiap angka menjadi dua kali lipat!)
 
-### Example 5: Seasons
+### Contoh 5: Musim
 
-The seasons follow a pattern that repeats every year:
+Musim mengikuti pola yang berulang setiap tahun:
 
-Spring, Summer, Autumn, Winter, Spring, Summer, Autumn, Winter...
+Musim Semi, Musim Panas, Musim Gugur, Musim Dingin, Musim Semi, Musim Panas, Musim Gugur, Musim Dingin...
 
-Because of this pattern, we know:
-- After winter, spring will come.
-- We should plant in spring and harvest in autumn.
-- We need warm clothes in winter and light clothes in summer.
+Karena pola ini, kita tahu:
+- Setelah musim dingin, musim semi akan datang.
+- Kita harus menanam di musim semi dan memanen di musim gugur.
+- Kita butuh baju hangat di musim dingin dan baju tipis di musim panas.
 
-Farmers have used this pattern for thousands of years to grow food!
-
----
-
-## Types of Patterns
-
-Now here's where it gets cool — let's discover the different kinds of patterns you might find.
-
-### Repeating Patterns
-
-The same thing happens over and over.
-
-- Red, blue, red, blue, red, blue...
-- Clap, stomp, clap, stomp, clap, stomp...
-- Circle, square, circle, square...
-
-### Growing Patterns
-
-Things get bigger (or smaller) in a regular way.
-
-- 1, 2, 3, 4, 5... (grows by 1)
-- 2, 4, 8, 16, 32... (doubles each time)
-- A snowball rolling downhill — it gets bigger and bigger!
-
-### Shape Patterns
-
-Shapes or designs that repeat or follow a rule.
-
-- A chess board: black, white, black, white...
-- A honeycomb: hexagons repeating in all directions
-- Floor tiles: squares or triangles fitting together perfectly
-
-### Sound Patterns
-
-Sounds that repeat or follow a rule.
-
-- A clock: tick, tock, tick, tock...
-- A drum beat: boom, tap, tap, boom, tap, tap...
-- A bird call: tweet-tweet-tweet, pause, tweet-tweet-tweet, pause...
-
-### Behavior Patterns
-
-Things people or animals do regularly.
-
-- Your dog gets excited every time you pick up the leash (pattern: leash = walk!)
-- You always feel hungry around noon (pattern: lunchtime!)
-- The ice cream truck comes every Saturday afternoon
+Petani sudah menggunakan pola ini selama ribuan tahun untuk menanam makanan!
 
 ---
 
-## Patterns in Problem-Solving
+## Jenis-jenis Pola
 
-Pattern recognition is a superpower for solving problems. Here's how:
+Nah sekarang yang seru — yuk temukan berbagai macam pola yang mungkin kamu temui.
 
-**If you solved one problem, and a new problem looks similar, you can use the same solution!**
+### Pola Berulang
 
-**Example:** In math, you learn that 3 + 4 = 7. Later you see 30 + 40 = ?. The pattern is the same — just add a zero! The answer is 70.
+Hal yang sama terjadi terus-menerus.
 
-**Example:** You figured out how to make a paper airplane. Your friend asks you to make a paper boat. It's different, but you notice a pattern — both start with folding paper in half. You can use what you already know!
+- Merah, biru, merah, biru, merah, biru...
+- Tepuk, hentak, tepuk, hentak, tepuk, hentak...
+- Lingkaran, persegi, lingkaran, persegi...
 
-**Example:** You learned to ride a bicycle. Now you want to ride a scooter. The pattern is similar — both need balance! You use the same balancing skills.
+### Pola Bertumbuh
+
+Sesuatu menjadi lebih besar (atau lebih kecil) secara teratur.
+
+- 1, 2, 3, 4, 5... (bertambah 1)
+- 2, 4, 8, 16, 32... (berlipat ganda setiap kali)
+- Bola salju yang menggelinding turun bukit — makin lama makin besar!
+
+### Pola Bentuk
+
+Bentuk atau desain yang berulang atau mengikuti aturan.
+
+- Papan catur: hitam, putih, hitam, putih...
+- Sarang lebah: segi enam yang berulang ke segala arah
+- Ubin lantai: persegi atau segitiga yang pas satu sama lain
+
+### Pola Suara
+
+Suara yang berulang atau mengikuti aturan.
+
+- Jam: tik, tok, tik, tok...
+- Ketukan drum: bum, tak, tak, bum, tak, tak...
+- Suara burung: cuit-cuit-cuit, jeda, cuit-cuit-cuit, jeda...
+
+### Pola Perilaku
+
+Hal-hal yang sering dilakukan orang atau hewan secara teratur.
+
+- Anjingmu jadi semangat setiap kali kamu mengambil tali pengikat (pola: tali = jalan-jalan!)
+- Kamu selalu merasa lapar sekitar jam 12 siang (pola: waktunya makan siang!)
+- Tukang es krim lewat setiap Sabtu sore
 
 ---
 
-## Activity 1: Spot the Pattern
+## Pola dalam Pemecahan Masalah
 
-**What you need:** Paper and pencil.
+Pattern recognition adalah kekuatan super untuk memecahkan masalah. Begini caranya:
 
-**Look at each set below and write down the pattern you see. Then fill in the blank.**
+**Kalau kamu sudah pernah menyelesaikan satu masalah, dan masalah baru terlihat mirip, kamu bisa pakai solusi yang sama!**
+
+**Contoh:** Di matematika, kamu belajar bahwa 3 + 4 = 7. Nanti kamu melihat 30 + 40 = ?. Polanya sama — tinggal tambahkan nol! Jawabannya 70.
+
+**Contoh:** Kamu sudah bisa membuat pesawat kertas. Temanmu minta kamu membuat perahu kertas. Beda sih, tapi kamu melihat polanya — keduanya dimulai dengan melipat kertas menjadi dua. Kamu bisa pakai apa yang sudah kamu tahu!
+
+**Contoh:** Kamu belajar naik sepeda. Sekarang kamu mau naik skuter. Polanya mirip — keduanya butuh keseimbangan! Kamu pakai keterampilan keseimbangan yang sama.
+
+---
+
+## Kegiatan 1: Temukan Polanya
+
+**Apa yang kamu butuhkan:** Kertas dan pensil.
+
+**Lihat setiap set di bawah dan tulis pola yang kamu lihat. Lalu isi bagian yang kosong.**
 
 **Set 1:** A B A B A B _ _
-Pattern: ___________
-Next two: ___________
+Pola: ___________
+Dua berikutnya: ___________
 
 **Set 2:** 1 3 5 7 9 _ _
-Pattern: ___________
-Next two: ___________
+Pola: ___________
+Dua berikutnya: ___________
 
-**Set 3:** Sun Mon Sun Mon Sun Mon _ _
-Pattern: ___________
-Next two: ___________
+**Set 3:** Minggu Senin Minggu Senin Minggu Senin _ _
+Pola: ___________
+Dua berikutnya: ___________
 
-**Set 4:** Triangle Circle Circle Triangle Circle Circle _ _ _
-Pattern: ___________
-Next three: ___________
+**Set 4:** Segitiga Lingkaran Lingkaran Segitiga Lingkaran Lingkaran _ _ _
+Pola: ___________
+Tiga berikutnya: ___________
 
 **Set 5:** 100 90 80 70 60 _ _
-Pattern: ___________
-Next two: ___________
+Pola: ___________
+Dua berikutnya: ___________
 
-**Set 6:** Red Red Blue Red Red Blue _ _ _
-Pattern: ___________
-Next three: ___________
-
----
-
-## Activity 2: Complete the Sequence
-
-**Draw what comes next!**
-
-**Sequence 1:** Draw these on paper, then draw the next two shapes.
-- Small circle, medium circle, big circle, small circle, medium circle, big circle, ?, ?
-
-**Sequence 2:**
-- One dot, two dots, three dots, four dots, ?, ?
-
-**Sequence 3:**
-- Happy face, sad face, happy face, sad face, ?, ?
-
-**Sequence 4:**
-- Up arrow, up arrow, down arrow, up arrow, up arrow, down arrow, ?, ?, ?
+**Set 6:** Merah Merah Biru Merah Merah Biru _ _ _
+Pola: ___________
+Tiga berikutnya: ___________
 
 ---
 
-## Activity 3: Find What's Similar
+## Kegiatan 2: Lengkapi Urutannya
 
-**What you need:** Paper and pencil.
+**Gambar apa yang datang selanjutnya!**
 
-**Look at each group and find what ALL the items have in common.**
+**Urutan 1:** Gambar ini di kertas, lalu gambar dua bentuk berikutnya.
+- Lingkaran kecil, lingkaran sedang, lingkaran besar, lingkaran kecil, lingkaran sedang, lingkaran besar, ?, ?
 
-**Group 1:** Dog, Cat, Fish, Hamster
-What's the same? ___________
+**Urutan 2:**
+- Satu titik, dua titik, tiga titik, empat titik, ?, ?
 
-**Group 2:** Bicycle, Car, Bus, Train
-What's the same? ___________
+**Urutan 3:**
+- Wajah senang, wajah sedih, wajah senang, wajah sedih, ?, ?
 
-**Group 3:** Apple, Banana, Mango, Grape
-What's the same? ___________
-
-**Group 4:** Pencil, Crayon, Marker, Chalk
-What's the same? ___________
-
-**Group 5:** Soccer, Basketball, Tennis, Badminton
-What's the same? ___________
-
-Now try the **harder version**: What is DIFFERENT about one item in each group? (Which one doesn't quite fit?)
-
-- In Group 1, fish is different because... (it doesn't have legs!)
-- In Group 2, bicycle is different because... (it has no engine!)
-- Can you find the odd one out in Groups 3, 4, and 5?
+**Urutan 4:**
+- Panah atas, panah atas, panah bawah, panah atas, panah atas, panah bawah, ?, ?, ?
 
 ---
 
-## Activity 4: Pattern Detective
+## Kegiatan 3: Temukan Persamaannya
 
-**What you need:** Your eyes and your brain! Walk around your house or school.
+**Apa yang kamu butuhkan:** Kertas dan pensil.
 
-**Mission:** Find and write down as many patterns as you can in 10 minutes.
+**Lihat setiap kelompok dan temukan apa yang SAMA dari semua benda di dalamnya.**
 
-Look for:
-- Patterns on the floor (tiles, carpet)
-- Patterns on clothes (stripes, dots, plaid)
-- Patterns on walls (wallpaper, bricks)
-- Patterns in nature (leaves, flowers, spider webs)
-- Patterns in sounds (clock ticking, birds singing)
-- Patterns in the daily schedule (what happens at the same time every day)
+**Kelompok 1:** Anjing, Kucing, Ikan, Hamster
+Apa yang sama? ___________
 
-**Challenge:** Can you find at least 10 patterns? Write a description of each one and what makes it a pattern.
+**Kelompok 2:** Sepeda, Mobil, Bus, Kereta
+Apa yang sama? ___________
 
----
+**Kelompok 3:** Apel, Pisang, Mangga, Anggur
+Apa yang sama? ___________
 
-## Activity 5: Create Your Own Pattern
+**Kelompok 4:** Pensil, Krayon, Spidol, Kapur
+Apa yang sama? ___________
 
-**What you need:** Colored pencils and paper.
+**Kelompok 5:** Sepak Bola, Basket, Tenis, Bulu Tangkis
+Apa yang sama? ___________
 
-1. Create a **color pattern** using at least 3 colors. Make it repeat at least 4 times.
-   Example: Red, Yellow, Blue, Green, Red, Yellow, Blue, Green...
+Sekarang coba versi **yang lebih susah**: Apa yang BERBEDA dari satu benda di setiap kelompok? (Mana yang agak nggak cocok?)
 
-2. Create a **shape pattern** using at least 2 shapes. Make it repeat at least 4 times.
-   Example: Star, Heart, Heart, Star, Heart, Heart...
-
-3. Create a **number pattern** with at least 6 numbers.
-   Example: 5, 10, 15, 20, 25, 30...
-
-4. Give your patterns to a friend. Can they figure out the rule and continue your pattern?
+- Di Kelompok 1, ikan berbeda karena... (nggak punya kaki!)
+- Di Kelompok 2, sepeda berbeda karena... (nggak punya mesin!)
+- Bisakah kamu menemukan yang beda di Kelompok 3, 4, dan 5?
 
 ---
 
-## Activity 6: Pattern Music
+## Kegiatan 4: Detektif Pola
 
-**What you need:** Your hands and feet!
+**Apa yang kamu butuhkan:** Matamu dan otakmu! Jalan-jalan di rumah atau sekolahmu.
 
-1. Create a beat pattern by clapping and stomping.
-   Example: CLAP CLAP STOMP, CLAP CLAP STOMP, CLAP CLAP STOMP
+**Misi:** Temukan dan tulis sebanyak mungkin pola yang kamu temukan dalam 10 menit.
 
-2. Teach your pattern to a friend.
+Cari:
+- Pola di lantai (ubin, karpet)
+- Pola di baju (garis-garis, titik-titik, kotak-kotak)
+- Pola di dinding (wallpaper, batu bata)
+- Pola di alam (daun, bunga, jaring laba-laba)
+- Pola di suara (jam berdetik, burung bernyanyi)
+- Pola di jadwal harian (apa yang terjadi di waktu yang sama setiap hari)
 
-3. Take turns — one person makes a pattern, the other repeats it.
-
-4. Make the patterns harder: add snaps, taps on the table, or funny sounds!
-
-**Bonus:** Can you layer two patterns? One person does CLAP CLAP STOMP while another does SNAP TAP SNAP TAP. See how they sound together!
-
----
-
-## Fun Fact: Patterns in Nature
-
-Nature is the greatest pattern maker of all!
-
-- **Sunflowers** have seeds arranged in spiral patterns.
-- **Snowflakes** always have 6 sides (but every snowflake is different!).
-- **Zebras** have stripe patterns (each zebra's stripes are unique, like fingerprints!).
-- **Spider webs** are built in spiral patterns.
-- **Tree branches** follow a pattern — they split into smaller and smaller branches.
-- **Pineapples** have spiral patterns going in two directions.
-
-Scientists and mathematicians study these patterns to understand how nature works!
+**Tantangan:** Bisakah kamu menemukan setidaknya 10 pola? Tulis deskripsi setiap pola dan apa yang membuatnya jadi pola.
 
 ---
 
-## Quiz Time!
+## Kegiatan 5: Buat Polamu Sendiri
 
-**Question 1:** What is pattern recognition?
-- A) Memorizing everything
-- B) Noticing things that repeat or follow a rule
-- C) Doing the same thing every day
-- D) Copying someone else
+**Apa yang kamu butuhkan:** Pensil warna dan kertas.
 
-**Question 2:** What comes next? 10, 20, 30, 40, ?
+1. Buat **pola warna** menggunakan setidaknya 3 warna. Buat berulang setidaknya 4 kali.
+   Contoh: Merah, Kuning, Biru, Hijau, Merah, Kuning, Biru, Hijau...
+
+2. Buat **pola bentuk** menggunakan setidaknya 2 bentuk. Buat berulang setidaknya 4 kali.
+   Contoh: Bintang, Hati, Hati, Bintang, Hati, Hati...
+
+3. Buat **pola angka** dengan setidaknya 6 angka.
+   Contoh: 5, 10, 15, 20, 25, 30...
+
+4. Berikan polamu ke teman. Bisakah mereka menemukan aturannya dan melanjutkan polamu?
+
+---
+
+## Kegiatan 6: Musik Pola
+
+**Apa yang kamu butuhkan:** Tangan dan kakimu!
+
+1. Buat pola ketukan dengan bertepuk dan menghentak.
+   Contoh: TEPUK TEPUK HENTAK, TEPUK TEPUK HENTAK, TEPUK TEPUK HENTAK
+
+2. Ajarkan polamu ke teman.
+
+3. Gantian — satu orang membuat pola, yang lain mengulanginya.
+
+4. Buat polanya makin susah: tambahkan jentikan jari, ketukan di meja, atau suara-suara lucu!
+
+**Bonus:** Bisakah kamu menggabungkan dua pola? Satu orang melakukan TEPUK TEPUK HENTAK sementara yang lain melakukan JENTIK KETUK JENTIK KETUK. Lihat gimana bunyinya kalau digabung!
+
+---
+
+## Fakta Seru: Pola di Alam
+
+Alam adalah pembuat pola terhebat!
+
+- **Bunga matahari** punya biji yang tersusun dalam pola spiral.
+- **Kepingan salju** selalu punya 6 sisi (tapi setiap kepingan salju itu berbeda!).
+- **Zebra** punya pola garis (garis setiap zebra itu unik, seperti sidik jari!).
+- **Jaring laba-laba** dibangun dalam pola spiral.
+- **Cabang pohon** mengikuti pola — mereka bercabang jadi cabang yang makin kecil dan kecil.
+- **Nanas** punya pola spiral yang berjalan ke dua arah.
+
+Ilmuwan dan matematikawan mempelajari pola-pola ini untuk memahami bagaimana alam bekerja!
+
+---
+
+## Waktunya Kuis!
+
+**Pertanyaan 1:** Apa itu pattern recognition?
+- A) Menghafal semuanya
+- B) Memperhatikan hal-hal yang berulang atau mengikuti aturan
+- C) Melakukan hal yang sama setiap hari
+- D) Meniru orang lain
+
+**Pertanyaan 2:** Apa yang datang selanjutnya? 10, 20, 30, 40, ?
 - A) 45
 - B) 50
 - C) 60
 - D) 100
 
-**Question 3:** What comes next? A, C, E, G, ?
+**Pertanyaan 3:** Apa yang datang selanjutnya? A, C, E, G, ?
 - A) H
 - B) I
 - C) J
 - D) F
 
-**Question 4:** Why is pattern recognition useful? (Pick the BEST answer)
-- A) It helps you predict what comes next
-- B) It helps you solve new problems using old solutions
-- C) It helps you learn faster
-- D) All of the above
+**Pertanyaan 4:** Kenapa pattern recognition itu berguna? (Pilih jawaban TERBAIK)
+- A) Membantu kamu memprediksi apa yang datang selanjutnya
+- B) Membantu kamu menyelesaikan masalah baru menggunakan solusi lama
+- C) Membantu kamu belajar lebih cepat
+- D) Semua jawaban di atas
 
-**Question 5:** Look at this pattern: Star Star Moon, Star Star Moon, Star Star Moon. What is the repeating part?
-- A) Star
-- B) Moon
-- C) Star Star Moon
-- D) Star Moon
+**Pertanyaan 5:** Lihat pola ini: Bintang Bintang Bulan, Bintang Bintang Bulan, Bintang Bintang Bulan. Apa bagian yang berulang?
+- A) Bintang
+- B) Bulan
+- C) Bintang Bintang Bulan
+- D) Bintang Bulan
 
-**Question 6:** You notice that every time you eat ice cream too fast, you get a brain freeze. What pattern did you recognize?
-- Write your answer in your own words.
+**Pertanyaan 6:** Kamu menemukan bahwa setiap kali makan es krim terlalu cepat, kepalamu jadi pusing. Pola apa yang kamu kenali?
+- Tulis jawabanmu dengan kata-katamu sendiri.
 
 ---
 
-## Challenge: The Super Pattern Puzzle
+## Tantangan: Teka-teki Pola Super
 
-Ready for a challenge? Here's a tricky one!
+Siap untuk tantangan? Ini yang agak tricky!
 
-Look at this grid:
+Lihat tabel ini:
 
 ```
-Row 1:  1   2   3   4   5
-Row 2:  6   7   8   9   10
-Row 3:  11  12  13  14  15
-Row 4:  16  17  18  19  20
-Row 5:  21  22  23  24  25
+Baris 1:  1   2   3   4   5
+Baris 2:  6   7   8   9   10
+Baris 3:  11  12  13  14  15
+Baris 4:  16  17  18  19  20
+Baris 5:  21  22  23  24  25
 ```
 
-Can you find these patterns?
-1. What pattern do the numbers in each row follow?
-2. What pattern do the numbers in each column (up and down) follow?
-3. What pattern do the diagonal numbers (1, 7, 13, 19, 25) follow?
-4. What do you notice about the corners (1, 5, 21, 25)?
+Bisakah kamu menemukan pola-pola ini?
+1. Pola apa yang diikuti angka-angka di setiap baris?
+2. Pola apa yang diikuti angka-angka di setiap kolom (atas ke bawah)?
+3. Pola apa yang diikuti angka-angka diagonal (1, 7, 13, 19, 25)?
+4. Apa yang kamu perhatikan tentang angka di sudut-sudut (1, 5, 21, 25)?
 
 ---
 
-## What You Learned
+## Apa yang Sudah Kamu Pelajari
 
-Great job, pattern detective! In this module, you learned that:
-- **Pattern Recognition** means finding things that repeat, look similar, or follow a rule.
-- Patterns are everywhere — in numbers, shapes, sounds, nature, and daily life.
-- Finding patterns helps you **predict** what comes next, **solve problems** faster, and **learn** more easily.
-- There are different types of patterns: repeating, growing, shape, sound, and behavior patterns.
-
----
-
-## Answers
-
-**Question 1:** B) Noticing things that repeat or follow a rule.
-
-**Question 2:** B) 50 (goes up by 10).
-
-**Question 3:** B) I (the pattern skips one letter: A, C, E, G, I).
-
-**Question 4:** D) All of the above.
-
-**Question 5:** C) Star Star Moon.
-
-**Question 6:** Example answer: "The pattern is that eating ice cream fast causes brain freeze. So if I eat it slowly, I probably won't get one!"
-
-**Super Pattern Puzzle:**
-1. Each row goes up by 1 (1,2,3,4,5).
-2. Each column goes up by 5 (1,6,11,16,21).
-3. The diagonal goes up by 6 (1,7,13,19,25).
-4. The corners are 1, 5, 21, 25. Top corners differ by 4, bottom corners differ by 4. Top-left to bottom-right differ by 24.
+Kerja bagus, detektif pola! Di modul ini, kamu belajar bahwa:
+- **Pattern Recognition** (pengenalan pola) artinya menemukan hal-hal yang berulang, terlihat mirip, atau mengikuti aturan.
+- Pola ada di mana-mana — di angka, bentuk, suara, alam, dan kehidupan sehari-hari.
+- Menemukan pola membantu kamu **memprediksi** apa yang datang selanjutnya, **memecahkan masalah** lebih cepat, dan **belajar** lebih mudah.
+- Ada berbagai jenis pola: pola berulang, pola bertumbuh, pola bentuk, pola suara, dan pola perilaku.
 
 ---
 
-[Previous: Module 01 — Decomposition](01-decomposition.md) | [Next: Module 03 — Abstraction](03-abstraction.md)
+## Jawaban
+
+**Pertanyaan 1:** B) Memperhatikan hal-hal yang berulang atau mengikuti aturan.
+
+**Pertanyaan 2:** B) 50 (naik 10).
+
+**Pertanyaan 3:** B) I (polanya melewatkan satu huruf: A, C, E, G, I).
+
+**Pertanyaan 4:** D) Semua jawaban di atas.
+
+**Pertanyaan 5:** C) Bintang Bintang Bulan.
+
+**Pertanyaan 6:** Contoh jawaban: "Polanya adalah makan es krim cepat-cepat bikin kepala pusing. Jadi kalau aku makannya pelan-pelan, kemungkinan nggak akan pusing!"
+
+**Teka-teki Pola Super:**
+1. Setiap baris naik 1 (1,2,3,4,5).
+2. Setiap kolom naik 5 (1,6,11,16,21).
+3. Diagonal naik 6 (1,7,13,19,25).
+4. Sudut-sudutnya adalah 1, 5, 21, 25. Sudut atas berbeda 4, sudut bawah berbeda 4. Kiri atas ke kanan bawah berbeda 24.
+
+---
+
+[Sebelumnya: Modul 01 — Decomposition](01-decomposition.md) | [Selanjutnya: Modul 03 — Abstraction](03-abstraction.md)

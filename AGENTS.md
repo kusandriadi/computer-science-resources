@@ -13,7 +13,7 @@ This is a collection of computer science learning materials. Each topic lives in
 | `ai-engineering-syllabus/` | University students, semesters 1–4, from both IT and non-IT backgrounds | Friendly, encouraging teacher. Jargon is always explained in parentheses or in context. Every course has a Week 0 crash course for students with no prior experience. Self-check checklists help students assess readiness. "Why this matters" motivations appear before technical weeks. |
 | `llm-handbook/` | ML engineers, researchers, and working professionals | Knowledgeable colleague — technically precise but conversational. Like explaining over coffee, not lecturing from a podium. Intuitive analogies before formal math. Paper references are expected and welcome. |
 | `algorithms-handbook/` | CS students and software engineers | Engaging teacher. Real-world examples and intuition come BEFORE formal definitions and code. Every algorithm is explained step-by-step with Java implementations. Every module ends with a quiz. |
-| `computational-thinking-handbook/` | Elementary school students, grades 1–6 (ages 6–12) | Fun, energetic, encouraging. Simple English with short sentences. No jargon. Real-life analogies (cooking, LEGO, games, school). All activities are "unplugged" (no computer required). The tone should make a 10-year-old excited to learn, not bored. |
+| `computational-thinking-handbook/` | Elementary school students, grades 1–6 (ages 6–12) | **Written entirely in Bahasa Indonesia.** Fun, energetic, encouraging. Simple Indonesian with short sentences. No jargon. Real-life analogies (cooking, LEGO, games, school). All activities are "unplugged" (no computer required). Technical terms kept in English with Indonesian explanation in parentheses (e.g., "**Decomposition** (memecah masalah besar jadi bagian kecil)"). The tone should make a 10-year-old excited to learn, not bored. |
 
 ## Audience-Specific Guidelines
 
@@ -42,13 +42,15 @@ This is a collection of computer science learning materials. Each topic lives in
 - Add comments to code. A student should understand what each line does without reading the surrounding text.
 
 ### Computational Thinking Handbook
-- Write for a 10-year-old. If a 10-year-old wouldn't understand a sentence, rewrite it.
-- Use analogies from everyday life: cooking, cleaning your room, playing games, going to school.
-- Every module (01–07) must end with a quiz/challenge and answer key.
+- **ALL content must be written in Bahasa Indonesia.** This is mandatory.
+- Write for a 10-year-old Indonesian child. If a 10-year-old wouldn't understand a sentence, rewrite it.
+- Keep technical terms in English with Indonesian explanation: "**Decomposition** (memecah masalah besar jadi bagian kecil)".
+- Use analogies from everyday life: cooking (nasi goreng), cleaning your room, playing games, going to school.
+- Every module (01–07) must end with a quiz/challenge and answer key (in Indonesian).
 - Activities must be doable without a computer ("unplugged").
-- Use encouraging language: "You're doing great!", "Ready for a challenge?", "Let's try something cool!"
-- Avoid: "In this module, we will explore..." Use instead: "Let's discover..."
-- Module 09 (For Teachers and Parents) targets adults — keep it professional but warm.
+- Use encouraging Indonesian language: "Kamu hebat!", "Siap untuk tantangan?", "Yuk coba sesuatu yang keren!"
+- Avoid formal/stiff Indonesian. Use casual, kid-friendly language.
+- Module 09 (Untuk Guru dan Orang Tua) targets Indonesian adults — keep it professional but warm.
 
 ## Conventions
 

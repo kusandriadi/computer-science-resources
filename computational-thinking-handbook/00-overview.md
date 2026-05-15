@@ -1,202 +1,202 @@
-# Module 00: What is Computational Thinking?
+# Modul 00: Apa Itu Computational Thinking?
 
-## Your New Superpower
+## Kekuatan Super Barumu
 
-Imagine you had a superpower that helped you solve ANY problem — from the easiest to the hardest. A superpower that helped you plan the best birthday party, build the most amazing pillow fort, or figure out how to beat the trickiest level in a video game.
+Bayangkan kamu punya kekuatan super yang bisa membantu memecahkan masalah APA PUN — dari yang paling gampang sampai yang paling susah. Kekuatan super yang membantu kamu merencanakan pesta ulang tahun terkeren, membangun benteng bantal paling kece, atau menemukan cara mengalahkan level tersulit di video game.
 
-Good news: **that superpower is real**, and it's called **Computational Thinking**.
+Kabar baik: **kekuatan super itu nyata**, dan namanya **Computational Thinking** (berpikir komputasional).
 
-Don't let the big name scare you! Computational Thinking is just a fancy way of saying **"smart problem-solving."** It's a set of tricks your brain can learn to break down hard things into easy things.
-
----
-
-## Wait — Do I Need a Computer?
-
-Nope! Even though the word "computational" sounds like it's about computers, you don't need one. Computational Thinking is something that happens **inside your brain**. Computers use these tricks too, but humans invented them first!
-
-You already use Computational Thinking every day without knowing it. Let's see how.
+Jangan takut sama nama besarnya! Computational Thinking cuma cara keren untuk bilang **"pemecahan masalah yang cerdas."** Ini adalah kumpulan trik yang bisa dipelajari otakmu untuk memecah hal-hal susah jadi hal-hal gampang.
 
 ---
 
-## A Story About Rani
+## Tunggu — Aku Butuh Komputer?
 
-Let's meet Rani. She's 10 years old, and her room is a HUGE mess. Toys everywhere. Books on the floor. Clothes on the chair. Her mom says, "Clean your room before dinner!"
+Nggak! Meskipun kata "computational" kedengarannya seperti tentang komputer, kamu nggak perlu komputer. Computational Thinking adalah sesuatu yang terjadi **di dalam otakmu**. Komputer juga pakai trik-trik ini, tapi manusia yang menemukan duluan!
 
-Rani looks at the mess and thinks, "This is impossible!"
-
-But then she uses her problem-solving superpower:
-
-1. **She breaks the big job into smaller jobs.** "First I'll pick up the toys. Then the books. Then the clothes." (This is called **Decomposition**.)
-
-2. **She notices a pattern.** "All the LEGO pieces are near the bed. All the books are near the desk. All the clothes are near the closet." (This is called **Pattern Recognition**.)
-
-3. **She focuses on what matters most.** "I don't need to organize every single crayon by color right now. I just need everything off the floor." (This is called **Abstraction**.)
-
-4. **She makes a plan.** "Step 1: Put toys in the toy box. Step 2: Put books on the shelf. Step 3: Put clothes in the hamper. Step 4: Done!" (This is called **Algorithm Design**.)
-
-In 15 minutes, Rani's room is clean. Her mom is happy. Rani is happy. That's Computational Thinking in action!
+Kamu sudah pakai Computational Thinking setiap hari tanpa sadar. Yuk kita lihat bagaimana caranya.
 
 ---
 
-## The Four Big Skills
+## Cerita Tentang Rani
 
-Computational Thinking has **four main skills**. Think of them like four tools in a toolbox. Each tool does something different, but they work best when you use them together.
+Yuk kenalan sama Rani. Dia berumur 10 tahun, dan kamarnya BERANTAKAN banget. Mainan di mana-mana. Buku di lantai. Baju di atas kursi. Mamanya bilang, "Bersihin kamar sebelum makan malam!"
 
-### 1. Decomposition — Break It Down!
+Rani melihat kekacauan itu dan berpikir, "Ini mustahil!"
 
-Taking a big, scary problem and chopping it into small, easy pieces.
+Tapi kemudian dia pakai kekuatan super pemecahan masalahnya:
 
-**Example:** You want to make nasi goreng (fried rice). That sounds hard! But if you break it down — cook the rice, chop the vegetables, crack the eggs, fry everything together — each step is pretty easy.
+1. **Dia memecah pekerjaan besar jadi pekerjaan kecil.** "Pertama aku bereskan mainan. Lalu buku. Lalu baju." (Ini namanya **Decomposition** — memecah masalah besar jadi bagian kecil.)
 
-### 2. Pattern Recognition — Spot the Pattern!
+2. **Dia menemukan pola.** "Semua LEGO ada di dekat tempat tidur. Semua buku ada di dekat meja. Semua baju ada di dekat lemari." (Ini namanya **Pattern Recognition** — mengenali pola.)
 
-Finding things that repeat or look similar. When you see a pattern, you can predict what comes next.
+3. **Dia fokus pada yang paling penting.** "Aku nggak perlu menyusun setiap krayon berdasarkan warna sekarang. Yang penting semuanya terangkat dari lantai." (Ini namanya **Abstraction** — menyederhanakan.)
 
-**Example:** Monday you have math class first. Tuesday you have math class first. Wednesday you have math class first. You see the pattern — math is always first! So you know Thursday will probably start with math too.
+4. **Dia membuat rencana.** "Langkah 1: Taruh mainan di kotak mainan. Langkah 2: Taruh buku di rak. Langkah 3: Taruh baju di keranjang cucian. Langkah 4: Selesai!" (Ini namanya **Algorithm Design** — merancang langkah-langkah.)
 
-### 3. Abstraction — Keep It Simple!
-
-Ignoring the stuff that doesn't matter and focusing only on the important stuff.
-
-**Example:** When you draw a map to show a friend how to get to your house, you don't draw every tree and every rock. You just draw the important roads and landmarks. That's abstraction — keeping only what matters.
-
-### 4. Algorithm Design — Make a Plan!
-
-Writing step-by-step instructions that anyone can follow to solve a problem.
-
-**Example:** A recipe is an algorithm! "Step 1: Get two slices of bread. Step 2: Spread peanut butter on one slice. Step 3: Spread jelly on the other. Step 4: Press them together." If you follow these steps, you'll always get a PB&J sandwich.
+Dalam 15 menit, kamar Rani bersih. Mamanya senang. Rani senang. Itulah Computational Thinking beraksi!
 
 ---
 
-## Two Bonus Skills
+## Empat Keterampilan Utama
 
-On top of the four big skills, there are two more that are super useful:
+Computational Thinking punya **empat keterampilan utama**. Bayangkan keempatnya seperti empat alat di dalam kotak peralatan. Setiap alat punya fungsi berbeda, tapi semuanya bekerja paling baik kalau dipakai bersama-sama.
 
-### 5. Logical Thinking — Think It Through!
+### 1. Decomposition — Pecah Jadi Bagian Kecil!
 
-Using "if-then" thinking to make smart choices.
+Mengambil masalah besar yang menakutkan dan memotongnya jadi potongan-potongan kecil yang gampang.
 
-**Example:** IF it's raining outside, THEN I should bring an umbrella. IF it's sunny, THEN I'll wear a hat.
+**Contoh:** Kamu mau bikin nasi goreng. Kedengarannya susah! Tapi kalau dipecah — masak nasi, potong sayuran, pecahkan telur, goreng semuanya — setiap langkah lumayan gampang kan.
 
-### 6. Debugging — Fix It!
+### 2. Pattern Recognition — Temukan Polanya!
 
-Finding and fixing mistakes. Everyone makes mistakes — the important thing is knowing how to find them and fix them.
+Menemukan hal-hal yang berulang atau terlihat mirip. Kalau kamu menemukan pola, kamu bisa memprediksi apa yang terjadi selanjutnya.
 
-**Example:** You're following a recipe and the food tastes too salty. You "debug" by looking at the steps. Oops! The recipe said 1 teaspoon of salt, but you put 1 tablespoon. That's the bug! Next time, you'll use the right amount.
+**Contoh:** Senin ada pelajaran matematika pertama. Selasa ada pelajaran matematika pertama. Rabu ada pelajaran matematika pertama. Kamu melihat polanya — matematika selalu yang pertama! Jadi kamu tahu hari Kamis kemungkinan juga dimulai dengan matematika.
 
----
+### 3. Abstraction — Buat Sesederhana Mungkin!
 
-## Who Uses Computational Thinking?
+Mengabaikan hal-hal yang nggak penting dan fokus hanya pada hal-hal yang penting.
 
-Lots of people! Not just computer programmers.
+**Contoh:** Saat kamu menggambar peta untuk menunjukkan arah ke rumahmu kepada teman, kamu nggak menggambar setiap pohon dan setiap batu. Kamu cuma menggambar jalan-jalan penting dan tempat-tempat yang mudah dikenali. Itulah abstraction — menyimpan hanya yang penting.
 
-- **Chefs** break recipes into steps (decomposition) and follow them in order (algorithms).
-- **Doctors** look at patterns in symptoms to figure out what's wrong (pattern recognition).
-- **Artists** decide what details to include in a painting and what to leave out (abstraction).
-- **Coaches** create game plans with step-by-step strategies (algorithm design).
-- **Detectives** look for clues and fix wrong guesses (debugging).
-- **YOU** use it when you solve a puzzle, plan your day, or figure out a new game!
+### 4. Algorithm Design — Buat Rencana!
 
----
+Menulis instruksi langkah demi langkah yang bisa diikuti siapa saja untuk menyelesaikan masalah.
 
-## Who Is This Handbook For?
-
-**You!** If you are between 6 and 12 years old and you like solving problems, playing games, or figuring out how things work — this handbook is for you.
-
-You don't need to know anything about computers. You don't need to be "good at math." You just need to be **curious**.
-
-Teachers and parents can use this too! There's a special guide at the end just for grown-ups (Module 09).
+**Contoh:** Resep masakan adalah sebuah algorithm! "Langkah 1: Ambil dua lembar roti. Langkah 2: Olesi selai kacang di satu lembar. Langkah 3: Olesi selai di lembar yang lain. Langkah 4: Tempelkan keduanya." Kalau kamu ikuti langkah-langkah ini, kamu pasti dapat roti selai yang enak.
 
 ---
 
-## How to Use This Handbook
+## Dua Keterampilan Bonus
 
-Here's your roadmap:
+Selain empat keterampilan utama, ada dua lagi yang super berguna:
 
-| Step | What to Do |
-|------|-----------|
-| 1 | Read each module in order (01, 02, 03...) |
-| 2 | Try every activity — they're fun! |
-| 3 | Do the quiz at the end of each module |
-| 4 | Grab a friend or family member to do activities together |
-| 5 | When you finish all modules, try the Fun Activities in Module 08 |
+### 5. Logical Thinking — Pikir dengan Logika!
+
+Menggunakan pemikiran "jika-maka" untuk membuat pilihan yang cerdas.
+
+**Contoh:** JIKA hujan di luar, MAKA aku harus bawa payung. JIKA cerah, MAKA aku pakai topi.
+
+### 6. Debugging — Perbaiki Kesalahannya!
+
+Menemukan dan memperbaiki kesalahan. Semua orang pasti pernah salah — yang penting adalah tahu cara menemukan dan memperbaikinya.
+
+**Contoh:** Kamu sedang mengikuti resep dan makanannya terlalu asin. Kamu "debug" dengan melihat langkah-langkahnya. Ups! Resepnya bilang 1 sendok teh garam, tapi kamu memasukkan 1 sendok makan. Itu dia kesalahannya! Lain kali, kamu akan pakai takaran yang benar.
+
+---
+
+## Siapa yang Pakai Computational Thinking?
+
+Banyak orang! Bukan cuma programmer komputer.
+
+- **Koki** memecah resep jadi langkah-langkah (decomposition) dan mengikutinya secara berurutan (algorithms).
+- **Dokter** melihat pola di gejala-gejala penyakit untuk mencari tahu apa yang salah (pattern recognition).
+- **Seniman** memutuskan detail apa yang harus dimasukkan ke lukisan dan apa yang tidak (abstraction).
+- **Pelatih olahraga** membuat strategi permainan dengan langkah-langkah (algorithm design).
+- **Detektif** mencari petunjuk dan memperbaiki dugaan yang salah (debugging).
+- **KAMU** memakainya saat menyelesaikan teka-teki, merencanakan harimu, atau mencari tahu permainan baru!
+
+---
+
+## Buku Panduan Ini Untuk Siapa?
+
+**Kamu!** Kalau kamu berusia antara 6 dan 12 tahun dan suka menyelesaikan masalah, bermain game, atau mencari tahu cara kerja sesuatu — buku panduan ini untukmu.
+
+Kamu nggak perlu tahu apa-apa tentang komputer. Kamu nggak perlu "jago matematika." Kamu cuma perlu **penasaran**.
+
+Guru dan orang tua juga bisa pakai buku ini! Ada panduan khusus untuk orang dewasa di akhir (Modul 09).
+
+---
+
+## Cara Menggunakan Buku Panduan Ini
+
+Ini peta jalanmu:
+
+| Langkah | Apa yang Harus Dilakukan |
+|---------|--------------------------|
+| 1 | Baca setiap modul secara berurutan (01, 02, 03...) |
+| 2 | Coba setiap kegiatan — seru banget! |
+| 3 | Kerjakan kuis di akhir setiap modul |
+| 4 | Ajak teman atau anggota keluarga untuk melakukan kegiatan bersama |
+| 5 | Kalau sudah selesai semua modul, coba Kegiatan Seru di Modul 08 |
 
 **Tips:**
-- Don't rush. Take your time with each module.
-- If something is confusing, read it again or ask someone to explain it.
-- You can always go back and review a module later.
-- Try to explain what you learned to someone else — teaching is the best way to learn!
+- Jangan buru-buru. Santai aja sama setiap modul.
+- Kalau ada yang membingungkan, baca lagi atau minta seseorang menjelaskan.
+- Kamu selalu bisa kembali dan mengulang modul kapan saja.
+- Coba jelaskan apa yang kamu pelajari ke orang lain — mengajar adalah cara terbaik untuk belajar!
 
 ---
 
-## Let's Talk About Problems
+## Yuk Kita Bicara Tentang Masalah
 
-Before we jump in, let's talk about what a "problem" means.
+Sebelum kita mulai, yuk kita bicara tentang apa itu "masalah."
 
-A problem is NOT just something bad. A problem is **anything you want to figure out or get done**. Here are some examples:
+Masalah itu BUKAN cuma sesuatu yang buruk. Masalah adalah **apa pun yang ingin kamu cari tahu atau selesaikan**. Ini beberapa contohnya:
 
-- "How do I build the tallest tower with blocks?" — That's a problem.
-- "How do I get to school on time?" — That's a problem.
-- "What game should we play at recess?" — That's a problem.
-- "How do I organize my sticker collection?" — That's a problem.
+- "Bagaimana cara membangun menara tertinggi dengan balok?" — Itu masalah.
+- "Bagaimana cara sampai ke sekolah tepat waktu?" — Itu masalah.
+- "Permainan apa yang harus kita mainkan saat istirahat?" — Itu masalah.
+- "Bagaimana cara mengatur koleksi stikerku?" — Itu masalah.
 
-Problems are just **questions waiting for answers** or **tasks waiting to be done**. And Computational Thinking gives you the tools to solve them.
-
----
-
-## A Quick Warm-Up
-
-Before you move on to Module 01, try this quick exercise!
-
-**Think of a problem you had today.** It could be anything — getting dressed, deciding what to eat, finding a lost toy, finishing homework.
-
-Now ask yourself:
-1. Did I break it into smaller parts? (Decomposition)
-2. Did I notice any patterns? (Pattern Recognition)
-3. Did I ignore stuff that didn't matter? (Abstraction)
-4. Did I follow steps in order? (Algorithm Design)
-
-You probably used at least one of these skills without even thinking about it! That's because Computational Thinking is natural. We're just going to help you get even better at it.
+Masalah hanyalah **pertanyaan yang menunggu jawaban** atau **tugas yang menunggu diselesaikan**. Dan Computational Thinking memberimu alat untuk menyelesaikannya.
 
 ---
 
-## What's Next?
+## Pemanasan Singkat
 
-You're ready! Turn the page and start with **Module 01: Decomposition** — where you'll learn how to break big problems into tiny, easy pieces.
+Sebelum kamu lanjut ke Modul 01, coba latihan singkat ini!
 
-Let's go, problem-solver!
+**Pikirkan satu masalah yang kamu hadapi hari ini.** Bisa apa saja — memilih baju, memutuskan mau makan apa, mencari mainan yang hilang, menyelesaikan PR.
+
+Sekarang tanya dirimu sendiri:
+1. Apakah aku memecahnya jadi bagian yang lebih kecil? (Decomposition)
+2. Apakah aku menemukan pola? (Pattern Recognition)
+3. Apakah aku mengabaikan hal yang nggak penting? (Abstraction)
+4. Apakah aku mengikuti langkah-langkah secara berurutan? (Algorithm Design)
+
+Kamu mungkin sudah pakai setidaknya satu dari keterampilan ini tanpa memikirkannya! Itu karena Computational Thinking itu alami. Kita cuma akan membantu kamu jadi lebih jago lagi.
 
 ---
 
-## Quiz Time!
+## Apa Selanjutnya?
 
-Test what you've learned! Write your answers on paper.
+Kamu sudah siap! Buka halaman berikutnya dan mulai dengan **Modul 01: Decomposition** — di mana kamu akan belajar cara memecah masalah besar jadi potongan-potongan kecil yang gampang.
 
-**Question 1:** What is Computational Thinking?
-- A) A way to program computers
-- B) A set of smart problem-solving skills
-- C) A type of math test
-- D) Something only adults can do
+Ayo, pemecah masalah!
 
-**Question 2:** What are the four main Computational Thinking skills?
-- A) Reading, Writing, Drawing, Singing
+---
+
+## Waktunya Kuis!
+
+Uji apa yang sudah kamu pelajari! Tulis jawabanmu di kertas.
+
+**Pertanyaan 1:** Apa itu Computational Thinking?
+- A) Cara memprogram komputer
+- B) Kumpulan keterampilan pemecahan masalah yang cerdas
+- C) Sejenis ujian matematika
+- D) Sesuatu yang hanya bisa dilakukan orang dewasa
+
+**Pertanyaan 2:** Apa empat keterampilan utama Computational Thinking?
+- A) Membaca, Menulis, Menggambar, Bernyanyi
 - B) Decomposition, Pattern Recognition, Abstraction, Algorithm Design
-- C) Adding, Subtracting, Multiplying, Dividing
-- D) Running, Jumping, Climbing, Swimming
+- C) Penjumlahan, Pengurangan, Perkalian, Pembagian
+- D) Berlari, Melompat, Memanjat, Berenang
 
-**Question 3:** Which skill means "ignoring the stuff that doesn't matter and focusing on what's important"?
+**Pertanyaan 3:** Keterampilan mana yang artinya "mengabaikan hal yang nggak penting dan fokus pada yang penting"?
 - A) Decomposition
 - B) Pattern Recognition
 - C) Abstraction
 - D) Algorithm Design
 
-**Question 4:** Which two bonus skills did you learn about in this module?
-- A) Typing and Clicking
-- B) Logical Thinking and Debugging
-- C) Spelling and Grammar
-- D) Drawing and Painting
+**Pertanyaan 4:** Dua keterampilan bonus apa yang kamu pelajari di modul ini?
+- A) Mengetik dan Mengklik
+- B) Logical Thinking dan Debugging
+- C) Ejaan dan Tata Bahasa
+- D) Menggambar dan Melukis
 
-**Question 5:** Rani's room was messy. She broke the big job of cleaning into smaller jobs (toys, books, clothes). Which Computational Thinking skill did she use first?
+**Pertanyaan 5:** Kamar Rani berantakan. Dia memecah pekerjaan besar membersihkan kamar jadi pekerjaan kecil (mainan, buku, baju). Keterampilan Computational Thinking apa yang dia pakai pertama kali?
 - A) Abstraction
 - B) Pattern Recognition
 - C) Decomposition
@@ -204,37 +204,37 @@ Test what you've learned! Write your answers on paper.
 
 ---
 
-## Challenge: Spot All Six Skills!
+## Tantangan: Temukan Semua Enam Keterampilan!
 
-Here's a fun challenge for you:
+Ini tantangan seru buat kamu:
 
-**Task:** Think about planning a birthday party for a friend.
+**Tugas:** Pikirkan tentang merencanakan pesta ulang tahun untuk temanmu.
 
-See if you can find all **six** Computational Thinking skills hiding in this one activity! Copy the list below and write an example for each one:
+Coba temukan semua **enam** keterampilan Computational Thinking yang tersembunyi di satu kegiatan ini! Salin daftar di bawah dan tuliskan contoh untuk masing-masing:
 
-1. **Decomposition:** How would you break "plan a birthday party" into smaller tasks?
-2. **Pattern Recognition:** What patterns can you use from parties you've been to before?
-3. **Abstraction:** What details do you NOT need to worry about right now?
-4. **Algorithm Design:** What is your step-by-step plan for the party day?
-5. **Logical Thinking:** Can you write an IF-THEN rule for the party? (Example: IF it rains, THEN we move the games inside.)
-6. **Debugging:** Something went wrong — the cake fell on the floor! How would you fix it?
+1. **Decomposition:** Bagaimana kamu memecah "merencanakan pesta ulang tahun" jadi tugas-tugas kecil?
+2. **Pattern Recognition:** Pola apa yang bisa kamu pakai dari pesta-pesta yang pernah kamu datangi sebelumnya?
+3. **Abstraction:** Detail apa yang TIDAK perlu kamu pikirkan sekarang?
+4. **Algorithm Design:** Apa rencana langkah demi langkah untuk hari pesta?
+5. **Logical Thinking:** Bisakah kamu menulis aturan JIKA-MAKA untuk pesta? (Contoh: JIKA hujan, MAKA kita pindahkan permainan ke dalam.)
+6. **Debugging:** Ada sesuatu yang salah — kuenya jatuh ke lantai! Bagaimana kamu memperbaikinya?
 
-Share your answers with a friend or family member and see if they come up with different ideas!
-
----
-
-## Answers
-
-**Question 1:** B) A set of smart problem-solving skills.
-
-**Question 2:** B) Decomposition, Pattern Recognition, Abstraction, Algorithm Design.
-
-**Question 3:** C) Abstraction.
-
-**Question 4:** B) Logical Thinking and Debugging.
-
-**Question 5:** C) Decomposition — she broke the big job into smaller pieces.
+Bagikan jawabanmu dengan teman atau anggota keluarga dan lihat apakah mereka punya ide yang berbeda!
 
 ---
 
-[Next: Module 01 — Decomposition](01-decomposition.md)
+## Jawaban
+
+**Pertanyaan 1:** B) Kumpulan keterampilan pemecahan masalah yang cerdas.
+
+**Pertanyaan 2:** B) Decomposition, Pattern Recognition, Abstraction, Algorithm Design.
+
+**Pertanyaan 3:** C) Abstraction.
+
+**Pertanyaan 4:** B) Logical Thinking dan Debugging.
+
+**Pertanyaan 5:** C) Decomposition — dia memecah pekerjaan besar jadi potongan-potongan kecil.
+
+---
+
+[Selanjutnya: Modul 01 — Decomposition](01-decomposition.md)

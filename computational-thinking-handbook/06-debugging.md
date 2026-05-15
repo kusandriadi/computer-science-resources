@@ -1,440 +1,440 @@
-# Module 06: Debugging — Finding and Fixing Mistakes
+# Modul 06: Debugging — Mencari dan Memperbaiki Kesalahan
 
-## What is Debugging?
+## Apa Itu Debugging?
 
-Everyone makes mistakes. EVERYONE. Your teacher, your parents, famous scientists, world-class chefs — they all make mistakes. The important thing isn't being perfect. The important thing is **knowing how to find and fix your mistakes**.
+Semua orang membuat kesalahan. SEMUA ORANG. Gurumu, orang tuamu, ilmuwan terkenal, koki kelas dunia — mereka semua membuat kesalahan. Yang penting bukan jadi sempurna. Yang penting adalah **tahu cara mencari dan memperbaiki kesalahanmu**.
 
-In the world of problem-solving, finding and fixing mistakes is called **debugging**.
+Di dunia pemecahan masalah, mencari dan memperbaiki kesalahan disebut **debugging** (mencari dan memperbaiki kesalahan).
 
-> **Debugging = finding what went wrong and fixing it.**
+> **Debugging = menemukan apa yang salah dan memperbaikinya.**
 
-But why is it called "debugging"? Here's a fun story:
+Tapi kenapa disebut "debugging"? Ini cerita serunya:
 
-A long time ago (in 1947!), a computer at Harvard University stopped working. The engineers looked inside and found the problem — an actual bug! A real moth was stuck inside the machine. They removed the moth and wrote in their notebook: "First actual case of bug being found." Ever since then, a mistake in a system has been called a **bug**, and fixing it is called **debugging**!
-
----
-
-## Why Debugging Matters
-
-Imagine you bake a cake, and it comes out flat and tasteless. You have two choices:
-
-1. **Give up** and say "I'm bad at baking."
-2. **Debug** — look at what went wrong, fix it, and try again.
-
-Option 2 is ALWAYS better! Debugging teaches you:
-
-- **Patience** — Take your time to find the problem.
-- **Attention to detail** — Look carefully at each step.
-- **Problem-solving** — Figure out why something happened and how to fix it.
-- **Confidence** — You CAN fix things! Mistakes aren't the end of the world.
-- **Learning** — Every bug you find teaches you something new.
+Dahulu kala (tahun 1947!), sebuah komputer di Universitas Harvard berhenti bekerja. Para insinyur melihat ke dalamnya dan menemukan masalahnya — serangga sungguhan! Seekor ngengat asli tersangkut di dalam mesin. Mereka mengeluarkan ngengat itu dan menulis di buku catatan mereka: "Kasus pertama bug (serangga) sungguhan yang ditemukan." Sejak saat itu, kesalahan dalam sistem disebut **bug** (serangga), dan memperbaikinya disebut **debugging**!
 
 ---
 
-## Real-Life Examples
+## Kenapa Debugging Itu Penting
 
-### Example 1: Spot the Difference Pictures
+Bayangkan kamu membuat kue, dan hasilnya kempes dan hambar. Kamu punya dua pilihan:
 
-You know those "spot the difference" puzzles in magazines? Two pictures look almost the same, but there are small differences — a missing button, a different color flower, an extra cloud.
+1. **Menyerah** dan bilang "Aku payah bikin kue."
+2. **Debug** — lihat apa yang salah, perbaiki, dan coba lagi.
 
-Finding those differences is debugging! You're carefully looking at something to find what's wrong.
+Pilihan 2 SELALU lebih baik! Debugging mengajarkanmu:
 
-### Example 2: A Recipe That Went Wrong
-
-You follow a cookie recipe, but the cookies taste WAY too salty. Time to debug!
-
-**Step 1: What happened?** The cookies are too salty.
-
-**Step 2: Check each ingredient.** Flour? Correct amount. Sugar? Correct amount. Salt? Wait... the recipe said 1 teaspoon of salt, but you used 1 TABLESPOON. A tablespoon is 3 times bigger than a teaspoon!
-
-**Step 3: Found the bug!** You used too much salt.
-
-**Step 4: Fix it!** Next time, use 1 teaspoon, not 1 tablespoon.
-
-That's debugging in action!
-
-### Example 3: Finding Why Your Bicycle Won't Move
-
-Your bicycle won't go forward when you pedal. Let's debug!
-
-**Check the chain:** Is the chain on the gears? YES, it's on.
-
-**Check the pedals:** Do the pedals spin? YES, they spin.
-
-**Check the wheels:** Does the back wheel spin? NO! It's stuck!
-
-**Check the brakes:** Are the brakes squeezing the wheel? YES! The brake is stuck in the "on" position!
-
-**Found the bug!** The brake cable is stuck.
-
-**Fix it!** Release the brake cable. Now the wheel spins and the bicycle moves!
-
-You checked things one by one until you found the problem. That's how debugging works.
+- **Kesabaran** — Luangkan waktu untuk menemukan masalahnya.
+- **Perhatian terhadap detail** — Perhatikan setiap langkah dengan cermat.
+- **Pemecahan masalah** — Cari tahu kenapa sesuatu terjadi dan cara memperbaikinya.
+- **Percaya diri** — Kamu BISA memperbaiki sesuatu! Kesalahan bukan akhir dari segalanya.
+- **Belajar** — Setiap bug yang kamu temukan mengajarkanmu sesuatu yang baru.
 
 ---
 
-## The Debugging Process
+## Contoh dalam Kehidupan Sehari-hari
 
-Here's a step-by-step way to debug anything:
+### Contoh 1: Gambar Cari Perbedaan
 
-### Step 1: Notice the Problem
+Kamu tahu teka-teki "cari perbedaannya" di majalah? Dua gambar terlihat hampir sama, tapi ada perbedaan kecil — kancing yang hilang, bunga warna berbeda, awan tambahan.
 
-Something isn't working right. Describe what's wrong.
-- "My paper airplane keeps crashing."
-- "The recipe didn't taste good."
-- "I followed the directions but got lost."
+Menemukan perbedaan itu adalah debugging! Kamu memperhatikan sesuatu dengan cermat untuk menemukan apa yang salah.
 
-### Step 2: Check Each Step
+### Contoh 2: Resep yang Gagal
 
-Go through the process step by step. Check each part carefully.
-- "Did I fold the wings evenly?"
-- "Did I use the right amount of each ingredient?"
-- "Did I turn left where I was supposed to?"
+Kamu mengikuti resep kue kering, tapi rasanya ASIN BANGET. Waktunya debug!
 
-### Step 3: Find the Bug
+**Langkah 1: Apa yang terjadi?** Kuenya terlalu asin.
 
-Identify exactly what went wrong.
-- "One wing is bigger than the other!"
-- "I used baking soda instead of baking powder!"
-- "I turned RIGHT instead of left!"
+**Langkah 2: Periksa setiap bahan.** Tepung? Takarannya benar. Gula? Takarannya benar. Garam? Tunggu... resepnya bilang 1 sendok teh garam, tapi kamu pakai 1 SENDOK MAKAN. Sendok makan itu 3 kali lebih besar dari sendok teh!
 
-### Step 4: Fix It
+**Langkah 3: Ketemu bug-nya!** Kamu kebanyakan garam.
 
-Now that you know what's wrong, fix it!
-- Refold the wings to be the same size.
-- Use baking powder next time.
-- Go back and turn left.
+**Langkah 4: Perbaiki!** Lain kali, pakai 1 sendok teh, bukan 1 sendok makan.
 
-### Step 5: Test Again
+Itu debugging beraksi!
 
-Try again to make sure the fix worked.
-- Fly the airplane again. Does it fly straight now?
-- Bake the cookies again. Do they taste better?
-- Follow the directions again. Do you arrive at the right place?
+### Contoh 3: Mencari Kenapa Sepedamu Tidak Mau Jalan
 
----
+Sepedamu tidak mau maju saat dikayuh. Yuk debug!
 
-## Common Types of Bugs
+**Periksa rantainya:** Apakah rantai ada di gir? YA, ada.
 
-### 1. Wrong Order
+**Periksa pedalnya:** Apakah pedal berputar? YA, berputar.
 
-You did the right things but in the wrong order.
+**Periksa rodanya:** Apakah roda belakang berputar? TIDAK! Tersangkut!
 
-**Bug:** "I put on my shoes, then put on my socks."
-**Fix:** Socks first, THEN shoes!
+**Periksa remnya:** Apakah rem menekan roda? YA! Remnya macet dalam posisi "aktif"!
 
-### 2. Missing Step
+**Ketemu bug-nya!** Kabel rem macet.
 
-You forgot a step.
+**Perbaiki!** Lepaskan kabel rem. Sekarang roda berputar dan sepeda bisa jalan!
 
-**Bug:** "I brushed my teeth, but my mouth still feels yucky." You forgot to use toothpaste!
-**Fix:** Add the toothpaste step.
-
-### 3. Wrong Value
-
-You used the wrong amount, number, or thing.
-
-**Bug:** "The lemonade is too sweet." You added 5 spoons of sugar instead of 2.
-**Fix:** Use 2 spoons of sugar next time.
-
-### 4. Logic Error
-
-Your reasoning was wrong.
-
-**Bug:** "I brought my swimsuit to school because it's Thursday." But swimming class is on WEDNESDAY, not Thursday!
-**Fix:** Check the schedule — swimming is on Wednesday.
-
-### 5. Copy Error
-
-You copied something incorrectly.
-
-**Bug:** You copied the phone number 555-1234, but you dialed 555-1243. The last two numbers are swapped!
-**Fix:** Check the number carefully and dial again.
+Kamu memeriksa satu per satu sampai menemukan masalahnya. Begitulah cara debugging bekerja.
 
 ---
 
-## Activity 1: Find the Bug in These Instructions
+## Proses Debugging
 
-**What you need:** Paper and pencil.
+Ini cara debugging apa saja langkah demi langkah:
 
-**Instructions:** Each set of steps below has a BUG. Find it and write the fix!
+### Langkah 1: Sadari Masalahnya
 
-**Bug Hunt 1: Making a Glass of Chocolate Milk**
-1. Get a glass.
-2. Pour milk into the glass.
-3. Drink the chocolate milk.
-4. Add chocolate syrup and stir.
+Sesuatu tidak berjalan dengan benar. Jelaskan apa yang salah.
+- "Pesawat kertasku terus jatuh."
+- "Resepnya rasanya tidak enak."
+- "Aku sudah ikuti petunjuknya tapi tersesat."
 
-**What's the bug?** ____________
-**How do you fix it?** ____________
+### Langkah 2: Periksa Setiap Langkah
 
-**Bug Hunt 2: Planting a Seed**
-1. Put the seed in the hole.
-2. Dig a small hole in the soil.
-3. Water the seed.
-4. Cover the seed with soil.
+Telusuri prosesnya langkah demi langkah. Periksa setiap bagian dengan cermat.
+- "Apakah aku melipat sayapnya rata?"
+- "Apakah aku pakai takaran yang benar untuk setiap bahan?"
+- "Apakah aku belok kiri di tempat yang seharusnya?"
 
-**What's the bug?** ____________
-**How do you fix it?** ____________
+### Langkah 3: Temukan Bug-nya
 
-**Bug Hunt 3: Washing Your Hands**
-1. Turn on the water.
-2. Put soap on your hands.
-3. Rinse your hands.
-4. Dry your hands with a towel.
+Identifikasi persisnya apa yang salah.
+- "Satu sayap lebih besar dari yang lain!"
+- "Aku pakai soda kue, bukan baking powder!"
+- "Aku belok KANAN, padahal seharusnya kiri!"
 
-**What's the bug?** ____________ (Hint: what step is missing between 2 and 3?)
-**How do you fix it?** ____________
+### Langkah 4: Perbaiki
 
-**Bug Hunt 4: Making a Phone Call**
-1. Pick up the phone.
-2. Dial the number: 555-1234.
-3. Say hello to Grandma.
-4. Wait for someone to answer.
+Sekarang kamu tahu apa yang salah, perbaiki!
+- Lipat ulang sayapnya supaya ukurannya sama.
+- Pakai baking powder lain kali.
+- Kembali dan belok kiri.
 
-**What's the bug?** ____________
-**How do you fix it?** ____________
+### Langkah 5: Tes Lagi
 
-**Bug Hunt 5: Getting Ready for Bed**
-1. Put on pajamas.
-2. Get into bed.
-3. Brush your teeth.
-4. Turn off the light.
-5. Fall asleep.
-
-**What's the bug?** ____________
-**How do you fix it?** ____________
+Coba lagi untuk memastikan perbaikannya berhasil.
+- Terbangkan pesawatnya lagi. Apakah sekarang terbang lurus?
+- Buat kue lagi. Apakah rasanya lebih enak?
+- Ikuti petunjuknya lagi. Apakah kamu sampai di tempat yang benar?
 
 ---
 
-## Activity 2: Fix the Broken Recipe
+## Jenis-Jenis Bug yang Umum
 
-**What you need:** Paper and pencil.
+### 1. Urutan Salah
 
-**The story:** Your friend tried to make pancakes using this recipe, but the pancakes turned out TERRIBLE. Can you find ALL the bugs?
+Kamu melakukan hal yang benar tapi urutannya salah.
 
-**Buggy Pancake Recipe:**
-1. Put the pan on the stove and turn the heat to HIGH.
-2. Add 10 cups of flour to a bowl. (This makes pancakes for 100 people!)
-3. Add 1 egg and 1 cup of milk.
-4. Pour the batter into the hot pan.
-5. Wait 30 minutes. (That's way too long!)
-6. Flip the pancake.
-7. Add salt instead of syrup on top.
-8. Eat!
+**Bug:** "Aku pakai sepatu, lalu pakai kaus kaki."
+**Perbaikan:** Kaus kaki dulu, BARU sepatu!
 
-**How many bugs can you find?** Try to find at least 4!
+### 2. Langkah yang Hilang
 
-For each bug, write:
-- What's wrong
-- What it should be
+Kamu lupa satu langkah.
 
-**Fixed recipe:**
-Write the correct version of the recipe.
+**Bug:** "Aku sudah sikat gigi, tapi mulutku masih terasa tidak enak." Kamu lupa pakai pasta gigi!
+**Perbaikan:** Tambahkan langkah pasta gigi.
 
----
+### 3. Nilai yang Salah
 
-## Activity 3: "What Went Wrong?" Scenarios
+Kamu menggunakan jumlah, angka, atau benda yang salah.
 
-**What you need:** Paper and pencil.
+**Bug:** "Limunnya terlalu manis." Kamu menambahkan 5 sendok gula, bukan 2.
+**Perbaikan:** Pakai 2 sendok gula lain kali.
 
-Read each scenario and figure out what went wrong. Then suggest a fix.
+### 4. Kesalahan Logika
 
-**Scenario 1:**
-Maya wanted to surprise her friend with a birthday card. She wrote a beautiful card, put it in an envelope, put a stamp on it, and mailed it. But the card never arrived!
+Penalaranmu yang salah.
 
-What might have gone wrong? (Think of at least 2 possibilities.)
+**Bug:** "Aku bawa baju renang ke sekolah karena hari Kamis." Tapi kelas renang hari RABU, bukan Kamis!
+**Perbaikan:** Cek jadwalnya — renang hari Rabu.
 
-**Scenario 2:**
-Tom followed a recipe for chocolate chip cookies. He put in flour, sugar, eggs, butter, and raisins. But the cookies tasted wrong — they didn't have the chocolate chip flavor he expected.
+### 5. Kesalahan Salin
 
-What went wrong?
+Kamu menyalin sesuatu dengan salah.
 
-**Scenario 3:**
-Lina was giving directions to her house over the phone. She said: "Turn left at the traffic light, walk three blocks, then turn right." Her friend followed the directions but ended up at the wrong place.
-
-What might have gone wrong? (Think of at least 2 possibilities.)
-
-**Scenario 4:**
-Rudi built a paper airplane and threw it. Instead of flying straight, it spun in circles and crashed immediately.
-
-What might have gone wrong? What should Rudi check?
-
-**Scenario 5:**
-A class was playing a relay race. Team A finished first but was disqualified. No one on Team A cheated — they all ran as fast as they could.
-
-What might have gone wrong?
+**Bug:** Kamu menyalin nomor telepon 555-1234, tapi kamu menelepon 555-1243. Dua angka terakhir tertukar!
+**Perbaikan:** Cek nomornya dengan cermat dan telepon lagi.
 
 ---
 
-## Activity 4: Debug the Drawing Instructions
+## Aktivitas 1: Temukan Bug di Instruksi Ini
 
-**What you need:** Paper, pencil, a friend.
+**Yang kamu butuhkan:** Kertas dan pensil.
 
-**How to play:**
+**Instruksi:** Setiap set langkah di bawah ini punya BUG. Temukan dan tulis perbaikannya!
 
-1. Look at these instructions for drawing a simple house:
+**Berburu Bug 1: Membuat Segelas Susu Cokelat**
+1. Ambil gelas.
+2. Tuang susu ke dalam gelas.
+3. Minum susu cokelatnya.
+4. Tambahkan sirup cokelat dan aduk.
+
+**Apa bug-nya?** ____________
+**Bagaimana cara memperbaikinya?** ____________
+
+**Berburu Bug 2: Menanam Biji**
+1. Masukkan biji ke dalam lubang.
+2. Gali lubang kecil di tanah.
+3. Siram bijinya.
+4. Tutup biji dengan tanah.
+
+**Apa bug-nya?** ____________
+**Bagaimana cara memperbaikinya?** ____________
+
+**Berburu Bug 3: Mencuci Tangan**
+1. Nyalakan air.
+2. Taruh sabun di tangan.
+3. Bilas tangan.
+4. Keringkan tangan dengan handuk.
+
+**Apa bug-nya?** ____________ (Petunjuk: langkah apa yang hilang antara 2 dan 3?)
+**Bagaimana cara memperbaikinya?** ____________
+
+**Berburu Bug 4: Menelepon**
+1. Angkat telepon.
+2. Tekan nomornya: 555-1234.
+3. Bilang halo ke Nenek.
+4. Tunggu seseorang mengangkat.
+
+**Apa bug-nya?** ____________
+**Bagaimana cara memperbaikinya?** ____________
+
+**Berburu Bug 5: Bersiap Tidur**
+1. Pakai piyama.
+2. Naik ke tempat tidur.
+3. Sikat gigi.
+4. Matikan lampu.
+5. Tidur.
+
+**Apa bug-nya?** ____________
+**Bagaimana cara memperbaikinya?** ____________
+
+---
+
+## Aktivitas 2: Perbaiki Resep yang Rusak
+
+**Yang kamu butuhkan:** Kertas dan pensil.
+
+**Ceritanya:** Temanmu mencoba membuat pancake pakai resep ini, tapi pancake-nya jadi BERANTAKAN. Bisakah kamu menemukan SEMUA bug-nya?
+
+**Resep Pancake yang Bermasalah:**
+1. Taruh wajan di atas kompor dan nyalakan api BESAR.
+2. Tambahkan 10 gelas tepung ke dalam mangkuk. (Ini untuk 100 orang!)
+3. Tambahkan 1 telur dan 1 gelas susu.
+4. Tuang adonan ke wajan panas.
+5. Tunggu 30 menit. (Itu kelamaan!)
+6. Balik pancake-nya.
+7. Tambahkan garam, bukan sirup, di atasnya.
+8. Makan!
+
+**Berapa bug yang bisa kamu temukan?** Coba temukan setidaknya 4!
+
+Untuk setiap bug, tulis:
+- Apa yang salah
+- Seharusnya bagaimana
+
+**Resep yang diperbaiki:**
+Tulis versi yang benar dari resepnya.
+
+---
+
+## Aktivitas 3: Skenario "Apa yang Salah?"
+
+**Yang kamu butuhkan:** Kertas dan pensil.
+
+Baca setiap skenario dan cari tahu apa yang salah. Lalu sarankan perbaikannya.
+
+**Skenario 1:**
+Maya ingin memberikan kejutan kartu ulang tahun untuk temannya. Dia menulis kartu yang indah, memasukkannya ke amplop, menempelkan perangko, dan mengirimnya lewat pos. Tapi kartunya tidak pernah sampai!
+
+Apa yang mungkin salah? (Pikirkan setidaknya 2 kemungkinan.)
+
+**Skenario 2:**
+Tom mengikuti resep kue kering cokelat chip. Dia memasukkan tepung, gula, telur, mentega, dan kismis. Tapi kue keringnya rasanya aneh — tidak ada rasa cokelat chip yang dia harapkan.
+
+Apa yang salah?
+
+**Skenario 3:**
+Lina memberikan petunjuk jalan ke rumahnya lewat telepon. Dia bilang: "Belok kiri di lampu lalu lintas, jalan tiga blok, lalu belok kanan." Temannya mengikuti petunjuk tapi sampai di tempat yang salah.
+
+Apa yang mungkin salah? (Pikirkan setidaknya 2 kemungkinan.)
+
+**Skenario 4:**
+Rudi membuat pesawat kertas dan melemparkannya. Alih-alih terbang lurus, pesawatnya berputar-putar dan langsung jatuh.
+
+Apa yang mungkin salah? Apa yang harus Rudi periksa?
+
+**Skenario 5:**
+Sebuah kelas sedang bermain lomba estafet. Tim A selesai pertama tapi didiskualifikasi. Tidak ada di Tim A yang curang — mereka semua berlari secepat mungkin.
+
+Apa yang mungkin salah?
+
+---
+
+## Aktivitas 4: Debug Instruksi Menggambar
+
+**Yang kamu butuhkan:** Kertas, pensil, seorang teman.
+
+**Cara bermain:**
+
+1. Lihat instruksi ini untuk menggambar rumah sederhana:
 
 ```
-Step 1: Draw a circle in the middle of the paper.
-Step 2: Draw a triangle on top of the circle for the roof.
-Step 3: Draw a tiny door on the left side.
-Step 4: Draw windows above the roof.
-Step 5: Draw a chimney under the house.
+Langkah 1: Gambar lingkaran di tengah kertas.
+Langkah 2: Gambar segitiga di atas lingkaran untuk atap.
+Langkah 3: Gambar pintu kecil di sisi kiri.
+Langkah 4: Gambar jendela di atas atap.
+Langkah 5: Gambar cerobong asap di bawah rumah.
 ```
 
-2. Follow these instructions EXACTLY and see what happens. Does it look like a house?
+2. Ikuti instruksi ini PERSIS dan lihat apa yang terjadi. Apakah terlihat seperti rumah?
 
-3. Find the bugs! There are several things wrong. Write down each bug and the fix.
+3. Temukan bug-nya! Ada beberapa hal yang salah. Tulis setiap bug dan perbaikannya.
 
-4. Write the CORRECT instructions for drawing a house.
+4. Tulis instruksi yang BENAR untuk menggambar rumah.
 
-5. Give your fixed instructions to a friend. Can they draw a proper house?
-
----
-
-## Activity 5: The Debugging Detective Game
-
-**What you need:** 3 or more players, a small room.
-
-**How to play:**
-
-1. **Setup:** One player is the Detective and leaves the room.
-
-2. **Making bugs:** While the Detective is gone, the other players change 5 things in the room. For example:
-   - Move a book to a different spot
-   - Turn a picture upside down
-   - Put a shoe on the wrong foot
-   - Swap two people's seats
-   - Close a window that was open
-
-3. **Debugging:** The Detective comes back and has to find all 5 changes.
-
-4. The Detective gets 1 point for each "bug" they find.
-
-5. Take turns being the Detective.
-
-**Make it harder:** Change 7 or 10 things instead of 5!
+5. Berikan instruksi yang sudah diperbaiki ke teman. Bisakah mereka menggambar rumah yang bagus?
 
 ---
 
-## The Debugging Mindset
+## Aktivitas 5: Permainan Detektif Debugging
 
-Good debuggers think differently. Here's the debugging mindset:
+**Yang kamu butuhkan:** 3 pemain atau lebih, ruangan kecil.
 
-### 1. "Mistakes are normal."
-Everyone makes them. Even the smartest people in the world make mistakes. A mistake is just a chance to learn!
+**Cara bermain:**
 
-### 2. "I can figure this out."
-Don't give up when something goes wrong. Take a deep breath and start checking step by step.
+1. **Persiapan:** Satu pemain jadi Detektif dan keluar ruangan.
 
-### 3. "Let me be a detective."
-Pretend you're a detective solving a mystery. The bug is the culprit, and you're going to find it!
+2. **Membuat bug:** Saat Detektif pergi, pemain lainnya mengubah 5 hal di ruangan. Contoh:
+   - Pindahkan buku ke tempat lain
+   - Balik gambar jadi terbalik
+   - Pakai sepatu di kaki yang salah
+   - Tukar tempat duduk dua orang
+   - Tutup jendela yang tadinya terbuka
 
-### 4. "I'll check one thing at a time."
-Don't change everything at once. Change one thing, then test. If it's still broken, change the next thing. This way, when you find the fix, you know exactly what was wrong.
+3. **Debugging:** Detektif kembali dan harus menemukan semua 5 perubahan.
 
-### 5. "I'll ask for help if I'm stuck."
-Sometimes a fresh pair of eyes can see what you missed. It's smart to ask for help!
+4. Detektif dapat 1 poin untuk setiap "bug" yang ditemukan.
 
----
+5. Bergantian jadi Detektif.
 
-## Famous Debugging Stories
-
-Here are some real stories about debugging:
-
-**The Mars Climate Orbiter (1999):** NASA sent a spacecraft to Mars, but it crashed! The bug? One team used miles and another team used kilometers. The mismatch caused the spacecraft to fly too close to Mars and burn up. One small unit mistake — one big crash!
-
-**The Millennium Bug (Y2K):** Before the year 2000, many computers stored years using only 2 digits (like "99" for 1999). People worried that when the year changed to 2000, computers would think it was 1900! Thousands of programmers worked to fix this bug before midnight on December 31, 1999.
-
-**Lesson:** Even experts make bugs. The important thing is finding and fixing them!
+**Bikin lebih sulit:** Ubah 7 atau 10 hal, bukan cuma 5!
 
 ---
 
-## Quiz Time!
+## Pola Pikir Debugging
 
-**Question 1:** What is debugging?
-- A) Adding bugs to a program
-- B) Finding and fixing mistakes
-- C) Removing insects from your garden
-- D) Starting over from the beginning
+Debugger yang baik berpikir berbeda. Ini pola pikir debugging:
 
-**Question 2:** What is the FIRST step in debugging?
-- A) Fix the problem right away
-- B) Give up
-- C) Notice and describe what went wrong
-- D) Start over
+### 1. "Kesalahan itu biasa."
+Semua orang membuat kesalahan. Bahkan orang paling pintar di dunia pun membuat kesalahan. Kesalahan itu cuma kesempatan untuk belajar!
 
-**Question 3:** You tried to bake a cake, but it didn't rise. Which of these is the BEST debugging step?
-- A) Throw the cake away and never bake again
-- B) Check each ingredient and step to find what went wrong
-- C) Add more frosting to hide the problem
-- D) Blame the oven
+### 2. "Aku bisa cari tahu."
+Jangan menyerah kalau ada yang salah. Tarik napas dalam-dalam dan mulai periksa langkah demi langkah.
 
-**Question 4:** You wrote instructions for making a sandwich: "Get bread. Put cheese on bread. Get cheese." What type of bug is this?
-- A) Missing step
-- B) Wrong order
-- C) Wrong value
-- D) Logic error
+### 3. "Aku jadi detektif."
+Pura-pura jadi detektif yang memecahkan misteri. Bug-nya adalah pelakunya, dan kamu yang akan menemukannya!
 
-**Question 5:** Why is it important to only change ONE thing at a time when debugging?
-Write your answer in your own words.
+### 4. "Aku periksa satu hal dalam satu waktu."
+Jangan ubah semuanya sekaligus. Ubah satu hal, lalu tes. Kalau masih rusak, ubah hal berikutnya. Dengan cara ini, saat kamu menemukan perbaikannya, kamu tahu persis apa yang salah.
+
+### 5. "Aku akan minta tolong kalau mentok."
+Kadang mata segar bisa melihat apa yang kamu lewatkan. Minta tolong itu cerdas!
 
 ---
 
-## Challenge: The Ultimate Bug Hunt
+## Kisah Debugging Terkenal
 
-Ready for a challenge? Here's a story FULL of bugs. How many can you find?
+Ini beberapa cerita nyata tentang debugging:
 
-**Ravi's Morning (Full of Bugs):**
+**Mars Climate Orbiter (1999):** NASA mengirim pesawat luar angkasa ke Mars, tapi pesawatnya jatuh! Bug-nya? Satu tim menggunakan mil dan tim lainnya menggunakan kilometer. Ketidakcocokan itu menyebabkan pesawat terbang terlalu dekat ke Mars dan terbakar. Satu kesalahan unit kecil — satu tabrakan besar!
 
-Ravi woke up at 7:00 AM on Saturday and got ready for school. He put on his school uniform and packed his bag with his math book and science book. He ate breakfast — a big bowl of dinner. Then he put on his sandals and walked outside into the snow. He turned right because school was to the left. When he arrived at school, the gate was locked. "That's weird," Ravi thought. He waited for 30 minutes and nobody came.
+**Bug Milenium (Y2K):** Sebelum tahun 2000, banyak komputer menyimpan tahun dengan hanya 2 digit (seperti "99" untuk 1999). Orang-orang khawatir bahwa saat tahun berganti ke 2000, komputer akan mengira tahunnya 1900! Ribuan programmer bekerja untuk memperbaiki bug ini sebelum tengah malam 31 Desember 1999.
 
-**How many bugs can you find?** (There are at least 6!)
-
-Write down each bug and explain what should have been different.
+**Pelajarannya:** Para ahli pun membuat bug. Yang penting adalah menemukannya dan memperbaikinya!
 
 ---
 
-## What You Learned
+## Waktunya Kuis!
 
-You're becoming a debugging pro! In this module, you learned that:
-- **Debugging** means finding and fixing mistakes.
-- The word "bug" comes from a real moth found in a computer in 1947!
-- The debugging process is: Notice the problem, Check each step, Find the bug, Fix it, Test again.
-- Common bug types include: wrong order, missing step, wrong value, logic error, and copy error.
-- Everyone makes mistakes — what matters is finding and fixing them.
-- Having a **debugging mindset** means staying calm, being a detective, and checking one thing at a time.
+**Pertanyaan 1:** Apa itu debugging?
+- A) Menambahkan bug ke program
+- B) Mencari dan memperbaiki kesalahan
+- C) Membasmi serangga dari kebun
+- D) Memulai dari awal lagi
 
----
+**Pertanyaan 2:** Apa langkah PERTAMA dalam debugging?
+- A) Langsung perbaiki masalahnya
+- B) Menyerah
+- C) Sadari dan jelaskan apa yang salah
+- D) Mulai dari awal
 
-## Answers
+**Pertanyaan 3:** Kamu mencoba memanggang kue, tapi kuenya tidak mengembang. Mana langkah debugging yang TERBAIK?
+- A) Buang kuenya dan jangan pernah memanggang lagi
+- B) Periksa setiap bahan dan langkah untuk menemukan apa yang salah
+- C) Tambahkan lebih banyak krim untuk menyembunyikan masalahnya
+- D) Salahkan ovennya
 
-**Question 1:** B) Finding and fixing mistakes.
+**Pertanyaan 4:** Kamu menulis instruksi membuat sandwich: "Ambil roti. Taruh keju di roti. Ambil keju." Jenis bug apa ini?
+- A) Langkah yang hilang
+- B) Urutan salah
+- C) Nilai yang salah
+- D) Kesalahan logika
 
-**Question 2:** C) Notice and describe what went wrong.
-
-**Question 3:** B) Check each ingredient and step to find what went wrong.
-
-**Question 4:** B) Wrong order. You need to "get cheese" before you can "put cheese on bread."
-
-**Question 5:** Example answer: "If you change many things at once and it starts working, you don't know which change actually fixed the problem. By changing one thing at a time, you can figure out exactly what was wrong."
-
-**Activity 1 Answers:**
-- Bug Hunt 1: Steps 3 and 4 are in the wrong order. You need to add chocolate syrup and stir BEFORE you drink.
-- Bug Hunt 2: Steps 1 and 2 are in the wrong order. You need to dig the hole BEFORE putting in the seed.
-- Bug Hunt 3: Missing step — you need to rub your hands together with the soap for 20 seconds between steps 2 and 3.
-- Bug Hunt 4: Steps 3 and 4 are in the wrong order. You need to wait for someone to answer BEFORE saying hello.
-- Bug Hunt 5: Step 3 (brush teeth) should come before Step 1 (put on pajamas) or at least before Step 2 (get into bed).
-
-**Ultimate Bug Hunt Answers:**
-1. It's Saturday — no school!
-2. He put on his school uniform on a weekend.
-3. He ate a "bowl of dinner" for breakfast — should be breakfast food (cereal, toast, etc.).
-4. Sandals in the snow — wrong shoes for the weather.
-5. He turned right, but school is to the left — wrong direction.
-6. The school gate was locked — because it's Saturday!
+**Pertanyaan 5:** Kenapa penting untuk hanya mengubah SATU hal dalam satu waktu saat debugging?
+Tulis jawabanmu dengan kata-katamu sendiri.
 
 ---
 
-[Previous: Module 05 — Logical Thinking](05-logical-thinking.md) | [Next: Module 07 — Everyday CT](07-everyday-ct.md)
+## Tantangan: Berburu Bug Terhebat
+
+Siap untuk tantangan? Ini cerita yang PENUH bug. Berapa banyak yang bisa kamu temukan?
+
+**Pagi Hari Ravi (Penuh Bug):**
+
+Ravi bangun jam 7:00 pagi di hari Sabtu dan bersiap ke sekolah. Dia memakai seragam sekolah dan mengemasi tasnya dengan buku matematika dan buku IPA. Dia sarapan — semangkuk besar makan malam. Lalu dia memakai sandal dan berjalan keluar ke salju. Dia belok kanan padahal sekolahnya di sebelah kiri. Saat tiba di sekolah, gerbangnya terkunci. "Aneh," pikir Ravi. Dia menunggu 30 menit dan tidak ada yang datang.
+
+**Berapa bug yang bisa kamu temukan?** (Ada setidaknya 6!)
+
+Tulis setiap bug dan jelaskan apa yang seharusnya berbeda.
+
+---
+
+## Apa yang Sudah Kamu Pelajari
+
+Kamu makin jago debugging! Di modul ini, kamu belajar bahwa:
+- **Debugging** (mencari dan memperbaiki kesalahan) berarti menemukan dan memperbaiki kesalahan.
+- Kata "bug" berasal dari ngengat sungguhan yang ditemukan di komputer tahun 1947!
+- Proses debugging adalah: Sadari masalahnya, Periksa setiap langkah, Temukan bug-nya, Perbaiki, Tes lagi.
+- Jenis-jenis bug yang umum meliputi: urutan salah, langkah yang hilang, nilai yang salah, kesalahan logika, dan kesalahan salin.
+- Semua orang membuat kesalahan — yang penting adalah menemukannya dan memperbaikinya.
+- Punya **pola pikir debugging** berarti tetap tenang, jadi detektif, dan periksa satu hal dalam satu waktu.
+
+---
+
+## Jawaban
+
+**Pertanyaan 1:** B) Mencari dan memperbaiki kesalahan.
+
+**Pertanyaan 2:** C) Sadari dan jelaskan apa yang salah.
+
+**Pertanyaan 3:** B) Periksa setiap bahan dan langkah untuk menemukan apa yang salah.
+
+**Pertanyaan 4:** B) Urutan salah. Kamu harus "ambil keju" sebelum bisa "taruh keju di roti."
+
+**Pertanyaan 5:** Contoh jawaban: "Kalau kamu mengubah banyak hal sekaligus dan tiba-tiba berhasil, kamu tidak tahu perubahan mana yang benar-benar memperbaiki masalahnya. Dengan mengubah satu hal dalam satu waktu, kamu bisa tahu persis apa yang salah."
+
+**Jawaban Aktivitas 1:**
+- Berburu Bug 1: Langkah 3 dan 4 urutannya salah. Kamu harus menambahkan sirup cokelat dan mengaduk SEBELUM minum.
+- Berburu Bug 2: Langkah 1 dan 2 urutannya salah. Kamu harus menggali lubang SEBELUM memasukkan biji.
+- Berburu Bug 3: Langkah yang hilang — kamu harus menggosok tangan dengan sabun selama 20 detik antara langkah 2 dan 3.
+- Berburu Bug 4: Langkah 3 dan 4 urutannya salah. Kamu harus menunggu seseorang mengangkat SEBELUM bilang halo.
+- Berburu Bug 5: Langkah 3 (sikat gigi) seharusnya sebelum Langkah 1 (pakai piyama) atau setidaknya sebelum Langkah 2 (naik ke tempat tidur).
+
+**Jawaban Berburu Bug Terhebat:**
+1. Ini hari Sabtu — tidak ada sekolah!
+2. Dia memakai seragam sekolah di akhir pekan.
+3. Dia makan "semangkuk makan malam" untuk sarapan — seharusnya makanan sarapan (sereal, roti panggang, dll.).
+4. Sandal di salju — sepatu yang salah untuk cuacanya.
+5. Dia belok kanan, tapi sekolahnya di kiri — arah yang salah.
+6. Gerbang sekolah terkunci — karena ini hari Sabtu!
+
+---
+
+[Sebelumnya: Modul 05 — Berpikir Logis](05-logical-thinking.md) | [Selanjutnya: Modul 07 — CT Sehari-hari](07-everyday-ct.md)

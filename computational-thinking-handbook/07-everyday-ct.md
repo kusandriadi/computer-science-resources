@@ -1,431 +1,431 @@
-# Module 07: Everyday Computational Thinking — Using All Your Skills in Real Life
+# Modul 07: Computational Thinking Sehari-hari — Menggunakan Semua Kemampuanmu di Kehidupan Nyata
 
-## Putting It All Together
+## Menggabungkan Semuanya
 
-Wow, look how far you've come! You've learned SIX amazing skills:
+Wah, lihat seberapa jauh kamu sudah belajar! Kamu sudah punya ENAM kemampuan keren:
 
-1. **Decomposition** — Break big problems into small pieces.
-2. **Pattern Recognition** — Find things that repeat or are similar.
-3. **Abstraction** — Focus on what matters, ignore the rest.
-4. **Algorithm Design** — Create step-by-step instructions.
-5. **Logical Thinking** — Make smart decisions with if/then.
-6. **Debugging** — Find and fix mistakes.
+1. **Dekomposisi** (Decomposition) — Memecah masalah besar jadi bagian-bagian kecil.
+2. **Pengenalan Pola** (Pattern Recognition) — Menemukan hal-hal yang berulang atau mirip.
+3. **Abstraksi** (Abstraction) — Fokus pada yang penting, abaikan sisanya.
+4. **Desain Algoritma** (Algorithm Design) — Membuat instruksi langkah demi langkah.
+5. **Berpikir Logis** (Logical Thinking) — Membuat keputusan cerdas dengan jika/maka.
+6. **Debugging** (mencari dan memperbaiki kesalahan) — Menemukan dan memperbaiki kesalahan.
 
-Each skill is powerful on its own. But when you use them TOGETHER, they become a **super combo**! Now here's where it gets cool — let's see how all these skills work together in your everyday life.
-
----
-
-## Example 1: Organizing Your Backpack
-
-Your backpack is a mess. Books, papers, pencils, snack wrappers, and random stuff are all jumbled together. You can never find anything! Let's use Computational Thinking to fix this.
-
-### Decomposition — Break It Down
-
-First, break the problem into smaller tasks:
-1. Take everything out of the backpack.
-2. Sort items into groups.
-3. Throw away trash.
-4. Put items back in an organized way.
-
-### Pattern Recognition — Find Patterns
-
-Look at the items. Do you notice any patterns?
-- **School supplies** — pencils, pens, erasers, ruler
-- **Books and notebooks** — math book, reading book, science notebook
-- **Personal items** — water bottle, snack, tissues
-- **Trash** — old wrappers, crumpled papers
-
-The pattern: items that belong together should go together!
-
-### Abstraction — Focus on What Matters
-
-You don't need to organize every single pencil by color or every paper by date. What matters RIGHT NOW is:
-- Can I find my books quickly?
-- Can I find my pencil case?
-- Is the trash out?
-
-Keep it simple.
-
-### Algorithm Design — Make a Plan
-
-```
-Step 1: Empty the entire backpack.
-Step 2: Throw away all trash.
-Step 3: Put pencils and pens in the pencil case.
-Step 4: Stack books from biggest to smallest.
-Step 5: Put books in the back of the backpack (closest to your back).
-Step 6: Put the pencil case in the front pocket.
-Step 7: Put water bottle in the side pocket.
-Step 8: Put snack on top where you can reach it.
-```
-
-### Logical Thinking — Make Decisions
-
-- **IF** a paper is important (homework, notes), **THEN** put it in a folder.
-- **IF** a paper is not important (old flyer, doodle), **THEN** recycle it.
-- **IF** something doesn't belong in your backpack (a toy from home), **THEN** take it out.
-
-### Debugging — Check Your Work
-
-After organizing, check:
-- Can you find your math book without digging? YES? Great!
-- Is there still trash in there? NO? Perfect!
-- Does your backpack close easily (not overstuffed)? YES? Done!
-
-**All six skills worked together to solve one real problem!**
+Setiap kemampuan sudah kuat sendiri-sendiri. Tapi kalau dipakai BERSAMA-SAMA, mereka jadi **combo super**! Nah, sekarang yang seru — yuk lihat bagaimana semua kemampuan ini bekerja bersama di kehidupan sehari-hari.
 
 ---
 
-## Example 2: Planning a Birthday Party
+## Contoh 1: Merapikan Tas Sekolah
 
-This is a big one. Let's plan the BEST birthday party using all our CT skills!
+Tas sekolahmu berantakan. Buku, kertas, pensil, bungkus camilan, dan barang-barang acak semuanya campur aduk. Kamu tidak pernah bisa menemukan apa-apa! Yuk pakai Computational Thinking untuk memperbaikinya.
 
-### Decomposition — Break It Down
+### Dekomposisi — Pecah Jadi Bagian Kecil
 
-Planning a birthday party is a HUGE task. Let's break it into smaller pieces:
+Pertama, pecah masalahnya jadi tugas-tugas yang lebih kecil:
+1. Keluarkan semua barang dari tas.
+2. Sortir barang jadi beberapa kelompok.
+3. Buang sampah.
+4. Masukkan barang kembali dengan rapi.
 
-1. **Guest list** — Who's coming?
-2. **Invitations** — How do we tell them?
-3. **Location** — Where will the party be?
-4. **Food and drinks** — What will we eat?
-5. **Activities and games** — What will we do?
-6. **Decorations** — How will it look?
-7. **Schedule** — When does each thing happen?
-8. **Clean-up** — How do we tidy up after?
+### Pengenalan Pola — Temukan Pola
 
-Each of these can be broken down even more! For example, "Food and drinks" becomes:
-- Decide what food to serve
-- Make a shopping list
-- Go shopping
-- Prepare the food
-- Set up the food table
+Lihat barang-barangnya. Kamu lihat pola apa?
+- **Alat tulis** — pensil, pulpen, penghapus, penggaris
+- **Buku dan buku tulis** — buku matematika, buku bacaan, buku tulis IPA
+- **Barang pribadi** — botol minum, camilan, tisu
+- **Sampah** — bungkus lama, kertas kusut
 
-### Pattern Recognition — Use What You Know
+Polanya: barang yang sejenis harus ditaruh bersama!
 
-Have you been to other birthday parties? What patterns did you notice?
-- Most parties have cake and snacks.
-- Most parties have games or activities.
-- Parties usually start with arriving and chatting, then games, then food, then cake, then presents, then goodbye.
-- Kids usually like pizza, juice, and cake at parties.
+### Abstraksi — Fokus pada yang Penting
 
-You can use these patterns to plan YOUR party! You don't have to start from zero — follow the pattern of what works.
+Kamu tidak perlu menyusun setiap pensil berdasarkan warna atau setiap kertas berdasarkan tanggal. Yang penting SEKARANG adalah:
+- Bisakah aku menemukan bukuku dengan cepat?
+- Bisakah aku menemukan tempat pensilku?
+- Apakah sampahnya sudah dibuang?
 
-### Abstraction — Focus on the Big Stuff
+Buat yang simpel aja.
 
-There are a million decisions to make. But not all of them are equally important.
-
-**Important things to figure out:**
-- Date and time
-- Who's invited
-- What's for food
-- What games to play
-
-**Less important right now:**
-- Exact shade of blue for the balloons
-- Whether to use square or round plates
-- Which specific songs to play in the background
-
-Focus on the big decisions first. The small details can come later.
-
-### Algorithm Design — Make the Plan
-
-Here's a timeline algorithm for the party:
+### Desain Algoritma — Buat Rencana
 
 ```
-BEFORE THE PARTY (1 week ahead):
-  Step 1: Make a guest list (10 friends).
-  Step 2: Send invitations.
-  Step 3: Choose a theme (space, dinosaurs, superheroes).
-  Step 4: Plan the menu (pizza, juice, cake).
-  Step 5: Plan 3 games (musical chairs, treasure hunt, relay race).
-
-THE DAY BEFORE:
-  Step 6: Go shopping for food and supplies.
-  Step 7: Decorate the party area.
-  Step 8: Prepare what you can ahead of time.
-
-PARTY DAY:
-  Step 9:  2:00 PM — Guests arrive, free play.
-  Step 10: 2:30 PM — Game 1: Musical chairs.
-  Step 11: 3:00 PM — Game 2: Treasure hunt.
-  Step 12: 3:30 PM — Pizza time!
-  Step 13: 4:00 PM — Cake and "Happy Birthday" song.
-  Step 14: 4:15 PM — Open presents.
-  Step 15: 4:30 PM — Game 3: Relay race.
-  Step 16: 5:00 PM — Goodbye! Give out goody bags.
-
-AFTER THE PARTY:
-  Step 17: Clean up.
-  Step 18: Write thank-you notes.
+Langkah 1: Kosongkan seluruh tas.
+Langkah 2: Buang semua sampah.
+Langkah 3: Masukkan pensil dan pulpen ke tempat pensil.
+Langkah 4: Susun buku dari yang paling besar ke paling kecil.
+Langkah 5: Taruh buku di bagian belakang tas (paling dekat punggung).
+Langkah 6: Taruh tempat pensil di kantong depan.
+Langkah 7: Taruh botol minum di kantong samping.
+Langkah 8: Taruh camilan di atas supaya mudah dijangkau.
 ```
 
-### Logical Thinking — Handle Decisions
+### Berpikir Logis — Buat Keputusan
 
-- **IF** it's raining, **THEN** move the party indoors.
-- **IF** more than 15 kids say yes, **THEN** we need more food and a bigger space.
-- **IF** someone has a food allergy, **THEN** make sure there's food they can eat.
-- **IF** a game finishes early, **THEN** play a bonus round.
-- **IF** the cake isn't ready, **THEN** play another game while we wait.
+- **JIKA** sebuah kertas penting (PR, catatan), **MAKA** masukkan ke map.
+- **JIKA** sebuah kertas tidak penting (brosur lama, coret-coretan), **MAKA** daur ulang.
+- **JIKA** sesuatu tidak seharusnya ada di tas (mainan dari rumah), **MAKA** keluarkan.
 
-### Debugging — Fix Problems
+### Debugging — Periksa Hasilmu
 
-Things WILL go wrong at a party. That's okay! Debug them:
+Setelah merapikan, cek:
+- Bisakah kamu menemukan buku matematika tanpa harus mengaduk-aduk? YA? Keren!
+- Apakah masih ada sampah di dalamnya? TIDAK? Sempurna!
+- Apakah tasmu bisa ditutup dengan mudah (tidak terlalu penuh)? YA? Selesai!
 
-- **Problem:** The piata string broke. **Debug:** Tie it up again or hold it by hand.
-- **Problem:** You ran out of juice. **Debug:** Make lemonade or serve water.
-- **Problem:** One kid feels left out. **Debug:** Include them in the next game as a team captain.
-- **Problem:** It started raining during the outdoor game. **Debug:** Move inside and play an indoor game instead.
+**Keenam kemampuan bekerja bersama untuk memecahkan satu masalah nyata!**
 
 ---
 
-## Example 3: Playing Strategy Games
+## Contoh 2: Merencanakan Pesta Ulang Tahun
 
-Games like chess, checkers, and puzzles use ALL the CT skills.
+Ini yang besar. Yuk rencanakan pesta ulang tahun TERBAIK pakai semua kemampuan CT kita!
 
-### Chess Example
+### Dekomposisi — Pecah Jadi Bagian Kecil
 
-- **Decomposition:** Break the game into phases — opening, middle game, end game.
-- **Pattern Recognition:** Notice common patterns — "Every time my opponent does X, they're planning Y."
-- **Abstraction:** Don't try to calculate every possible move. Focus on the most important pieces and threats.
-- **Algorithm Design:** Have a plan — "First control the center, then develop my pieces, then attack."
-- **Logical Thinking:** "IF I move my rook here, THEN my king is unprotected. So I should NOT move my rook."
-- **Debugging:** "I lost that game because I didn't protect my queen. Next time I'll keep my queen safe."
+Merencanakan pesta ulang tahun adalah tugas yang BESAR. Yuk pecah jadi bagian-bagian kecil:
 
-### Puzzle Example (Jigsaw)
+1. **Daftar tamu** — Siapa yang datang?
+2. **Undangan** — Bagaimana cara memberitahu mereka?
+3. **Lokasi** — Di mana pestanya?
+4. **Makanan dan minuman** — Mau makan apa?
+5. **Aktivitas dan permainan** — Mau ngapain?
+6. **Dekorasi** — Tampilannya seperti apa?
+7. **Jadwal** — Kapan setiap acara berlangsung?
+8. **Bersih-bersih** — Bagaimana kita membereskan setelahnya?
 
-- **Decomposition:** Start with the edge pieces, then fill in sections by color or image.
-- **Pattern Recognition:** Group pieces by color, pattern, or shape.
-- **Abstraction:** Focus on one section at a time, not the whole puzzle.
-- **Algorithm Design:** Step 1: Find all edge pieces. Step 2: Build the border. Step 3: Sort remaining pieces by color. Step 4: Fill in section by section.
-- **Logical Thinking:** "IF this piece has a straight edge, THEN it's a border piece."
-- **Debugging:** "This piece doesn't fit here even though the color matches. Let me try rotating it or finding a different spot."
+Masing-masing bisa dipecah lebih kecil lagi! Contoh, "Makanan dan minuman" jadi:
+- Tentukan makanan apa yang disajikan
+- Buat daftar belanja
+- Belanja
+- Siapkan makanan
+- Tata meja makanan
+
+### Pengenalan Pola — Gunakan yang Kamu Tahu
+
+Pernahkah kamu datang ke pesta ulang tahun lain? Pola apa yang kamu perhatikan?
+- Kebanyakan pesta ada kue dan camilan.
+- Kebanyakan pesta ada permainan atau aktivitas.
+- Pesta biasanya dimulai dengan datang dan ngobrol, lalu permainan, lalu makan, lalu kue, lalu kado, lalu selamat tinggal.
+- Anak-anak biasanya suka pizza, jus, dan kue di pesta.
+
+Kamu bisa pakai pola ini untuk merencanakan pestamu! Kamu tidak harus mulai dari nol — ikuti pola yang sudah terbukti berhasil.
+
+### Abstraksi — Fokus pada yang Besar
+
+Ada sejuta keputusan yang harus dibuat. Tapi tidak semuanya sama pentingnya.
+
+**Hal penting yang harus ditentukan:**
+- Tanggal dan waktu
+- Siapa yang diundang
+- Makanan apa
+- Permainan apa
+
+**Yang kurang penting sekarang:**
+- Warna biru balon yang mana persisnya
+- Pakai piring kotak atau bulat
+- Lagu apa yang diputar di latar belakang
+
+Fokus pada keputusan besar dulu. Detail kecil bisa nanti.
+
+### Desain Algoritma — Buat Rencana
+
+Ini algoritma timeline untuk pestanya:
+
+```
+SEBELUM PESTA (1 minggu sebelumnya):
+  Langkah 1: Buat daftar tamu (10 teman).
+  Langkah 2: Kirim undangan.
+  Langkah 3: Pilih tema (luar angkasa, dinosaurus, superhero).
+  Langkah 4: Rencanakan menu (pizza, jus, kue).
+  Langkah 5: Rencanakan 3 permainan (kursi musik, berburu harta karun, lomba estafet).
+
+SEHARI SEBELUMNYA:
+  Langkah 6: Belanja makanan dan perlengkapan.
+  Langkah 7: Dekorasi area pesta.
+  Langkah 8: Siapkan apa yang bisa disiapkan lebih awal.
+
+HARI PESTA:
+  Langkah 9:  14:00 — Tamu datang, main bebas.
+  Langkah 10: 14:30 — Permainan 1: Kursi musik.
+  Langkah 11: 15:00 — Permainan 2: Berburu harta karun.
+  Langkah 12: 15:30 — Waktunya pizza!
+  Langkah 13: 16:00 — Kue dan nyanyi "Selamat Ulang Tahun."
+  Langkah 14: 16:15 — Buka kado.
+  Langkah 15: 16:30 — Permainan 3: Lomba estafet.
+  Langkah 16: 17:00 — Selamat tinggal! Bagikan goody bag.
+
+SETELAH PESTA:
+  Langkah 17: Bersih-bersih.
+  Langkah 18: Tulis kartu terima kasih.
+```
+
+### Berpikir Logis — Tangani Keputusan
+
+- **JIKA** hujan, **MAKA** pindahkan pesta ke dalam.
+- **JIKA** lebih dari 15 anak bilang ikut, **MAKA** kita butuh lebih banyak makanan dan tempat yang lebih besar.
+- **JIKA** seseorang punya alergi makanan, **MAKA** pastikan ada makanan yang bisa dia makan.
+- **JIKA** suatu permainan selesai lebih cepat, **MAKA** mainkan ronde bonus.
+- **JIKA** kuenya belum siap, **MAKA** mainkan permainan lain sambil menunggu.
+
+### Debugging — Perbaiki Masalah
+
+Pasti AKAN ada yang salah di pesta. Tidak apa-apa! Debug aja:
+
+- **Masalah:** Tali pinata putus. **Debug:** Ikat lagi atau pegang pakai tangan.
+- **Masalah:** Jusnya habis. **Debug:** Buat limun atau sajikan air putih.
+- **Masalah:** Satu anak merasa tidak diikutsertakan. **Debug:** Ajak dia di permainan berikutnya sebagai kapten tim.
+- **Masalah:** Hujan turun saat permainan di luar. **Debug:** Pindah ke dalam dan mainkan permainan dalam ruangan.
 
 ---
 
-## Example 4: Sorting Your Toys
+## Contoh 3: Bermain Game Strategi
 
-You have a big pile of toys, and you want to organize them so you can find things easily.
+Game seperti catur, dam, dan teka-teki menggunakan SEMUA kemampuan CT.
 
-### Decomposition
-Break the toys into categories:
-- Building toys (LEGO, blocks)
-- Action figures and dolls
-- Board games and puzzles
-- Art supplies
-- Stuffed animals
-- Outdoor toys (balls, jump rope)
+### Contoh Catur
 
-### Pattern Recognition
-Notice which toys you play with most. Put those in the easiest-to-reach spot! Toys you rarely play with can go on higher shelves or in storage.
+- **Dekomposisi:** Pecah permainan jadi fase — pembukaan, pertengahan permainan, akhir permainan.
+- **Pengenalan Pola:** Perhatikan pola umum — "Setiap kali lawanku melakukan X, dia merencanakan Y."
+- **Abstraksi:** Jangan coba menghitung setiap langkah yang mungkin. Fokus pada bidak dan ancaman yang paling penting.
+- **Desain Algoritma:** Punya rencana — "Pertama kuasai tengah, lalu kembangkan bidak, lalu serang."
+- **Berpikir Logis:** "JIKA aku pindahkan bentengku ke sini, MAKA rajaku tidak terlindungi. Jadi sebaiknya aku JANGAN pindahkan bentengku."
+- **Debugging:** "Aku kalah tadi karena tidak menjaga ratu. Lain kali aku akan jaga ratuku dengan aman."
 
-### Abstraction
-You don't need a perfect museum display. Just make it so you can FIND what you want when you want it. Good enough is good enough.
+### Contoh Puzzle (Jigsaw)
 
-### Algorithm Design
+- **Dekomposisi:** Mulai dari potongan pinggir, lalu isi bagian-bagian berdasarkan warna atau gambar.
+- **Pengenalan Pola:** Kelompokkan potongan berdasarkan warna, pola, atau bentuk.
+- **Abstraksi:** Fokus pada satu bagian dalam satu waktu, bukan seluruh puzzle.
+- **Desain Algoritma:** Langkah 1: Cari semua potongan pinggir. Langkah 2: Bangun bingkainya. Langkah 3: Sortir potongan sisanya berdasarkan warna. Langkah 4: Isi bagian demi bagian.
+- **Berpikir Logis:** "JIKA potongan ini punya sisi lurus, MAKA itu potongan pinggir."
+- **Debugging:** "Potongan ini tidak cocok di sini meskipun warnanya sama. Aku coba putar atau cari tempat lain."
+
+---
+
+## Contoh 4: Menyortir Mainan
+
+Kamu punya tumpukan mainan yang besar, dan kamu ingin menyusunnya supaya bisa menemukan barang dengan mudah.
+
+### Dekomposisi
+Pecah mainan jadi kategori:
+- Mainan bangunan (LEGO, balok)
+- Action figure dan boneka
+- Board game dan puzzle
+- Alat gambar
+- Boneka binatang
+- Mainan luar ruangan (bola, lompat tali)
+
+### Pengenalan Pola
+Perhatikan mainan mana yang paling sering kamu mainkan. Taruh yang itu di tempat yang paling mudah dijangkau! Mainan yang jarang dimainkan bisa ditaruh di rak atas atau di penyimpanan.
+
+### Abstraksi
+Kamu tidak perlu pajangan museum yang sempurna. Yang penting cuma bisa MENEMUKAN apa yang kamu mau saat kamu mau. Cukup bagus itu sudah cukup.
+
+### Desain Algoritma
 ```
-Step 1: Take all toys out.
-Step 2: Sort into categories (one pile per category).
-Step 3: Decide where each category goes.
-Step 4: Put each category in its spot.
-Step 5: Label each spot (optional but helpful!).
+Langkah 1: Keluarkan semua mainan.
+Langkah 2: Sortir jadi kategori (satu tumpukan per kategori).
+Langkah 3: Tentukan di mana setiap kategori ditaruh.
+Langkah 4: Taruh setiap kategori di tempatnya.
+Langkah 5: Beri label setiap tempat (opsional tapi membantu!).
 ```
 
-### Logical Thinking
-- **IF** a toy is broken and can't be fixed, **THEN** throw it away.
-- **IF** a toy is too young for me now, **THEN** donate it.
-- **IF** I play with it every day, **THEN** put it where I can reach it easily.
+### Berpikir Logis
+- **JIKA** mainan rusak dan tidak bisa diperbaiki, **MAKA** buang.
+- **JIKA** mainan sudah terlalu kecil untukku sekarang, **MAKA** sumbangkan.
+- **JIKA** aku mainkan setiap hari, **MAKA** taruh di tempat yang mudah dijangkau.
 
 ### Debugging
-After a week, check your system:
-- Are toys ending up in the wrong spots? Move the labels or make the spots clearer.
-- Is one category overflowing? Maybe split it into two groups.
-- Can you find things quickly? If not, adjust your system.
+Setelah seminggu, cek sistemmu:
+- Apakah mainan berakhir di tempat yang salah? Pindahkan label atau buat tempatnya lebih jelas.
+- Apakah satu kategori meluap? Mungkin pecah jadi dua kelompok.
+- Bisakah kamu menemukan barang dengan cepat? Kalau tidak, sesuaikan sistemmu.
 
 ---
 
-## Example 5: Making a Schedule
+## Contoh 5: Membuat Jadwal
 
-Let's say it's Saturday and you have a lot you want to do: homework, play video games, go to the park, read a book, and help Mom with groceries.
+Misalnya hari Sabtu dan kamu punya banyak hal yang ingin dilakukan: PR, main video game, pergi ke taman, baca buku, dan bantu Ibu belanja.
 
-### Decomposition
-List everything:
-1. Homework (about 45 minutes)
-2. Video games (1 hour)
-3. Park (1.5 hours)
-4. Read a book (30 minutes)
-5. Help with groceries (1 hour)
+### Dekomposisi
+Daftar semuanya:
+1. PR (sekitar 45 menit)
+2. Video game (1 jam)
+3. Taman (1,5 jam)
+4. Baca buku (30 menit)
+5. Bantu belanja (1 jam)
 
-### Pattern Recognition
-You know from experience:
-- You focus better on homework in the morning.
-- You get sleepy after lunch.
-- The park is best when the sun isn't too hot (morning or late afternoon).
-- Mom usually goes shopping in the afternoon.
+### Pengenalan Pola
+Kamu tahu dari pengalaman:
+- Kamu lebih fokus mengerjakan PR di pagi hari.
+- Kamu ngantuk setelah makan siang.
+- Taman paling enak saat matahari belum terlalu panas (pagi atau sore).
+- Ibu biasanya belanja di siang hari.
 
-### Abstraction
-The important thing is fitting everything in. The exact minute each thing starts doesn't matter as much as the overall flow.
+### Abstraksi
+Yang penting adalah semua kegiatan bisa masuk jadwal. Menit tepat kapan setiap hal dimulai tidak terlalu penting dibanding alur keseluruhannya.
 
-### Algorithm Design
+### Desain Algoritma
 ```
-Saturday Schedule:
-  9:00 AM  — Homework (fresh brain = better work!)
-  10:00 AM — Go to the park (before it gets too hot)
-  11:30 AM — Lunch
-  12:00 PM — Read a book (relaxing after lunch)
-  12:30 PM — Video games
-  1:30 PM  — Help Mom with groceries
-  2:30 PM  — Free time!
+Jadwal Sabtu:
+  09:00  — PR (otak segar = kerja lebih baik!)
+  10:00  — Pergi ke taman (sebelum kepanasan)
+  11:30  — Makan siang
+  12:00  — Baca buku (santai setelah makan siang)
+  12:30  — Video game
+  13:30  — Bantu Ibu belanja
+  14:30  — Waktu bebas!
 ```
 
-### Logical Thinking
-- **IF** it's raining, **THEN** skip the park and play indoor games instead.
-- **IF** homework takes longer than expected, **THEN** shorten video game time.
-- **IF** Mom doesn't need help with groceries, **THEN** extra free time!
+### Berpikir Logis
+- **JIKA** hujan, **MAKA** lewati taman dan main permainan dalam ruangan.
+- **JIKA** PR lebih lama dari yang diharapkan, **MAKA** kurangi waktu video game.
+- **JIKA** Ibu tidak butuh bantuan belanja, **MAKA** waktu bebas tambahan!
 
 ### Debugging
-At the end of the day, check:
-- Did I get everything done?
-- Was there enough time for each activity?
-- Was the order good, or should I change it next time?
+Di akhir hari, cek:
+- Apakah semua kegiatan selesai?
+- Apakah waktu untuk setiap aktivitas cukup?
+- Apakah urutannya bagus, atau harus diubah lain kali?
 
 ---
 
-## Activity: Plan a Birthday Party Using ALL 6 CT Skills
+## Aktivitas: Rencanakan Pesta Ulang Tahun Pakai SEMUA 6 Kemampuan CT
 
-**What you need:** Paper, pencil, colored pencils (optional).
+**Yang kamu butuhkan:** Kertas, pensil, pensil warna (opsional).
 
-Ready for a challenge? This is a big one! Plan a birthday party from start to finish using Computational Thinking.
+Siap untuk tantangan? Ini yang besar! Rencanakan pesta ulang tahun dari awal sampai akhir menggunakan Computational Thinking.
 
-**Instructions:**
+**Instruksi:**
 
-### Part 1: Decomposition
-Write down ALL the things you need to plan. Break "Plan a birthday party" into at least 8 smaller tasks. Then break 2 of those tasks into even smaller steps.
+### Bagian 1: Dekomposisi
+Tulis SEMUA hal yang perlu kamu rencanakan. Pecah "Rencanakan pesta ulang tahun" jadi setidaknya 8 tugas kecil. Lalu pecah 2 dari tugas itu jadi langkah-langkah yang lebih kecil lagi.
 
-### Part 2: Pattern Recognition
-Think about parties you've been to or seen in movies. Write down 5 patterns you noticed about what makes a party good. Use these patterns in your plan.
+### Bagian 2: Pengenalan Pola
+Pikirkan tentang pesta yang pernah kamu datangi atau lihat di film. Tulis 5 pola yang kamu perhatikan tentang apa yang membuat pesta bagus. Gunakan pola-pola ini dalam rencanamu.
 
-### Part 3: Abstraction
-Look at your task list from Part 1. Circle the 5 MOST important things. Put a line through things that can wait or aren't critical. Focus your energy on what matters most.
+### Bagian 3: Abstraksi
+Lihat daftar tugasmu dari Bagian 1. Lingkari 5 hal yang PALING penting. Coret hal-hal yang bisa ditunda atau tidak kritis. Fokuskan energimu pada yang paling penting.
 
-### Part 4: Algorithm Design
-Write a step-by-step timeline for your party. Include:
-- What happens before the party (preparation)
-- What happens during the party (activities in order)
-- What happens after the party (cleanup)
+### Bagian 4: Desain Algoritma
+Tulis timeline langkah demi langkah untuk pestamu. Sertakan:
+- Apa yang terjadi sebelum pesta (persiapan)
+- Apa yang terjadi selama pesta (aktivitas berurutan)
+- Apa yang terjadi setelah pesta (bersih-bersih)
 
-### Part 5: Logical Thinking (Bonus)
-Write 3 IF-THEN rules for things that might go wrong. What's your backup plan?
+### Bagian 5: Berpikir Logis (Bonus)
+Tulis 3 aturan JIKA-MAKA untuk hal-hal yang mungkin salah. Apa rencana cadanganmu?
 
-### Part 6: Debugging (Bonus)
-Imagine the party already happened and 2 things went wrong. What could they be? How would you debug and fix them for next time?
+### Bagian 6: Debugging (Bonus)
+Bayangkan pestanya sudah berlangsung dan 2 hal salah. Apa itu? Bagaimana kamu akan debug dan memperbaikinya untuk lain kali?
 
 ---
 
-## The CT Combo Move
+## Combo CT
 
-Here's a summary of how all the skills work together:
+Ini ringkasan bagaimana semua kemampuan bekerja bersama:
 
-| Step | Skill | What You Do |
+| Langkah | Kemampuan | Apa yang Kamu Lakukan |
 |------|-------|-------------|
-| 1 | Decomposition | Break the big problem into small pieces |
-| 2 | Pattern Recognition | Look for familiar patterns you've seen before |
-| 3 | Abstraction | Focus on the important parts, ignore the rest |
-| 4 | Algorithm Design | Create a step-by-step plan |
-| 5 | Logical Thinking | Add decision points (if this, then that) |
-| 6 | Debugging | Test your plan, find problems, fix them |
+| 1 | Dekomposisi | Pecah masalah besar jadi bagian kecil |
+| 2 | Pengenalan Pola | Cari pola yang sudah pernah kamu lihat sebelumnya |
+| 3 | Abstraksi | Fokus pada bagian penting, abaikan sisanya |
+| 4 | Desain Algoritma | Buat rencana langkah demi langkah |
+| 5 | Berpikir Logis | Tambahkan titik keputusan (jika ini, maka itu) |
+| 6 | Debugging | Tes rencanamu, temukan masalah, perbaiki |
 
-This combo works for ANYTHING:
-- School projects
-- Sports practice
-- Learning a musical instrument
-- Cooking a meal
-- Building something
-- Solving a disagreement with a friend
+Combo ini bisa dipakai untuk APA SAJA:
+- Proyek sekolah
+- Latihan olahraga
+- Belajar alat musik
+- Memasak
+- Membangun sesuatu
+- Menyelesaikan perselisihan dengan teman
 
 ---
 
-## Quiz Time!
+## Waktunya Kuis!
 
-**Question 1:** Which CT skill helps you take a big project and chop it into smaller tasks?
-- A) Pattern Recognition
-- B) Abstraction
-- C) Decomposition
+**Pertanyaan 1:** Kemampuan CT mana yang membantumu memecah proyek besar jadi tugas-tugas kecil?
+- A) Pengenalan Pola
+- B) Abstraksi
+- C) Dekomposisi
 - D) Debugging
 
-**Question 2:** You notice that every time you study the night before a test, you do well. What CT skill is that?
-- A) Algorithm Design
-- B) Pattern Recognition
+**Pertanyaan 2:** Kamu menyadari bahwa setiap kali belajar malam sebelum ulangan, hasilnya bagus. Kemampuan CT apa itu?
+- A) Desain Algoritma
+- B) Pengenalan Pola
 - C) Debugging
-- D) Abstraction
+- D) Abstraksi
 
-**Question 3:** You're planning a trip and you focus on "where to go" and "what to pack" but ignore "what color suitcase to use." What CT skill is that?
-- A) Decomposition
-- B) Abstraction
-- C) Logical Thinking
+**Pertanyaan 3:** Kamu merencanakan perjalanan dan fokus pada "mau ke mana" dan "apa yang dibawa" tapi mengabaikan "warna koper yang mana." Kemampuan CT apa itu?
+- A) Dekomposisi
+- B) Abstraksi
+- C) Berpikir Logis
 - D) Debugging
 
-**Question 4:** You made a schedule but everything took longer than expected. You adjust the times for next week. What CT skill is that?
-- A) Decomposition
-- B) Pattern Recognition
-- C) Abstraction
+**Pertanyaan 4:** Kamu membuat jadwal tapi semuanya lebih lama dari yang diharapkan. Kamu menyesuaikan waktunya untuk minggu depan. Kemampuan CT apa itu?
+- A) Dekomposisi
+- B) Pengenalan Pola
+- C) Abstraksi
 - D) Debugging
 
-**Question 5:** Put the CT skills in order for solving a new problem:
-- First: _____________ (Break it down)
-- Second: ____________ (Look for patterns)
-- Third: _____________ (Focus on what matters)
-- Fourth: ____________ (Make a plan)
-- Fifth: _____________ (Make decisions)
-- Sixth: _____________ (Fix mistakes)
+**Pertanyaan 5:** Urutkan kemampuan CT untuk menyelesaikan masalah baru:
+- Pertama: _____________ (Pecah masalahnya)
+- Kedua: ____________ (Cari polanya)
+- Ketiga: _____________ (Fokus pada yang penting)
+- Keempat: ____________ (Buat rencana)
+- Kelima: _____________ (Buat keputusan)
+- Keenam: _____________ (Perbaiki kesalahan)
 
 ---
 
-## Challenge: Solve a Real Problem!
+## Tantangan: Selesaikan Masalah Nyata!
 
-You're doing great! Now here's the ultimate test. Pick ONE real problem from your life right now. It could be:
-- Organizing your desk
-- Preparing for a test
-- Learning a new skill (like juggling or cooking)
-- Planning a weekend
-- Improving at a sport or game
+Kamu hebat! Sekarang ini ujian pamungkas. Pilih SATU masalah nyata dari hidupmu sekarang. Bisa:
+- Merapikan meja belajar
+- Mempersiapkan ulangan
+- Belajar kemampuan baru (seperti juggling atau memasak)
+- Merencanakan akhir pekan
+- Meningkatkan kemampuan di olahraga atau game
 
-Now solve it using ALL the CT skills:
+Sekarang selesaikan pakai SEMUA kemampuan CT:
 
-1. **Decompose** the problem into at least 5 smaller parts.
-2. **Find patterns** from past experience that might help.
-3. **Abstract** — decide what's most important to focus on.
-4. **Design an algorithm** — write a step-by-step plan.
-5. **Add logic** — include at least 2 IF-THEN decisions.
-6. **Plan for debugging** — what could go wrong? How will you check and fix it?
+1. **Dekomposisi** masalahnya jadi setidaknya 5 bagian kecil.
+2. **Temukan pola** dari pengalaman sebelumnya yang mungkin membantu.
+3. **Abstraksi** — putuskan apa yang paling penting untuk difokuskan.
+4. **Desain algoritma** — tulis rencana langkah demi langkah.
+5. **Tambahkan logika** — sertakan setidaknya 2 keputusan JIKA-MAKA.
+6. **Rencanakan debugging** — apa yang bisa salah? Bagaimana cara kamu periksa dan perbaiki?
 
-Write it all down. Then ACTUALLY DO IT and see how well your plan works!
-
----
-
-## What You Learned
-
-Awesome work! In this module, you learned that:
-- The six CT skills work BEST when used together.
-- You can apply CT to real-life situations like organizing, planning parties, playing games, sorting, and scheduling.
-- **Decomposition** chops the problem up. **Pattern Recognition** finds familiar ground. **Abstraction** filters out the noise. **Algorithm Design** creates the plan. **Logical Thinking** handles decisions. **Debugging** catches and fixes mistakes.
-- You already use these skills every day — now you can use them on purpose!
-
-You're becoming a real problem-solving pro!
+Tulis semuanya. Lalu BENAR-BENAR LAKUKAN dan lihat seberapa bagus rencanamu bekerja!
 
 ---
 
-## Answers
+## Apa yang Sudah Kamu Pelajari
 
-**Question 1:** C) Decomposition.
+Kerja yang luar biasa! Di modul ini, kamu belajar bahwa:
+- Enam kemampuan CT bekerja PALING BAIK saat digunakan bersama-sama.
+- Kamu bisa menerapkan CT ke situasi kehidupan nyata seperti merapikan, merencanakan pesta, bermain game, menyortir, dan membuat jadwal.
+- **Dekomposisi** memecah masalah. **Pengenalan Pola** menemukan hal yang sudah familiar. **Abstraksi** menyaring gangguan. **Desain Algoritma** membuat rencana. **Berpikir Logis** menangani keputusan. **Debugging** menangkap dan memperbaiki kesalahan.
+- Kamu sudah menggunakan kemampuan ini setiap hari — sekarang kamu bisa menggunakannya dengan sengaja!
 
-**Question 2:** B) Pattern Recognition.
-
-**Question 3:** B) Abstraction.
-
-**Question 4:** D) Debugging.
-
-**Question 5:** First: Decomposition. Second: Pattern Recognition. Third: Abstraction. Fourth: Algorithm Design. Fifth: Logical Thinking. Sixth: Debugging.
+Kamu jadi pemecah masalah yang hebat!
 
 ---
 
-[Previous: Module 06 — Debugging](06-debugging.md) | [Next: Module 08 — Fun Activities](08-fun-activities.md)
+## Jawaban
+
+**Pertanyaan 1:** C) Dekomposisi.
+
+**Pertanyaan 2:** B) Pengenalan Pola.
+
+**Pertanyaan 3:** B) Abstraksi.
+
+**Pertanyaan 4:** D) Debugging.
+
+**Pertanyaan 5:** Pertama: Dekomposisi. Kedua: Pengenalan Pola. Ketiga: Abstraksi. Keempat: Desain Algoritma. Kelima: Berpikir Logis. Keenam: Debugging.
+
+---
+
+[Sebelumnya: Modul 06 — Debugging](06-debugging.md) | [Selanjutnya: Modul 08 — Aktivitas Seru](08-fun-activities.md)

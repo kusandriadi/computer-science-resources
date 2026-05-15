@@ -1,477 +1,478 @@
-# Module 05: Logical Thinking — Making Decisions with Yes/No, If/Then, True/False
+# Modul 05: Berpikir Logis — Membuat Keputusan dengan Ya/Tidak, Jika/Maka, Benar/Salah
 
-## What is Logical Thinking?
+## Apa Itu Berpikir Logis?
 
-Every day, you make hundreds of decisions. Some are small — "Should I wear the red shirt or the blue shirt?" Some are bigger — "Should I study for the test or play outside first?"
+Setiap hari, kamu membuat ratusan keputusan. Ada yang kecil — "Pakai baju merah atau baju biru ya?" Ada yang lebih besar — "Belajar dulu untuk ulangan atau main dulu ya?"
 
-**Logical Thinking** is about making decisions in a smart, organized way. It uses simple rules to help you figure things out.
+**Berpikir Logis** (Logical Thinking) adalah cara membuat keputusan dengan cerdas dan teratur. Caranya pakai aturan-aturan sederhana untuk membantu kamu mencari jawaban.
 
-> **Logical Thinking = using rules, facts, and reasoning to make decisions and solve problems.**
+> **Berpikir Logis = menggunakan aturan, fakta, dan penalaran untuk membuat keputusan dan menyelesaikan masalah.**
 
-The coolest tools of logical thinking are:
+Alat-alat paling keren dalam berpikir logis adalah:
 
-- **Yes/No questions** — "Is it raining? Yes or No?"
-- **True/False statements** — "Cats can fly. True or False?"
-- **If/Then rules** — "IF it's raining, THEN bring an umbrella."
-- **AND, OR, NOT** — combining conditions to make smarter decisions.
+- **Pertanyaan Ya/Tidak** — "Apakah sedang hujan? Ya atau Tidak?"
+- **Pernyataan Benar/Salah** — "Kucing bisa terbang. Benar atau Salah?"
+- **Aturan Jika/Maka** — "JIKA hujan, MAKA bawa payung."
+- **DAN, ATAU, BUKAN** — menggabungkan syarat-syarat untuk membuat keputusan yang lebih cerdas.
 
-> **Hey younger readers (ages 6-8)!** Logical thinking can sound complicated, but you already do it every day! When you think "IF it's raining, THEN I need an umbrella" — that's logical thinking! Just take it one step at a time, and try the activities. They'll make everything click.
+> **Hei adik-adik (usia 6-8 tahun)!** Berpikir logis kedengarannya rumit, tapi kamu sebenarnya sudah melakukannya setiap hari! Waktu kamu mikir "JIKA hujan, MAKA aku perlu payung" — itu sudah berpikir logis! Pelan-pelan saja ya, dan coba aktivitasnya. Nanti semuanya jadi jelas kok.
 
-Let's dive in!
-
----
-
-## If/Then Thinking
-
-This is the most powerful tool in logical thinking. Here's how it works:
-
-> **IF** something is true, **THEN** do something.
-
-You use If/Then thinking ALL THE TIME:
-
-- **IF** I'm hungry, **THEN** I eat a snack.
-- **IF** the traffic light is red, **THEN** I stop.
-- **IF** my friend waves at me, **THEN** I wave back.
-- **IF** it's Saturday, **THEN** I don't go to school.
-- **IF** my phone battery is low, **THEN** I charge it.
-
-Sometimes there's also an **ELSE** — what you do when the condition is NOT true:
-
-- **IF** it's raining, **THEN** bring an umbrella. **ELSE** wear sunglasses.
-- **IF** I have homework, **THEN** do homework first. **ELSE** I can play.
-- **IF** the store is open, **THEN** go buy milk. **ELSE** try again tomorrow.
+Yuk mulai!
 
 ---
 
-## Real-Life Examples
+## Berpikir Jika/Maka
 
-### Example 1: "Guess Who?" Game
+Ini adalah alat paling ampuh dalam berpikir logis. Begini caranya:
 
-Have you played "Guess Who?" You ask yes/no questions to figure out which character your opponent picked:
+> **JIKA** sesuatu benar, **MAKA** lakukan sesuatu.
 
-- "Does your person have glasses?" — Yes or No?
-- "Does your person have brown hair?" — Yes or No?
-- "Is your person smiling?" — Yes or No?
+Kamu pakai pemikiran Jika/Maka SEPANJANG WAKTU lho:
 
-Each answer eliminates some characters. If the answer to "Does your person have glasses?" is NO, you flip down ALL the characters with glasses. After enough questions, only one character is left — that's the answer!
+- **JIKA** aku lapar, **MAKA** aku makan camilan.
+- **JIKA** lampu lalu lintas merah, **MAKA** aku berhenti.
+- **JIKA** temanku melambaikan tangan, **MAKA** aku lambaikan tangan balik.
+- **JIKA** hari Sabtu, **MAKA** aku tidak pergi ke sekolah.
+- **JIKA** baterai HP-ku hampir habis, **MAKA** aku mengisi dayanya.
 
-This is logical thinking at its best. You're using **yes/no questions** and **elimination** to narrow down possibilities.
+Kadang-kadang ada juga **SELAINNYA** — apa yang kamu lakukan kalau syaratnya TIDAK terpenuhi:
 
-### Example 2: Traffic Lights
+- **JIKA** hujan, **MAKA** bawa payung. **SELAINNYA** pakai kacamata hitam.
+- **JIKA** aku punya PR, **MAKA** kerjakan PR dulu. **SELAINNYA** aku bisa main.
+- **JIKA** tokonya buka, **MAKA** pergi beli susu. **SELAINNYA** coba lagi besok.
 
-Traffic lights are a simple logical system:
+---
 
-- **IF** the light is green, **THEN** go.
-- **IF** the light is yellow, **THEN** slow down and prepare to stop.
-- **IF** the light is red, **THEN** stop.
+## Contoh dalam Kehidupan Sehari-hari
 
-Everyone follows the same logic, and that keeps everyone safe!
+### Contoh 1: Permainan "Guess Who?" (Tebak Siapa)
 
-### Example 3: School Rules
+Pernahkah kamu main "Guess Who?" (permainan tebak-tebakan)? Kamu bertanya pertanyaan ya/tidak untuk menebak karakter mana yang dipilih lawanmu:
 
-Your school probably has lots of If/Then rules:
+- "Apakah orangnya pakai kacamata?" — Ya atau Tidak?
+- "Apakah orangnya berambut cokelat?" — Ya atau Tidak?
+- "Apakah orangnya tersenyum?" — Ya atau Tidak?
 
-- **IF** the bell rings, **THEN** go to your next class.
-- **IF** it's raining at recess, **THEN** stay inside.
-- **IF** you need help, **THEN** raise your hand.
-- **IF** you finish your work early, **THEN** you may read a book.
+Setiap jawaban menyingkirkan beberapa karakter. Kalau jawaban untuk "Apakah orangnya pakai kacamata?" adalah TIDAK, kamu balikkan SEMUA karakter yang pakai kacamata. Setelah cukup banyak pertanyaan, tinggal satu karakter yang tersisa — itulah jawabannya!
 
-### Example 4: Weather and Clothing
+Ini adalah berpikir logis yang keren banget. Kamu menggunakan **pertanyaan ya/tidak** dan **eliminasi** (penyingkiran) untuk mempersempit kemungkinan.
 
-Every morning, you (or your parents) use logical thinking to decide what to wear:
+### Contoh 2: Lampu Lalu Lintas
+
+Lampu lalu lintas adalah sistem logika sederhana:
+
+- **JIKA** lampunya hijau, **MAKA** jalan.
+- **JIKA** lampunya kuning, **MAKA** pelankan dan bersiap berhenti.
+- **JIKA** lampunya merah, **MAKA** berhenti.
+
+Semua orang mengikuti logika yang sama, dan itu menjaga keselamatan semua orang!
+
+### Contoh 3: Aturan Sekolah
+
+Sekolahmu pasti punya banyak aturan Jika/Maka:
+
+- **JIKA** bel berbunyi, **MAKA** pergi ke kelas berikutnya.
+- **JIKA** hujan saat istirahat, **MAKA** tetap di dalam.
+- **JIKA** kamu butuh bantuan, **MAKA** angkat tangan.
+- **JIKA** kamu selesai mengerjakan lebih awal, **MAKA** boleh baca buku.
+
+### Contoh 4: Cuaca dan Pakaian
+
+Setiap pagi, kamu (atau orang tuamu) menggunakan berpikir logis untuk memutuskan pakaian apa yang dipakai:
 
 ```
-IF it's cold outside THEN
-  Wear a jacket and long pants
-ELSE IF it's hot outside THEN
-  Wear a t-shirt and shorts
-ELSE IF it's rainy outside THEN
-  Wear a raincoat and boots
-ELSE
-  Wear whatever you want!
-END IF
+JIKA di luar dingin MAKA
+  Pakai jaket dan celana panjang
+SELAIN JIKA di luar panas MAKA
+  Pakai kaos dan celana pendek
+SELAIN JIKA di luar hujan MAKA
+  Pakai jas hujan dan sepatu bot
+SELAINNYA
+  Pakai apa saja yang kamu mau!
+SELESAI JIKA
 ```
 
 ---
 
-## AND, OR, NOT
+## DAN, ATAU, BUKAN
 
-Sometimes decisions depend on MORE than one thing. That's where AND, OR, and NOT come in.
+Kadang-kadang keputusan bergantung pada LEBIH DARI satu hal. Di sinilah DAN, ATAU, dan BUKAN berperan.
 
-### AND (Both must be true)
+### DAN (Keduanya harus benar)
 
-- **IF** it's Saturday **AND** the weather is nice, **THEN** go to the park.
-  (You need BOTH to be true. If it's Saturday but raining? No park!)
+- **JIKA** hari Sabtu **DAN** cuacanya bagus, **MAKA** pergi ke taman.
+  (Kamu butuh KEDUANYA benar. Kalau hari Sabtu tapi hujan? Tidak jadi ke taman!)
 
-- **IF** I finished my homework **AND** cleaned my room, **THEN** I can watch TV.
-  (You need to do BOTH things first.)
+- **JIKA** aku sudah selesai PR **DAN** sudah bersihkan kamar, **MAKA** aku boleh nonton TV.
+  (Kamu harus melakukan KEDUA hal itu dulu.)
 
-### OR (At least one must be true)
+### ATAU (Setidaknya satu harus benar)
 
-- **IF** it's Saturday **OR** Sunday, **THEN** I can sleep late.
-  (Either day works!)
+- **JIKA** hari Sabtu **ATAU** Minggu, **MAKA** aku bisa tidur lebih lama.
+  (Hari apa saja boleh!)
 
-- **IF** I have a pencil **OR** a pen, **THEN** I can write.
-  (I just need one of them.)
+- **JIKA** aku punya pensil **ATAU** pulpen, **MAKA** aku bisa menulis.
+  (Aku cuma butuh salah satu.)
 
-### NOT (The opposite)
+### BUKAN (Kebalikannya)
 
-- **IF** it is **NOT** raining, **THEN** we can play outside.
-  (We can play when there's no rain.)
+- **JIKA** **BUKAN** sedang hujan, **MAKA** kita bisa main di luar.
+  (Kita bisa main kalau tidak hujan.)
 
-- **IF** it is **NOT** a school day, **THEN** I can stay up late.
-  (Not a school day = weekend or holiday.)
+- **JIKA** **BUKAN** hari sekolah, **MAKA** aku bisa tidur larut malam.
+  (Bukan hari sekolah = akhir pekan atau libur.)
 
-Let's put them together:
+Yuk kita gabungkan semuanya:
 
-**Simple version first:**
+**Versi sederhana dulu:**
 
-**IF** it's sunny **AND** I have free time, **THEN** I can play outside!
+**JIKA** cerah **DAN** aku punya waktu luang, **MAKA** aku bisa main di luar!
 
-(See? We just combined two conditions with AND. Now here's a bigger example that uses AND, OR, and NOT all at once:)
+(Lihat? Kita baru saja menggabungkan dua syarat dengan DAN. Sekarang ini contoh yang lebih besar yang pakai DAN, ATAU, dan BUKAN sekaligus:)
 
-**IF** it's my birthday **AND** it's **NOT** raining **AND** (my friends can come **OR** my cousins can come), **THEN** have a party outside!
+**JIKA** hari ulang tahunku **DAN** **BUKAN** sedang hujan **DAN** (teman-temanku bisa datang **ATAU** sepupu-sepupuku bisa datang), **MAKA** adakan pesta di luar!
 
-That's a lot of logic, but if you break it apart, each piece makes sense.
+Itu banyak logikanya, tapi kalau kamu pecah satu-satu, setiap bagian masuk akal kok.
 
 ---
 
-## True or False?
+## Benar atau Salah?
 
-Another important part of logical thinking is figuring out if statements are **TRUE** or **FALSE**.
+Bagian penting lainnya dari berpikir logis adalah mencari tahu apakah pernyataan itu **BENAR** atau **SALAH**.
 
-Try these:
+Coba ini:
 
-| Statement | True or False? |
+| Pernyataan | Benar atau Salah? |
 |-----------|---------------|
-| The sun is hot. | TRUE |
-| Fish can walk. | FALSE |
-| 2 + 3 = 5 | TRUE |
-| Bananas are blue. | FALSE |
-| Water is wet. | TRUE |
-| Dogs can fly. | FALSE |
+| Matahari itu panas. | BENAR |
+| Ikan bisa jalan. | SALAH |
+| 2 + 3 = 5 | BENAR |
+| Pisang berwarna biru. | SALAH |
+| Air itu basah. | BENAR |
+| Anjing bisa terbang. | SALAH |
 
-Easy, right? But sometimes statements are trickier:
+Gampang, kan? Tapi kadang-kadang pernyataannya lebih menjebak:
 
-| Statement | True or False? |
+| Pernyataan | Benar atau Salah? |
 |-----------|---------------|
-| All birds can fly. | FALSE (penguins and ostriches can't!) |
-| Some animals live in water. | TRUE |
-| If it's Tuesday, then it's a weekday. | TRUE |
-| All squares are rectangles. | TRUE (a square IS a special rectangle!) |
+| Semua burung bisa terbang. | SALAH (penguin dan burung unta tidak bisa!) |
+| Beberapa hewan hidup di air. | BENAR |
+| Jika hari Selasa, maka itu hari kerja. | BENAR |
+| Semua persegi adalah persegi panjang. | BENAR (persegi ITU persegi panjang yang spesial!) |
 
-Logical thinking helps you carefully check whether statements are actually true — not just guess!
+Berpikir logis membantumu memeriksa dengan cermat apakah pernyataan itu benar-benar benar — bukan cuma menebak!
 
 ---
 
-## Decision Trees
+## Pohon Keputusan
 
-A **decision tree** is a picture that shows how to make a series of decisions. It looks like a tree with branches, where each branch is a different choice.
+**Pohon keputusan** (Decision Tree) adalah gambar yang menunjukkan cara membuat serangkaian keputusan. Bentuknya seperti pohon dengan cabang-cabang, di mana setiap cabang adalah pilihan yang berbeda.
 
-Here's a decision tree for choosing what to do after school:
+Ini adalah pohon keputusan untuk memilih apa yang dilakukan setelah pulang sekolah:
 
 ```
-                    Are you hungry?
+                    Apakah kamu lapar?
                     /            \
-                  YES             NO
+                  YA              TIDAK
                   /                \
-           Eat a snack.       Do you have homework?
+           Makan camilan.     Apakah kamu punya PR?
                               /              \
-                            YES               NO
+                            YA               TIDAK
                             /                  \
-                    Do homework.         Is a friend free?
+                    Kerjakan PR.         Apakah ada teman yang bisa main?
                                          /           \
-                                       YES            NO
+                                       YA            TIDAK
                                        /               \
-                                Play with friend.   Read a book
-                                                    or draw.
+                                Main dengan teman.   Baca buku
+                                                    atau menggambar.
 ```
 
-You start at the top and follow the branches based on your answers. Each yes/no question leads you down a different path!
+Kamu mulai dari atas dan ikuti cabang-cabang berdasarkan jawabanmu. Setiap pertanyaan ya/tidak membawamu ke jalur yang berbeda!
 
-Decision trees are used by:
-- Doctors (to figure out what illness you have)
-- Customer service (to help solve your problem)
-- Games (to decide what happens next in the story)
-
----
-
-## Activity 1: 20 Questions Game
-
-**What you need:** Two or more players.
-
-**How to play:**
-
-1. Player 1 thinks of an object (animal, food, toy — anything!).
-2. The other players can ask up to **20 yes/no questions** to figure out what it is.
-3. Questions must have a YES or NO answer. No "what" or "how" questions!
-
-**Good questions to start with:**
-- "Is it alive?" (This eliminates HALF of all possible objects!)
-- "Is it bigger than a bread box?"
-- "Can you find it at school?"
-- "Is it an animal?"
-- "Can you eat it?"
-
-**Strategy tip:** Ask broad questions first to eliminate lots of options. Don't guess specific things too early!
-
-**Example:**
-- "Is it alive?" — Yes
-- "Is it an animal?" — Yes
-- "Does it have four legs?" — No
-- "Does it fly?" — Yes
-- "Is it colorful?" — Yes
-- "Is it a parrot?" — YES!
-
-That's logical thinking — using yes/no questions to narrow down possibilities step by step.
+Pohon keputusan digunakan oleh:
+- Dokter (untuk mencari tahu penyakit apa yang kamu derita)
+- Layanan pelanggan (untuk membantu menyelesaikan masalahmu)
+- Game (untuk menentukan apa yang terjadi selanjutnya dalam cerita)
 
 ---
 
-## Activity 2: Fun Truth Tables
+## Aktivitas 1: Permainan 20 Pertanyaan
 
-**What you need:** Paper and pencil.
+**Yang kamu butuhkan:** Dua pemain atau lebih.
 
-A truth table shows all the possible combinations of true and false. Let's make them fun!
+**Cara bermain:**
 
-**Scenario:** You can go to the park IF the weather is nice AND you finished your chores.
+1. Pemain 1 memikirkan sebuah benda (hewan, makanan, mainan — apa saja!).
+2. Pemain lainnya boleh bertanya sampai **20 pertanyaan ya/tidak** untuk menebak benda itu.
+3. Pertanyaan harus bisa dijawab YA atau TIDAK. Tidak boleh pertanyaan "apa" atau "bagaimana"!
 
-| Weather is nice? | Chores done? | Can you go to the park? |
+**Pertanyaan bagus untuk memulai:**
+- "Apakah benda itu hidup?" (Ini menyingkirkan SETENGAH dari semua kemungkinan benda!)
+- "Apakah lebih besar dari kotak roti?"
+- "Apakah bisa ditemukan di sekolah?"
+- "Apakah itu hewan?"
+- "Apakah bisa dimakan?"
+
+**Tips strategi:** Tanyakan pertanyaan yang luas dulu untuk menyingkirkan banyak pilihan. Jangan tebak hal spesifik terlalu cepat!
+
+**Contoh:**
+- "Apakah benda itu hidup?" — Ya
+- "Apakah itu hewan?" — Ya
+- "Apakah punya empat kaki?" — Tidak
+- "Apakah bisa terbang?" — Ya
+- "Apakah berwarna-warni?" — Ya
+- "Apakah itu burung beo?" — YA!
+
+Itu berpikir logis — menggunakan pertanyaan ya/tidak untuk mempersempit kemungkinan selangkah demi selangkah.
+
+---
+
+## Aktivitas 2: Tabel Kebenaran yang Seru
+
+**Yang kamu butuhkan:** Kertas dan pensil.
+
+Tabel kebenaran menunjukkan semua kombinasi yang mungkin dari benar dan salah. Yuk kita bikin yang seru!
+
+**Skenario:** Kamu boleh pergi ke taman JIKA cuacanya bagus DAN kamu sudah selesai piket.
+
+| Cuaca bagus? | Piket selesai? | Boleh pergi ke taman? |
 |:---:|:---:|:---:|
-| YES | YES | YES! |
-| YES | NO | NO (finish chores first!) |
-| NO | YES | NO (bad weather!) |
-| NO | NO | NO (both problems!) |
+| YA | YA | YA! |
+| YA | TIDAK | TIDAK (selesaikan piket dulu!) |
+| TIDAK | YA | TIDAK (cuaca jelek!) |
+| TIDAK | TIDAK | TIDAK (dua-duanya bermasalah!) |
 
-With AND, BOTH conditions must be true.
+Dengan DAN, KEDUA syarat harus benar.
 
-**Now try this one:**
+**Sekarang coba yang ini:**
 
-**Scenario:** You can have dessert IF you ate your vegetables OR you ate your fruit.
+**Skenario:** Kamu boleh makan dessert JIKA kamu sudah makan sayur ATAU sudah makan buah.
 
-| Ate vegetables? | Ate fruit? | Can you have dessert? |
+| Makan sayur? | Makan buah? | Boleh makan dessert? |
 |:---:|:---:|:---:|
-| YES | YES | ? |
-| YES | NO | ? |
-| NO | YES | ? |
-| NO | NO | ? |
+| YA | YA | ? |
+| YA | TIDAK | ? |
+| TIDAK | YA | ? |
+| TIDAK | TIDAK | ? |
 
-Fill in the last column! (Remember: with OR, you just need ONE to be true.)
+Isi kolom terakhir! (Ingat: dengan ATAU, kamu cuma butuh SATU yang benar.)
 
-**One more:**
+**Satu lagi:**
 
-**Scenario:** You can go swimming IF it is NOT raining.
+**Skenario:** Kamu boleh berenang JIKA BUKAN sedang hujan.
 
-| Is it raining? | Can you go swimming? |
+| Apakah hujan? | Boleh berenang? |
 |:---:|:---:|
-| YES | ? |
-| NO | ? |
+| YA | ? |
+| TIDAK | ? |
 
-Fill it in! (NOT flips the answer — if raining is YES, swimming is NO.)
+Isi ya! (BUKAN membalik jawabannya — kalau hujan YA, berenang jadi TIDAK.)
 
 ---
 
-## Activity 3: Create Your Own Decision Tree
+## Aktivitas 3: Buat Pohon Keputusanmu Sendiri
 
-**What you need:** A large piece of paper, pencil, colored pencils.
+**Yang kamu butuhkan:** Selembar kertas besar, pensil, pensil warna.
 
-**Instructions:**
+**Instruksi:**
 
-1. Pick a topic:
-   - What to wear today
-   - What to have for lunch
-   - What game to play at recess
-   - What to do on a weekend morning
-   - What book to read next
+1. Pilih topik:
+   - Mau pakai baju apa hari ini
+   - Mau makan siang apa
+   - Mau main apa saat istirahat
+   - Mau ngapain di pagi hari akhir pekan
+   - Mau baca buku apa selanjutnya
 
-2. Start with ONE yes/no question at the top.
+2. Mulai dengan SATU pertanyaan ya/tidak di paling atas.
 
-3. For each answer (yes or no), write the next question or decision.
+3. Untuk setiap jawaban (ya atau tidak), tulis pertanyaan berikutnya atau keputusan.
 
-4. Keep branching until each path reaches a final answer.
+4. Terus bercabang sampai setiap jalur mencapai jawaban akhir.
 
-5. Decorate your decision tree with colors and pictures!
+5. Hias pohon keputusanmu dengan warna dan gambar!
 
-**Example topic: "What to have for lunch"**
+**Contoh topik: "Mau makan siang apa"**
 
 ```
-           Am I very hungry?
+           Apakah aku sangat lapar?
            /              \
-         YES               NO
+         YA               TIDAK
          /                  \
-  Do I want hot food?    Have a light snack
-   /           \          (fruit + crackers)
- YES            NO
+  Mau makanan panas?    Makan camilan ringan
+   /           \          (buah + biskuit)
+ YA            TIDAK
  /               \
-Rice and          Do I want sweet?
-chicken           /           \
-                YES            NO
+Nasi dan          Mau yang manis?
+ayam              /           \
+                YA            TIDAK
                 /               \
-          PB&J sandwich    Salad with bread
+          Roti selai           Salad dengan roti
+          kacang
 ```
 
-6. Test your decision tree by following it for real! Does it give you a good answer?
+6. Tes pohon keputusanmu dengan mengikutinya beneran! Apakah memberimu jawaban yang bagus?
 
 ---
 
-## Activity 4: Logic Puzzles
+## Aktivitas 4: Teka-Teki Logika
 
-**What you need:** Paper and pencil.
+**Yang kamu butuhkan:** Kertas dan pensil.
 
-**Puzzle 1: Who sits where?**
+**Teka-teki 1: Siapa duduk di mana?**
 
-Three friends — Amir, Bella, and Carlos — sit in three chairs: left, middle, and right.
-- Amir is NOT on the left.
-- Bella is NOT in the middle.
-- Carlos is on the right.
+Tiga teman — Amir, Bella, dan Carlos — duduk di tiga kursi: kiri, tengah, dan kanan.
+- Amir BUKAN di kiri.
+- Bella BUKAN di tengah.
+- Carlos di kanan.
 
-Where does each friend sit?
+Di mana masing-masing teman duduk?
 
-*Hint: Start with what you know for sure. Carlos is on the right. Now figure out the other two!*
+*Petunjuk: Mulai dari yang sudah pasti. Carlos di kanan. Sekarang cari tahu dua yang lain!*
 
-**Puzzle 2: What pet?**
+**Teka-teki 2: Punya hewan peliharaan apa?**
 
-Three kids each have a different pet: a cat, a dog, and a fish.
-- Dina does NOT have the dog.
-- Eka does NOT have the cat.
-- Farid has the fish.
+Tiga anak masing-masing punya hewan peliharaan yang berbeda: kucing, anjing, dan ikan.
+- Dina BUKAN punya anjing.
+- Eka BUKAN punya kucing.
+- Farid punya ikan.
 
-Who has which pet?
+Siapa punya hewan apa?
 
-**Puzzle 3: True or False?**
+**Teka-teki 3: Benar atau Salah?**
 
-Only ONE of these statements is true. Which one?
-- A) Statement B is true.
-- B) Statement A is false.
+Hanya SATU dari pernyataan ini yang benar. Yang mana?
+- A) Pernyataan B benar.
+- B) Pernyataan A salah.
 
-*Think carefully about this one! If A is true, then B is true too — but we said only ONE is true. So A can't be true...*
+*Pikirkan baik-baik yang ini! Kalau A benar, maka B juga benar — tapi kita bilang hanya SATU yang benar. Jadi A tidak bisa benar...*
 
 ---
 
-## Activity 5: The Sorting Hat Game
+## Aktivitas 5: Permainan Topi Penyortir
 
-**What you need:** A group of friends and a "sorting hat" person.
+**Yang kamu butuhkan:** Sekelompok teman dan satu orang "topi penyortir."
 
-**How to play:**
+**Cara bermain:**
 
-This is inspired by the magical sorting hat! The "sorting hat" person asks yes/no questions to sort each player into a group.
+Ini terinspirasi dari topi penyortir ajaib! Orang "topi penyortir" bertanya pertanyaan ya/tidak untuk menyortir setiap pemain ke dalam kelompok.
 
-1. Create 4 groups (like houses, teams, or animal groups).
-2. The sorting hat creates a decision tree:
+1. Buat 4 kelompok (seperti asrama, tim, atau kelompok hewan).
+2. Topi penyortir membuat pohon keputusan:
 
 ```
-       Do you like being outside?
+       Apakah kamu suka di luar?
        /                    \
-     YES                     NO
+     YA                     TIDAK
      /                        \
-Do you like sports?     Do you like reading?
+Suka olahraga?          Suka membaca?
   /         \            /           \
-YES          NO        YES            NO
-Eagles    Dolphins    Owls          Pandas
+YA          TIDAK      YA            TIDAK
+Elang      Lumba-lumba  Burung Hantu  Panda
 ```
 
-3. Each player answers the questions, and the decision tree tells them which group they belong to.
+3. Setiap pemain menjawab pertanyaan, dan pohon keputusan memberitahu mereka masuk kelompok mana.
 
-4. After everyone is sorted, each group does an activity together!
+4. Setelah semua disortir, setiap kelompok melakukan aktivitas bersama!
 
-**Make it your own:** Create your own sorting system with your own questions and group names.
-
----
-
-## Logical Thinking in Games
-
-Many games you already play use logical thinking:
-
-- **Chess:** "IF I move my knight here, THEN my opponent might take my bishop. So I should move it there instead."
-- **Sudoku:** "This row already has 1-8, so the missing number MUST be 9."
-- **Tic-Tac-Toe:** "IF my opponent has two in a row, THEN I MUST block them."
-- **Simon Says:** "IF Simon says do it, THEN I do it. IF Simon doesn't say it, THEN I don't."
-- **Red Light Green Light:** "IF green light, THEN run. IF red light, THEN freeze."
-
-Every time you think about what might happen next and make a choice based on that, you're using logical thinking!
+**Bikin versimu sendiri:** Buat sistem penyortiran sendiri dengan pertanyaan dan nama kelompok buatanmu.
 
 ---
 
-## Quiz Time!
+## Berpikir Logis dalam Permainan
 
-**Question 1:** What does If/Then mean?
-- A) Do everything at the same time
-- B) IF something is true, THEN do something
-- C) Always do the same thing
-- D) Ask for help
+Banyak permainan yang sudah kamu mainkan menggunakan berpikir logis:
 
-**Question 2:** IF it is a school day AND I feel healthy, THEN I go to school. Today is Monday and I feel sick. Do I go to school?
-- A) Yes
-- B) No
-- C) Maybe
-- D) Only if my mom says so
+- **Catur:** "JIKA aku pindahkan kudaku ke sini, MAKA lawan mungkin mengambil menterian. Jadi lebih baik aku pindahkan ke sana."
+- **Sudoku:** "Baris ini sudah ada 1-8, jadi angka yang hilang PASTI 9."
+- **Tic-Tac-Toe:** "JIKA lawan punya dua berturut-turut, MAKA aku HARUS memblokir mereka."
+- **Simon Says:** "JIKA Simon bilang lakukan, MAKA aku lakukan. JIKA Simon tidak bilang, MAKA aku tidak lakukan."
+- **Lampu Merah Lampu Hijau:** "JIKA lampu hijau, MAKA lari. JIKA lampu merah, MAKA diam."
 
-**Question 3:** IF I have money OR a gift card, THEN I can buy a book. I have no money, but I have a gift card. Can I buy a book?
-- A) Yes
-- B) No
-
-**Question 4:** What is a decision tree?
-- A) A tree you climb to make decisions
-- B) A diagram that shows a series of yes/no choices leading to different outcomes
-- C) A list of random choices
-- D) A type of math problem
-
-**Question 5:** In the "Guess Who?" game, why do we ask broad questions first (like "Is your person a girl?") instead of specific questions (like "Is your person named Bob?")?
-Write your answer in your own words.
+Setiap kali kamu memikirkan apa yang mungkin terjadi selanjutnya dan membuat pilihan berdasarkan itu, kamu sedang menggunakan berpikir logis!
 
 ---
 
-## Challenge: Build a Mystery Solver
+## Waktunya Kuis!
 
-Ready for a challenge? Let's play detective! Create a decision tree that helps solve a "mystery." Here's the setup:
+**Pertanyaan 1:** Apa arti Jika/Maka?
+- A) Lakukan semuanya sekaligus
+- B) JIKA sesuatu benar, MAKA lakukan sesuatu
+- C) Selalu lakukan hal yang sama
+- D) Minta tolong
 
-**Mystery:** Someone ate the last cookie. There are 4 suspects: Mom, Dad, Big Sister, and the Dog.
+**Pertanyaan 2:** JIKA ini hari sekolah DAN aku sehat, MAKA aku pergi ke sekolah. Hari ini hari Senin dan aku sakit. Apakah aku pergi ke sekolah?
+- A) Ya
+- B) Tidak
+- C) Mungkin
+- D) Hanya kalau ibu bilang boleh
 
-**Clues:**
-- There are crumbs on the kitchen counter (the dog can't reach the counter).
-- The cookie jar lid was put back on (the dog can't do that).
-- Mom was at work.
-- Big Sister says she was in her room studying.
+**Pertanyaan 3:** JIKA aku punya uang ATAU kartu hadiah, MAKA aku bisa beli buku. Aku tidak punya uang, tapi aku punya kartu hadiah. Bisakah aku beli buku?
+- A) Ya
+- B) Tidak
 
-Build a decision tree with yes/no questions to figure out who ate the cookie.
+**Pertanyaan 4:** Apa itu pohon keputusan?
+- A) Pohon yang kamu panjat untuk membuat keputusan
+- B) Diagram yang menunjukkan serangkaian pilihan ya/tidak yang mengarah ke hasil yang berbeda
+- C) Daftar pilihan acak
+- D) Jenis soal matematika
 
-Start with: "Could the suspect reach the counter?"
-
-Follow the logic and see where it leads!
-
----
-
-## What You Learned
-
-Awesome job! In this module, you learned that:
-- **Logical Thinking** uses rules and reasoning to make smart decisions.
-- **If/Then** statements help you make decisions based on conditions.
-- **AND** means both conditions must be true. **OR** means at least one must be true. **NOT** means the opposite.
-- **True/False** helps you check whether statements are correct.
-- **Decision trees** are pictures that map out a series of choices.
-- You use logical thinking every day — in games, at school, and at home!
+**Pertanyaan 5:** Dalam permainan "Guess Who?", kenapa kita bertanya pertanyaan luas dulu (seperti "Apakah orangnya perempuan?") bukan pertanyaan spesifik (seperti "Apakah orangnya namanya Bob?")?
+Tulis jawabanmu dengan kata-katamu sendiri.
 
 ---
 
-## Answers
+## Tantangan: Bangun Pemecah Misteri
 
-**Question 1:** B) IF something is true, THEN do something.
+Siap untuk tantangan? Yuk jadi detektif! Buat pohon keputusan yang membantu memecahkan sebuah "misteri." Ini ceritanya:
 
-**Question 2:** B) No. The rule says you need BOTH conditions to be true (school day AND healthy). It IS a school day (Monday), but you're NOT healthy (sick). Since one condition is false, the AND fails, so you don't go.
+**Misteri:** Seseorang makan kue terakhir. Ada 4 tersangka: Ibu, Ayah, Kakak Perempuan, dan Anjing.
 
-**Question 3:** A) Yes. With OR, you only need ONE condition to be true. You have a gift card, so you can buy the book!
+**Petunjuk:**
+- Ada remah-remah di meja dapur (anjing tidak bisa menjangkau meja).
+- Tutup toples kue dipasang kembali (anjing tidak bisa melakukan itu).
+- Ibu sedang di kantor.
+- Kakak perempuan bilang dia di kamar belajar.
 
-**Question 4:** B) A diagram that shows a series of yes/no choices leading to different outcomes.
+Buat pohon keputusan dengan pertanyaan ya/tidak untuk mencari tahu siapa yang makan kuenya.
 
-**Question 5:** Example answer: "Broad questions eliminate more possibilities at once. Asking 'Is your person a girl?' eliminates about half the characters. Asking 'Is it Bob?' only checks one person, so it's slower."
+Mulai dengan: "Apakah tersangka bisa menjangkau meja?"
 
-**Logic Puzzle Answers:**
-
-Puzzle 1: Carlos is on the right. Amir is NOT on the left, so Amir is in the middle. That leaves Bella on the left.
-
-Puzzle 2: Farid has the fish. Dina does NOT have the dog, so Dina has the cat. Eka has the dog.
-
-Puzzle 3: Statement B is true. If B is true ("A is false"), that means A is false, which is consistent. Only one statement (B) is true.
+Ikuti logikanya dan lihat ke mana arahnya!
 
 ---
 
-[Previous: Module 04 — Algorithm Design](04-algorithm-design.md) | [Next: Module 06 — Debugging](06-debugging.md)
+## Apa yang Sudah Kamu Pelajari
+
+Keren banget! Di modul ini, kamu belajar bahwa:
+- **Berpikir Logis** (Logical Thinking) menggunakan aturan dan penalaran untuk membuat keputusan yang cerdas.
+- Pernyataan **Jika/Maka** membantumu membuat keputusan berdasarkan syarat.
+- **DAN** berarti kedua syarat harus benar. **ATAU** berarti setidaknya satu harus benar. **BUKAN** berarti kebalikannya.
+- **Benar/Salah** membantumu memeriksa apakah pernyataan itu benar.
+- **Pohon keputusan** (Decision Tree) adalah gambar yang memetakan serangkaian pilihan.
+- Kamu menggunakan berpikir logis setiap hari — dalam permainan, di sekolah, dan di rumah!
+
+---
+
+## Jawaban
+
+**Pertanyaan 1:** B) JIKA sesuatu benar, MAKA lakukan sesuatu.
+
+**Pertanyaan 2:** B) Tidak. Aturannya bilang kamu butuh KEDUA syarat benar (hari sekolah DAN sehat). Memang hari sekolah (Senin), tapi kamu TIDAK sehat (sakit). Karena satu syarat salah, DAN gagal, jadi kamu tidak pergi.
+
+**Pertanyaan 3:** A) Ya. Dengan ATAU, kamu hanya butuh SATU syarat yang benar. Kamu punya kartu hadiah, jadi kamu bisa beli bukunya!
+
+**Pertanyaan 4:** B) Diagram yang menunjukkan serangkaian pilihan ya/tidak yang mengarah ke hasil yang berbeda.
+
+**Pertanyaan 5:** Contoh jawaban: "Pertanyaan luas menyingkirkan lebih banyak kemungkinan sekaligus. Bertanya 'Apakah orangnya perempuan?' menyingkirkan sekitar setengah karakter. Bertanya 'Apakah itu Bob?' hanya mengecek satu orang, jadi lebih lambat."
+
+**Jawaban Teka-Teki Logika:**
+
+Teka-teki 1: Carlos di kanan. Amir BUKAN di kiri, jadi Amir di tengah. Berarti Bella di kiri.
+
+Teka-teki 2: Farid punya ikan. Dina BUKAN punya anjing, jadi Dina punya kucing. Eka punya anjing.
+
+Teka-teki 3: Pernyataan B yang benar. Kalau B benar ("A salah"), itu berarti A memang salah, yang konsisten. Hanya satu pernyataan (B) yang benar.
+
+---
+
+[Sebelumnya: Modul 04 — Desain Algoritma](04-algorithm-design.md) | [Selanjutnya: Modul 06 — Debugging](06-debugging.md)

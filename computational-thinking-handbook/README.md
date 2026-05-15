@@ -1,56 +1,56 @@
-# Computational Thinking Handbook
+# Buku Panduan Computational Thinking
 
-**A fun guide for kids who want to think like problem-solvers!**
+**Panduan seru untuk anak-anak yang ingin berpikir seperti pemecah masalah!**
 
-Have you ever wondered how scientists, engineers, and game designers solve really hard problems? They use something called **Computational Thinking** — and guess what? You already use it too, even if you don't know it yet!
+Pernahkah kamu penasaran bagaimana ilmuwan, insinyur, dan perancang game menyelesaikan masalah yang sulit banget? Mereka pakai sesuatu yang namanya **Computational Thinking** (berpikir komputasional) — dan tahu nggak? Kamu juga sudah memakainya, meskipun kamu belum tahu!
 
-This handbook will teach you the secret skills behind solving ANY problem, from planning a birthday party to building the coolest LEGO castle ever. No computer needed — just your amazing brain!
-
----
-
-## Who Is This For?
-
-- Kids ages 6 to 12
-- Teachers who want fun activities for the classroom
-- Parents who want to explore problem-solving with their kids
+Buku panduan ini akan mengajarkan kamu keterampilan rahasia di balik pemecahan masalah APA PUN, mulai dari merencanakan pesta ulang tahun sampai membangun istana LEGO paling keren. Nggak perlu komputer — cuma butuh otakmu yang luar biasa!
 
 ---
 
-## What's Inside?
+## Untuk Siapa Buku Ini?
 
-| Module | Title | What You'll Learn |
-|--------|-------|-------------------|
-| [00](00-overview.md) | What is Computational Thinking? | The big picture — your new superpower! |
-| [01](01-decomposition.md) | Decomposition | Breaking big problems into small pieces |
-| [02](02-pattern-recognition.md) | Pattern Recognition | Finding patterns and things that repeat |
-| [03](03-abstraction.md) | Abstraction | Focusing on what matters, ignoring the rest |
-| [04](04-algorithm-design.md) | Algorithm Design | Creating step-by-step instructions |
-| [05](05-logical-thinking.md) | Logical Thinking | Making smart decisions with yes/no and if/then |
-| [06](06-debugging.md) | Debugging | Finding and fixing mistakes |
-| [07](07-everyday-ct.md) | Everyday Computational Thinking | Using all your skills in real life |
-| [08](08-fun-activities.md) | Fun Activities | Unplugged games and puzzles |
-| [09](09-for-teachers-and-parents.md) | For Teachers and Parents | A guide for grown-ups who want to help |
+- Anak-anak usia 6 sampai 12 tahun
+- Guru yang ingin kegiatan seru di kelas
+- Orang tua yang ingin menjelajahi pemecahan masalah bersama anaknya
 
 ---
 
-## Start Here!
+## Apa Isinya?
 
-1. **New to Computational Thinking?** Start with [Module 00 — What is Computational Thinking?](00-overview.md) to learn what it's all about.
-2. **Ready to learn?** Go through Modules 01 to 06 in order. Each one builds on the last.
-3. **Want to practice?** Jump to [Module 08 — Fun Activities](08-fun-activities.md) for games and puzzles you can do anytime.
-4. **Are you a teacher or parent?** Check out [Module 09](09-for-teachers-and-parents.md) for tips on how to teach these ideas.
+| Modul | Judul | Apa yang Akan Kamu Pelajari |
+|-------|-------|----------------------------|
+| [00](00-overview.md) | Apa Itu Computational Thinking? | Gambaran besar — kekuatan super barumu! |
+| [01](01-decomposition.md) | Decomposition | Memecah masalah besar jadi bagian kecil |
+| [02](02-pattern-recognition.md) | Pattern Recognition | Menemukan pola dan hal-hal yang berulang |
+| [03](03-abstraction.md) | Abstraction | Fokus pada yang penting, abaikan sisanya |
+| [04](04-algorithm-design.md) | Algorithm Design | Membuat instruksi langkah demi langkah |
+| [05](05-logical-thinking.md) | Logical Thinking | Membuat keputusan cerdas dengan ya/tidak dan jika/maka |
+| [06](06-debugging.md) | Debugging | Menemukan dan memperbaiki kesalahan |
+| [07](07-everyday-ct.md) | Computational Thinking Sehari-hari | Menggunakan semua keterampilanmu di kehidupan nyata |
+| [08](08-fun-activities.md) | Kegiatan Seru | Permainan dan teka-teki tanpa komputer |
+| [09](09-for-teachers-and-parents.md) | Untuk Guru dan Orang Tua | Panduan untuk orang dewasa yang ingin membantu |
 
 ---
 
-## How to Use This Handbook
+## Mulai dari Sini!
 
-- **Read at your own speed.** There's no rush!
-- **Try every activity.** The best way to learn is by doing.
-- **Work with friends.** Many activities are more fun with a partner or a group.
-- **Ask questions.** If something is confusing, talk about it with a friend, teacher, or parent.
+1. **Baru kenal Computational Thinking?** Mulai dari [Modul 00 — Apa Itu Computational Thinking?](00-overview.md) untuk belajar tentang apa itu.
+2. **Siap belajar?** Ikuti Modul 01 sampai 06 secara berurutan. Setiap modul membangun dari yang sebelumnya.
+3. **Mau latihan?** Langsung ke [Modul 08 — Kegiatan Seru](08-fun-activities.md) untuk permainan dan teka-teki yang bisa kamu mainkan kapan saja.
+4. **Kamu guru atau orang tua?** Cek [Modul 09](09-for-teachers-and-parents.md) untuk tips cara mengajarkan ide-ide ini.
 
 ---
 
-## Let's Go!
+## Cara Menggunakan Buku Panduan Ini
 
-Ready to unlock your problem-solving superpower? Open [Module 00](00-overview.md) and let's begin!
+- **Baca sesuai kecepatanmu.** Nggak usah buru-buru!
+- **Coba setiap kegiatan.** Cara terbaik untuk belajar adalah dengan mencoba.
+- **Kerjakan bersama teman.** Banyak kegiatan yang lebih seru kalau dikerjakan berdua atau berkelompok.
+- **Jangan takut bertanya.** Kalau ada yang membingungkan, diskusikan dengan teman, guru, atau orang tua.
+
+---
+
+## Ayo Mulai!
+
+Siap membuka kekuatan super pemecahan masalahmu? Buka [Modul 00](00-overview.md) dan ayo kita mulai!
