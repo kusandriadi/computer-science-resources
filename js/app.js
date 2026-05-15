@@ -241,3 +241,8 @@ window.addEventListener('popstate', () => {
 // Init
 // ========================================
 initTheme();
+
+// Register Service Worker for PWA (installable / downloadable)
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/cs/sw.js').catch(() => {});
+}
