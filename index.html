@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#1e40af">
+
+    <title>Computer Science Resources — cs.kusandriadi.com</title>
+    <meta name="description" content="A curated collection of computer science learning materials — AI engineering syllabus, LLM handbook, algorithms handbook, and computational thinking for kids.">
+    <meta name="keywords" content="computer science, AI engineering, LLM, algorithms, computational thinking, machine learning, data structures, Java, education">
+    <meta name="author" content="Kus Andriadi">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cs.kusandriadi.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cs.kusandriadi.com/">
+    <meta property="og:title" content="Computer Science Resources">
+    <meta property="og:description" content="A curated collection of CS learning materials — from AI engineering to algorithms to computational thinking for kids.">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Computer Science Resources">
+    <meta name="twitter:description" content="AI syllabus, LLM handbook, algorithms, and computational thinking — all in one place.">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle">
+            <button class="theme-btn" data-theme="light" title="Light Mode" aria-label="Light Mode">&#9728;&#65039;</button>
+            <button class="theme-btn" data-theme="dark" title="Dark Mode" aria-label="Dark Mode">&#127769;</button>
+        </div>
+
+        <!-- Header -->
+        <div class="card header">
+            <h1 class="site-title">Computer Science Resources</h1>
+            <p class="site-subtitle">A curated collection of learning materials — from fundamentals to frontier topics</p>
+            <p class="site-author">by <a href="https://kusandriadi.com" target="_blank" rel="noopener">Kus Andriadi</a></p>
+        </div>
+
+        <!-- Handbooks Grid -->
+        <div class="handbooks-grid">
+
+            <!-- AI Engineering Syllabus -->
+            <div class="card handbook-card" data-handbook="ai-engineering-syllabus">
+                <div class="handbook-icon">&#127891;</div>
+                <h2 class="handbook-title">AI Engineering Syllabus</h2>
+                <p class="handbook-audience">University students (semester 1–4)</p>
+                <p class="handbook-desc">7 courses across 4 semesters — data science, machine learning, generative AI, deep learning, computer vision, AI ethics, and cloud infrastructure.</p>
+                <div class="handbook-tags">
+                    <span class="tag">English</span>
+                    <span class="tag">IT & Non-IT</span>
+                    <span class="tag">7 Courses</span>
+                </div>
+                <div class="handbook-meta">
+                    <span>16 weeks per course</span>
+                    <span>Week 0 included</span>
+                </div>
+            </div>
+
+            <!-- LLM Handbook -->
+            <div class="card handbook-card" data-handbook="llm-handbook">
+                <div class="handbook-icon">&#129302;</div>
+                <h2 class="handbook-title">LLM Handbook</h2>
+                <p class="handbook-audience">ML engineers & researchers</p>
+                <p class="handbook-desc">Deep-dive reference on Large Language Models — transformers, pre-training, inference, reasoning, agents, and production systems.</p>
+                <div class="handbook-tags">
+                    <span class="tag">English</span>
+                    <span class="tag">Professional</span>
+                    <span class="tag">17 Chapters</span>
+                </div>
+                <div class="handbook-meta">
+                    <span>+ 7 appendices</span>
+                    <span>Papers & references</span>
+                </div>
+            </div>
+
+            <!-- Algorithms Handbook -->
+            <div class="card handbook-card" data-handbook="algorithms-handbook">
+                <div class="handbook-icon">&#128187;</div>
+                <h2 class="handbook-title">Algorithms Handbook</h2>
+                <p class="handbook-audience">CS students & engineers</p>
+                <p class="handbook-desc">Algorithms and data structures — complexity, sorting, graphs, dynamic programming, network flows. All code in Java.</p>
+                <div class="handbook-tags">
+                    <span class="tag">English</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">15 Modules</span>
+                </div>
+                <div class="handbook-meta">
+                    <span>100+ quiz questions</span>
+                    <span>Real-world examples</span>
+                </div>
+            </div>
+
+            <!-- Computational Thinking -->
+            <div class="card handbook-card" data-handbook="computational-thinking-handbook">
+                <div class="handbook-icon">&#129513;</div>
+                <h2 class="handbook-title">Buku Panduan Computational Thinking</h2>
+                <p class="handbook-audience">Anak SD kelas 1–6 (usia 6–12)</p>
+                <p class="handbook-desc">Belajar memecahkan masalah seperti pemikir hebat — tanpa komputer! Dengan analogi seru dan aktivitas langsung.</p>
+                <div class="handbook-tags">
+                    <span class="tag">Bahasa Indonesia</span>
+                    <span class="tag">Unplugged</span>
+                    <span class="tag">10 Modul</span>
+                </div>
+                <div class="handbook-meta">
+                    <span>15 aktivitas seru</span>
+                    <span>Panduan guru</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Module Viewer -->
+        <div id="module-viewer" class="card module-viewer hidden">
+            <div class="viewer-header">
+                <button id="btn-back" class="btn-action">
+                    <span>&#8592;</span>
+                    <span>Back</span>
+                </button>
+                <h2 id="viewer-title" class="viewer-title"></h2>
+            </div>
+            <div id="module-list" class="module-list"></div>
+        </div>
+
+        <!-- Content Viewer -->
+        <div id="content-viewer" class="card content-viewer hidden">
+            <div class="viewer-header">
+                <button id="btn-back-content" class="btn-action">
+                    <span>&#8592;</span>
+                    <span>Back</span>
+                </button>
+                <a id="btn-github" class="btn-action" target="_blank" rel="noopener">
+                    <span>&#128279;</span>
+                    <span>GitHub</span>
+                </a>
+            </div>
+            <div id="content-body" class="content-body"></div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-credits">
+            <p class="credits-text">
+                Open source on <a href="https://github.com/kusandriadi/computer-science-resources" target="_blank" rel="noopener">GitHub</a> &middot; MIT License
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
