@@ -177,6 +177,19 @@ async function loadContent(handbookKey, file) {
                 gfm: true
             });
             contentBody.innerHTML = marked.parse(markdown);
+
+            // Render LaTeX math with KaTeX
+            if (typeof renderMathInElement !== 'undefined') {
+                renderMathInElement(contentBody, {
+                    delimiters: [
+                        { left: '$$', right: '$$', display: true },
+                        { left: '$', right: '$', display: false },
+                        { left: '\\(', right: '\\)', display: false },
+                        { left: '\\[', right: '\\]', display: true }
+                    ],
+                    throwOnError: false
+                });
+            }
         } else {
             contentBody.innerHTML = `<pre style="white-space: pre-wrap;">${markdown}</pre>`;
         }
