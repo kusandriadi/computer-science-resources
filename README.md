@@ -27,7 +27,6 @@ computer-science-resources/
 ├── algorithms-handbook/               # 15 modules with Java examples and quizzes
 ├── computational-thinking-handbook/   # 10 modules + activities for young learners
 ├── gan-handbook/                      # 9 modules + 2 appendices + runnable trainer
-├── presentations/                     # Marp-rendered HTML slide decks per handbook
 ├── index.html, js/, css/, icons/      # Static website (cs.kusandriadi.com)
 ├── manifest.json, sw.js               # PWA support
 ├── AGENTS.md                          # Detailed guidelines for AI agents

@@ -21,7 +21,6 @@ cs/
 ├── algorithms-handbook/               # Handbook 3 — 15 modules with Java
 ├── computational-thinking-handbook/   # Handbook 4 — Bahasa Indonesia, for kids
 ├── gan-handbook/                      # Handbook 5 — GANs, undergrad level
-├── presentations/                     # Marp-rendered HTML slide decks per handbook
 ├── css/styles.css                     # Website styles (theme, cards, viewer, FABs)
 ├── js/app.js                          # Handbook registry + viewer logic
 ├── icons/                             # PWA icons (SVG)
@@ -248,8 +247,7 @@ PWA icons in SVG. Two sizes (192, 512). If you change the brand mark, update bot
    - Add a row to §3 (the five handbooks table).
    - Add a subsection in §4 with the full style guide.
    - Update §5 (code conventions table).
-10. (Optional) Render presentation slides via Marp into `presentations/<handbook-name>/`.
-11. Bump `sw.js` cache version if you changed any non-handbook files.
+10. Bump `sw.js` cache version if you changed any non-handbook files.
 
 ### 8.3 Slot numbering — the design intent
 
@@ -323,19 +321,7 @@ Especially in technical handbooks (LLM, GAN), include failure mode discussions. 
 
 ---
 
-## 11. Presentations
-
-`presentations/<handbook-name>/` contains Marp-rendered HTML slide decks corresponding to each module's markdown. They are generated from the `.md` files in the same folder. When you add a new module **and** want slides:
-
-1. Add a Marp directive at the top of the module file (or in a copy).
-2. Render with: `marp <file>.md --html --allow-local-files`.
-3. Output goes alongside the source as `<file>.html`.
-
-We do not currently auto-generate slides for the GAN handbook. Add only if explicitly requested.
-
----
-
-## 12. Anti-Patterns To Avoid
+## 11. Anti-Patterns To Avoid
 
 - ❌ AI-sounding sentences: "This module provides a comprehensive overview of...", "Let's delve into...", "It is important to note that..." — rewrite to sound human.
 - ❌ Mixing languages in the CT handbook. **CT handbook content body is Bahasa Indonesia only.** English loanwords are OK in technical terms with Indonesian gloss.
@@ -349,7 +335,7 @@ We do not currently auto-generate slides for the GAN handbook. Add only if expli
 
 ---
 
-## 13. Quality Checklist (Before Committing)
+## 12. Quality Checklist (Before Committing)
 
 - [ ] Content language matches the target audience (no jargon for kids, no oversimplification for professionals).
 - [ ] Every new technical term is explained when first used.
@@ -368,7 +354,7 @@ We do not currently auto-generate slides for the GAN handbook. Add only if expli
 
 ---
 
-## 14. Quick Reference: Where to Edit What
+## 13. Quick Reference: Where to Edit What
 
 | Goal | File(s) |
 |---|---|
@@ -380,11 +366,10 @@ We do not currently auto-generate slides for the GAN handbook. Add only if expli
 | Change PWA install metadata | `manifest.json` |
 | Force fresh load for all users | Bump cache version in `sw.js` |
 | Update math notation explanation | The `.md` file (don't touch KaTeX in HTML) |
-| Add a slide deck | Marp on the source `.md`, output to `presentations/<handbook>/...` |
 
 ---
 
-## 15. Project Identity
+## 14. Project Identity
 
 This project is owned by **Kus Andriadi**. Public site: [cs.kusandriadi.com](https://cs.kusandriadi.com). License: MIT.
 
