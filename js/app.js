@@ -6,13 +6,13 @@ const handbooks = {
         title: 'AI Engineering Syllabus',
         modules: [
             { file: 'README.md', name: 'Overview — Program Structure', meta: true },
-            { file: '01-data-science-ai-for-business/syllabus.md', name: '01. Data Science & AI for Business' },
-            { file: '02-machine-learning/syllabus.md', name: '02. Machine Learning' },
-            { file: '03-generative-ai-engineering/syllabus.md', name: '03. Generative AI Engineering' },
-            { file: '04-deep-learning-nlp/syllabus.md', name: '04. Deep Learning & NLP' },
-            { file: '05-computer-vision/syllabus.md', name: '05. Computer Vision' },
-            { file: '06-ai-ethics-governance-explainability/syllabus.md', name: '06. AI Ethics, Governance & Explainability' },
-            { file: '07-cloud-ai-infrastructure/syllabus.md', name: '07. Cloud & AI Infrastructure' }
+            { file: '01-data-science-ai-for-business/syllabus.md', name: 'Data Science & AI for Business' },
+            { file: '02-machine-learning/syllabus.md', name: 'Machine Learning' },
+            { file: '03-generative-ai-engineering/syllabus.md', name: 'Generative AI Engineering' },
+            { file: '04-deep-learning-nlp/syllabus.md', name: 'Deep Learning & NLP' },
+            { file: '05-computer-vision/syllabus.md', name: 'Computer Vision' },
+            { file: '06-ai-ethics-governance-explainability/syllabus.md', name: 'AI Ethics, Governance & Explainability' },
+            { file: '07-cloud-ai-infrastructure/syllabus.md', name: 'Cloud & AI Infrastructure' }
         ]
     },
     'llm-handbook': {
@@ -20,56 +20,56 @@ const handbooks = {
         modules: [
             { file: 'README.md', name: 'Overview — Reading Order', meta: true },
             { file: '10-learning-plan.md', name: 'Learning Plan', meta: true },
-            { file: '01-foundations.md', name: '01. Foundations' },
-            { file: '02-pretraining.md', name: '02. Pre-training' },
-            { file: '03-post-training.md', name: '03. Post-training' },
-            { file: '04-inference.md', name: '04. Inference' },
-            { file: '05-architectures.md', name: '05. Architectures' },
-            { file: '06-reasoning-agents.md', name: '06. Reasoning & Agents' },
-            { file: '07-evaluation.md', name: '07. Evaluation' },
-            { file: '08-production.md', name: '08. Production' },
-            { file: '11-appendix-A-toolkit.md', name: 'A. Toolkit' },
-            { file: '12-appendix-B-opensource-and-local.md', name: 'B. Open Source & Local' },
-            { file: '13-appendix-C-agent-engineering.md', name: 'C. Agent Engineering' },
-            { file: '14-appendix-D-api-vs-selfhosted.md', name: 'D. API vs Self-hosted' },
-            { file: '15-appendix-E-hardware.md', name: 'E. Hardware' },
-            { file: '16-appendix-F-enterprise-cases.md', name: 'F. Enterprise Cases' },
-            { file: '17-appendix-G-security.md', name: 'G. Security' }
+            { file: '01-foundations.md', name: 'Foundations' },
+            { file: '02-pretraining.md', name: 'Pre-training' },
+            { file: '03-post-training.md', name: 'Post-training' },
+            { file: '04-inference.md', name: 'Inference' },
+            { file: '05-architectures.md', name: 'Architectures' },
+            { file: '06-reasoning-agents.md', name: 'Reasoning & Agents' },
+            { file: '07-evaluation.md', name: 'Evaluation' },
+            { file: '08-production.md', name: 'Production' },
+            { file: '11-appendix-A-toolkit.md', name: 'Toolkit', label: 'A' },
+            { file: '12-appendix-B-opensource-and-local.md', name: 'Open Source & Local', label: 'B' },
+            { file: '13-appendix-C-agent-engineering.md', name: 'Agent Engineering', label: 'C' },
+            { file: '14-appendix-D-api-vs-selfhosted.md', name: 'API vs Self-hosted', label: 'D' },
+            { file: '15-appendix-E-hardware.md', name: 'Hardware', label: 'E' },
+            { file: '16-appendix-F-enterprise-cases.md', name: 'Enterprise Cases', label: 'F' },
+            { file: '17-appendix-G-security.md', name: 'Security', label: 'G' }
         ]
     },
     'algorithms-handbook': {
         title: 'Algorithms Handbook',
         modules: [
             { file: 'README.md', name: 'Overview — Module Map', meta: true },
-            { file: '01-complexity-analysis.md', name: '01. Complexity Analysis' },
-            { file: '02-data-structures.md', name: '02. Data Structures' },
-            { file: '03-sorting-and-searching.md', name: '03. Sorting & Searching' },
-            { file: '04-recursion-and-backtracking.md', name: '04. Recursion & Backtracking' },
-            { file: '05-divide-and-conquer.md', name: '05. Divide and Conquer' },
-            { file: '06-dynamic-programming.md', name: '06. Dynamic Programming' },
-            { file: '07-greedy-algorithms.md', name: '07. Greedy Algorithms' },
-            { file: '08-graph-algorithms.md', name: '08. Graph Algorithms' },
-            { file: '09-string-algorithms.md', name: '09. String Algorithms' },
-            { file: '10-advanced-topics.md', name: '10. Advanced Topics' },
-            { file: '11-complexity-theory.md', name: '11. Complexity Theory' },
-            { file: '12-problem-solving-patterns.md', name: '12. Problem-Solving Patterns' },
-            { file: '13-essential-reading.md', name: '13. Essential Reading' },
-            { file: '14-network-flows.md', name: '14. Network Flows' }
+            { file: '01-complexity-analysis.md', name: 'Complexity Analysis' },
+            { file: '02-data-structures.md', name: 'Data Structures' },
+            { file: '03-sorting-and-searching.md', name: 'Sorting & Searching' },
+            { file: '04-recursion-and-backtracking.md', name: 'Recursion & Backtracking' },
+            { file: '05-divide-and-conquer.md', name: 'Divide and Conquer' },
+            { file: '06-dynamic-programming.md', name: 'Dynamic Programming' },
+            { file: '07-greedy-algorithms.md', name: 'Greedy Algorithms' },
+            { file: '08-graph-algorithms.md', name: 'Graph Algorithms' },
+            { file: '09-string-algorithms.md', name: 'String Algorithms' },
+            { file: '10-advanced-topics.md', name: 'Advanced Topics' },
+            { file: '11-complexity-theory.md', name: 'Complexity Theory' },
+            { file: '12-problem-solving-patterns.md', name: 'Problem-Solving Patterns' },
+            { file: '13-essential-reading.md', name: 'Essential Reading' },
+            { file: '14-network-flows.md', name: 'Network Flows' }
         ]
     },
     'computational-thinking-handbook': {
         title: 'Buku Panduan Computational Thinking',
         modules: [
             { file: 'README.md', name: 'Gambaran Umum', meta: true },
-            { file: '01-decomposition.md', name: '01. Dekomposisi' },
-            { file: '02-pattern-recognition.md', name: '02. Pengenalan Pola' },
-            { file: '03-abstraction.md', name: '03. Abstraksi' },
-            { file: '04-algorithm-design.md', name: '04. Desain Algoritma' },
-            { file: '05-logical-thinking.md', name: '05. Berpikir Logis' },
-            { file: '06-debugging.md', name: '06. Debugging' },
-            { file: '07-everyday-ct.md', name: '07. CT Sehari-hari' },
-            { file: '08-fun-activities.md', name: '08. Aktivitas Seru' },
-            { file: '09-for-teachers-and-parents.md', name: '09. Untuk Guru & Orang Tua' }
+            { file: '01-decomposition.md', name: 'Dekomposisi' },
+            { file: '02-pattern-recognition.md', name: 'Pengenalan Pola' },
+            { file: '03-abstraction.md', name: 'Abstraksi' },
+            { file: '04-algorithm-design.md', name: 'Desain Algoritma' },
+            { file: '05-logical-thinking.md', name: 'Berpikir Logis' },
+            { file: '06-debugging.md', name: 'Debugging' },
+            { file: '07-everyday-ct.md', name: 'CT Sehari-hari' },
+            { file: '08-fun-activities.md', name: 'Aktivitas Seru' },
+            { file: '09-for-teachers-and-parents.md', name: 'Untuk Guru & Orang Tua' }
         ]
     }
 };
@@ -134,7 +134,10 @@ function showModuleList(handbookKey) {
     const list = document.getElementById('module-list');
     let chapterIdx = 0;
     list.innerHTML = handbook.modules.map((mod) => {
-        const num = mod.meta ? '~' : String(++chapterIdx).padStart(2, '0');
+        let num;
+        if (mod.meta) num = '~';
+        else if (mod.label) num = mod.label;
+        else num = String(++chapterIdx).padStart(2, '0');
         return `
         <div class="module-item" data-handbook="${handbookKey}" data-file="${mod.file}">
             <div class="module-number">${num}</div>
