@@ -5,7 +5,7 @@ const handbooks = {
     'ai-engineering-syllabus': {
         title: 'AI Engineering Syllabus',
         modules: [
-            { file: 'README.md', name: 'Overview — Program Structure' },
+            { file: 'README.md', name: 'Overview — Program Structure', meta: true },
             { file: '01-data-science-ai-for-business/syllabus.md', name: '01. Data Science & AI for Business' },
             { file: '02-machine-learning/syllabus.md', name: '02. Machine Learning' },
             { file: '03-generative-ai-engineering/syllabus.md', name: '03. Generative AI Engineering' },
@@ -18,8 +18,8 @@ const handbooks = {
     'llm-handbook': {
         title: 'LLM Handbook',
         modules: [
-            { file: 'README.md', name: 'Overview — Reading Order' },
-            { file: '00-overview.md', name: '00. Overview' },
+            { file: 'README.md', name: 'Overview — Reading Order', meta: true },
+            { file: '10-learning-plan.md', name: 'Learning Plan', meta: true },
             { file: '01-foundations.md', name: '01. Foundations' },
             { file: '02-pretraining.md', name: '02. Pre-training' },
             { file: '03-post-training.md', name: '03. Post-training' },
@@ -28,8 +28,6 @@ const handbooks = {
             { file: '06-reasoning-agents.md', name: '06. Reasoning & Agents' },
             { file: '07-evaluation.md', name: '07. Evaluation' },
             { file: '08-production.md', name: '08. Production' },
-            { file: '09-essential-reading.md', name: '09. Essential Reading' },
-            { file: '10-learning-plan.md', name: '10. Learning Plan' },
             { file: '11-appendix-A-toolkit.md', name: 'A. Toolkit' },
             { file: '12-appendix-B-opensource-and-local.md', name: 'B. Open Source & Local' },
             { file: '13-appendix-C-agent-engineering.md', name: 'C. Agent Engineering' },
@@ -42,8 +40,7 @@ const handbooks = {
     'algorithms-handbook': {
         title: 'Algorithms Handbook',
         modules: [
-            { file: 'README.md', name: 'Overview — Module Map' },
-            { file: '00-overview.md', name: '00. Overview' },
+            { file: 'README.md', name: 'Overview — Module Map', meta: true },
             { file: '01-complexity-analysis.md', name: '01. Complexity Analysis' },
             { file: '02-data-structures.md', name: '02. Data Structures' },
             { file: '03-sorting-and-searching.md', name: '03. Sorting & Searching' },
@@ -63,8 +60,7 @@ const handbooks = {
     'computational-thinking-handbook': {
         title: 'Buku Panduan Computational Thinking',
         modules: [
-            { file: 'README.md', name: 'Gambaran Umum' },
-            { file: '00-overview.md', name: '00. Apa Itu Computational Thinking?' },
+            { file: 'README.md', name: 'Gambaran Umum', meta: true },
             { file: '01-decomposition.md', name: '01. Dekomposisi' },
             { file: '02-pattern-recognition.md', name: '02. Pengenalan Pola' },
             { file: '03-abstraction.md', name: '03. Abstraksi' },
@@ -136,12 +132,16 @@ function showModuleList(handbookKey) {
     document.getElementById('viewer-title').textContent = handbook.title;
 
     const list = document.getElementById('module-list');
-    list.innerHTML = handbook.modules.map((mod, i) => `
+    let chapterIdx = 0;
+    list.innerHTML = handbook.modules.map((mod) => {
+        const num = mod.meta ? '~' : String(++chapterIdx).padStart(2, '0');
+        return `
         <div class="module-item" data-handbook="${handbookKey}" data-file="${mod.file}">
-            <div class="module-number">${i === 0 ? '~' : String(i).padStart(2, '0')}</div>
+            <div class="module-number">${num}</div>
             <div class="module-name">${mod.name}</div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 
     list.querySelectorAll('.module-item').forEach(item => {
         item.addEventListener('click', () => {
