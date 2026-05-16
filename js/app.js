@@ -118,6 +118,7 @@ function showHome() {
     document.getElementById('module-viewer').classList.add('hidden');
     document.getElementById('content-viewer').classList.add('hidden');
     currentHandbook = null;
+    updateFloatingActions();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -149,6 +150,7 @@ function showModuleList(handbookKey) {
     });
 
     viewer.classList.remove('hidden');
+    updateFloatingActions();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -162,6 +164,7 @@ async function loadContent(handbookKey, file) {
     btnGithub.href = `${GITHUB_REPO}/${handbookKey}/${file}`;
     contentBody.innerHTML = '<div class="loading-indicator"><div class="spinner"></div><p>Loading...</p></div>';
     contentViewer.classList.remove('hidden');
+    updateFloatingActions();
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -213,13 +216,40 @@ document.querySelectorAll('.handbook-card').forEach(card => {
 
 document.getElementById('btn-back').addEventListener('click', showHome);
 
-document.getElementById('btn-back-content').addEventListener('click', () => {
-    if (currentHandbook) {
+function handleBack() {
+    const contentVisible = !document.getElementById('content-viewer').classList.contains('hidden');
+    if (contentVisible && currentHandbook) {
         showModuleList(currentHandbook);
     } else {
         showHome();
     }
+}
+
+document.getElementById('btn-back-content').addEventListener('click', handleBack);
+document.getElementById('btn-back-floating').addEventListener('click', handleBack);
+document.getElementById('btn-top').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// ========================================
+// Floating Action Buttons visibility
+// ========================================
+function updateFloatingActions() {
+    const fabs = document.getElementById('floating-actions');
+    const inViewer =
+        !document.getElementById('module-viewer').classList.contains('hidden') ||
+        !document.getElementById('content-viewer').classList.contains('hidden');
+    fabs.classList.toggle('hidden', !inViewer);
+    updateTopButton();
+}
+
+function updateTopButton() {
+    const btnTop = document.getElementById('btn-top');
+    const shouldShow = window.scrollY > 200;
+    btnTop.classList.toggle('is-hidden', !shouldShow);
+}
+
+window.addEventListener('scroll', updateTopButton, { passive: true });
 
 // Handle browser back button
 window.addEventListener('popstate', () => {
