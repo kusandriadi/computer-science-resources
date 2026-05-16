@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cs-resources-v1';
+const CACHE_NAME = 'cs-resources-v2';
 const STATIC_ASSETS = [
     '/cs/',
     '/cs/index.html',

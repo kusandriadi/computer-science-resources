@@ -201,7 +201,29 @@ async function loadContent(handbookKey, file) {
                 breaks: true,
                 gfm: true
             });
-            contentBody.innerHTML = marked.parse(markdown);
+
+            // Protect math from marked: only the constructs marked would
+            // otherwise mangle. Display math always stashed; inline `$...$`
+            // only when its body contains underscore/asterisk/backslash
+            // (the markdown-meaningful characters). This sidesteps false
+            // positives like "$0.20/kWh ... $15" while keeping `$p_z$` safe.
+            const mathBlocks = [];
+            const stash = (match) => {
+                const token = `@@MATH${mathBlocks.length}@@`;
+                mathBlocks.push(match);
+                return token;
+            };
+            let protectedMd = markdown
+                .replace(/\$\$[\s\S]+?\$\$/g, stash)
+                .replace(/\\\[[\s\S]+?\\\]/g, stash)
+                .replace(/\\\([\s\S]+?\\\)/g, stash)
+                .replace(/\$(?!\s)([^\$\n]*?[^\s\$])\$(?!\d)/g, (m, body) => {
+                    return /[_*\\]/.test(body) ? stash(m) : m;
+                });
+
+            let html = marked.parse(protectedMd);
+            html = html.replace(/@@MATH(\d+)@@/g, (m, idx) => mathBlocks[+idx]);
+            contentBody.innerHTML = html;
 
             // Render LaTeX math with KaTeX
             if (typeof renderMathInElement !== 'undefined') {

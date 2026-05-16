@@ -35,7 +35,7 @@ The economics are dominated by VRAM. CUDA core count matters for speed; VRAM det
 
 **Cloud options (rough Q1 2026 pricing, varies):**
 - Lambda Labs: A100 40GB at $1.10/hr. Best price for serious training.
-- Vast.ai: RTX 4090s often available at $0.40–$0.80/hr. Variable reliability.
+- Vast.ai: RTX 4090s often available at $0.40–0.80/hr. Variable reliability.
 - RunPod: similar to Vast.
 - Colab Pro: T4/A100 spot access. Cheap but uncontrolled session lengths.
 
@@ -115,7 +115,7 @@ A 1 TB NVMe is the right baseline. 2 TB if you collect datasets.
 Practical things people forget:
 
 - A 4090 draws 450 W under full load. Your PSU needs 850 W minimum, 1000 W to be safe.
-- 1 week of training pulls ~75 kWh. At $0.20/kWh, that's $15 of electricity per run. Worth keeping in mind for "let me restart training with a slightly different LR" decisions.
+- 1 week of training pulls ~75 kWh. At 20 cents per kWh, that's about 15 USD of electricity per run. Worth keeping in mind for "let me restart training with a slightly different LR" decisions.
 - GPUs idle at 25–35 °C; under GAN load, expect 70–80 °C and high fan noise. Good airflow matters.
 
 ## Distributed training
