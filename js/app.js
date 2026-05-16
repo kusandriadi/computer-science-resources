@@ -71,6 +71,25 @@ const handbooks = {
             { file: '08-fun-activities.md', name: 'Aktivitas Seru' },
             { file: '09-for-teachers-and-parents.md', name: 'Untuk Guru & Orang Tua' }
         ]
+    },
+    'gan-handbook': {
+        title: 'GAN Handbook',
+        modules: [
+            { file: 'README.md', name: 'Overview — Reading Order', meta: true },
+            { file: '00-overview.md', name: 'Why GANs Exist', meta: true },
+            { file: '10-learning-plan.md', name: 'Learning Plan', meta: true },
+            { file: '01-foundations.md', name: 'Foundations' },
+            { file: '02-losses.md', name: 'Losses' },
+            { file: '03-architectures.md', name: 'Architectures' },
+            { file: '04-conditional.md', name: 'Conditional & Image-to-Image' },
+            { file: '05-evaluation.md', name: 'Evaluation' },
+            { file: '06-applications.md', name: 'Applications (Real-ESRGAN)' },
+            { file: '07-vs-diffusion.md', name: 'GAN vs Diffusion' },
+            { file: '08-end-to-end.md', name: 'End-to-End: Runnable GAN' },
+            { file: '09-essential-reading.md', name: 'Essential Reading' },
+            { file: '11-appendix-A-toolkit.md', name: 'Toolkit', label: 'A' },
+            { file: '12-appendix-B-hardware.md', name: 'Hardware', label: 'B' }
+        ]
     }
 };
 
