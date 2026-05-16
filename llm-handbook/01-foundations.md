@@ -6,7 +6,7 @@ Everything else in this curriculum sits on top of this module. If you only have 
 
 By the end of this module you can:
 
-- Explain why we use subword tokenization and tokenize text with `tiktoken`
+- Explain why we use subword tokenization and tokenize text with `tiktoken` / Hugging Face `AutoTokenizer`
 - Compute attention by hand on a 3-token example
 - Trace a full forward pass through a decoder block
 - Implement a minimal GPT (≤300 lines) that trains on character-level data
@@ -27,13 +27,29 @@ Practical notes:
 
 - **Token economy matters**. English prose is ~0.75 words/token. Code, math, and non-Latin scripts are denser (more tokens per byte). Tokenization choices materially affect compute cost and effective context length.
 - **Numbers** are a known pain point. Older tokenizers split numbers inconsistently ("1234" might be `1234` or `1`, `234`); modern tokenizers (LLaMA-3, GPT-4o) often digit-by-digit or grouped consistently to help arithmetic.
-- **`tiktoken`** is the fast reference implementation. `cl100k_base` is GPT-3.5/4; `o200k_base` is GPT-4o-era.
+
+### Tokenizer libraries
+
+You don't implement BPE/Unigram from scratch — you call a library. The main ones:
+
+- **🤗 `tokenizers` / `transformers.AutoTokenizer`** (Hugging Face) — **the de facto standard.** `AutoTokenizer.from_pretrained("...")` loads the right tokenizer for any model on the Hub (LLaMA, Mistral, Qwen, Gemma, BERT, DeepSeek, ...). Rust core, supports BPE, WordPiece, and Unigram/SentencePiece transparently. This is what you'll reach for 90% of the time.
+- **`tiktoken`** (OpenAI) — fast Rust BPE, but ships **only OpenAI tokenizers**. `cl100k_base` is GPT-3.5/4; `o200k_base` is GPT-4o-era. Use it when you specifically need to count or encode for an OpenAI model (e.g. cost estimation before an API call).
+- **`sentencepiece`** (Google) — reference C++ implementation of Unigram/BPE on raw bytes. Used directly by LLaMA-1/2, T5, Gemma, and mT5 (Hugging Face wraps it transparently). Reach for it when you want to **train a new tokenizer from scratch** on your own corpus.
+- Historical / niche: **`subword-nmt`** (original 2016 BPE paper code), **`fastBPE`** (FAIR), **`YouTokenToMe`** (VK). Safe to ignore unless reproducing an old paper.
+
+Rule of thumb: open model → `AutoTokenizer`. OpenAI API → `tiktoken`. Training your own vocab → `sentencepiece`.
 
 ```python
+# OpenAI tokenizer
 import tiktoken
 enc = tiktoken.get_encoding("cl100k_base")
 enc.encode("hello world")          # [15339, 1917]
 enc.encode(" hello world")         # different — leading space changes the first token
+
+# Any HF model
+from transformers import AutoTokenizer
+tok = AutoTokenizer.from_pretrained("meta-llama/Llama-3-8B")
+tok.encode("hello world")
 ```
 
 ### Try it: Tokenization in practice
