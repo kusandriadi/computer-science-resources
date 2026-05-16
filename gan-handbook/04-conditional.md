@@ -63,7 +63,14 @@ Roughly:
 
 $$D(x, y) = \phi(x)^\top y + \psi(x)$$
 
-where $\phi$ is the conv backbone, $y$ is a learnable class embedding, and $\psi$ is an unconditional real/fake head. The dot product $\phi(x)^\top y$ scores the alignment between the image and the class.
+**Notation.**
+
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $\phi(x)$ | "phi of x" | The convolutional backbone's feature vector for image $x$. ($\phi$ is Greek "phi" — "fai" or "fee".) |
+| $y$ | "y" | A learnable class embedding — one vector per class. |
+| $\phi(x)^\top y$ | "phi of x transpose y" | The dot product between image features and class embedding. Measures how well the image aligns with that class. The $\top$ means "transpose" (turn a column vector on its side). |
+| $\psi(x)$ | "psi of x" | A separate unconditional real/fake head. ($\psi$ is Greek "psi" — "sai".) |
 
 ## 4.2 Pix2Pix — paired image translation (2016)
 
@@ -106,7 +113,14 @@ Pix2Pix uses both the adversarial loss and a plain L1 loss between $G(A)$ and th
 
 $$L_{\text{Pix2Pix}} = L_{\text{GAN}}(G, D) + \lambda \, \|B - G(A)\|_1$$
 
-**Notation.** $\|\cdot\|_1$ is the L1 norm — sum of absolute pixel differences. $\lambda$ is a weight, usually 100.
+**Notation.**
+
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $L_{\text{Pix2Pix}}$ | "L Pix2Pix" | The total Pix2Pix loss we minimize. |
+| $L_{\text{GAN}}(G, D)$ | "L GAN of G and D" | The standard adversarial loss from Modules 1 and 2. |
+| $\lambda$ | "lambda" | A weight balancing the GAN loss against the reconstruction loss. Usually 100. |
+| $\|B - G(A)\|_1$ | "L1 norm of B minus G of A" | L1 distance between the target and the generated image. L1 means "sum of absolute differences pixel by pixel." |
 
 The L1 loss handles low-frequency structure ("the image should match overall"). The GAN loss handles high-frequency detail ("the image should be sharp and realistic"). Together they avoid both blurriness (pure L1) and unfaithful outputs (pure GAN).
 
@@ -130,7 +144,17 @@ The training objective combines:
 
 $$L_{\text{cyc}} = \mathbb{E}_a[\|F(G(a)) - a\|_1] + \mathbb{E}_b[\|G(F(b)) - b\|_1]$$
 
-**Notation.** $a, b$ are samples from the two unpaired collections (horse photos and zebra photos). $F(G(a))$ is "go to zebra, then back to horse." $\|\cdot\|_1$ is L1.
+**Notation.**
+
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $L_{\text{cyc}}$ | "L cyc" or "cycle loss" | The cycle-consistency loss. |
+| $a$ | "a" | A sample from domain A (e.g., a horse photo). |
+| $b$ | "b" | A sample from domain B (e.g., a zebra photo). |
+| $G(a)$ | "G of a" | $G$ translates a horse to a zebra. |
+| $F(G(a))$ | "F of G of a" | Go horse → zebra → horse. Should recover the original. |
+| $\|\cdot\|_1$ | "L1 norm" | Sum of absolute pixel differences. |
+| $\mathbb{E}_a[\,\cdot\,]$ | "expected value of dot, over a" | Average over samples from domain A. |
 
 This consistency constraint is what prevents G from "cheating" by mapping every horse to the same zebra (mode collapse), since then $F$ would have no way to recover the original horse.
 
@@ -171,7 +195,18 @@ Park et al. (NVIDIA) noticed that vanilla BatchNorm in G erases the spatial info
 
 $$\text{SPADE}(x, m) = \gamma(m) \cdot \frac{x - \mu(x)}{\sigma(x)} + \beta(m)$$
 
-**Notation.** Same as AdaIN, but $\gamma$ and $\beta$ are now *spatial maps* derived from the segmentation mask $m$. Each pixel gets its own scale and shift, conditioned on what semantic class it belongs to at that location.
+**Notation.**
+
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $x$ | "x" | The feature map at some layer. |
+| $m$ | "m" | The segmentation mask (input condition). |
+| $\mu(x)$ | "mu of x" | Mean of the feature map. ($\mu$ is Greek "mu" — rhymes with "few".) |
+| $\sigma(x)$ | "sigma of x" | Standard deviation of the feature map. ($\sigma$ is Greek "sigma".) |
+| $\gamma(m)$ | "gamma of m" | A scale map predicted from $m$ — one number per pixel. ($\gamma$ is Greek "gamma".) |
+| $\beta(m)$ | "beta of m" | A shift map predicted from $m$ — one number per pixel. ($\beta$ is Greek "beta".) |
+
+Same idea as AdaIN, but $\gamma$ and $\beta$ are now *spatial maps* derived from the segmentation mask $m$. Each pixel gets its own scale and shift, conditioned on what semantic class it belongs to at that location.
 
 This was the foundation of **GauGAN** — NVIDIA's interactive tool where you paint a rough segmentation map ("sky here, water here, mountain here") and get a photorealistic landscape. The tool actually shipped to artists.
 

@@ -84,9 +84,13 @@ $$W(p_{\text{data}}, p_G) = \sup_{\|f\|_L \le 1} \; \mathbb{E}_{x \sim p_{\text{
 
 **Notation.**
 
-- $\sup$ = "supremum" — basically *max* over functions $f$.
-- $f$ = any function from images to real numbers. WGAN trains a neural network to play this role. We rename it from $D$ to **$f$** or **the critic**, because it no longer outputs probabilities.
-- $\|f\|_L \le 1$ = "$f$ is 1-Lipschitz." This is a smoothness condition: $f$ cannot change too fast as its input changes. Formally, $|f(x_1) - f(x_2)| \le \|x_1 - x_2\|$.
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $W(p_{\text{data}}, p_G)$ | "W of p-data and p-G" | The Wasserstein-1 distance between the real and fake distributions. |
+| $\sup$ | "sup" or "supremum" | Like a max, but always well-defined. Take the largest value over all choices. |
+| $f$ | "f" | Any function from images to real numbers. WGAN trains a neural network to play this role. We rename it from $D$ to $f$ (or "the critic") because it no longer outputs a probability. |
+| $\|f\|_L \le 1$ | "the Lipschitz norm of f is at most one" | $f$ is "1-Lipschitz" — a smoothness condition. $f$ cannot change too fast as its input changes. Formally, $\|f(x_1) - f(x_2)\| \le \|x_1 - x_2\|$. |
+| $\le$ | "less than or equal to" | Pretty much what it looks like. |
 
 **Why the critic is "1-Lipschitz."** Without this constraint, $f$ could just send real points to $+\infty$ and fakes to $-\infty$, and the gap would be infinite. The Lipschitz constraint forces $f$ to be smooth, which makes the optimization well-posed.
 
@@ -135,10 +139,14 @@ $$L_f^{\text{GP}} = \mathbb{E}_z[f(G(z))] - \mathbb{E}_x[f(x)] + \lambda \, \mat
 
 **Notation.**
 
-- $\hat{x}$ = a point sampled on a random line between a real and a fake. Specifically $\hat{x} = \epsilon x + (1 - \epsilon) G(z)$ for $\epsilon \sim U[0, 1]$.
-- $\nabla_{\hat{x}} f(\hat{x})$ = the gradient of the critic's output with respect to its input.
-- $\|\cdot\|_2$ = Euclidean norm.
-- $\lambda$ = penalty weight, usually 10.
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $\hat{x}$ | "x hat" | A point sampled on a random line between a real and a fake. Specifically $\hat{x} = \epsilon x + (1 - \epsilon) G(z)$ for $\epsilon \sim U[0, 1]$. |
+| $\epsilon$ | "epsilon" | A random number between 0 and 1. We use it to mix the real image and the fake image. |
+| $U[0, 1]$ | "U zero one" | The uniform distribution between 0 and 1 — every value in that range is equally likely. |
+| $\nabla_{\hat{x}} f(\hat{x})$ | "nabla x-hat of f of x-hat" | The gradient of the critic's output with respect to its input. "Nabla" is the upside-down triangle that means "gradient." |
+| $\|\cdot\|_2$ | "the L2 norm" or "the Euclidean norm" | The length of a vector. For a vector $(a, b)$ it is $\sqrt{a^2 + b^2}$. |
+| $\lambda$ | "lambda" | Penalty weight. Usually 10. It controls how strongly we enforce the constraint. |
 
 **Why points on a line?** Theory says the constraint matters along the "transport path" between real and fake distributions. Sampling on lines between real and fake samples is a practical approximation.
 
@@ -164,6 +172,8 @@ loss_f = f(fake).mean() - f(real).mean() + 10 * gp
 Another way to enforce the Lipschitz constraint, even cheaper. The Lipschitz constant of a layer with weight matrix $W$ and activation that does not increase Lipschitz constant (like LeakyReLU) is bounded by the largest singular value of $W$ (also called its **spectral norm**, written $\sigma(W)$).
 
 **Idea.** Divide every weight matrix by its spectral norm, so that $W / \sigma(W)$ has spectral norm 1. Layer-by-layer, the Lipschitz constant of the whole network is then at most 1.
+
+**Notation refresher.** $\sigma$ (read "sigma") here means "the largest singular value of," not standard deviation. Same Greek letter, different math object — context decides.
 
 In practice you estimate $\sigma(W)$ with one step of power iteration per training step — that is *fast*, just a couple of matrix-vector multiplies.
 
@@ -213,9 +223,12 @@ where $\tilde{D}(a, b) = \sigma(D(a) - \mathbb{E}[D(b)])$.
 
 **Notation.**
 
-- $x_r$ = real sample. $x_f$ = fake sample.
-- $\sigma$ = sigmoid.
-- $\mathbb{E}[D(b)]$ = average D output over a batch of $b$'s. The "comparison reference."
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $x_r$ | "x sub r" or "x-r" | Real sample. |
+| $x_f$ | "x sub f" or "x-f" | Fake sample. |
+| $\sigma$ | "sigma" | Here, the **sigmoid function** $\sigma(u) = 1 / (1 + e^{-u})$ — squashes any number into $(0, 1)$. (Same Greek letter we used for spectral norm earlier. Different meaning, context decides.) |
+| $\mathbb{E}[D(b)]$ | "expected value of D of b" | Average D output over a batch of $b$'s. The "comparison reference." |
 
 **Why it helps.** During training, G should know not just "you need to look real" but "you need to look *more* real than the current fakes." This pushes G to consistently improve relative to its own current quality, and prevents D from getting stuck at $D \approx 1$ for everything.
 

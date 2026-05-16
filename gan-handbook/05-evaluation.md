@@ -38,10 +38,15 @@ $$\text{IS}(G) = \exp\Big(\mathbb{E}_{x \sim G}\big[\text{KL}\big(p(y|x) \, \|\,
 
 **Notation.**
 
-- $p(y|x)$ = classifier's class distribution for image $x$.
-- $p(y)$ = marginal class distribution (average $p(y|x)$ over all samples).
-- $\text{KL}(P \| Q) = \sum_y P(y) \log \frac{P(y)}{Q(y)}$ — the Kullback-Leibler divergence, a measure of how different two distributions are.
-- $\exp$ at the front is just there to make IS positive and easier to interpret.
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $\text{IS}(G)$ | "I-S of G" | The Inception Score of generator $G$. Higher is better. |
+| $p(y \mid x)$ | "p of y given x" | The classifier's probability for class $y$ given image $x$. The vertical bar means "given." |
+| $p(y)$ | "p of y" | The marginal class distribution — the average of $p(y \mid x)$ over all samples. |
+| $\text{KL}(P \| Q)$ | "K-L divergence of P and Q" | Kullback-Leibler divergence. A measure of how different two probability distributions are. Defined as $\sum_y P(y) \log \frac{P(y)}{Q(y)}$. Zero means identical; bigger means more different. |
+| $\sum_y$ | "sum over y" | Add up over every possible class $y$. |
+| $\exp$ | "exp" | The exponential function $e^x$. Used here only to make the IS positive and easier to compare. |
+| $\mathbb{E}_{x \sim G}[\,\cdot\,]$ | "expected value of dot, when x is drawn from G" | Average over images sampled from the generator. |
 
 **Interpretation.** A high IS means classifiers are confident *and* the marginal class distribution is broad. The original 50,000-image ImageNet test set scores about 240 IS. CIFAR-10 generators today score 8–10.
 
@@ -62,11 +67,15 @@ $$\text{FID} = \|\mu_r - \mu_g\|_2^2 + \text{Tr}\big(\Sigma_r + \Sigma_g - 2(\Si
 
 **Notation.**
 
-- $\mu_r, \Sigma_r$ — mean and covariance of real-image features.
-- $\mu_g, \Sigma_g$ — same for generated images.
-- $\|\mu_r - \mu_g\|_2^2$ — squared Euclidean distance between mean vectors.
-- $\text{Tr}(\cdot)$ — trace of a matrix (sum of diagonal entries).
-- $(\Sigma_r \Sigma_g)^{1/2}$ — the matrix square root.
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $\mu_r$ | "mu sub r" | Mean of real-image features. ($\mu$ is the Greek letter "mu" — rhymes with "few" — used for averages.) |
+| $\mu_g$ | "mu sub g" | Mean of generated-image features. |
+| $\Sigma_r$ | "capital sigma sub r" | Covariance matrix of real-image features. (Capital $\Sigma$ here means a matrix, not a sum.) |
+| $\Sigma_g$ | "capital sigma sub g" | Covariance matrix of generated-image features. |
+| $\|\mu_r - \mu_g\|_2^2$ | "L2 norm squared of mu-r minus mu-g" | Squared Euclidean distance between the two mean vectors. |
+| $\text{Tr}(M)$ | "trace of M" | The sum of a matrix's diagonal entries. |
+| $(\Sigma_r \Sigma_g)^{1/2}$ | "the matrix square root of sigma-r sigma-g" | A matrix that, multiplied by itself, gives $\Sigma_r \Sigma_g$. Computed numerically — most libraries handle this. |
 
 **Plain-English reading.** FID = "how different are the average feature and the spread of features between real and generated images?" Lower is better.
 
@@ -118,11 +127,14 @@ $$\text{PPL} = \mathbb{E}_{w, t}\Big[\frac{1}{\epsilon^2}\, d\big(G(w + t \, n),
 
 **Notation.**
 
-- $w$ = a latent code.
-- $n$ = a random unit-direction in latent space.
-- $t \in [0, 1]$ = a position along the path.
-- $\epsilon$ = a small step size.
-- $d(\cdot, \cdot)$ = LPIPS perceptual distance between two images.
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $w$ | "w" | A latent code in StyleGAN's $W$ space — the high-level "style" vector. |
+| $n$ | "n" | A random unit-direction in latent space. Think "which way are we walking?" |
+| $t$ | "t" | A position along the walk, between 0 and 1. |
+| $t \in [0, 1]$ | "t is in zero one" | $t$ ranges from 0 to 1. |
+| $\epsilon$ | "epsilon" | A small step size — how big each footstep along the walk is. |
+| $d(\cdot, \cdot)$ | "d of dot, dot" | LPIPS perceptual distance between two images. Each $\cdot$ is a placeholder for one image. |
 
 **Plain English.** Pick a random direction in latent space. Take a tiny step. How much does the image change? PPL averages this over many directions. Lower PPL = smoother latent space = "moving in latent space causes smooth, predictable image changes."
 

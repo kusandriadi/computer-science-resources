@@ -81,15 +81,78 @@ $$\min_G \max_D \; \mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)] + \mathbb{E}_{
 
 You do not need to read this right now. We will unpack it slowly in Module 1. But here is how to look at it without panicking:
 
-- $\min_G$ means "the Generator wants to make this number small."
-- $\max_D$ means "the Discriminator wants to make this number large."
-- $\mathbb{E}_{x \sim p_{\text{data}}}[\,\cdot\,]$ means "the average value of $\cdot$ when $x$ is drawn from the real data." Read $\mathbb{E}$ as "expected value" or just "average."
-- $\sim$ means "drawn from" or "sampled from." So $x \sim p_{\text{data}}$ = "x is a real data sample."
+- $\min_G$ — read "min G" — means "the Generator wants to make this number small."
+- $\max_D$ — read "max D" — means "the Discriminator wants to make this number large."
+- $\mathbb{E}_{x \sim p_{\text{data}}}[\,\cdot\,]$ — read "expected value of dot, when x is drawn from p-data" — means "the average value of $\cdot$ when $x$ is drawn from the real data." The fancy $\mathbb{E}$ is read as just "E" or "expected value."
+- $\sim$ — read "tilde" — means "drawn from" or "sampled from." So $x \sim p_{\text{data}}$ = "x is a real data sample."
 - $D(x)$ is what the Discriminator outputs for input $x$ — a number between 0 and 1 representing "how likely $x$ is to be real."
 - $G(z)$ is a fake image the Generator produces from random noise $z$.
-- $\log$ is the natural logarithm.
+- $\log$ is the natural logarithm (read "log").
 
 That is it. We go slowly.
+
+## How to read Greek letters and math symbols
+
+Many ML papers use Greek letters. They look intimidating only because most people never said them out loud. Here is a quick pronunciation guide for what you will meet in this handbook. Bookmark this section — it is easier to follow the math when you know what each symbol *sounds* like in your head.
+
+### Greek letters
+
+| Symbol | Read it as | What it usually means here |
+|---|---|---|
+| $\alpha$ | "alpha" | A weighting factor or step size |
+| $\beta$ | "beta" | Momentum parameter in Adam; bias in normalization |
+| $\gamma$ | "gamma" | A scale factor in normalization layers |
+| $\delta$ | "delta" | A small change or difference |
+| $\epsilon$ | "epsilon" (EP-si-lon) | A tiny positive number, often $10^{-8}$ |
+| $\eta$ | "eta" (AY-ta) | Learning rate |
+| $\theta$ | "theta" (THAY-ta) | Model parameters (the weights of a network) |
+| $\lambda$ | "lambda" (LAM-da) | A weight balancing two terms in a loss |
+| $\mu$ | "mu" (rhymes with "few") | Mean (the average value) |
+| $\pi$ | "pi" (like "pie") | A probability or policy |
+| $\rho$ | "rho" (like "row") | Correlation or density |
+| $\sigma$ | "sigma" (SIG-ma) | Standard deviation; or the sigmoid function |
+| $\Sigma$ | "capital sigma" | A covariance matrix |
+| $\tau$ | "tau" (rhymes with "now") | Temperature or time |
+| $\phi$ | "phi" (English: "fai" or "fee") | A function — often the discriminator's features |
+| $\psi$ | "psi" (English: "sai") | Another function |
+| $\chi$ | "chi" (English: "kai") | Used in $\chi^2$ (chi-squared) distances |
+| $\omega$ | "omega" | Weights or angular frequency |
+| $\nabla$ | "nabla" or "del" | Gradient (a vector of partial derivatives) |
+| $\partial$ | "partial" | A partial derivative |
+
+### Common math operators
+
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $\sum$ | "the sum" | Add everything in the sequence |
+| $\int$ | "the integral" | Continuous version of a sum |
+| $\mathbb{E}$ | "expected value" or just "E" | Average over a probability distribution |
+| $\sim$ | "tilde" or "distributed as" | The random variable on the left is drawn from the distribution on the right |
+| $\approx$ | "approximately equals" | Close to, but not exactly |
+| $\propto$ | "is proportional to" | Equal up to a constant factor |
+| $\hat{x}$ | "x hat" | An estimate or modified version of $x$ |
+| $\bar{x}$ | "x bar" | An average value |
+| $\tilde{x}$ | "x tilde" | A modified or noisy version of $x$ |
+| $\|x\|$ or $\|x\|_2$ | "norm of x" / "L2 norm of x" | The length (magnitude) of vector $x$ |
+| $\|x\|_1$ | "L1 norm of x" | Sum of absolute values of $x$'s entries |
+| $\cdot$ | "dot" | Either multiplication or a placeholder, depending on context |
+| $\in$ | "is in" or "element of" | Set membership: $x \in S$ means "$x$ is in $S$" |
+| $\to$ | "goes to" | Direction of a mapping or a limit |
+| $\mathcal{N}(0, I)$ | "normal zero, identity" | A standard normal (Gaussian) distribution centered at 0 |
+| $\log$ | "log" | Natural logarithm (base $e$). In ML, "log" almost always means natural log. |
+| $\exp$ | "exp" | The exponential function $e^x$ |
+| $\sup$ | "sup" or "supremum" | The largest possible value (a "max" that always exists) |
+| $\arg\min, \arg\max$ | "arg min, arg max" | The *input* that produces the minimum / maximum |
+
+### Examples to read aloud
+
+- $\mu = 0$ → "mu equals zero" (the average is zero).
+- $\sigma^2$ → "sigma squared" (variance).
+- $\theta^* = \arg\min_\theta \mathcal{L}(\theta)$ → "theta star equals arg min over theta of the loss function of theta" (the best parameters are the ones that minimize the loss).
+- $\nabla_\theta \mathcal{L}$ → "nabla theta of L" or "the gradient of L with respect to theta."
+- $x \sim \mathcal{N}(0, 1)$ → "x is distributed as a normal with mean zero and variance one."
+
+Whenever you hit a symbol you do not know, say it in your head — that simple habit makes equations much easier to follow.
 
 ## Prerequisites checklist
 

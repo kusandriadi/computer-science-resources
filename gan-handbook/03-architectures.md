@@ -78,6 +78,20 @@ then
 
 $$\text{attention} = \text{softmax}\!\left(\frac{Q K^\top}{\sqrt{d_k}}\right) V$$
 
+**Notation.**
+
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $x$ | "x" | The input feature map. |
+| $W_Q, W_K, W_V$ | "W sub Q, W sub K, W sub V" | Learnable weight matrices that project $x$ into three roles. |
+| $Q$ | "Q" or "query" | Query — what each pixel is looking for. |
+| $K$ | "K" or "key" | Key — what each pixel contains. |
+| $V$ | "V" or "value" | Value — what each pixel contributes if it gets attended to. |
+| $K^\top$ | "K transpose" | The key matrix flipped on its side, so we can multiply with $Q$. |
+| $Q K^\top$ | "Q times K transpose" | A score matrix: how well every query matches every key. |
+| $\sqrt{d_k}$ | "square root of d sub k" | A normalizing factor. $d_k$ is the size of each key vector. |
+| $\text{softmax}$ | "softmax" | Turns a row of raw scores into probabilities that sum to 1. |
+
 Don't worry if you have not seen attention before — Module 1 of the LLM Handbook walks through it. The high-level point is: attention lets the model write "the pixel at position A depends on the pixel at position B" without going through a long chain of conv layers.
 
 SAGAN added one self-attention layer at 32×32 in both G and D and saw a clear improvement in image quality, especially for objects with structure (animals, vehicles). It also introduced **spectral normalization in G**, not just in D — which became a quiet standard.
@@ -111,7 +125,18 @@ Architecture:
 
 $$\text{AdaIN}(x, w) = \gamma(w) \cdot \frac{x - \mu(x)}{\sigma(x)} + \beta(w)$$
 
-**Notation.** $\mu(x), \sigma(x)$ are the mean and standard deviation of feature map $x$. $\gamma(w), \beta(w)$ are scale and bias values predicted from the style vector. The formula normalizes $x$ to have mean 0 / std 1, then rescales it using $w$.
+**Notation.**
+
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $x$ | "x" | The feature map at some layer. |
+| $w$ | "w" | The style vector. |
+| $\mu(x)$ | "mu of x" | Mean (average) of the feature map. ($\mu$ — Greek "mu", rhymes with "few".) |
+| $\sigma(x)$ | "sigma of x" | Standard deviation of the feature map. ($\sigma$ — Greek "sigma".) |
+| $\gamma(w)$ | "gamma of w" | A scale factor predicted from the style vector. ($\gamma$ — Greek "gamma".) |
+| $\beta(w)$ | "beta of w" | A shift (bias) predicted from the style vector. ($\beta$ — Greek "beta".) |
+
+In words: subtract the mean, divide by the standard deviation (so the feature map has mean 0 and std 1), then re-scale and shift using values that come from the style vector $w$.
 
 The result: $w$ controls "style" — color palette, pose, hair length, glasses. Different layers control different *levels of style*: early layers control coarse features (pose, face shape); middle layers control hair and facial structure; late layers control fine details (color of skin tone, lighting).
 

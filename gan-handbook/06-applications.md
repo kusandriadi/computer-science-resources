@@ -35,11 +35,14 @@ $$L_{\text{perc}} = \|\phi(I_{\text{HR}}) - \phi(G(I_{\text{LR}}))\|_2^2$$
 
 **Notation.**
 
-- $I_{\text{HR}}$ = ground-truth high-res image.
-- $I_{\text{LR}}$ = low-res input image.
-- $G(I_{\text{LR}})$ = the super-resolved output.
-- $\phi(\cdot)$ = features extracted from an intermediate VGG layer.
-- $\|\cdot\|_2$ = Euclidean norm.
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $L_{\text{perc}}$ | "L sub perc" or "perceptual loss" | The perceptual loss we are minimizing. |
+| $I_{\text{HR}}$ | "I sub HR" | Ground-truth high-resolution image. (HR = high resolution.) |
+| $I_{\text{LR}}$ | "I sub LR" | Low-resolution input image. (LR = low resolution.) |
+| $G(I_{\text{LR}})$ | "G of I-LR" | The super-resolved output the generator produces from the low-res input. |
+| $\phi(\cdot)$ | "phi of dot" | Features extracted from an intermediate VGG layer. $\phi$ (Greek "phi", read "fai" or "fee") is just a name for the feature-extraction function. |
+| $\|\cdot\|_2^2$ | "L2 norm squared" | Squared Euclidean distance between two feature vectors. |
 
 **Why VGG features and not pixels?** VGG has been trained on millions of natural images. It has learned to detect edges, textures, faces, objects. Distance in VGG feature space measures *perceptual similarity* — two images can be pixel-different but feature-close (and look the same to humans), or pixel-close but feature-different (and look different). Optimizing perceptual loss gives sharper, more natural outputs than pixel losses.
 

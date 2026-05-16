@@ -77,25 +77,27 @@ Time to unpack it. Read this slowly.
 
 **The big picture.** $V(D, G)$ is a number that measures "how well D is doing." D wants $V$ to be **high** (it is good at telling real from fake). G wants $V$ to be **low** (it is fooling D). The notation $\min_G \max_D$ means "G plays a minimization game, D plays a maximization game, both against $V$."
 
-**Each symbol explained.**
+**Each symbol explained.** (Pronunciation guide for unfamiliar symbols is in `00-overview.md`.)
 
-| Symbol | What it means |
-|---|---|
-| $V(D, G)$ | The "value function." A single number that depends on both networks' current weights. |
-| $\min_G$ | "Pick G's weights to make this number small." |
-| $\max_D$ | "Pick D's weights to make this number large." |
-| $\mathbb{E}_{x \sim p_{\text{data}}}[\,\cdot\,]$ | "The average of $\cdot$ over the real data distribution." Read $\mathbb{E}$ as "expected value" or just "average." |
-| $p_{\text{data}}$ | The (unknown) distribution that real images come from. We approximate it by sampling from our training set. |
-| $x$ | A real image from the dataset. |
-| $D(x)$ | The Discriminator's probability that $x$ is real. A number in $(0, 1)$. |
-| $\log D(x)$ | The log of D's output. Close to 0 when $D(x) \approx 1$ (good); very negative when $D(x) \approx 0$ (bad). |
-| $\mathbb{E}_{z \sim p_z(z)}[\,\cdot\,]$ | Average over random noise samples. |
-| $p_z$ | The noise distribution we sample from. Usually $\mathcal{N}(0, I)$ — a standard normal. |
-| $z$ | A noise vector. |
-| $G(z)$ | A fake image generated from noise $z$. |
-| $D(G(z))$ | What D thinks of the fake. |
-| $1 - D(G(z))$ | Probability that the fake is fake. |
-| $\log(1 - D(G(z)))$ | Close to 0 when D is correctly suspicious of the fake; very negative when G fools D. |
+| Symbol | Read it as | What it means |
+|---|---|---|
+| $V(D, G)$ | "V of D, G" | The "value function." A single number that depends on both networks' current weights. |
+| $\min_G$ | "min G" | "Pick G's weights to make this number small." |
+| $\max_D$ | "max D" | "Pick D's weights to make this number large." |
+| $\mathbb{E}_{x \sim p_{\text{data}}}[\,\cdot\,]$ | "expected value of dot, when x is drawn from p-data" | The average of $\cdot$ over the real data distribution. $\mathbb{E}$ is just "E for expected value." |
+| $p_{\text{data}}$ | "p data" | The (unknown) distribution that real images come from. We approximate it by sampling from our training set. |
+| $x$ | "x" | A real image from the dataset. |
+| $D(x)$ | "D of x" | The Discriminator's probability that $x$ is real. A number in $(0, 1)$. |
+| $\log D(x)$ | "log D of x" | The natural log of D's output. Close to 0 when $D(x) \approx 1$ (good); very negative when $D(x) \approx 0$ (bad). |
+| $\mathbb{E}_{z \sim p_z(z)}[\,\cdot\,]$ | "expected value of dot, when z is drawn from p-z" | Average over random noise samples. |
+| $p_z$ | "p sub z" or just "p-z" | The noise distribution we sample from. Usually $\mathcal{N}(0, I)$ — a standard normal. |
+| $z$ | "z" | A noise vector. |
+| $G(z)$ | "G of z" | A fake image generated from noise $z$. |
+| $D(G(z))$ | "D of G of z" | What D thinks of the fake. |
+| $1 - D(G(z))$ | "one minus D of G of z" | Probability that the fake is fake. |
+| $\log(1 - D(G(z)))$ | "log of one minus D of G of z" | Close to 0 when D is correctly suspicious of the fake; very negative when G fools D. |
+| $\sim$ | "tilde" or "distributed as" | "Drawn from" — random variable on the left is sampled from the distribution on the right. |
+| $\mathcal{N}(0, I)$ | "normal zero, identity" | The standard normal distribution. Mean 0, covariance the identity matrix. |
 
 **Plain English version:**
 
